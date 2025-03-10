@@ -3,10 +3,11 @@
 
 class JtagMasterMonitor extends uart_monitor; 
   `uvm_component_utils(JtagMasterMonitor)
-
-
+  
   uvm_analysis_port #(JtagMasterTransaction)jtagMasterMonitorAnalysisPort;
-
+  virtual JtagMasterMonitorBfm jtagMasterMonitorBfm;
+  JtagMasterAgentConfig jtagMasterAgentConfig;
+  
   extern function new(string name = "JtagMasterMonitor" , uvm_component name);
   extern virtual function build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
@@ -25,7 +26,7 @@ function JtagMasterMonitor :: build_phase(uvm_phase phase);
     `uvm_fatal(get_type_name(),"FAILED TP GET MASTER AGENT CONFIG IN MASTER MONITOR")
 
   if(!(uvm_config_db #(JtagMasterMonitorBfm) :: get(this,"","jtagMasterMonitorBfm",jtagMasterMonitorBfm)))
-    `uvm_fatal(get_type_name(),"FAILED TO GET THE MASTER DRIVER BFM IN MASTER MONITOR")
+    `uvm_fatal(get_type_name(),"FAILED TO GET THE MASTER MONITOR BFM IN MASTER MONITOR")
   
   jtagMasterMonitorAnalysisPort = new("jtagMasterMonitorAnalysisPort",this);
 endfunction : build_phase
