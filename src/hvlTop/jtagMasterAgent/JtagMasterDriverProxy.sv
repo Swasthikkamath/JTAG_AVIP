@@ -21,12 +21,10 @@ function JtagMasterDriver :: build_phase(uvm_phase phase);
 
   if(!(uvm_config_db #(JtagMasterBfm) :: get(this,"","jtagMasterBfm",jtagMasterBfm)))
     `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO MASTER BFM IN MASTER DRIVER")
-endfunction : JtagMasterDriver
+endfunction : build_phase
 
 task JtagMasterDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
-
-
 endtask : run_phase
 
 `endif
