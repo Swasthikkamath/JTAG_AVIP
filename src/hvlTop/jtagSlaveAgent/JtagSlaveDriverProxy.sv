@@ -21,7 +21,7 @@ function JtagSlaveDriver :: build_phase(uvm_phase phase);
 
   if(!(uvm_config_db #(JtagSlaveBfm) :: get(this,"","jtagSlaveBfm",jtagSlaveBfm)))
     `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO Slave BFM IN Slave DRIVER")
-endfunction : JtagSlaveDriver
+endfunction : build_phase
 
 task JtagSlaveDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
