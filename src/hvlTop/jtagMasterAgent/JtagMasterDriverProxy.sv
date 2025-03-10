@@ -1,0 +1,32 @@
+`ifndef JTAGMASTERDRIVER_INCLUDED_
+`define JTAGMASTERDRIVER_INCLUDED_
+
+class JtagMasterDriver extends uvm_driver#(JtagMasterTransaction);
+  `uvm_component_utils(JtagMasterDriver)
+
+  extern function new (string name = "JtagMasterDriver", uvm_component parent);
+  extern virtual function void build_phase(uvm_phase phase);
+  extern virtual task run_phase(uvm_phase phase);
+endclass : JtagMasterDriver
+
+function JtagMasterDriver::new(string name = "JtagMasterDriver",uvm_component parent);
+  super.new(name,parent);
+endfunction  : new
+
+function JtagMasterDriver :: build_phase(uvm_phase phase);
+  super.build_phase(phase);
+
+  if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
+    `uvm_fatal(get_type_name(),"FAILED TO GET CONFIG IN MASTER DRIVER")
+
+  if(!(uvm_config_db #(JtagMasterBfm) :: get(this,"","jtagMasterBfm",jtagMasterBfm)))
+    `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO MASTER BFM IN MASTER DRIVER")
+endfunction : JtagMasterDriver
+
+task JtagMasterDriver :: run_phase(uvm_phase phase);
+  super.run_phase(phase);
+
+
+endtask : run_phase
+
+`endif
