@@ -16,7 +16,7 @@ endclass : JtagMasterMonitor
 
 function JtagMasterMonitor :: new( string name = "JtagMasterMonitor" , uvm_component parent);
   super.new(name,parent);
-endfunction : JtagMasterMonitor
+endfunction : new
 
 
 function JtagMasterMonitor :: build_phase(uvm_phase phase);
