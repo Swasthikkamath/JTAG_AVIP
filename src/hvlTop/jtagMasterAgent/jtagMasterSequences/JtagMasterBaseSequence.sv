@@ -1,5 +1,5 @@
 `ifndef JTAGMASTERBASESEQUENCE_INCLUDED_
-`define JTGAMASTERBASESEQUENCE_INCLUDED_
+`define JTGMASTERBASESEQUENCE_INCLUDED_
 
 class JtagMasterBaseSequence extends uvm_sequence#(JtagMasterTransaction);
   `uvm_object_utils(JtagMasterBaseSequence) 
