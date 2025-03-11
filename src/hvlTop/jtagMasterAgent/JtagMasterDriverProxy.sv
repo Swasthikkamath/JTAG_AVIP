@@ -14,7 +14,7 @@ function JtagMasterDriver::new(string name = "JtagMasterDriver",uvm_component pa
   super.new(name,parent);
 endfunction  : new
 
-function JtagMasterDriver :: build_phase(uvm_phase phase);
+function void JtagMasterDriver :: build_phase(uvm_phase phase);
   super.build_phase(phase);
 
   if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
