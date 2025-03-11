@@ -1,10 +1,57 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 23:40:09 on Mar 11,2025
+# Start time: 00:43:57 on Mar 12,2025
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: (vopt-13130) Failed to find design unit HdlTop.
-#         Searched libraries:
-#             work
-# Optimization failed
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Error: (vsim-7065) ../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv(45): Illegal assignment to class mtiUvm.uvm_pkg::uvm_port_base #(class mtiUvm.uvm_pkg::uvm_sqr_if_base #(class work.JtagSlavePkg::JtagSlaveTransaction, class work.JtagSlavePkg::JtagSlaveTransaction)) from class mtiUvm.uvm_pkg::uvm_seq_item_pull_imp #(class work.JtagSlavePkg::JtagSlaveSequencer, class work.JtagSlavePkg::JtagSlaveSequencer, class mtiUvm.uvm_pkg::uvm_sequencer #(class work.JtagSlavePkg::JtagSlaveSequencer, class work.JtagSlavePkg::JtagSlaveSequencer))
+#    Time: 0 ps  Iteration: 0  Region: /JtagSlavePkg File: ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv
+# ** Error: (vsim-8754) ../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv(45): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_seq_item_pull_imp #(class work.JtagSlavePkg::JtagSlaveSequencer, class work.JtagSlavePkg::JtagSlaveSequencer, class mtiUvm.uvm_pkg::uvm_sequencer #(class work.JtagSlavePkg::JtagSlaveSequencer, class work.JtagSlavePkg::JtagSlaveSequencer))' for formal 'provider' of 'connect' is not compatible with the formal's type 'class mtiUvm.uvm_pkg::uvm_port_base #(class mtiUvm.uvm_pkg::uvm_sqr_if_base #(class work.JtagSlavePkg::JtagSlaveTransaction, class work.JtagSlavePkg::JtagSlaveTransaction))'.
+#    Time: 0 ps  Iteration: 0  Region: /JtagSlavePkg File: ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv
+# ** Error: (vsim-7065) ../../src/hvlTop/jtagMasterAgent//JtagMasterAgent.sv(56): Illegal assignment to class mtiUvm.uvm_pkg::uvm_port_base #(class mtiUvm.uvm_pkg::uvm_sqr_if_base #(class work.JtagMasterPkg::JtagMasterTransaction, class work.JtagMasterPkg::JtagMasterTransaction)) from class mtiUvm.uvm_pkg::uvm_seq_item_pull_imp #(class work.JtagMasterPkg::JtagMasterSequencer, class work.JtagMasterPkg::JtagMasterSequencer, class mtiUvm.uvm_pkg::uvm_sequencer #(class work.JtagMasterPkg::JtagMasterSequencer, class work.JtagMasterPkg::JtagMasterSequencer))
+#    Time: 0 ps  Iteration: 0  Region: /JtagMasterPkg File: ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv
+# ** Error: (vsim-8754) ../../src/hvlTop/jtagMasterAgent//JtagMasterAgent.sv(56): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_seq_item_pull_imp #(class work.JtagMasterPkg::JtagMasterSequencer, class work.JtagMasterPkg::JtagMasterSequencer, class mtiUvm.uvm_pkg::uvm_sequencer #(class work.JtagMasterPkg::JtagMasterSequencer, class work.JtagMasterPkg::JtagMasterSequencer))' for formal 'provider' of 'connect' is not compatible with the formal's type 'class mtiUvm.uvm_pkg::uvm_port_base #(class mtiUvm.uvm_pkg::uvm_sqr_if_base #(class work.JtagMasterPkg::JtagMasterTransaction, class work.JtagMasterPkg::JtagMasterTransaction))'.
+#    Time: 0 ps  Iteration: 0  Region: /JtagMasterPkg File: ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv
 # Error loading design
-# End time: 23:40:10 on Mar 11,2025, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
+# End time: 00:44:03 on Mar 12,2025, Elapsed time: 0:00:06
+# Errors: 4, Warnings: 0

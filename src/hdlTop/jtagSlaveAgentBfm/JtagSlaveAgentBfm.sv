@@ -20,13 +20,13 @@ module JtagSlaveAgentBfm(JtagIf jtagIf);
   // Slave driver bfm instantiation
   //-------------------------------------------------------
   
-  JtagSlaveDriverBfm jtagSlaveDriverBfm (.clk(jtagIf.Clk),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset));
+  JtagSlaveDriverBfm jtagSlaveDriverBfm (.clk(jtagIf.clk),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset));
 
   //-------------------------------------------------------
   // Slave monitor bfm instantiation
   //-------------------------------------------------------
   
-  JtagSlaveMonitorBfm jtagSlaveMonitorBfm (.clk(jtagIf.Clk),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset));
+  JtagSlaveMonitorBfm jtagSlaveMonitorBfm (.clk(jtagIf.clk),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset));
 
 
   //-------------------------------------------------------

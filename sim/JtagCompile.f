@@ -21,5 +21,5 @@
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveMonitorBfm.sv
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv
-../../src/hdlTop/UartHdlTop.sv
+../../src/hdlTop/JtagHdlTop.sv
 ../../src/hvlTop/JtagHvlTop.sv 

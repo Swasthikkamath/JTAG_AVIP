@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 23:40:01 on Mar 11,2025
+Start time: 00:43:51 on Mar 12,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
@@ -18,10 +18,42 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 -- Importing package JtagSlaveSequencePkg
 -- Compiling package JtagBaseTestPkg
 -- Importing package JtagVirtualSequencePkg
+-- Compiling package JtagInterface_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagIf
+-- Compiling package JtagMasterDriverBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagMasterDriverBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagMasterPkg
+-- Compiling package JtagMasterMonitorBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagMasterMonitorBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagMasterPkg
+-- Compiling module JtagMasterAgentBfm
+-- Compiling package JtagSlaveDriverBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagSlaveDriverBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagSlavePkg
+-- Compiling package JtagSlaveMonitorBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagSlaveMonitorBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagSlavePkg
+-- Compiling module JtagSlaveAgentBfm
+-- Compiling module HdlTop
 -- Compiling module HvlTop
 -- Importing package JtagBaseTestPkg
+-- Importing package JtagMasterPkg
+-- Importing package JtagEnvPkg
+-- Importing package JtagMasterSequencePkg
+-- Importing package JtagSlaveSequencePkg
+-- Importing package JtagVirtualSequencePkg
 
 Top level modules:
+	HdlTop
 	HvlTop
-End time: 23:40:02 on Mar 11,2025, Elapsed time: 0:00:01
+End time: 00:43:53 on Mar 12,2025, Elapsed time: 0:00:02
 Errors: 0, Warnings: 0

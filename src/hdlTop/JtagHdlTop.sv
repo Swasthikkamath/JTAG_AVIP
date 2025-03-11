@@ -59,14 +59,14 @@ module HdlTop;
   // Jtag Transmitter BFM Agent Instantiation
   //-------------------------------------------------------
 
-  JtagMasterAgentBfm jtagMasterAgentBfm(JtagIf); 
+  JtagMasterAgentBfm jtagMasterAgentBfm(jtagIf); 
   
   //-------------------------------------------------------
   // Jtag Reciever BFM Agent Instantiation
   //-------------------------------------------------------
 
-  JtagSlaveAgentBfm jtagSlaveAgentBfm(JtagIf);
+  JtagSlaveAgentBfm jtagSlaveAgentBfm(jtagIf);
 
-  assign JtagIf.jtagSerialOut = JtagIf.jtagSerialIn;
+  assign jtagIf.jtagSerialOut = jtagIf.jtagSerialIn;
   
 endmodule : HdlTop
