@@ -48,8 +48,8 @@ endfunction : setupJtagMasterAgentConfig
 
 function void  JtagBaseTest :: setupJtagSlaveAgentConfig();
  jtagEnvConfig.jtagSlaveAgentConfig = JtagSlaveAgentConfig :: type_id :: create("jtagSlaveAgentConfig");
- jtagEnvConfig.jtagMasterAgentConfig.hasCoverage =1;
- jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_PASSIVE;
+ jtagEnvConfig.jtagSlaveAgentConfig.hasCoverage =1;
+ jtagEnvConfig.jtagSlaveAgentConfig.is_active = UVM_PASSIVE;
   uvm_config_db #(JtagSlaveAgentConfig) :: set(null,"*", "jtagSlaveAgentConfig",jtagEnvConfig.jtagSlaveAgentConfig);
 endfunction : setupJtagSlaveAgentConfig
 
