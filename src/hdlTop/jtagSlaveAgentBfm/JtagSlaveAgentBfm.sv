@@ -40,4 +40,4 @@ module JtagSlaveAgentBfm(JtagIf jtagIf);
 
 //  bind jtagSlaveMonitorBfm jtagSlaveAssertions TestVectrorTestingAssertions();
 
-endmodule : jtagSlaveAgentBfm
+endmodule : JtagSlaveAgentBfm
