@@ -4,7 +4,7 @@
 class JtagBaseTest extends uvm_test;
   `uvm_component_utils(JtagBaseTest)
 
-  JtagVirtualBaseSequence jtagVirtualBaseSequence;
+  JtagMasterTestingVirtualSequence jtagMasterTestingVirtualSequence;
   JtagEnv jtagEnv;
   JtagEnvConfig jtagEnvConfig;
   
@@ -57,10 +57,10 @@ function void JtagBaseTest :: end_of_elaboration_phase(uvm_phase phase);
 endfunction :  end_of_elaboration_phase
 
 task  JtagBaseTest :: run_phase(uvm_phase phase);
-  jtagVirtualBaseSequence = JtagVirtualBaseSequence :: type_id :: create("jtagVirtualBaseSequence");
+  jtagMasterTestingVirtualSequence = JtagMasterTestingVirtualSequence :: type_id :: create("JtagMasterTestingVirtualSequence");
 
   phase.raise_objection(this);
-    jtagVirtualBaseSequence.start(jtagEnv.jtagVirtualSequencer);
+    jtagMasterTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   phase.drop_objection(this);
 
 endtask : run_phase
