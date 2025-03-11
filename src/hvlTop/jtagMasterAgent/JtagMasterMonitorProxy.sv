@@ -8,7 +8,7 @@ class JtagMasterMonitor extends uvm_monitor;
   virtual JtagMasterMonitorBfm jtagMasterMonitorBfm;
   JtagMasterAgentConfig jtagMasterAgentConfig;
   
-  extern function new(string name = "JtagMasterMonitor" , uvm_component name);
+  extern function new(string name = "JtagMasterMonitor" , uvm_component parent);
   extern virtual function build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
 
