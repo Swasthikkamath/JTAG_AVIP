@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 23:17:54 on Mar 11,2025
+Start time: 23:40:01 on Mar 11,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
@@ -12,24 +12,16 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 -- Compiling package JtagSlaveSequencePkg
 -- Importing package JtagSlavePkg
 -- Compiling package JtagEnvPkg
-** Error: (vlog-7) Failed to open design unit file "../../src/hvlTop/tb/jtagVirtualSequences/UartVirtualSequencePkg.sv" in read mode.
-No such file or directory. (errno = ENOENT)
--- Compiling package JtagBaseTestPkg
+-- Compiling package JtagVirtualSequencePkg
 -- Importing package JtagEnvPkg
 -- Importing package JtagMasterSequencePkg
 -- Importing package JtagSlaveSequencePkg
-** Error: ../../src/hvlTop/tb/JtagBaseTestPkg.sv(15): (vlog-13006) Could not find the package (JtagVirtualSequencePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(17)
-** at ../../src/hvlTop/tb/JtagBaseTest.sv(7): Invalid type 'JtagVirtualBaseSequence'. Please check the type of the variable 'jtagVirtualBaseSequence'.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(17)
-** at ../../src/hvlTop/tb/JtagBaseTest.sv(60): (vlog-2730) Undefined variable: 'jtagVirtualBaseSequence'.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(17)
-** at ../../src/hvlTop/tb/JtagBaseTest.sv(60): (vlog-2164) Class or package 'JtagVirtualBaseSequence' not found.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(17)
-** at ../../src/hvlTop/tb/JtagBaseTest.sv(60): (vlog-2730) Undefined variable: 'JtagVirtualBaseSequence'.
-** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(17)
-** at ../../src/hvlTop/tb/JtagBaseTest.sv(60): near "::": syntax error, unexpected ::, expecting ';'.
+-- Compiling package JtagBaseTestPkg
+-- Importing package JtagVirtualSequencePkg
 -- Compiling module HvlTop
-** Error: ../../src/hvlTop/JtagHvlTop.sv(13): (vlog-13006) Could not find the package (JtagBaseTestPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-End time: 23:17:54 on Mar 11,2025, Elapsed time: 0:00:00
-Errors: 8, Warnings: 0
+-- Importing package JtagBaseTestPkg
+
+Top level modules:
+	HvlTop
+End time: 23:40:02 on Mar 11,2025, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

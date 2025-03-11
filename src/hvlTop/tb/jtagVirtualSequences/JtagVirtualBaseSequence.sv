@@ -1,7 +1,7 @@
 `ifndef JTAGVIRTUALBASESEQUENCE_INCLUDED_
 `define JTAGVIRTUALBASESEQUENCE_INCLUDED_
 
-class JtagVirtualBaseSequence extends uvm_object;
+class JtagVirtualBaseSequence extends uvm_sequence;
   `uvm_object_utils(JtagVirtualBaseSequence)
   `uvm_declare_p_sequencer(JtagVirtualSequencer)
 

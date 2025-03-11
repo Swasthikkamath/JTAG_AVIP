@@ -4,6 +4,7 @@
 class JtagMasterBaseSequence extends uvm_sequence#(JtagMasterTransaction);
   `uvm_object_utils(JtagMasterBaseSequence) 
 
+  rand int numberOfTests;
   extern function new(string name = "JtagMasterBaseSequence");
   extern virtual task body();
 

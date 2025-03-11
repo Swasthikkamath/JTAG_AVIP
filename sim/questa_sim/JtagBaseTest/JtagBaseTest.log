@@ -1,0 +1,10 @@
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 23:40:09 on Mar 11,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit HdlTop.
+#         Searched libraries:
+#             work
+# Optimization failed
+# Error loading design
+# End time: 23:40:10 on Mar 11,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

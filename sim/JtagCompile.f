@@ -12,6 +12,6 @@
 ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv
 ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv
 ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv
-../../src/hvlTop/tb/jtagVirtualSequences/UartVirtualSequencePkg.sv
+../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv
 ../../src/hvlTop/tb/JtagBaseTestPkg.sv
 ../../src/hvlTop/JtagHvlTop.sv 

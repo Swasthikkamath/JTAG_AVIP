@@ -51,7 +51,7 @@ function void  JtagBaseTest :: setupJtagSlaveAgentConfig();
  jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_PASSIVE;
 endfunction : setupJtagSlaveAgentConfig
 
-function void end_of_elaboration_phase(uvm_phase phase);
+function void JtagBaseTest :: end_of_elaboration_phase(uvm_phase phase);
   super.end_of_elaboration_phase(phase);
   uvm_top.print_topology();
 endfunction :  end_of_elaboration_phase
