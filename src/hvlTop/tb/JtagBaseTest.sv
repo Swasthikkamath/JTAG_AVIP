@@ -33,7 +33,7 @@ function void  JtagBaseTest :: setupJtagEnvConfig();
   jtagEnvConfig = JtagEnvConfig :: type_id :: create("jtagEnvConfig");
   jtagEnvConfig.hasScoreboard = 1 ;
   jtagEnvConfig.hasVirtualSequencer = 1;
-
+  uvm_config_db #(JtagEnvConfig) :: set(this,"*", "jtagEnvConfig",jtagEnvConfig);
   setupJtagMasterAgentConfig();
   setupJtagSlaveAgentConfig();
 endfunction : setupJtagEnvConfig
@@ -42,6 +42,7 @@ function void  JtagBaseTest :: setupJtagMasterAgentConfig();
   jtagEnvConfig.jtagMasterAgentConfig = JtagMasterAgentConfig :: type_id :: create("jtagMasterAgentConfig");
   jtagEnvConfig.jtagMasterAgentConfig.hasCoverage =1;
   jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_ACTIVE;
+  uvm_config_db #(JtagMasterAgentConfig) :: set(null,"*", "jtagMasterAgentConfig",jtagEnvConfig.jtagMasterAgentConfig);
 
 endfunction : setupJtagMasterAgentConfig
 
@@ -49,6 +50,7 @@ function void  JtagBaseTest :: setupJtagSlaveAgentConfig();
  jtagEnvConfig.jtagSlaveAgentConfig = JtagSlaveAgentConfig :: type_id :: create("jtagSlaveAgentConfig");
  jtagEnvConfig.jtagMasterAgentConfig.hasCoverage =1;
  jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_PASSIVE;
+  uvm_config_db #(JtagSlaveAgentConfig) :: set(null,"*", "jtagSlaveAgentConfig",jtagEnvConfig.jtagSlaveAgentConfig);
 endfunction : setupJtagSlaveAgentConfig
 
 function void JtagBaseTest :: end_of_elaboration_phase(uvm_phase phase);
