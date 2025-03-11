@@ -5,7 +5,7 @@ class JtagSlaveBaseSequence extends uvm_sequence#(JtagSlaveTransaction);
   `uvm_object_utils(JtagSlaveBaseSequence) 
 
   extern function new(string name = "JtagSlaveBaseSequence");
-  extern virtual function body();
+  extern virtual task body();
 
 endclass : JtagSlaveBaseSequence 
 
