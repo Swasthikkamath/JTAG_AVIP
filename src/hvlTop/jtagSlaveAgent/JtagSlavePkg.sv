@@ -16,6 +16,6 @@ package JtagSlavePkg;
   //`include "JtagSlaveCoverage.sv"
   `include "JtagSlaveAgent.sv"
 
-endpackage : JtageSlavePkg
+endpackage : JtagSlavePkg
 
 `endif
