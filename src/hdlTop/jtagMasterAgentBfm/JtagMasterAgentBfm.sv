@@ -1,9 +1,10 @@
+
 //--------------------------------------------------------------------------------------------
-// Module      : jtag Transmitter Agent BFM
+// Module      : jtag Master Agent BFM
 // Description : Instantiates driver and monitor
 //--------------------------------------------------------------------------------------------
 
-module JtagTxAgentBfm(jtagIf jtagIf);
+module JtagMasterAgentBfm(JtagIf jtagIf);
 
   //-------------------------------------------------------
   // Importing uvm package file
@@ -13,17 +14,17 @@ module JtagTxAgentBfm(jtagIf jtagIf);
   `include "uvm_macros.svh"
   
   initial begin
-    `uvm_info("jtag transmitter agent bfm",$sformatf("JTAG TRANSMITTER AGENT BFM"),UVM_LOW)
+    `uvm_info("jtag Master agent bfm",$sformatf("JTAG Master AGENT BFM"),UVM_LOW)
   end
   
   //-------------------------------------------------------
-  // Transmitter driver bfm instantiation
+  // Master driver bfm instantiation
   //-------------------------------------------------------
   
   JtagMasterDriverBfm jtagMasterDriverBfm ();
 
   //-------------------------------------------------------
-  // Transmitter monitor bfm instantiation
+  // Master monitor bfm instantiation
   //-------------------------------------------------------
   
  JtagMasterMonitorBfm jtagMasterMonitorBfm ();
@@ -40,4 +41,4 @@ module JtagTxAgentBfm(jtagIf jtagIf);
 
 //  bind jtagMasterMonitorBfm jtagMasterAssertions TestVectrorTestingAssertions();
 
-endmodule : jtagTxAgentBfm
+endmodule : jtagMasterAgentBfm
