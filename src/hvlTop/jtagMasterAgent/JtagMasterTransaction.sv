@@ -13,7 +13,7 @@ class JtagMasterTransaction extends uvm_sequence_item;
 
 endclass : JtagMasterTransaction
 
-function JtagMasterTransaction :: new(string name = "JtagMasterTransaction");
+function void JtagMasterTransaction :: new(string name = "JtagMasterTransaction");
   super.new(name);
 endfunction  : new
 
@@ -28,7 +28,7 @@ function JtagMasterTransaction  :: do_copy(uvm_object rhs);
   this.jtagTestVector = sourceObject.jtagTestVector;
 endfunction : do_copy
 
-function JtagMasterTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
+function bit JtagMasterTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
   JtagMasterTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
@@ -37,7 +37,7 @@ function JtagMasterTransaction :: do_compare(uvm_object rhs,uvm_comparer compare
   return (super.compare(rhs,comparer) && (this.jtagTestVector == sourceObject.jtagTestVector));
 endfunction : do_compare
 
-function JtagMasterTransaction :: do_print(uvm_printer printer);
+function void JtagMasterTransaction :: do_print(uvm_printer printer);
   super.do_print(printer);
   printer.print_field($sformatf("TEST VECTOR"),this.jtagTestVector,$bits(this.jtagTestVector),UVM_BIN);
 endfunction : do_print
