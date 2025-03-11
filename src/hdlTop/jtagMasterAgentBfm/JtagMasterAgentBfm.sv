@@ -41,4 +41,4 @@ module JtagMasterAgentBfm(JtagIf jtagIf);
 
 //  bind jtagMasterMonitorBfm jtagMasterAssertions TestVectrorTestingAssertions();
 
-endmodule : jtagMasterAgentBfm
+endmodule : JtagMasterAgentBfm
