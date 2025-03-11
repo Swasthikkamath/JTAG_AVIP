@@ -11,17 +11,17 @@ class JtagEnv extends uvm_env;
   JtagSlaveAgent jtagSlaveAgent;
   
   extern function new(string name = "JtagEnv" , uvm_component parent);
-  extern virtual function build_phase(uvm_phase phase);
-  extern virtual function connect_phase(uvm_phase phase);
+  extern virtual function void build_phase(uvm_phase phase);
+  extern virtual function void connect_phase(uvm_phase phase);
 endclass : JtagEnv
 
-function new( string name = "JtagEnv" , uvm_component parent);
+function JtagEnv :: new( string name = "JtagEnv" , uvm_component parent);
   super.new(name,parent);
 endfunction : new
 
-function void build_phase(uvm_phase phase);
+function void JtagEnv :: build_phase(uvm_phase phase);
 
-  if(!(uvm_config_db #(JtagEnvCionfig) :: get(this,"","jtagEnvConfig",jtagEnvConfig)))
+  if(!(uvm_config_db #(JtagEnvConfig) :: get(this,"","jtagEnvConfig",jtagEnvConfig)))
     `uvm_fatal(get_type_name(),"FAILED TO GET ENV CONFIG")
 
   if(jtagEnvConfig.hasScoreboard) begin 
@@ -37,12 +37,12 @@ function void build_phase(uvm_phase phase);
   jtagSlaveAgent = JtagSlaveAgent :: type_id :: create("JtagSlaveAgent",this);
 endfunction : build_phase
 
-function void connect_phase(uvm_phase phase);
+function void JtagEnv :: connect_phase(uvm_phase phase);
   super.connect_phase(phase);
 
   if(jtagEnvConfig.hasScoreboard) begin 
-    jtagMasterAgent.jtagMastertAnalysisPort.connect(jtagScoreboard.jtagScoreboardMasterAnalysisExport);
-    jtagSlaveAgent.jtagSlaveAnalysisisPort.connect(jtagScoreboard.jtagScoreboardSlaveAnalysisExport);
+    jtagMasterAgent.jtagMasterAnalysisPort.connect(jtagScoreboard.jtagScoreboardMasterAnalysisExport);
+    jtagSlaveAgent.jtagSlaveAnalysisPort.connect(jtagScoreboard.jtagScoreboardSlaveAnalysisExport);
   end 
 
   if(jtagEnvConfig.hasVirtualSequencer)begin 
