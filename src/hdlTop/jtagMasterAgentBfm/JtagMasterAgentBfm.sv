@@ -21,13 +21,13 @@ module JtagMasterAgentBfm(JtagIf jtagIf);
   // Master driver bfm instantiation
   //-------------------------------------------------------
   
-  JtagMasterDriverBfm jtagMasterDriverBfm ();
+  JtagMasterDriverBfm jtagMasterDriverBfm (.clk(jtagIf.Clk),.jtagSerialIn(jtagIf.jtagSerialIn),.reset(jtagIf.reset));
 
   //-------------------------------------------------------
   // Master monitor bfm instantiation
   //-------------------------------------------------------
   
- JtagMasterMonitorBfm jtagMasterMonitorBfm ();
+ JtagMasterMonitorBfm jtagMasterMonitorBfm (.clk(jtagIf.Clk),.jtagSerialIn(jtagIf.jtagSerialIn),.reset(jtagIf.reset));
 
 
   //-------------------------------------------------------
