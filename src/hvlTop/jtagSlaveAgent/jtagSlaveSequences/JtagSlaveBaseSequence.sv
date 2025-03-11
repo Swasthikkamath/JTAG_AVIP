@@ -14,8 +14,6 @@ function JtagSlaveBaseSequence :: new (string name = "JtagSlaveBaseSequence");
 endfunction : new
 
 task JtagSlaveBaseSequence :: body();
-  super.body();
-
   req = JtagSlaveTransaction :: type_id :: create("req");
 
   start_item(req);
