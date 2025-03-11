@@ -4,7 +4,7 @@
 package JtagGlobalPkg;
   
   
-  typedef enum bit [4:0]{testVectorWidth8Bit= 8,
+  typedef enum bit [5:0]{testVectorWidth8Bit= 8,
                          testVectorWidth16Bit = 16,
 			 testVectorWidth24Bit = 24 , 
 			 testVectorWidth32Bit=32} JtagTestVectorWidthEnum;
