@@ -36,6 +36,7 @@ function void  JtagMasterAgent ::build_phase (uvm_phase phase);
     `uvm_fatal(get_type_name(),"FAILED TO GET AGENT CONFIG IN MASTER")
 
   if(jtagMasterAgentConfig.is_active == UVM_ACTIVE) begin 
+    $display("***************************************************************8CONNECTING DRIVER AND SEQUENCER");
     jtagMasterDriver = JtagMasterDriver :: type_id :: create("jtagMasterDriver",this);
     jtagMasterSequencer = JtagMasterSequencer :: type_id :: create("jtagMasterSequencer",this);
   end 
