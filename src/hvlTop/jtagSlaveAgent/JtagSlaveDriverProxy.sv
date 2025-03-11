@@ -14,7 +14,7 @@ function JtagSlaveDriver::new(string name = "JtagSlaveDriver",uvm_component pare
   super.new(name,parent);
 endfunction  : new
 
-function JtagSlaveDriver :: build_phase(uvm_phase phase);
+function void JtagSlaveDriver :: build_phase(uvm_phase phase);
   super.build_phase(phase);
 
   if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,"","jtagSlaveAgentConfig",jtagSlaveAgentConfig)))
