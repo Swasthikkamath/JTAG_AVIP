@@ -1,0 +1,51 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 22:06:57 on Mar 11,2025
+vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
+-- Compiling package JtagGlobalPkg
+** Error: (vlog-13069) ../../src/globals/JtagGlobalPkg.sv(12): near "typedef": syntax error, unexpected "SystemVerilog keyword 'typedef'", expecting ';'.
+-- Compiling package JtagMasterPkg
+** Note: (vlog-2286) ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(5): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Error: ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(8): (vlog-13006) Could not find the package (JtagGlobalPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(9)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv(10): Invalid type 'JtagTestVectorWidthEnum'. Please check the type of the variable 'jtagTestVectorWidth'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(9)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv(11): Invalid type 'JtagInstructionWidthEnum'. Please check the type of the variable 'jtagInstructionWidth'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(9)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv(12): Invalid type 'JtagInstructionFlagEnum'. Please check the type of the variable 'jtagInstructionFlag'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(9)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv(13): Invalid type 'JtagInstructionOpcodeEnum'. Please check the type of the variable 'jtagInstructionOpcode'.
+** Error: ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(13): Cannot find `include file "JyagMasterSequencer.sv" in directories:
+    ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/, ../../src/hvlTop/jtagMasterAgent/, ../../src/hvlTop/jtagEnv/virtualSequencer/, ../../src/hvlTop/tb/jtagVirtualSequences/, ../../src/hvlTop/jtagEnv, ../../src/hvlTop/jtagSlaveAgent, ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/, ../../src/hvlTop/tb, /tools/mentor/questasim_10.6c/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterMonitorProxy.sv(4): near "uart_monitor": syntax error, unexpected IDENTIFIER.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterMonitorProxy.sv(4): Error in class extension specification.
+-- Compiling package JtagSlavePkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(11): (vlog-13006) Could not find the package (JtagGlobalPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(12)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgentConfig.sv(9): Invalid type 'JtagTestVectorWidthEnum'. Please check the type of the variable 'jtagTestVectorWidth'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(12)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgentConfig.sv(10): Invalid type 'JtagInstructionWidthEnum'. Please check the type of the variable 'jtagInstructionWidthEnum'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(12)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgentConfig.sv(11): Invalid type 'JtagInstructionFlagEnum'. Please check the type of the variable 'jtagInstructionFlag'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(12)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgentConfig.sv(12): Invalid type 'JtagInstructionOpcodeEnum'. Please check the type of the variable 'jtagInstructionOpcodeEnum'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16): Cannot find `include file "JyagSlaveSequencer.sv" in directories:
+    ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/, ../../src/hvlTop/jtagMasterAgent/, ../../src/hvlTop/jtagEnv/virtualSequencer/, ../../src/hvlTop/tb/jtagVirtualSequences/, ../../src/hvlTop/jtagEnv, ../../src/hvlTop/jtagSlaveAgent, ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/, ../../src/hvlTop/tb, /tools/mentor/questasim_10.6c/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(18)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveMonitorProxy.sv(4): near "uart_monitor": syntax error, unexpected IDENTIFIER.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(15)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(18)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveMonitorProxy.sv(4): Error in class extension specification.
+** Error: (vlog-7) Failed to open design unit file "../../src/hvlTop/jtagMasterAgent/uartTxSequences/UartTxSequencePkg.sv" in read mode.
+No such file or directory. (errno = ENOENT)
+End time: 22:06:57 on Mar 11,2025, Elapsed time: 0:00:00
+Errors: 18, Warnings: 0

@@ -20,8 +20,8 @@ function JtagMasterDriver :: build_phase(uvm_phase phase);
   if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
     `uvm_fatal(get_type_name(),"FAILED TO GET CONFIG IN MASTER DRIVER")
 
-    if(!(uvm_config_db #(JtagMasterDriverBfm) :: get(this,"","jtagMasterDriverBfm",jtagMasterDriverBfm)))
-      `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO MASTER DRIVERBFM IN MASTER DRIVER")
+//    if(!(uvm_config_db #(JtagMasterDriverBfm) :: get(this,"","jtagMasterDriverBfm",jtagMasterDriverBfm)))
+  //    `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO MASTER DRIVERBFM IN MASTER DRIVER")
 endfunction : build_phase
 
 task JtagMasterDriver :: run_phase(uvm_phase phase);

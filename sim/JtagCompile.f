@@ -1,0 +1,17 @@
++incdir+../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/
++incdir+../../src/hvlTop/jtagMasterAgent/
++incdir+../../src/hvlTop/jtagEnv/virtualSequencer/
++incdir+../../src/hvlTop/tb/jtagVirtualSequences/
++incdir+../../src/hvlTop/jtagEnv
++incdir+../../src/hvlTop/jtagSlaveAgent
++incdir+../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/
++incdir+../../src/hvlTop/tb
+../../src/globals/JtagGlobalPkg.sv
+../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv
+../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv
+../../src/hvlTop/jtagMasterAgent/uartTxSequences/UartTxSequencePkg.sv
+../../src/hvlTop/jtagSlaveAgent/uartRxSequences/UartRxSequencePkg.sv
+../../src/hvlTop/jtagEnv/UartEnvPkg.sv
+../../src/hvlTop/tb/jtagVirtualSequences/UartVirtualSequencePkg.sv
+../../src/hvlTop/tb/JtagBaseTestPkg.sv
+../../src/hvlTop/JtagHvlTop.sv 
