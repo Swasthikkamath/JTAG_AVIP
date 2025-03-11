@@ -5,7 +5,7 @@ class JtagMasterBaseSequence extends uvm_sequence#(JtagMasterTransaction);
   `uvm_object_utils(JtagMasterBaseSequence) 
 
   extern function new(string name = "JtagMasterBaseSequence");
-  extern virtual function body();
+  extern virtual task body();
 
 endclass : JtagMasterBaseSequence 
 
