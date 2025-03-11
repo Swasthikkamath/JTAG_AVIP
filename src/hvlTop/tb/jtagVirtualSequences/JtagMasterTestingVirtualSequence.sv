@@ -20,7 +20,7 @@ endfunction  : new
 
 task JtagMasterTestingVirtualSequence :: body();
   super.body();
-  `uvm_do_on_with(jtagMasterBaseSequence,p_sequencer.jtagMasterBaseSequencer,{numberOfTests == jtagMasterAgentConfig.NumberOfTests;})
+  `uvm_do_on_with(jtagMasterBaseSequence,p_sequencer.jtagMasterSequencer,{numberOfTests == jtagMasterAgentConfig.NumberOfTests;})
 endtask : body 
 
 task JtagMasterTestingVirtualSequence :: setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
