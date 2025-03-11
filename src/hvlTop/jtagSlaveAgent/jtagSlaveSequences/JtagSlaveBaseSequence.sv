@@ -1,5 +1,5 @@
 `ifndef JTAGSLAVEBASESEQUENCE_INCLUDED_
-`define JTGSLAVEBASESEQUENCE_INCLUDED_
+`define JTAGSLAVEBASESEQUENCE_INCLUDED_
 
 class JtagSlaveBaseSequence extends uvm_sequence#(JtagSlaveTransaction);
   `uvm_object_utils(JtagSlaveBaseSequence) 
