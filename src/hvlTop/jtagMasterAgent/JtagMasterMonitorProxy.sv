@@ -9,7 +9,7 @@ class JtagMasterMonitor extends uvm_monitor;
   JtagMasterAgentConfig jtagMasterAgentConfig;
   
   extern function new(string name = "JtagMasterMonitor" , uvm_component parent);
-  extern virtual function build_phase(uvm_phase phase);
+  extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
 
 endclass : JtagMasterMonitor
@@ -19,7 +19,7 @@ function JtagMasterMonitor :: new( string name = "JtagMasterMonitor" , uvm_compo
 endfunction : new
 
 
-function JtagMasterMonitor :: build_phase(uvm_phase phase);
+function void JtagMasterMonitor :: build_phase(uvm_phase phase);
   super.build_phase(phase);
 
   if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
