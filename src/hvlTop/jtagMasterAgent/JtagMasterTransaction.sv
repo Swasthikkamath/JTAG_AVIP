@@ -5,7 +5,7 @@ class JtagMasterTransaction extends uvm_sequence_item;
 
   `uvm_object_utils(JtagMasterTransaction)
 
-  logic[31:0]jtagTestVector;
+  rand logic[31:0]jtagTestVector;
   extern function new(string name = "JtagMasterTransaction");
   extern function void do_copy(uvm_object rhs);
   extern function bit do_compare(uvm_object rhs , uvm_comparer comparer = null);
