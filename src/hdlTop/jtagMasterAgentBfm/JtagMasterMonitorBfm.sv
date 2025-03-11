@@ -4,7 +4,7 @@
 import JtagGlobalPkg::*;
 
 //--------------------------------------------------------------------------------------------
-// Interface : JtagMasterDriverBfm
+// Interface : JtagMasterMonitorBfm
 //  Used as the HDL driver for Jtag
 //  It connects with the HVL driver_proxy for driving the stimulus
 //--------------------------------------------------------------------------------------------
