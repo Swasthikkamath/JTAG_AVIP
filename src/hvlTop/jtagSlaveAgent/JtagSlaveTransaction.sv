@@ -18,7 +18,7 @@ function JtagSlaveTransaction :: new(string name = "JtagSlaveTransaction");
 endfunction  : new
 
 
-function JtagSlaveTransaction  :: do_copy(uvm_object rhs);
+function void JtagSlaveTransaction  :: do_copy(uvm_object rhs);
   JtagSlaveTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
@@ -28,7 +28,7 @@ function JtagSlaveTransaction  :: do_copy(uvm_object rhs);
   this.jtagTestVector = sourceObject.jtagTestVector;
 endfunction : do_copy
 
-function JtagSlaveTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
+function bit  JtagSlaveTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
   JtagSlaveTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
@@ -37,7 +37,7 @@ function JtagSlaveTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer
   return (super.compare(rhs,comparer) && (this.jtagTestVector == sourceObject.jtagTestVector));
 endfunction : do_compare
 
-function JtagSlaveTransaction :: do_print(uvm_printer printer);
+function void JtagSlaveTransaction :: do_print(uvm_printer printer);
   super.do_print(printer);
   printer.print_field($sformatf("TEST VECTOR"),this.jtagTestVector,$bits(this.jtagTestVector),UVM_BIN);
 endfunction : do_print
