@@ -9,7 +9,7 @@ class JtagSlaveMonitor extends uvm_monitor;
   JtagSlaveAgentConfig jtagSlaveAgentConfig;
   
   extern function new(string name = "JtagSlaveMonitor" , uvm_component parent);
-  extern virtual function build_phase(uvm_phase phase);
+  extern virtual function void  build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
 
 endclass : JtagSlaveMonitor
@@ -19,7 +19,7 @@ function JtagSlaveMonitor :: new( string name = "JtagSlaveMonitor" , uvm_compone
 endfunction : new
 
 
-function JtagSlaveMonitor :: build_phase(uvm_phase phase);
+function void JtagSlaveMonitor :: build_phase(uvm_phase phase);
   super.build_phase(phase);
 
   if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,"","jtagSlaveAgentConfig",jtagSlaveAgentConfig)))
