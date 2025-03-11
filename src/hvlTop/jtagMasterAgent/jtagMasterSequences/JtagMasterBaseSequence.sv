@@ -15,8 +15,6 @@ function JtagMasterBaseSequence :: new (string name = "JtagMasterBaseSequence");
 endfunction : new
 
 task JtagMasterBaseSequence :: body();
-  super.body();
-
   req = JtagMasterTransaction :: type_id :: create("req");
 
   start_item(req);
