@@ -9,11 +9,11 @@ class JtagSlaveBaseSequence extends uvm_sequence#(JtagSlaveTransaction);
 
 endclass : JtagSlaveBaseSequence 
 
-function JtagSlaveBasesequence :: new (string name = "JtagSlaveBaseSequence");
+function JtagSlaveBaseSequence :: new (string name = "JtagSlaveBaseSequence");
   super.new(name);
 endfunction : new
 
-task JtagSlaveBasesequence :: body();
+task JtagSlaveBaseSequence :: body();
   super.body();
 
   req = JtagSlaveTransaction :: type_id :: create("req");
