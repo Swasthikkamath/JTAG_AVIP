@@ -17,9 +17,10 @@ endfunction : new
 task JtagMasterBaseSequence :: body();
   req = JtagMasterTransaction :: type_id :: create("req");
    req.randomize();
+  req.print();
   start_item(req);
  
-  req.print();
+ 
   finish_item(req);
 endtask : body
 
