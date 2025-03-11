@@ -1,0 +1,27 @@
+`ifndef JTAGSLAVEBASESEQUENCE_INCLUDED_
+`define JTGSLAVEBASESEQUENCE_INCLUDED_
+
+class JtagSlaveBaseSequence extends uvm_sequence#(JtagSlaveTransaction);
+  `uvm_object_utils(JtagSlaveBaseSequence) 
+
+  extern function new(string name = "JtagSlaveBaseSequence");
+  extern virtual function body();
+
+endclass : JtagSlaveBaseSequence 
+
+function JtagSlaveBasesequence :: new (string name = "JtagSlaveBaseSequence");
+  super.new(name);
+endfunction : new
+
+task JtagSlaveBasesequence :: body();
+  super.body();
+
+  req = JtagSlaveTransaction :: type_id :: create("req");
+
+  start_item(req);
+  req.randomize();
+  req.print();
+  finish_item(req);
+endtask : body
+
+`endif
