@@ -10,7 +10,7 @@ package JtagMasterPkg;
   `include "JtagMasterTransaction.sv"
   //`include "JtagMasterSeqItemConverter.sv"
   //`include "JtagMasterConfigConverter.sv"
-  `include "JyagMasterSequencer.sv"
+  `include "JtagMasterSequencer.sv"
   `include "JtagMasterDriverProxy.sv"
   `include "JtagMasterMonitorProxy.sv"
   //`include "JtagMasterCoverage.sv"
