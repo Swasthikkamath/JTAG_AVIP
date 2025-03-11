@@ -13,7 +13,7 @@ class JtagMasterTransaction extends uvm_sequence_item;
 
 endclass : JtagMasterTransaction
 
-function void JtagMasterTransaction :: new(string name = "JtagMasterTransaction");
+function JtagMasterTransaction :: new(string name = "JtagMasterTransaction");
   super.new(name);
 endfunction  : new
 
