@@ -57,7 +57,7 @@ function void JtagMasterAgent :: connect_phase(uvm_phase phase);
   end  
 
   if(jtagMasterAgentConfig.hasCoverage ==1) begin 
-  jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(jtagMasterCoverage.analysis_export);
+  //jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(jtagMasterCoverage.analysis_export);
   end 
 
   jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(this.jtagMasterAnalysisPort);
