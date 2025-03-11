@@ -53,6 +53,7 @@ function void JtagMasterAgent :: connect_phase(uvm_phase phase);
   super.connect_phase(phase);
 
   if(jtagMasterAgentConfig.is_active == UVM_ACTIVE) begin 
+    $display("CONNECTING DRIVER AND SEQUENCER");
     jtagMasterDriver.seq_item_port.connect(jtagMasterSequencer.seq_item_export);
   end  
 
