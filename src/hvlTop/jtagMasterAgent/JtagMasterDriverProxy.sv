@@ -26,7 +26,8 @@ endfunction : build_phase
 
 task JtagMasterDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
-  
+
+  $display("ENTERED TO DRIVER PROXY SUCCESSFULLY");
   seq_item_port.get_next_item(req);
   #1000;
   seq_item_port.item_done(rsp);
