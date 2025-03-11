@@ -14,4 +14,12 @@
 ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv
 ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv
 ../../src/hvlTop/tb/JtagBaseTestPkg.sv
+../../src/hdlTop/jtagInterface/JtagInterface.sv
+../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv
+../../src/hdlTop/jtagMasterAgentBfm/JtagMasterMonitorBfm.sv
+../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv
+../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv
+../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveMonitorBfm.sv
+../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv
+../../src/hdlTop/UartHdlTop.sv
 ../../src/hvlTop/JtagHvlTop.sv 
