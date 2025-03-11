@@ -9,9 +9,9 @@
 ../../src/globals/JtagGlobalPkg.sv
 ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv
 ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv
-../../src/hvlTop/jtagMasterAgent/uartTxSequences/UartTxSequencePkg.sv
-../../src/hvlTop/jtagSlaveAgent/uartRxSequences/UartRxSequencePkg.sv
-../../src/hvlTop/jtagEnv/UartEnvPkg.sv
+../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv
+../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv
+../../src/hvlTop/jtagEnv/JtagEnvPkg.sv
 ../../src/hvlTop/tb/jtagVirtualSequences/UartVirtualSequencePkg.sv
 ../../src/hvlTop/tb/JtagBaseTestPkg.sv
 ../../src/hvlTop/JtagHvlTop.sv 
