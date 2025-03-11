@@ -3,7 +3,7 @@
 
 class JtagSlaveTransaction extends uvm_sequence_item;
 
-  `uvm_component_utils(JtagSlaveTransaction)
+  `uvm_object_utils(JtagSlaveTransaction)
 
   logic[31:0]jtagTestVector;
   extern function new(string name = "JtagSlaveTransaction");
