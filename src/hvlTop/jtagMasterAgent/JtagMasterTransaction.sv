@@ -3,7 +3,7 @@
 
 class JtagMasterTransaction extends uvm_sequence_item;
 
-  `uvm_component_utils(JtagMasterTransaction)
+  `uvm_object_utils(JtagMasterTransaction)
 
   logic[31:0]jtagTestVector;
   extern function new(string name = "JtagMasterTransaction");
