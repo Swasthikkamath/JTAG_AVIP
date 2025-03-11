@@ -60,7 +60,7 @@ endfunction :  end_of_elaboration_phase
 
 task  JtagBaseTest :: run_phase(uvm_phase phase);
   jtagMasterTestingVirtualSequence = JtagMasterTestingVirtualSequence :: type_id :: create("JtagMasterTestingVirtualSequence");
-
+  jtagMasterTestingVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
   phase.raise_objection(this);
     jtagMasterTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   phase.drop_objection(this);
