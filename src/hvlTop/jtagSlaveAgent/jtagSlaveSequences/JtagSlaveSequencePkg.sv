@@ -3,7 +3,7 @@
 
 package JtagSlaveSequencePkg;
   import uvm_pkg :: *;
-  `include "uvm_macos.svh"
+  `include "uvm_macros.svh"
   import JtagGlobalPkg :: *;
   import JtagSlavePkg :: *;
 
