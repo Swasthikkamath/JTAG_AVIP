@@ -18,7 +18,7 @@ function JtagMasterTransaction :: new(string name = "JtagMasterTransaction");
 endfunction  : new
 
 
-function JtagMasterTransaction  :: do_copy(uvm_object rhs);
+function void JtagMasterTransaction  :: do_copy(uvm_object rhs);
   JtagMasterTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
