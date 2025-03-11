@@ -1,7 +1,7 @@
 `ifndef UARTMASTERMONITOR_INCLUDED_
 `define UARTMASTERMONITOR_INCLUDED_
 
-class JtagMasterMonitor extends uart_monitor; 
+class JtagMasterMonitor extends uvm_monitor; 
   `uvm_component_utils(JtagMasterMonitor)
   
   uvm_analysis_port #(JtagMasterTransaction)jtagMasterMonitorAnalysisPort;
