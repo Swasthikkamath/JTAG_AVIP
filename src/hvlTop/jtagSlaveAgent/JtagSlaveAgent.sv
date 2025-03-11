@@ -11,15 +11,15 @@ class JtagSlaveAgent extends uvm_agent;
   JtagSlaveAgentConfig jtagSlaveAgentConfig;
   JtagSlaveSequencer jtagSlaveSequencer;
   extern function new(string name = "JtagSlaveAgent" , uvm_component parent);
-  extern virtual function build_phase(uvm_phase phase);
-  extern virtual function connect_phase(uvm_phase phase);
+  extern virtual function void  build_phase(uvm_phase phase);
+  extern virtual function void connect_phase(uvm_phase phase);
 endclass : JtagSlaveAgent 
 
 function JtagSlaveAgent::new(string name = "JtagSlaveAgent",uvm_component parent);
   super.new(name,parent);
 endfunction : new
 
-function JtagSlaveAgent::build_phase(uvm_phase phase);
+function void JtagSlaveAgent::build_phase(uvm_phase phase);
   super.build_phase(phase);
 
   if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,"","jtagSlaveAgentConfig",jtagSlaveAgentConfig)))
@@ -38,7 +38,7 @@ function JtagSlaveAgent::build_phase(uvm_phase phase);
   jtagSlaveAnalysisPort = new("jtagSlaveAnalysisPort",this);
 endfunction :  build_phase
 
-function JtagSlaveAgent :: connect_phase(uvm_phase phase);
+function void JtagSlaveAgent :: connect_phase(uvm_phase phase);
   super.connect_phase(phase);
 
   if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin 
