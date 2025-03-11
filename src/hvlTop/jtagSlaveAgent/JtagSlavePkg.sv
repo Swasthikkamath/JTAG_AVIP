@@ -10,7 +10,7 @@ package JtagSlavePkg;
   `include "JtagSlaveTransaction.sv"
   //`include "JtagSlaveSeqItemConverter.sv"
   //`include "JtagSlaveConfigConverter.sv"
-  `include "JyagSlaveSequencer.sv"
+  `include "JtagSlaveSequencer.sv"
   `include "JtagSlaveDriverProxy.sv"
   `include "JtagSlaveMonitorProxy.sv"
   //`include "JtagSlaveCoverage.sv"
