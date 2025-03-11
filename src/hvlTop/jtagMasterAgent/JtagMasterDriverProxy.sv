@@ -28,6 +28,7 @@ task JtagMasterDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
   
   seq_item_port.get_next_item(req);
+  #1000;
   seq_item_port.item_done(rsp);
 endtask : run_phase
 
