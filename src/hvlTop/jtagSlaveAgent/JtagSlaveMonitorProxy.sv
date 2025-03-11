@@ -1,7 +1,7 @@
 `ifndef UARTSLAVEMONITOR_INCLUDED_
 `define UARTSLAVEMONITOR_INCLUDED_
 
-class JtagSlaveMonitor extends uart_monitor; 
+class JtagSlaveMonitor extends uvm_monitor; 
   `uvm_component_utils(JtagSlaveMonitor)
   
   uvm_analysis_port #(JtagSlaveTransaction)jtagSlaveMonitorAnalysisPort;
