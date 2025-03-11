@@ -16,6 +16,6 @@ package JtagMasterPkg;
   //`include "JtagMasterCoverage.sv"
   `include "JtagMasterAgent.sv"
 
-endpackage : JtageMasterPkg
+endpackage : JtagMasterPkg
 
 `endif
