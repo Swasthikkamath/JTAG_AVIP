@@ -13,7 +13,7 @@ package JtagSlavePkg;
   `include "JtagSlaveSequencer.sv"
   `include "JtagSlaveDriverProxy.sv"
   `include "JtagSlaveMonitorProxy.sv"
-  //`include "JtagSlaveCoverage.sv"
+  `include "JtagSlaveCoverage.sv"
   `include "JtagSlaveAgent.sv"
 
 endpackage : JtagSlavePkg
