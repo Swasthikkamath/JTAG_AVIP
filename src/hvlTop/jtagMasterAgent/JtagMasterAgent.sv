@@ -14,7 +14,7 @@ class JtagMasterAgent extends uvm_agent;
 
   JtagMasterSequencer jtagMasterSequencer;
 
-  //JtagMasterCoverage jtagMasterCoverage;
+  JtagMasterCoverage jtagMasterCoverage;
 
 
   extern function new(string name ="JtagMasterAgent", uvm_component parent);
@@ -45,7 +45,7 @@ function void  JtagMasterAgent ::build_phase (uvm_phase phase);
   jtagMasterMonitor = JtagMasterMonitor :: type_id :: create("jtagMasterMonitor",this);
 
   if(jtagMasterAgentConfig.hasCoverage == 1) begin 
-   //jtagMasterCoverage = JtagMasterCoverage :: type_id :: create("jtagMasterCoverage",this);
+   jtagMasterCoverage = JtagMasterCoverage :: type_id :: create("jtagMasterCoverage",this);
   end
 
   jtagMasterAnalysisPort = new("jtagMasterAnalysisPort",this);
@@ -60,7 +60,7 @@ function void JtagMasterAgent :: connect_phase(uvm_phase phase);
   end  
 
   if(jtagMasterAgentConfig.hasCoverage ==1) begin 
-  //jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(jtagMasterCoverage.analysis_export);
+  jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(jtagMasterCoverage.analysis_export);
   end 
 
   jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(this.jtagMasterAnalysisPort);

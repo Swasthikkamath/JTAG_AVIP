@@ -13,7 +13,7 @@ package JtagMasterPkg;
   `include "JtagMasterSequencer.sv"
   `include "JtagMasterDriverProxy.sv"
   `include "JtagMasterMonitorProxy.sv"
-  //`include "JtagMasterCoverage.sv"
+  `include "JtagMasterCoverage.sv"
   `include "JtagMasterAgent.sv"
 
 endpackage : JtagMasterPkg
