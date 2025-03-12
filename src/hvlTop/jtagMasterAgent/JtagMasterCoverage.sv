@@ -21,15 +21,13 @@ endclass : JtagMasterCoverage
 
 function JtagMasterCoverage :: new(string name= "JtagMasterCoverage",uvm_component parent);
  super.new(name,parent);
+  JtagMasterCoverGroup = new();
 endfunction : new
 
 function void JtagMasterCoverage :: build_phase(uvm_phase phase);
   super.build_phase(phase);
   if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
     `uvm_fatal(get_type_name(),"FAILED TO GET MASTER CONFIG IN COVERRAGE")
-
-    
-  JtagMasterCoverGroup = new();
 endfunction : build_phase
 
 function void JtagMasterCoverage :: write(JtagMasterTransaction t);
