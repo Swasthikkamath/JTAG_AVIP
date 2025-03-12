@@ -4,13 +4,13 @@
 class JtagMasterCoverage extends uvm_subscriber;
   `uvm_component_utils(JtagMasterCoverage)
   
-  bit[31:0] data;
+  bit[31:0] testVector;
 
   extern function new(string name = "JtagMasterCoverage");
   extern virtual function void build_phase(uvm_phase phase);
   extern function void write(JtagMasterTransaction t);
 
-  covergroup JtagMasterCoverGroup with function sample(bit[31:0]data);
+  covergroup JtagMasterCoverGroup with function sample(bit[31:0]TestVector);
 
     JtagTestVector_CP : coverpoint TestVector{ bins TestData = {[0:$]};}
 
@@ -32,9 +32,9 @@ function void JtagMasterCoverage :: build_phase(uvm_phase phase);
 endfunction : build_phase
 
 function void JtagMasterCoverage :: write(JtagMasterTransaction t);
-  data =0;
-  data = t.jtagTestVector;
-  JtagMasterCoverGroup.sample(data);
+  testVector =0;
+  testVector = t.jtagTestVector;
+  JtagMasterCoverGroup.sample(testVector);
  
 endfunction : write
 
