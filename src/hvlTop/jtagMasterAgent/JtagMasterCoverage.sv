@@ -7,7 +7,7 @@ class JtagMasterCoverage extends uvm_subscriber;
   bit[31:0] testVector;
   JtagMasterAgentConfig jtagMasterAgentConfig;
 
-  extern function new(string name = "JtagMasterCoverage");
+  extern function new(string name = "JtagMasterCoverage",uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern function void write(JtagMasterTransaction t);
 
