@@ -102,7 +102,7 @@ endif
 
 
 ifndef UartType
-override  UartType= UartBaseTest
+override  UartType= JtagBaseTest
 endif
 
 
@@ -199,11 +199,11 @@ compile_war_err:
 	echo "-----------------------------------------------------------------";
 	echo "------------------- Compilation Report --------------------------";
 	echo "";
-	grep "^** " UartCompile.log;
+	grep "^** " JtagCompile.log;
 	echo "";
-	grep "^Error" UartCompile.log;
+	grep "^Error" JtagCompile.log;
 	echo "";
-	echo "Log file path: UartCompile.log"
+	echo "Log file path: JtagCompile.log"
 	echo "";
 	echo "-----------------------------------------------------------------";
 	echo "-----------------------------------------------------------------";

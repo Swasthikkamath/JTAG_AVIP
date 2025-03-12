@@ -83,3 +83,752 @@
 # Error loading design
 # End time: 00:44:03 on Mar 12,2025, Elapsed time: 0:00:06
 # Errors: 4, Warnings: 0
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 00:48:59 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# ** Error: (vsim-8268) ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences//JtagSlaveBaseSequence.sv(19): No Default value for formal 'parent' in task/function create.
+#    Time: 0 ps  Iteration: 0  Region: /JtagSlaveSequencePkg::JtagSlaveBaseSequence File: ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv
+# ** Error: (vsim-8268) ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv(20): No Default value for formal 'parent' in task/function create.
+#    Time: 0 ps  Iteration: 0  Region: /JtagMasterSequencePkg::JtagMasterBaseSequence File: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv
+# ** Error: (vsim-3567) ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(23): No field named 'jtagMasterBaseSequencer'.
+#    Time: 0 ps  Iteration: 0  Region: /JtagVirtualSequencePkg::JtagMasterTestingVirtualSequence File: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv
+# ** Error (suppressible): (vsim-2997) ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(23): Cannot assign a packed type 'reg' to an unpacked type 'class mtiUvm.uvm_pkg::uvm_sequencer_base'.
+#    Time: 0 ps  Iteration: 0  Region: /JtagVirtualSequencePkg::JtagMasterTestingVirtualSequence File: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv
+# ** Error: (vsim-8754) ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(23): Actual input arg. of type 'reg' for formal 'l_sequencer' of 'create_item' is not compatible with the formal's type 'class mtiUvm.uvm_pkg::uvm_sequencer_base'.
+#    Time: 0 ps  Iteration: 0  Region: /JtagVirtualSequencePkg::JtagMasterTestingVirtualSequence File: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv
+# ** Error: (vsim-7065) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(67): Illegal assignment to class mtiUvm.uvm_pkg::uvm_component from class work.JtagSlavePkg::JtagSlaveTransaction
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-8754) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_component' for formal 'name' of 'new' is not compatible with the formal's type 'string'.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-3046) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Too many arguments to 'new'. Expected 1, found 2.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-7065) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(67): Illegal assignment to class mtiUvm.uvm_pkg::uvm_component from class work.JtagMasterPkg::JtagMasterTransaction
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-8754) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_component' for formal 'name' of 'new' is not compatible with the formal's type 'string'.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-3046) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Too many arguments to 'new'. Expected 1, found 2.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# Error loading design
+# End time: 00:49:04 on Mar 12,2025, Elapsed time: 0:00:05
+# Errors: 11, Warnings: 1
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 00:54:15 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# ** Error: (vsim-8268) ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences//JtagSlaveBaseSequence.sv(17): No Default value for formal 'parent' in task/function create.
+#    Time: 0 ps  Iteration: 0  Region: /JtagSlaveSequencePkg::JtagSlaveBaseSequence File: ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv
+# ** Error: (vsim-8268) ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv(18): No Default value for formal 'parent' in task/function create.
+#    Time: 0 ps  Iteration: 0  Region: /JtagMasterSequencePkg::JtagMasterBaseSequence File: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv
+# ** Error: (vsim-7065) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(67): Illegal assignment to class mtiUvm.uvm_pkg::uvm_component from class work.JtagSlavePkg::JtagSlaveTransaction
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-8754) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_component' for formal 'name' of 'new' is not compatible with the formal's type 'string'.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-3046) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Too many arguments to 'new'. Expected 1, found 2.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-7065) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(67): Illegal assignment to class mtiUvm.uvm_pkg::uvm_component from class work.JtagMasterPkg::JtagMasterTransaction
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-8754) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_component' for formal 'name' of 'new' is not compatible with the formal's type 'string'.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-3046) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Too many arguments to 'new'. Expected 1, found 2.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# Error loading design
+# End time: 00:54:20 on Mar 12,2025, Elapsed time: 0:00:05
+# Errors: 8, Warnings: 1
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 00:58:05 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# ** Error: (vsim-8268) ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences//JtagSlaveBaseSequence.sv(17): No Default value for formal 'parent' in task/function create.
+#    Time: 0 ps  Iteration: 0  Region: /JtagSlaveSequencePkg::JtagSlaveBaseSequence File: ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv
+# ** Error: (vsim-8268) ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv(18): No Default value for formal 'parent' in task/function create.
+#    Time: 0 ps  Iteration: 0  Region: /JtagMasterSequencePkg::JtagMasterBaseSequence File: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv
+# ** Error: (vsim-7065) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(67): Illegal assignment to class mtiUvm.uvm_pkg::uvm_component from class work.JtagSlavePkg::JtagSlaveTransaction
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-8754) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_component' for formal 'name' of 'new' is not compatible with the formal's type 'string'.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-3046) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Too many arguments to 'new'. Expected 1, found 2.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagSlavePkg::JtagSlaveTransaction, "JtagSlaveTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-7065) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(67): Illegal assignment to class mtiUvm.uvm_pkg::uvm_component from class work.JtagMasterPkg::JtagMasterTransaction
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-8754) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Actual input arg. of type 'class mtiUvm.uvm_pkg::uvm_component' for formal 'name' of 'new' is not compatible with the formal's type 'string'.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# ** Error: (vsim-3046) /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_registry.svh(66): Too many arguments to 'new'. Expected 1, found 2.
+#    Time: 0 ps  Iteration: 0  Region: /uvm_pkg::uvm_component_registry #(JtagMasterPkg::JtagMasterTransaction, "JtagMasterTransaction") File: /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/uvm_pkg.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# Error loading design
+# End time: 00:58:12 on Mar 12,2025, Elapsed time: 0:00:07
+# Errors: 8, Warnings: 1
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 01:01:24 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# UVM_FATAL ../../src/hvlTop/jtagEnv/JtagEnv.sv(25) @ 0: uvm_test_top.jtagEnv [JtagEnv] FAILED TO GET ENV CONFIG
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    6
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    1
+# ** Report counts by id
+# [HDL_TOP]     1
+# [JtagEnv]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [jtag Master agent bfm]     1
+# [jtag slave agent bfm]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh(292)
+#    Time: 0 ps  Iteration: 7  Region: /uvm_pkg::uvm_phase::m_run_phases
+# Saving coverage database on exit...
+# End time: 01:01:30 on Mar 12,2025, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 1
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 01:04:23 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                                      Type                        Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                              JtagBaseTest                -     @473 
+#   jtagEnv                                 JtagEnv                     -     @511 
+#     JtagMasterAgent                       JtagMasterAgent             -     @635 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @658 
+#       jtagMasterMonitor                   JtagMasterMonitor           -     @651 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @667 
+#     JtagScoreboard                        JtagScoreboard              -     @519 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @675 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @691 
+#         analysis_export                   uvm_analysis_imp            -     @730 
+#         get_ap                            uvm_analysis_port           -     @722 
+#         get_peek_export                   uvm_get_peek_imp            -     @706 
+#         put_ap                            uvm_analysis_port           -     @714 
+#         put_export                        uvm_put_imp                 -     @698 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @683 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @738 
+#         analysis_export                   uvm_analysis_imp            -     @777 
+#         get_ap                            uvm_analysis_port           -     @769 
+#         get_peek_export                   uvm_get_peek_imp            -     @753 
+#         put_ap                            uvm_analysis_port           -     @761 
+#         put_export                        uvm_put_imp                 -     @745 
+#     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @794 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @787 
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @803 
+#     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
+#       rsp_export                          uvm_analysis_export         -     @533 
+#       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
+#       arbitration_queue                   array                       0     -    
+#       lock_queue                          array                       0     -    
+#       num_last_reqs                       integral                    32    'd1  
+#       num_last_rsps                       integral                    32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# ** Failure: (vsim-7073) ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(23): Attempt to dereference null class reference ((local::this.jtagMasterAgentConfig<11>)) in constraint.
+#    Time: 0 ps  Iteration: 52  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_f6b34bb File: ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv
+# Break in Task JtagVirtualSequencePkg/JtagMasterTestingVirtualSequence::body at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv line 23
+# Stopped at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv line 23
+#  exit
+# Saving coverage database on exit...
+# End time: 01:04:30 on Mar 12,2025, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 1
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+UartBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 01:31:14 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# CONNECTING DRIVER AND SEQUENCER
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                                      Type                        Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                              JtagBaseTest                -     @473 
+#   jtagEnv                                 JtagEnv                     -     @511 
+#     JtagMasterAgent                       JtagMasterAgent             -     @635 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @790 
+#       jtagMasterDriver                    JtagMasterDriver            -     @651 
+#         rsp_port                          uvm_analysis_port           -     @666 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @658 
+#       jtagMasterMonitor                   JtagMasterMonitor           -     @783 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @800 
+#       jtagMasterSequencer                 JtagMasterSequencer         -     @674 
+#         rsp_export                        uvm_analysis_export         -     @681 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @775 
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagScoreboard                        JtagScoreboard              -     @519 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @813 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @829 
+#         analysis_export                   uvm_analysis_imp            -     @868 
+#         get_ap                            uvm_analysis_port           -     @860 
+#         get_peek_export                   uvm_get_peek_imp            -     @844 
+#         put_ap                            uvm_analysis_port           -     @852 
+#         put_export                        uvm_put_imp                 -     @836 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @821 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @876 
+#         analysis_export                   uvm_analysis_imp            -     @915 
+#         get_ap                            uvm_analysis_port           -     @907 
+#         get_peek_export                   uvm_get_peek_imp            -     @891 
+#         put_ap                            uvm_analysis_port           -     @899 
+#         put_export                        uvm_put_imp                 -     @883 
+#     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @932 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @925 
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @941 
+#     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
+#       rsp_export                          uvm_analysis_export         -     @533 
+#       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
+#       arbitration_queue                   array                       0     -    
+#       lock_queue                          array                       0     -    
+#       num_last_reqs                       integral                    32    'd1  
+#       num_last_rsps                       integral                    32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# ENTERED TO DRIVER PROXY SUCCESSFULLY
+# ------------------------------------------------------------------------------
+# Name           Type                   Size  Value                             
+# ------------------------------------------------------------------------------
+# req            JtagMasterTransaction  -     @968                              
+#   TEST VECTOR  integral               32    'b11110011111010010011110010001110
+# ------------------------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    8
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [HDL_TOP]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [jtag Master agent bfm]     1
+# [jtag slave agent bfm]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1 ns  Iteration: 64  Instance: /HvlTop
+# Saving coverage database on exit...
+# End time: 01:31:21 on Mar 12,2025, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 1
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 09:34:10 on Mar 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# CONNECTING DRIVER AND SEQUENCER
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                                      Type                        Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                              JtagBaseTest                -     @473 
+#   jtagEnv                                 JtagEnv                     -     @511 
+#     JtagMasterAgent                       JtagMasterAgent             -     @635 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @790 
+#       jtagMasterDriver                    JtagMasterDriver            -     @651 
+#         rsp_port                          uvm_analysis_port           -     @666 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @658 
+#       jtagMasterMonitor                   JtagMasterMonitor           -     @783 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @800 
+#       jtagMasterSequencer                 JtagMasterSequencer         -     @674 
+#         rsp_export                        uvm_analysis_export         -     @681 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @775 
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagScoreboard                        JtagScoreboard              -     @519 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @813 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @829 
+#         analysis_export                   uvm_analysis_imp            -     @868 
+#         get_ap                            uvm_analysis_port           -     @860 
+#         get_peek_export                   uvm_get_peek_imp            -     @844 
+#         put_ap                            uvm_analysis_port           -     @852 
+#         put_export                        uvm_put_imp                 -     @836 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @821 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @876 
+#         analysis_export                   uvm_analysis_imp            -     @915 
+#         get_ap                            uvm_analysis_port           -     @907 
+#         get_peek_export                   uvm_get_peek_imp            -     @891 
+#         put_ap                            uvm_analysis_port           -     @899 
+#         put_export                        uvm_put_imp                 -     @883 
+#     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @932 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @925 
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @941 
+#     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
+#       rsp_export                          uvm_analysis_export         -     @533 
+#       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
+#       arbitration_queue                   array                       0     -    
+#       lock_queue                          array                       0     -    
+#       num_last_reqs                       integral                    32    'd1  
+#       num_last_rsps                       integral                    32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# ENTERED TO DRIVER PROXY SUCCESSFULLY
+# ------------------------------------------------------------------------------
+# Name           Type                   Size  Value                             
+# ------------------------------------------------------------------------------
+# req            JtagMasterTransaction  -     @968                              
+#   TEST VECTOR  integral               32    'b11110011111010010011110010001110
+# ------------------------------------------------------------------------------
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    8
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [HDL_TOP]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [jtag Master agent bfm]     1
+# [jtag slave agent bfm]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1 ns  Iteration: 64  Instance: /HvlTop
+# Saving coverage database on exit...
+# End time: 09:34:17 on Mar 12,2025, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 1
