@@ -1,7 +1,7 @@
 `ifndef JTAGMASTERCOVERAGE_INCLUDED_
 `define JTAGMASTERCOVERAGE_INCLUDED_
 
-class JtagMasterCoverage extends uvm_subscriber;
+class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
   `uvm_component_utils(JtagMasterCoverage)
   
   bit[31:0] testVector;
