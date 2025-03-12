@@ -5,7 +5,7 @@ class JtagSlaveAgent extends uvm_agent;
   `uvm_component_utils(JtagSlaveAgent)
 
   uvm_analysis_port #(JtagSlaveTransaction) jtagSlaveAnalysisPort;
-//  JtagSlaveCoverage jtagSlaveCoverage;
+  JtagSlaveCoverage jtagSlaveCoverage;
   JtagSlaveMonitor jtagSlaveMonitor;
   JtagSlaveDriver jtagSlaveDriver;
   JtagSlaveAgentConfig jtagSlaveAgentConfig;
@@ -31,7 +31,7 @@ function void JtagSlaveAgent::build_phase(uvm_phase phase);
   end 
    
   if(jtagSlaveAgentConfig.hasCoverage==1) begin 
-  //  jtagSlaveCoverage = JtagSlaveCoverage  :: type_id ::create("jtagSlaveCoverage",this);
+    jtagSlaveCoverage = JtagSlaveCoverage  :: type_id ::create("jtagSlaveCoverage",this);
   end 
 
   jtagSlaveMonitor = JtagSlaveMonitor :: type_id :: create("jtagSlaveMonitor",this);
@@ -46,7 +46,7 @@ function void JtagSlaveAgent :: connect_phase(uvm_phase phase);
   end 
 
   if(jtagSlaveAgentConfig.hasCoverage ==1) begin
-    //jtagSlaveMonitor.jtagSlaveMonitorAnalysisPort.connect(jtagSlaveCoverage.analysis_export);
+    jtagSlaveMonitor.jtagSlaveMonitorAnalysisPort.connect(jtagSlaveCoverage.analysis_export);
   end   
 
   jtagSlaveMonitor.jtagSlaveMonitorAnalysisPort.connect(this.jtagSlaveAnalysisPort);
