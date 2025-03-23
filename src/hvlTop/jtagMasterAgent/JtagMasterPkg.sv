@@ -8,8 +8,8 @@ package JtagMasterPkg;
   import JtagGlobalPkg :: *;
   `include "JtagMasterAgentConfig.sv"
   `include "JtagMasterTransaction.sv"
-  //`include "JtagMasterSeqItemConverter.sv"
-  //`include "JtagMasterConfigConverter.sv"
+  `include "JtagMasterSeqItemConverter.sv"
+  `include "JtagMasterConfigConverter.sv"
   `include "JtagMasterSequencer.sv"
   `include "JtagMasterDriverProxy.sv"
   `include "JtagMasterMonitorProxy.sv"

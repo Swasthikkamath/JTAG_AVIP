@@ -1,6 +1,7 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 09:34:10 on Mar 12,2025
+# Start time: 02:49:32 on Mar 24,2025
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -85,12 +86,14 @@
 # uvm_test_top                              JtagBaseTest                -     @473 
 #   jtagEnv                                 JtagEnv                     -     @511 
 #     JtagMasterAgent                       JtagMasterAgent             -     @635 
-#       jtagMasterAnalysisPort              uvm_analysis_port           -     @790 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @805 
+#       jtagMasterCoverage                  JtagMasterCoverage          -     @790 
+#         analysis_imp                      uvm_analysis_imp            -     @797 
 #       jtagMasterDriver                    JtagMasterDriver            -     @651 
 #         rsp_port                          uvm_analysis_port           -     @666 
 #         seq_item_port                     uvm_seq_item_pull_port      -     @658 
 #       jtagMasterMonitor                   JtagMasterMonitor           -     @783 
-#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @800 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @818 
 #       jtagMasterSequencer                 JtagMasterSequencer         -     @674 
 #         rsp_export                        uvm_analysis_export         -     @681 
 #         seq_item_export                   uvm_seq_item_pull_imp       -     @775 
@@ -99,24 +102,26 @@
 #         num_last_reqs                     integral                    32    'd1  
 #         num_last_rsps                     integral                    32    'd1  
 #     JtagScoreboard                        JtagScoreboard              -     @519 
-#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @813 
-#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @829 
-#         analysis_export                   uvm_analysis_imp            -     @868 
-#         get_ap                            uvm_analysis_port           -     @860 
-#         get_peek_export                   uvm_get_peek_imp            -     @844 
-#         put_ap                            uvm_analysis_port           -     @852 
-#         put_export                        uvm_put_imp                 -     @836 
-#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @821 
-#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @876 
-#         analysis_export                   uvm_analysis_imp            -     @915 
-#         get_ap                            uvm_analysis_port           -     @907 
-#         get_peek_export                   uvm_get_peek_imp            -     @891 
-#         put_ap                            uvm_analysis_port           -     @899 
-#         put_export                        uvm_put_imp                 -     @883 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @831 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @847 
+#         analysis_export                   uvm_analysis_imp            -     @886 
+#         get_ap                            uvm_analysis_port           -     @878 
+#         get_peek_export                   uvm_get_peek_imp            -     @862 
+#         put_ap                            uvm_analysis_port           -     @870 
+#         put_export                        uvm_put_imp                 -     @854 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @839 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @894 
+#         analysis_export                   uvm_analysis_imp            -     @933 
+#         get_ap                            uvm_analysis_port           -     @925 
+#         get_peek_export                   uvm_get_peek_imp            -     @909 
+#         put_ap                            uvm_analysis_port           -     @917 
+#         put_export                        uvm_put_imp                 -     @901 
 #     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
-#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @932 
-#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @925 
-#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @941 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @965 
+#       jtagSlaveCoverage                   JtagSlaveCoverage           -     @943 
+#         analysis_imp                      uvm_analysis_imp            -     @950 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @958 
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @975 
 #     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
 #       rsp_export                          uvm_analysis_export         -     @533 
 #       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
@@ -127,19 +132,35 @@
 # ---------------------------------------------------------------------------------
 # 
 # ENTERED TO DRIVER PROXY SUCCESSFULLY
-# ------------------------------------------------------------------------------
-# Name           Type                   Size  Value                             
-# ------------------------------------------------------------------------------
-# req            JtagMasterTransaction  -     @968                              
-#   TEST VECTOR  integral               32    'b11110011111010010011110010001110
-# ------------------------------------------------------------------------------
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# The test vector is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# UVM_WARNING @ 0: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterSequencer@@JtagMasterTestingVirtualSequence.jtagMasterTestVectorSequence [uvm_sequence_base] Body definition undefined
+# -----------------------------------------------------
+# Name           Type                   Size  Value    
+# -----------------------------------------------------
+# req            JtagMasterTransaction  -     @1002    
+#   TEST VECTOR  integral               32    'b1100100
+# -----------------------------------------------------
+# the tms value is 0 and serial in is x
+# the tms value is 1 and serial in is x
+# the tms value is 1 and serial in is x
+# the tms value is 0 and serial in is x
+# the tms value is 0 and serial in is 0
+# the tms value is 0 and serial in is 0
+# the tms value is 0 and serial in is 0
+# the tms value is 0 and serial in is 0
+# the tms value is 0 and serial in is 1
+# the tms value is 0 and serial in is 0
+# the tms value is 0 and serial in is 0
+# the tms value is 0 and serial in is 1
+# the tms value is 0 and serial in is 1
+# the tms value is 0 and serial in is 0
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 2700: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
 # UVM_INFO :    8
-# UVM_WARNING :    0
+# UVM_WARNING :    1
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
@@ -150,8 +171,9 @@
 # [UVMTOP]     1
 # [jtag Master agent bfm]     1
 # [jtag slave agent bfm]     1
+# [uvm_sequence_base]     1
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 1 ns  Iteration: 64  Instance: /HvlTop
+#    Time: 2700 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 09:34:17 on Mar 12,2025, Elapsed time: 0:00:07
-# Errors: 0, Warnings: 1
+# End time: 02:49:39 on Mar 24,2025, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 2

@@ -1,0 +1,31 @@
+`ifndef JTAGMASTERSEQITEMCONVERTER_INCLUDED_
+`define JTAGMASTERSEQITEMCONVERTER_INCLUDED_
+
+class JtagMasterSeqItemConverter extends uvm_object;
+  `uvm_object_utils(JtagMasterSeqItemConverter)
+
+  extern function new(string name = "JtagMasterSeqItemConverter");
+  extern static function void fromClass(input JtagMasterTransaction jtagMasterTransaction , input JtagConfigStruct jtagConfigStruct , output JtagPacketStruct jtagPacketStruct);
+  extern static function void toClass (input JtagPacketStruct jtagPacketStruct ,input JtagConfigStruct jtagConfigStruct , inout JtagMasterTransaction jtagMasterTransaction);
+ 
+endclass : JtagMasterSeqItemConverter 
+
+function JtagMasterSeqItemConverter :: new(string  name = "JtagMasterSeqItemConverter");
+  super.new(name);
+endfunction : new
+
+
+function void JtagMasterSeqItemConverter :: fromClass(input JtagMasterTransaction jtagMasterTransaction ,          input JtagConfigStruct jtagConfigStruct , output JtagPacketStruct jtagPacketStruct);
+  for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
+    jtagPacketStruct.jtagTestVector[i] = jtagMasterTransaction.jtagTestVector[i];
+
+  for(int i=0 ; i<32 ; i++)
+   jtagPacketStruct.jtagTms[i]= jtagMasterTransaction.jtagTms[i];
+ endfunction : fromClass
+
+function void JtagMasterSeqItemConverter :: toClass (input JtagPacketStruct jtagPacketStruct ,input JtagConfigStruct  jtagConfigStruct , inout JtagMasterTransaction jtagMasterTransaction);
+   for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
+     jtagMasterTransaction.jtagTestVector[i] = jtagPacketStruct.jtagTestVector[i];
+ endfunction : toClass
+
+ `endif

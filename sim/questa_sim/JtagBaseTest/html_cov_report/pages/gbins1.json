@@ -1,0 +1,8 @@
+var g_data = {
+c895:[4,'JtagTestVector_CP',[],,'894',1,1,'JtagSlaveCoverGroup','885','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','0',1,'TestData']],[]],
+c1019:[4,'JtagTestVector_CP',[],,'1018',1,1,'JtagMasterCoverGroup','1009','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','0',1,'TestData']],[]],
+c1244:[4,'JtagTestVector_CP',[],,'1243',1,1,'JtagSlaveCoverGroup','1234','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','0',1,'TestData']],[]],
+c1381:[4,'JtagTestVector_CP',[],,'1380',1,1,'JtagMasterCoverGroup','1371','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','0',1,'TestData']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

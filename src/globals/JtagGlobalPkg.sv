@@ -13,11 +13,17 @@ package JtagGlobalPkg;
                          instructionWidth4Bit = 4,
 			 instructionWidth5Bit = 5} JtagInstructionWidthEnum;
  
-  typedef enum bit {noInstructoion = 0 ,
-                    yesInstruction =1} JtagInstructionFlagEnum;
-  
-  typedef enum bit[4:0] {bypassRegister = 5'b 0000}JtagInstructionOpcodeEnum;
+  typedef enum bit[4:0] {bypassRegister = 5'b 00000,
+                         userDefinedRegister = 5'b 00001, 
+			 boundaryScanRegisters=5'b 00010}JtagInstructionOpcodeEnum;
 
+  typedef struct packed {JtagTestVectorWidthEnum jtagTestVectorWidth;
+                         JtagInstructionWidthEnum jtagInstructionWidth;
+			 logic[4:0] jtagInstructionOpcode;}JtagConfigStruct;
+ 
+ 
+  typedef struct packed{logic[31:0] jtagTestVector; logic[31:0]jtagTms;}JtagPacketStruct;
 
+  typedef enum{jtagResetState ,jtagIdleState,jtagDrScanState, jtagIrScanState,jtagCaptureIrState,jtagShiftIrState,jtagExit1IrState,jtagPauseIrState,jtagExit2IrState,jtagUpdateIrState,jtagCaptureDrState,jtagShiftDrState,jtagExit1DrState,jtagPauseDrState,jtagExit2DrState,jtagUpdateDrState}JtagTapStates;
 endpackage : JtagGlobalPkg
 `endif

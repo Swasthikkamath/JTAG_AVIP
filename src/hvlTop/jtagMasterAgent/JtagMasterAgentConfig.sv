@@ -9,7 +9,6 @@ class JtagMasterAgentConfig extends uvm_object;
   uvm_active_passive_enum   is_active;
   JtagTestVectorWidthEnum   jtagTestVectorWidth;
   JtagInstructionWidthEnum  jtagInstructionWidth;
-  JtagInstructionFlagEnum   jtagInstructionFlag;
   JtagInstructionOpcodeEnum jtagInstructionOpcode;
   int NumberOfTests =10;
 

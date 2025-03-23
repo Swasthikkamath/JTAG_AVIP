@@ -5,6 +5,8 @@ class JtagMasterDriver extends uvm_driver#(JtagMasterTransaction);
   `uvm_component_utils(JtagMasterDriver)
   virtual JtagMasterDriverBfm jtagMasterDriverBfm;
   JtagMasterAgentConfig jtagMasterAgentConfig;
+  JtagConfigStruct jtagConfigStruct;
+  JtagPacketStruct jtagPacketStruct;
   extern function new (string name = "JtagMasterDriver", uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
@@ -20,16 +22,20 @@ function void JtagMasterDriver :: build_phase(uvm_phase phase);
   if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
     `uvm_fatal(get_type_name(),"FAILED TO GET CONFIG IN MASTER DRIVER")
 
-//    if(!(uvm_config_db #(JtagMasterDriverBfm) :: get(this,"","jtagMasterDriverBfm",jtagMasterDriverBfm)))
-  //    `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO MASTER DRIVERBFM IN MASTER DRIVER")
+    if(!(uvm_config_db #(virtual JtagMasterDriverBfm) :: get(this,"","jtagMasterDriverBfm",jtagMasterDriverBfm)))
+      `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO MASTER DRIVERBFM IN MASTER DRIVER")
 endfunction : build_phase
 
 task JtagMasterDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
-
+  JtagMasterConfigConverter :: fromClass(jtagMasterAgentConfig,jtagConfigStruct);
+ 
   $display("ENTERED TO DRIVER PROXY SUCCESSFULLY");
+  $display("The test vector is %b ",jtagPacketStruct.jtagTestVector);
   seq_item_port.get_next_item(req);
-  #1000;
+ 
+  JtagMasterSeqItemConverter :: fromClass(req ,jtagConfigStruct,jtagPacketStruct);
+  jtagMasterDriverBfm.DriveToBfm(jtagPacketStruct,jtagConfigStruct); 
   seq_item_port.item_done(rsp);
 endtask : run_phase
 

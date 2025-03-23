@@ -8,6 +8,6 @@ package JtagMasterSequencePkg;
   import JtagMasterPkg :: *;
 
   `include "JtagMasterBaseSequence.sv"
-
+  `include "JtagMasterTestVectorSequence.sv"
 endpackage : JtagMasterSequencePkg
 `endif
