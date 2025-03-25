@@ -26,7 +26,12 @@ interface JtagSlaveDriverBfm (input  logic   clk,
   //Variable: name
   //Used to store the name of the interface
   string name = "JTAG_SlaveDRIVER_BFM"; 
-	
+
+   task waitForReset();
+    jtagTapState = jtagResetState;
+  endtask : waitForReset
+
+  
   
 
 	
