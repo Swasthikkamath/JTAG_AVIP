@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 22:04:15 on Mar 25,2025
+# Start time: 22:37:14 on Mar 25,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
 # //  Questa Sim
@@ -124,7 +124,7 @@
 #         rsp_port                          uvm_analysis_port           -     @958 
 #         seq_item_port                     uvm_seq_item_pull_port      -     @950 
 #       jtagSlaveMonitor                    JtagSlaveMonitor            -     @1090
-#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @1108
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @1109
 #       jtagSlaveSequencer                  JtagSlaveSequencer          -     @966 
 #         rsp_export                        uvm_analysis_export         -     @973 
 #         seq_item_export                   uvm_seq_item_pull_imp       -     @1067
@@ -147,40 +147,72 @@
 # -----------------------------------------------------
 # Name           Type                   Size  Value    
 # -----------------------------------------------------
-# req            JtagMasterTransaction  -     @1142    
+# req            JtagMasterTransaction  -     @1143    
 #   TEST VECTOR  integral               32    'b1100100
 # -----------------------------------------------------
 # THE STATE IS jtagIdleState @                 100
+# THE STATE in slave IS jtagResetState @                 100
+# THE STATE in slave IS jtagIdleState @                 300
 # THE STATE IS jtagDrScanState @                 300
 # THE STATE IS jtagIrScanState @                 500
+# THE STATE in slave IS jtagDrScanState @                 500
+# THE STATE in slave IS jtagIrScanState @                 700
 # THE STATE IS jtagCaptureIrState @                 700
 # THE STATE IS jtagShiftIrState @                 900
+# THE STATE in slave IS jtagCaptureIrState @                 900
+# THE STATE in slave IS jtagShiftIrState @                1100
 # THE STATE IS jtagShiftIrState @                1100
 # THE STATE IS jtagShiftIrState @                1300
+# THE STATE in slave IS jtagShiftIrState @                1300
+# THE STATE in slave IS jtagShiftIrState @                1500
 # THE STATE IS jtagExit1IrState @                1500
 # THE STATE IS jtagUpdateIrState @                1700
+# THE STATE in slave IS jtagExit1IrState @                1700
+# THE STATE in slave IS jtagUpdateIrState @                1900
 # THE STATE IS jtagDrScanState @                1900
 # THE STATE IS jtagCaptureDrState @                2100
+# THE STATE in slave IS jtagDrScanState @                2100
+# THE STATE in slave IS jtagCaptureDrState @                2300
 # THE STATE IS jtagShiftDrState @                2300
 # THE STATE IS jtagShiftDrState @                2500
+# THE STATE in slave IS jtagShiftDrState @                2500
+# THE STATE in slave IS jtagShiftDrState @                2700
 # THE STATE IS jtagShiftDrState @                2700
 # THE STATE IS jtagShiftDrState @                2900
+# THE STATE in slave IS jtagShiftDrState @                2900
+# THE STATE in slave IS jtagShiftDrState @                3100
 # THE STATE IS jtagExit1DrState @                3100
 # THE STATE IS jtagUpdateDrState @                3300
+# THE STATE in slave IS jtagExit1DrState @                3300
+# THE STATE in slave IS jtagUpdateDrState @                3500
 # THE STATE IS jtagIdleState @                3500
 # THE STATE IS jtagResetState @                3700
+# THE STATE in slave IS jtagIdleState @                3700
+# THE STATE in slave IS jtagResetState @                3900
 # THE STATE IS jtagIdleState @                3900
 # THE STATE IS jtagResetState @                4100
+# THE STATE in slave IS jtagIdleState @                4100
+# THE STATE in slave IS jtagResetState @                4300
 # THE STATE IS jtagIdleState @                4300
 # THE STATE IS jtagResetState @                4500
+# THE STATE in slave IS jtagIdleState @                4500
+# THE STATE in slave IS jtagResetState @                4700
 # THE STATE IS jtagIdleState @                4700
 # THE STATE IS jtagResetState @                4900
+# THE STATE in slave IS jtagIdleState @                4900
+# THE STATE in slave IS jtagResetState @                5100
 # THE STATE IS jtagIdleState @                5100
 # THE STATE IS jtagResetState @                5300
+# THE STATE in slave IS jtagIdleState @                5300
+# THE STATE in slave IS jtagResetState @                5500
 # THE STATE IS jtagIdleState @                5500
 # THE STATE IS jtagResetState @                5700
+# THE STATE in slave IS jtagIdleState @                5700
+# THE STATE in slave IS jtagResetState @                5900
 # THE STATE IS jtagIdleState @                5900
 # THE STATE IS jtagResetState @                6100
+# THE STATE in slave IS jtagIdleState @                6100
+# THE STATE in slave IS jtagResetState @                6300
 # THE STATE IS jtagIdleState @                6300
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 6300: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
@@ -203,5 +235,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 6300 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 22:04:20 on Mar 25,2025, Elapsed time: 0:00:05
+# End time: 22:37:21 on Mar 25,2025, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 2

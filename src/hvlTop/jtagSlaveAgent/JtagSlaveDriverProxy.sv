@@ -20,12 +20,15 @@ function void JtagSlaveDriver :: build_phase(uvm_phase phase);
   if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,"","jtagSlaveAgentConfig",jtagSlaveAgentConfig)))
     `uvm_fatal(get_type_name(),"FAILED TO GET CONFIG IN Slave DRIVER")
 
-//    if(!(uvm_config_db #(JtagSlaveDriverBfm) :: get(this,"","jtagSlaveDriverBfm",jtagSlaveDriverBfm)))
-  //    `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO Slave DRIVERBFM IN Slave DRIVER")
+    if(!(uvm_config_db #(virtual JtagSlaveDriverBfm) :: get(this,"","jtagSlaveDriverBfm",jtagSlaveDriverBfm)))
+      `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO Slave DRIVERBFM IN Slave DRIVER")
 endfunction : build_phase
 
 task JtagSlaveDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
+
+  jtagSlaveDriverBfm.observeData();
+
 endtask : run_phase
 
 `endif

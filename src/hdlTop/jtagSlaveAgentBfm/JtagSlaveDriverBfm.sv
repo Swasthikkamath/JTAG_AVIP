@@ -10,7 +10,9 @@ import JtagGlobalPkg::*;
 //--------------------------------------------------------------------------------------------
 interface JtagSlaveDriverBfm (input  logic   clk,
                               input  logic   reset,
-                             output logic  jtagSerialOut
+			     input logic jtagSerialIn,
+			     input logic jtagTms,
+			     output logic  jtagSerialOut
                               );
 	//-------------------------------------------------------
   // Importing uvm package file
@@ -35,9 +37,9 @@ interface JtagSlaveDriverBfm (input  logic   clk,
     jtagTapState = jtagResetState;
   endtask : waitForReset
 
-task observeData(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfigStruct);
+task observeData();
   int  i,k ,m;
-    for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
+    for(int j=0 ; j< 32 ;j++)
       begin
         @(posedge clk);
 
@@ -216,7 +218,7 @@ task observeData(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfig
 	  end 
           
 	endcase  
-	$display("THE STATE IS %s @%t",jtagTapState.name(),$time);
+	$display("THE STATE in slave IS %s @%t",jtagTapState.name(),$time);
       end  
   endtask : observeData
 
