@@ -78,7 +78,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	  jtagIdleState : begin 
 	   
 	   if(jtagTms ==0) begin 
-             jtagTapState =jtagResetState;
+             jtagTapState = jtagIdleState;
 	   end 
 	   else if(jtagTms == 1) begin 
              jtagTapState = jtagDrScanState;
