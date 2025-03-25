@@ -192,7 +192,8 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    end 
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagShiftIrState ;
-	    end 
+	    end
+	    jtagSerialIn = jtagConfigStruct.jtagInstructionOpcode[m++];
 	  end 
  
     

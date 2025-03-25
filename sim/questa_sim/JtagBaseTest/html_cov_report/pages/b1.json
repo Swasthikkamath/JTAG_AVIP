@@ -13,10 +13,10 @@ b46:[{dummy:0},
 ,{cr:'c',t:'T',z:'	  jtagIrScanState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'166',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'	  jtagCaptureIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'176',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'	  jtagShiftIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'188',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'          jtagExit1IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'199',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'	  jtagPauseIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'210',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'	  jtagExit2IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'220',h:'0',c:'r'}
-,{cr:'c',t:'T',z:'	  jtagUpdateIrState: begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'230',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'          jtagExit1IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'200',h:'1',c:'g'}
+,{cr:'m',t:'T',z:'	  jtagPauseIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'211',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'	  jtagExit2IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'221',h:'0',c:'r'}
+,{cr:'c',t:'T',z:'	  jtagUpdateIrState: begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'231',h:'1',c:'g'}
 ,{cr:'m',t:'A',z:'        case(jtagTapState)\r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'65',h:'0',c:'r'}
 ]},
 {anchor:'cvg48',items:[{z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'69',c:'R',p:'33.33'}
@@ -79,25 +79,25 @@ b46:[{dummy:0},
 ,{cr:'c',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'193',h:'2',c:'g'}
 ,{cr:'m',t:'A',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'190',h:'0',c:'r'}
 ]},
-{anchor:'cvg60',items:[{z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'201',c:'R',p:'33.33'}
-,{cr:'c',t:'I',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'201',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'204',h:'0',c:'r'}
-,{cr:'m',t:'A',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'201',h:'0',c:'r'}
+{anchor:'cvg60',items:[{z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'202',c:'R',p:'33.33'}
+,{cr:'c',t:'I',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'202',h:'1',c:'g'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'205',h:'0',c:'r'}
+,{cr:'m',t:'A',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'202',h:'0',c:'r'}
 ]},
-{anchor:'cvg61',items:[{z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'212',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'212',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'215',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'212',h:'0',c:'r'}
+{anchor:'cvg61',items:[{z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'213',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'213',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'216',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'213',h:'0',c:'r'}
 ]},
-{anchor:'cvg62',items:[{z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'222',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'222',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'225',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'222',h:'0',c:'r'}
+{anchor:'cvg62',items:[{z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'223',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'223',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'226',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'223',h:'0',c:'r'}
 ]},
-{anchor:'cvg63',items:[{z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'232',c:'R',p:'33.33'}
-,{cr:'c',t:'I',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'232',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'235',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'232',h:'0',c:'r'}
+{anchor:'cvg63',items:[{z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'233',c:'R',p:'33.33'}
+,{cr:'c',t:'I',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'233',h:'1',c:'g'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'236',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'233',h:'0',c:'r'}
 ]}],
 b19:[{dummy:0},
 {anchor:'cvg38',items:[{z:'    `uvm_info(&#34;jtag Master agent bfm&#34;,$sformatf(&#34;JTAG Master AGENT BFM&#34;...',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv',l:'17',c:'Y',p:'50.00'}
@@ -192,9 +192,9 @@ b910:[{dummy:0},
 ,{cr:'m',t:'A',z:'   `uvm_fatal(&#34;DO_COMPARE&#34;,&#34;THE TYPE OF SOURCE IS NOT COMPATIBLE&#34;...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveTransaction.sv',l:'35',h:'0',c:'r'}
 ]}],
 b924:[{dummy:0},
-{anchor:'cvg925',items:[{z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',c:'R',p:'0.00'}
+{anchor:'cvg925',items:[{z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',h:'1',c:'g'}
 ]},
 {anchor:'cvg926',items:[{z:'    `uvm_fatal(get_type_name(),&#34;FAILED TO GET CONFIG IN Slave DRIVER&#34;...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'21',c:'R',p:'0.00'}
 ,{cr:'m',t:'I',z:'    `uvm_fatal(get_type_name(),&#34;FAILED TO GET CONFIG IN Slave DRIVER&#34;...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'21',h:'0',c:'r'}
@@ -228,8 +228,8 @@ b953:[{dummy:0},
 ,{cr:'m',t:'A',z:'    `uvm_fatal(get_type_name(),&#34;FAILED TO GET SLAVE CONFIG&#34;)',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'26',h:'0',c:'r'}
 ]},
 {anchor:'cvg956',items:[{z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'1',c:'g'}
+,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'1',c:'g'}
+,{cr:'m',t:'A',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'0',c:'r'}
 ]},
 {anchor:'cvg957',items:[{z:'  if(jtagSlaveAgentConfig.hasCoverage==1) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'33',c:'Y',p:'50.00'}
 ,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.hasCoverage==1) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'33',h:'1',c:'g'}
@@ -237,8 +237,8 @@ b953:[{dummy:0},
 ]}],
 b958:[{dummy:0},
 {anchor:'cvg959',items:[{z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'1',c:'g'}
+,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'1',c:'g'}
+,{cr:'m',t:'A',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'0',c:'r'}
 ]},
 {anchor:'cvg960',items:[{z:'  if(jtagSlaveAgentConfig.hasCoverage ==1) begin',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'48',c:'Y',p:'50.00'}
 ,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.hasCoverage ==1) begin',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'48',h:'1',c:'g'}
@@ -675,9 +675,9 @@ b1259:[{dummy:0},
 ,{cr:'m',t:'A',z:'   `uvm_fatal(&#34;DO_COMPARE&#34;,&#34;THE TYPE OF SOURCE IS NOT COMPATIBLE&#34;...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveTransaction.sv',l:'35',h:'0',c:'r'}
 ]}],
 b1273:[{dummy:0},
-{anchor:'cvg1274',items:[{z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',c:'R',p:'0.00'}
+{anchor:'cvg1274',items:[{z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',c:'Y',p:'50.00'}
 ,{cr:'m',t:'I',z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',h:'0',c:'r'}
+,{cr:'c',t:'A',z:'  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,&#34;&#34;,&#34;jtagSlaveAge...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'20',h:'1',c:'g'}
 ]},
 {anchor:'cvg1275',items:[{z:'    `uvm_fatal(get_type_name(),&#34;FAILED TO GET CONFIG IN Slave DRIVER&#34;...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'21',c:'R',p:'0.00'}
 ,{cr:'m',t:'I',z:'    `uvm_fatal(get_type_name(),&#34;FAILED TO GET CONFIG IN Slave DRIVER&#34;...',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv',l:'21',h:'0',c:'r'}
@@ -711,8 +711,8 @@ b1302:[{dummy:0},
 ,{cr:'m',t:'A',z:'    `uvm_fatal(get_type_name(),&#34;FAILED TO GET SLAVE CONFIG&#34;)',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'26',h:'0',c:'r'}
 ]},
 {anchor:'cvg1305',items:[{z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'1',c:'g'}
+,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'1',c:'g'}
+,{cr:'m',t:'A',z:'  if(jtagSlaveAgentConfig.is_active == UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'28',h:'0',c:'r'}
 ]},
 {anchor:'cvg1306',items:[{z:'  if(jtagSlaveAgentConfig.hasCoverage==1) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'33',c:'Y',p:'50.00'}
 ,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.hasCoverage==1) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'33',h:'1',c:'g'}
@@ -720,8 +720,8 @@ b1302:[{dummy:0},
 ]}],
 b1307:[{dummy:0},
 {anchor:'cvg1308',items:[{z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',c:'Y',p:'50.00'}
-,{cr:'m',t:'I',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'0',c:'r'}
-,{cr:'c',t:'A',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'1',c:'g'}
+,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'1',c:'g'}
+,{cr:'m',t:'A',z:'  if(jtagSlaveAgentConfig.is_active ==UVM_ACTIVE ) begin ',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'44',h:'0',c:'r'}
 ]},
 {anchor:'cvg1309',items:[{z:'  if(jtagSlaveAgentConfig.hasCoverage ==1) begin',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'48',c:'Y',p:'50.00'}
 ,{cr:'c',t:'I',z:'  if(jtagSlaveAgentConfig.hasCoverage ==1) begin',f:'../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv',l:'48',h:'1',c:'g'}
@@ -763,10 +763,10 @@ b1331:[{dummy:0},
 ,{cr:'c',t:'T',z:'	  jtagIrScanState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'166',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'	  jtagCaptureIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'176',h:'1',c:'g'}
 ,{cr:'c',t:'T',z:'	  jtagShiftIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'188',h:'3',c:'g'}
-,{cr:'c',t:'T',z:'          jtagExit1IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'199',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'	  jtagPauseIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'210',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'	  jtagExit2IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'220',h:'0',c:'r'}
-,{cr:'c',t:'T',z:'	  jtagUpdateIrState: begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'230',h:'1',c:'g'}
+,{cr:'c',t:'T',z:'          jtagExit1IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'200',h:'1',c:'g'}
+,{cr:'m',t:'T',z:'	  jtagPauseIrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'211',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'	  jtagExit2IrState : begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'221',h:'0',c:'r'}
+,{cr:'c',t:'T',z:'	  jtagUpdateIrState: begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'231',h:'1',c:'g'}
 ,{cr:'m',t:'A',z:'        case(jtagTapState)\r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'65',h:'0',c:'r'}
 ]},
 {anchor:'cvg1333',items:[{z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'69',c:'R',p:'33.33'}
@@ -829,25 +829,25 @@ b1331:[{dummy:0},
 ,{cr:'c',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'193',h:'2',c:'g'}
 ,{cr:'m',t:'A',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'190',h:'0',c:'r'}
 ]},
-{anchor:'cvg1345',items:[{z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'201',c:'R',p:'33.33'}
-,{cr:'c',t:'I',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'201',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'204',h:'0',c:'r'}
-,{cr:'m',t:'A',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'201',h:'0',c:'r'}
+{anchor:'cvg1345',items:[{z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'202',c:'R',p:'33.33'}
+,{cr:'c',t:'I',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'202',h:'1',c:'g'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'205',h:'0',c:'r'}
+,{cr:'m',t:'A',z:' 	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'202',h:'0',c:'r'}
 ]},
-{anchor:'cvg1346',items:[{z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'212',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'212',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'215',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'212',h:'0',c:'r'}
+{anchor:'cvg1346',items:[{z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'213',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'213',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'216',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'            if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'213',h:'0',c:'r'}
 ]},
-{anchor:'cvg1347',items:[{z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'222',c:'R',p:'0.00'}
-,{cr:'m',t:'I',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'222',h:'0',c:'r'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'225',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'222',h:'0',c:'r'}
+{anchor:'cvg1347',items:[{z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'223',c:'R',p:'0.00'}
+,{cr:'m',t:'I',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'223',h:'0',c:'r'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'226',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'            if(jtagTms ==0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'223',h:'0',c:'r'}
 ]},
-{anchor:'cvg1348',items:[{z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'232',c:'R',p:'33.33'}
-,{cr:'c',t:'I',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'232',h:'1',c:'g'}
-,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'235',h:'0',c:'r'}
-,{cr:'m',t:'A',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'232',h:'0',c:'r'}
+{anchor:'cvg1348',items:[{z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'233',c:'R',p:'33.33'}
+,{cr:'c',t:'I',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'233',h:'1',c:'g'}
+,{cr:'m',t:'T',z:'	    else if(jtagTms == 0) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'236',h:'0',c:'r'}
+,{cr:'m',t:'A',z:'	    if(jtagTms == 1) begin \r',f:'../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv',l:'233',h:'0',c:'r'}
 ]}],
 b1394:[{dummy:0},
 {anchor:'cvg1395',items:[{z:'  `uvm_object_utils(JtagMasterAgentConfig)',f:'../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv',l:'6',c:'R',p:'0.00'}
