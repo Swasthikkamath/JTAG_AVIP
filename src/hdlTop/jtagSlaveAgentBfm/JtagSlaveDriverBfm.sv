@@ -59,7 +59,7 @@ task observeData();
 	  jtagIdleState : begin 
 	   
 	   if(jtagTms ==0) begin 
-             jtagTapState = jtagIdleState
+             jtagTapState = jtagIdleState;
 	   end 
 	   else if(jtagTms == 1) begin 
              jtagTapState = jtagDrScanState;
