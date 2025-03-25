@@ -105,7 +105,6 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;
 	    end 
-	    jtagSerialIn = jtagPacketStruct.jtagTestVector[k++];
 	  end 
 
 	  
@@ -181,7 +180,6 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagShiftIrState;
 	    end 
-            jtagSerialIn = jtagConfigStruct.jtagInstructionOpcode[m++];
 	  end 
 
 

@@ -15,7 +15,7 @@ package JtagGlobalPkg;
  
   typedef enum bit[4:0] {bypassRegister = 5'b 00000,
                          userDefinedRegister = 5'b 00001, 
-			 boundaryScanRegisters=5'b 00010}JtagInstructionOpcodeEnum;
+			 boundaryScanRegisters=5'b 00110 }JtagInstructionOpcodeEnum;
 
   typedef struct packed {JtagTestVectorWidthEnum jtagTestVectorWidth;
                          JtagInstructionWidthEnum jtagInstructionWidth;

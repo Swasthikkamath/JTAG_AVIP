@@ -26,9 +26,9 @@ interface JtagSlaveDriverBfm (input  logic   clk,
   import JtagSlavePkg::*;
   JtagTapStates jtagTapState;
   reg byPassRegister;
-  reg[4:0]registerBank[3];
+  reg[7:0]registerBank[JtagInstructionOpcodeEnum];
   reg[4:0]instructionRegister;
-  
+  JtagInstructionOpcodeEnum jtagInstructionOpcode;
   //Variable: name
   //Used to store the name of the interface
   string name = "JTAG_SlaveDRIVER_BFM"; 
@@ -37,6 +37,22 @@ interface JtagSlaveDriverBfm (input  logic   clk,
     jtagTapState = jtagResetState;
   endtask : waitForReset
 
+
+task registeringData(reg[4:0]instructionRegister , logic dataIn);
+       $display("^^^^^^^^^^^^^^^666ENUM SIZE IS %0D ",jtagInstructionOpcode.num());
+       for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin 
+        if(jtagInstructionOpcode == instructionRegister) begin 
+	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][7:1] };
+	  $display("^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is %b and data in is %b",registerBank[instructionRegister],dataIn);
+
+	  break;
+        end 
+	else begin
+	  jtagInstructionOpcode = jtagInstructionOpcode.next();
+	  $display("the next enum moved is %s",jtagInstructionOpcode.name());
+        end 
+      end 
+endtask 
 task observeData();
   int  i,k ,m;
     for(int j=0 ; j< 32 ;j++)
@@ -96,8 +112,8 @@ task observeData();
 	    end 
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;      
-	    end 
-            // jtagSerialIn = jtagPacketStruct.jtagTestVector[k++];          
+	    end
+	    registeringData(instructionRegister,jtagSerialIn);
 	  end 
           
 	  
@@ -173,7 +189,7 @@ task observeData();
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagShiftIrState ;
 	    end
-            instructionRegister = {instructionRegister , jtagSerialIn};
+            instructionRegister = {jtagSerialIn,instructionRegister[4:1]};
 	  end 
  
           jtagExit1IrState : begin 
@@ -218,7 +234,7 @@ task observeData();
 	  end 
           
 	endcase  
-	$display("THE STATE in slave IS %s @%t",jtagTapState.name(),$time);
+	$display("THE STATE in slave IS %s @%t instruction is %b ",jtagTapState.name(),$time,instructionRegister);
       end  
   endtask : observeData
 

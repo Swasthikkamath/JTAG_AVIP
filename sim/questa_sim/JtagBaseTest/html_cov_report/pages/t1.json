@@ -18,9 +18,9 @@ t31:{items:[{dummy:0}
 t39:{items:[{dummy:0}
 ,{id:'cvg40',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg41',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg42 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
-,{cr:'c',st:'1',z:'jtagResetState',h1:'7',c:'g'}
-,{cr:'c',st:'1',z:'jtagIdleState',h1:'8',c:'g'}
+,{id:'cvg42 ',s:9,z:'jtagTapState',c:'Y',p:'68.75'}
+,{cr:'m',st:'1',z:'jtagResetState',h1:'0',c:'r'}
+,{cr:'c',st:'1',z:'jtagIdleState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIrScanState',h1:'1',c:'g'}
 ,{cr:'c',st:'1',z:'jtagCaptureIrState',h1:'1',c:'g'}
@@ -62,24 +62,27 @@ t64:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagUpdateDrState',h1:'0',c:'r'}
 ,{id:'cvg68',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg69',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg71',s:'2',cr:'m',z:'temp[31-17]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg86',s:'2',z:'temp[16]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg87',s:'2',cr:'c',z:'temp[15-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg71',s:'2',cr:'m',z:'temp[31-24]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg79',s:'2',z:'temp[23-22]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg81',s:'2',cr:'c',z:'temp[21-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
 t106:{items:[{dummy:0}
 ,{id:'cvg107',s:'2',cr:'m',z:'byPassRegister',h1:'0',h2:'0',c:'R',p:'0.00'}
 ,{id:'cvg108',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg110',s:'2',z:'instructionRegister[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg111',s:'2',cr:'c',z:'instructionRegister[3-2]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg113',s:'2',z:'instructionRegister[1]',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg114',s:'2',cr:'m',z:'instructionRegister[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg115',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg116',s:'2',cr:'m',z:'jtagSerialOut',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg117 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
-,{cr:'c',st:'1',z:'jtagResetState',h1:'6',c:'g'}
-,{cr:'c',st:'1',z:'jtagIdleState',h1:'8',c:'g'}
+,{id:'cvg110',s:'2',cr:'c',z:'instructionRegister[4-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg112',s:'2',z:'instructionRegister[2]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg113',s:'2',cr:'c',z:'instructionRegister[1-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg115 ',s:9,z:'jtagInstructionOpcode',c:'R',p:'33.33'}
+,{cr:'m',st:'1',z:'bypassRegister',h1:'0',c:'r'}
+,{cr:'c',st:'1',z:'userDefinedRegister',h1:'1',c:'g'}
+,{cr:'m',st:'1',z:'boundaryScanRegisters',h1:'0',c:'r'}
+,{id:'cvg116',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg117',s:'2',cr:'m',z:'jtagSerialOut',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg118 ',s:9,z:'jtagTapState',c:'Y',p:'68.75'}
+,{cr:'m',st:'1',z:'jtagResetState',h1:'0',c:'r'}
+,{cr:'c',st:'1',z:'jtagIdleState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIrScanState',h1:'1',c:'g'}
 ,{cr:'c',st:'1',z:'jtagCaptureIrState',h1:'1',c:'g'}
@@ -94,15 +97,15 @@ t106:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'1',c:'g'}
-,{id:'cvg118',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg119',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg119',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg120',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
-t139:{items:[{dummy:0}
-,{id:'cvg140',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg141',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg142',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+t142:{items:[{dummy:0}
+,{id:'cvg143',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg144',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg145',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 ,footnote:1
 },
@@ -117,17 +120,20 @@ t27:{items:[{dummy:0}
 ]
 },
 t2:{items:[{dummy:0}
-,{id:'cvg1255',s:'2',cr:'m',z:'byPassRegister',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1256',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1258',s:'2',cr:'m',z:'instructionRegister[0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1259',s:'2',z:'instructionRegister[1]',h1:'0',h2:'1',c:'Y',p:'50.00'}
-,{id:'cvg1260',s:'2',cr:'c',z:'instructionRegister[2-3]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1262',s:'2',z:'instructionRegister[4]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1263',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1264',s:'2',cr:'m',z:'jtagSerialOut',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1265 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
-,{cr:'c',st:'1',z:'jtagResetState',h1:'6',c:'g'}
-,{cr:'c',st:'1',z:'jtagIdleState',h1:'8',c:'g'}
+,{id:'cvg1258',s:'2',cr:'m',z:'byPassRegister',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1259',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1261',s:'2',cr:'c',z:'instructionRegister[0-1]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1263',s:'2',z:'instructionRegister[2]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1264',s:'2',cr:'c',z:'instructionRegister[3-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1266 ',s:9,z:'jtagInstructionOpcode',c:'R',p:'33.33'}
+,{cr:'m',st:'1',z:'bypassRegister',h1:'0',c:'r'}
+,{cr:'c',st:'1',z:'userDefinedRegister',h1:'1',c:'g'}
+,{cr:'m',st:'1',z:'boundaryScanRegisters',h1:'0',c:'r'}
+,{id:'cvg1267',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1268',s:'2',cr:'m',z:'jtagSerialOut',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1269 ',s:9,z:'jtagTapState',c:'Y',p:'68.75'}
+,{cr:'m',st:'1',z:'jtagResetState',h1:'0',c:'r'}
+,{cr:'c',st:'1',z:'jtagIdleState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIrScanState',h1:'1',c:'g'}
 ,{cr:'c',st:'1',z:'jtagCaptureIrState',h1:'1',c:'g'}
@@ -142,22 +148,22 @@ t2:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'1',c:'g'}
-,{id:'cvg1266',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1267',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1270',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1271',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t3:{items:[{dummy:0}
-,{id:'cvg1288',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1289',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1290',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1294',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1295',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1296',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t8:{items:[{dummy:0}
-,{id:'cvg1387',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1388',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1389 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
-,{cr:'c',st:'1',z:'jtagResetState',h1:'7',c:'g'}
-,{cr:'c',st:'1',z:'jtagIdleState',h1:'8',c:'g'}
+,{id:'cvg1393',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1394',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1395 ',s:9,z:'jtagTapState',c:'Y',p:'68.75'}
+,{cr:'m',st:'1',z:'jtagResetState',h1:'0',c:'r'}
+,{cr:'c',st:'1',z:'jtagIdleState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIrScanState',h1:'1',c:'g'}
 ,{cr:'c',st:'1',z:'jtagCaptureIrState',h1:'1',c:'g'}
@@ -172,14 +178,14 @@ t8:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'1',c:'g'}
-,{id:'cvg1390',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1391',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1396',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1397',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t9:{items:[{dummy:0}
-,{id:'cvg1412',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1413',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1414 ',s:9,cr:'m',z:'jtagTapState',c:'R',p:'0.00'}
+,{id:'cvg1418',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1419',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1420 ',s:9,cr:'m',z:'jtagTapState',c:'R',p:'0.00'}
 ,{cr:'m',st:'1',z:'jtagResetState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagIdleState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagDrScanState',h1:'0',c:'r'}
@@ -196,11 +202,11 @@ t9:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagUpdateDrState',h1:'0',c:'r'}
-,{id:'cvg1415',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1416',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1418',s:'2',cr:'c',z:'temp[0-15]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1434',s:'2',z:'temp[16]',h1:'1',h2:'0',c:'Y',p:'50.00'}
-,{id:'cvg1435',s:'2',cr:'m',z:'temp[17-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1421',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1422',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1424',s:'2',cr:'c',z:'temp[0-21]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1446',s:'2',z:'temp[22-23]',h1:'1',h2:'0',c:'Y',p:'50.00'}
+,{id:'cvg1448',s:'2',cr:'m',z:'temp[24-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
 ]
 },
 dummyEnd:0
