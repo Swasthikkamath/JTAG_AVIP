@@ -28,32 +28,218 @@ interface JtagMasterDriverBfm (input  logic   clk,
   //Used to store the name of the interface
   string name = "JTAG_MASTERDRIVER_BFM"; 
 	
+
+  task waitForReset();
+    jtagTapState = jtagResetState;
+  endtask : waitForReset
   task DriveToBfm(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfigStruct);
-   
+  /* 
     int i;
+    @(posedge clk);
     jtagTms = jtagPacketStruct.jtagTms[i++];
     jtagTapState = jtagIdleState;
-    @(posedge clk);
-
+    $display("first tms is being sent @%0t",$time);
     while(jtagTapState != jtagCaptureIrState)
      begin 
        @(posedge clk);
        jtagTapState = JtagTapStates'(i);
        jtagTms = jtagPacketStruct.jtagTms[i++];
+       $display("THE STATE IS %s @%0t",jtagTapState.name(),$time);
      end 
-    
+    $display("in capture state now %0t",$time); 
     jtagSerialIn = jtagPacketStruct.jtagTestVector[0];
-    @(posedge  clk);
     for(int i=1;i<jtagConfigStruct.jtagTestVectorWidth;i++)
      begin 
        @(posedge clk);
        jtagSerialIn = jtagPacketStruct.jtagTestVector[i];
+       $display("The serial in from driver is %b @%t",jtagSerialIn,$time);
        jtagTms=0;
      end 
      @(posedge clk);
-    jtagTms = 1; 
+    jtagTms = 1; */
+    int  i,k ,m;
+    for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
+      begin
+      @(posedge clk) jtagTms = jtagPacketStruct.jtagTms[i++];
 
+        case(jtagTapState)
+
+          jtagResetState :begin 
+          
+	    if(jtagTms == 1) begin 
+	      jtagTapState = jtagResetState;
+	    end 
+	    else if(jtagTms ==0) begin 
+	      jtagTapState = jtagIdleState;
+	    end 
+	  end
+
+
+	  jtagIdleState : begin 
+	   
+	   if(jtagTms ==0) begin 
+             jtagTapState =jtagResetState;
+	   end 
+	   else if(jtagTms == 1) begin 
+             jtagTapState = jtagDrScanState;
+	   end 
+	  end
+
+
+          jtagDrScanState : begin 
+	   
+	   if(jtagTms == 1) begin 
+             jtagTapState = jtagIrScanState;
+	   end
+	   else if(jtagTms == 0) begin 
+             jtagTapState = jtagCaptureDrState;
+	   end
+	  end 
+
+	  
+	  jtagCaptureDrState : begin 
+	    
+	    if(jtagTms == 1) begin 
+             jtagTapState = jtagExit1DrState;
+	    end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagShiftDrState;
+	    end 
+	    jtagSerialIn = jtagPacketStruct.jtagTestVector[k++];
+	  end 
+
+	  
+	  jtagShiftDrState : begin 
+	    
+	    if(jtagTms ==1) begin
+              jtagTapState = jtagExit1DrState;
+	    end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagShiftDrState;      
+	    end 
+            jtagSerialIn = jtagPacketStruct.jtagTestVector[k++];          
+	  end 
+          
+	  
+	  jtagExit1DrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateDrState;
+	    end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagPauseDrState;
+	    end 
+	  end 
+          
+
+          jtagPauseDrState : begin 
+	    
+	    if(jtagTms ==1) begin 
+              jtagTapState = jtagExit2DrState;
+ 	    end 
+	    else if(jtagTms ==0) begin
+              jtagTapState = jtagPauseDrState;
+	    end 
+	  end 
+
+
+          jtagExit2DrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateDrState;
+	    end 
+ 	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagShiftDrState;
+            end 
+	  end 
+
+	  jtagUpdateDrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagDrScanState;
+	    end  
+	    else if(jtagTms == 0) begin 
+	      jtagTapState = jtagIdleState;
+	    end 
+	  end 
+
+	  jtagIrScanState : begin 
+	    
+            if(jtagTms == 1) begin 
+	      jtagTapState = jtagResetState;
+            end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagCaptureIrState;
+	    end
+	  end 
+
+	  jtagCaptureIrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagExit1IrState;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagShiftIrState;
+	    end 
+            jtagSerialIn = jtagConfigStruct.jtagInstructionOpcode[m++];
+	  end 
+
+
+	  jtagShiftIrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagExit1IrState;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagShiftIrState ;
+	    end 
+	  end 
+ 
+    
+          jtagExit1IrState : begin 
+            
+ 	    if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateIrState ;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagPauseIrState;
+	    end 
+	  end 
+
+
+	  jtagPauseIrState : begin 
+  
+            if(jtagTms == 1) begin 
+              jtagTapState = jtagExit2IrState;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagPauseIrState;
+	    end
+	  end 
+
+	  jtagExit2IrState : begin 
       
+            if(jtagTms ==0) begin 
+              jtagTapState = jtagShiftIrState;
+	    end 
+	    else if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateIrState;
+	    end 
+	  end
+
+	  jtagUpdateIrState: begin 
+            
+	    if(jtagTms == 1) begin 
+	      jtagTapState = jtagDrScanState;
+            end
+	    else if(jtagTms == 0) begin 
+               jtagTapState = jtagIdleState;
+	    end
+	  end 
+          
+	endcase  
+	$display("THE STATE IS %s @%t",jtagTapState.name(),$time);
+      end  
   endtask :DriveToBfm
 
 	

@@ -18,7 +18,8 @@ interface JtagMasterMonitorBfm (input  logic   clk,
   //-------------------------------------------------------
   import uvm_pkg::*;
   `include "uvm_macros.svh"
-	
+  JtagTapStates jtagTapState;	
+  reg[31:0] temp;
   //-------------------------------------------------------
   // Importing the Transmitter package file
   //-------------------------------------------------------
@@ -31,12 +32,13 @@ interface JtagMasterMonitorBfm (input  logic   clk,
   
 task startMonitoring();
   repeat(2) @(posedge clk);
-   $display("the tms value is %b and serial in is %b",jtagTms,jtagSerialIn);
-  repeat(4) @(posedge clk)
-   $display("the tms value is %b and serial in is %b",jtagTms,jtagSerialIn);
-
-  for(int i=0;i <32 ;i++) begin 
-   $display("the tms value is %b and serial in is %b",jtagTms,jtagSerialIn);
+  // $display(" first tms captured @%0t the tms value is %b and serial in is %b",$time,jtagTms,jtagSerialIn);
+  repeat(4) begin 
+    //@(posedge clk)  $display("@%0t the tms value is %b and serial in is %b",$time,jtagTms,jtagSerialIn);
+  end 
+  for(int i=0;i <32 ;i++) begin
+   temp ={temp,jtagSerialIn};
+   //$display("the tms value is %b and serial in is %b @%0t temp is %b",jtagTms,jtagSerialIn,$time,temp);
    @(posedge clk);
 end 
 

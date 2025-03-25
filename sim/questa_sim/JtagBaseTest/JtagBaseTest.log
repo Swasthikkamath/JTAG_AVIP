@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 02:49:32 on Mar 24,2025
+# Start time: 15:46:47 on Mar 25,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
 # //  Questa Sim
@@ -140,21 +140,39 @@
 # req            JtagMasterTransaction  -     @1002    
 #   TEST VECTOR  integral               32    'b1100100
 # -----------------------------------------------------
-# the tms value is 0 and serial in is x
-# the tms value is 1 and serial in is x
-# the tms value is 1 and serial in is x
-# the tms value is 0 and serial in is x
-# the tms value is 0 and serial in is 0
-# the tms value is 0 and serial in is 0
-# the tms value is 0 and serial in is 0
-# the tms value is 0 and serial in is 0
-# the tms value is 0 and serial in is 1
-# the tms value is 0 and serial in is 0
-# the tms value is 0 and serial in is 0
-# the tms value is 0 and serial in is 1
-# the tms value is 0 and serial in is 1
-# the tms value is 0 and serial in is 0
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 2700: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# THE STATE IS jtagIdleState @                 100
+# THE STATE IS jtagDrScanState @                 300
+# THE STATE IS jtagIrScanState @                 500
+# THE STATE IS jtagCaptureIrState @                 700
+# THE STATE IS jtagShiftIrState @                 900
+# THE STATE IS jtagShiftIrState @                1100
+# THE STATE IS jtagShiftIrState @                1300
+# THE STATE IS jtagExit1IrState @                1500
+# THE STATE IS jtagUpdateIrState @                1700
+# THE STATE IS jtagDrScanState @                1900
+# THE STATE IS jtagCaptureDrState @                2100
+# THE STATE IS jtagShiftDrState @                2300
+# THE STATE IS jtagShiftDrState @                2500
+# THE STATE IS jtagShiftDrState @                2700
+# THE STATE IS jtagShiftDrState @                2900
+# THE STATE IS jtagExit1DrState @                3100
+# THE STATE IS jtagUpdateDrState @                3300
+# THE STATE IS jtagIdleState @                3500
+# THE STATE IS jtagResetState @                3700
+# THE STATE IS jtagIdleState @                3900
+# THE STATE IS jtagResetState @                4100
+# THE STATE IS jtagIdleState @                4300
+# THE STATE IS jtagResetState @                4500
+# THE STATE IS jtagIdleState @                4700
+# THE STATE IS jtagResetState @                4900
+# THE STATE IS jtagIdleState @                5100
+# THE STATE IS jtagResetState @                5300
+# THE STATE IS jtagIdleState @                5500
+# THE STATE IS jtagResetState @                5700
+# THE STATE IS jtagIdleState @                5900
+# THE STATE IS jtagResetState @                6100
+# THE STATE IS jtagIdleState @                6300
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 6300: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
@@ -173,7 +191,7 @@
 # [jtag slave agent bfm]     1
 # [uvm_sequence_base]     1
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 2700 ps  Iteration: 65  Instance: /HvlTop
+#    Time: 6300 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 02:49:39 on Mar 24,2025, Elapsed time: 0:00:07
+# End time: 15:46:52 on Mar 25,2025, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 2

@@ -35,6 +35,7 @@ task JtagMasterDriver :: run_phase(uvm_phase phase);
   seq_item_port.get_next_item(req);
  
   JtagMasterSeqItemConverter :: fromClass(req ,jtagConfigStruct,jtagPacketStruct);
+  jtagMasterDriverBfm.waitForReset();
   jtagMasterDriverBfm.DriveToBfm(jtagPacketStruct,jtagConfigStruct); 
   seq_item_port.item_done(rsp);
 endtask : run_phase
