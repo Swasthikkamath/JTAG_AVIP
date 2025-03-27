@@ -17,7 +17,6 @@ function void JtagMasterConfigConverter :: fromClass(input JtagMasterAgentConfig
   jtagConfigStruct.jtagInstructionWidth = jtagMasterAgentConfig.jtagInstructionWidth;
   for (int i=0; i<jtagMasterAgentConfig.jtagInstructionWidth;i++)
    jtagConfigStruct.jtagInstructionOpcode[i] = jtagMasterAgentConfig.jtagInstructionOpcode[i];
-
 endfunction :fromClass
 
 `endif

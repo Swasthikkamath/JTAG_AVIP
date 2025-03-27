@@ -26,7 +26,8 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   //Variable: name
   //Used to store the name of the interface
   string name = "JTAG_Slave_MONITOR_BFM"; 
-	
+
+
   
 
 	

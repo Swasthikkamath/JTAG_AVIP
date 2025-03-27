@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 01:48:48 on Mar 26,2025
+# Start time: 11:06:50 on Mar 27,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
 # //  Questa Sim
@@ -183,7 +183,7 @@
 # ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
 # the next enum moved is userDefinedRegister
 # the next enum moved is boundaryScanRegisters
-# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(45): Non-existent associative array entry. Returning default value.
+# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(46): Non-existent associative array entry. Returning default value.
 # ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 0xxxxxxx and data in is 0
 # THE STATE in slave IS jtagShiftDrState @                3100 instruction is 00110 
 # THE STATE IS jtagShiftDrState @                3100
@@ -254,5 +254,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 6300 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 01:48:53 on Mar 26,2025, Elapsed time: 0:00:05
+# End time: 11:06:55 on Mar 27,2025, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 3

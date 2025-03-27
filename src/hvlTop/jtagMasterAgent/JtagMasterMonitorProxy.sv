@@ -7,7 +7,9 @@ class JtagMasterMonitor extends uvm_monitor;
   uvm_analysis_port #(JtagMasterTransaction)jtagMasterMonitorAnalysisPort;
   virtual JtagMasterMonitorBfm jtagMasterMonitorBfm;
   JtagMasterAgentConfig jtagMasterAgentConfig;
-  
+  JtagPacketStruct jtagPacketStruct;
+  JtagConfigStruct jtagConfigStruct;
+  JtagMasterTransaction jtagMasterTransaction;
   extern function new(string name = "JtagMasterMonitor" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
@@ -28,11 +30,16 @@ function void JtagMasterMonitor :: build_phase(uvm_phase phase);
   if(!(uvm_config_db #(virtual JtagMasterMonitorBfm) :: get(this,"","jtagMasterMonitorBfm",jtagMasterMonitorBfm)))
     `uvm_fatal(get_type_name(),"FAILED TO GET THE MASTER MONITOR BFM IN MASTER MONITOR")
   
+  jtagMasterTransaction = JtagMasterTransaction :: type_id :: create("jtagMasterTransaction");
   jtagMasterMonitorAnalysisPort = new("jtagMasterMonitorAnalysisPort",this);
+
 endfunction : build_phase
 
 task JtagMasterMonitor :: run_phase(uvm_phase phase);
   super.run_phase(phase);
-  jtagMasterMonitorBfm.startMonitoring();
+  JtagMasterConfigConverter :: fromClass (jtagMasterAgentConfig , jtagConfigStruct);
+  jtagMasterMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
+  JtagMasterSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagMasterTransaction);
 endtask : run_phase
+
 `endif

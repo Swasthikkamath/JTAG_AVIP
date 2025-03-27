@@ -128,6 +128,8 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagPauseDrState;
 	    end 
+
+	    jtagSerialIn = 'b x;
 	  end 
           
 
@@ -203,6 +205,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagPauseIrState;
 	    end 
+	    jtagSerialIn = 'b x;
 	  end 
 
 
