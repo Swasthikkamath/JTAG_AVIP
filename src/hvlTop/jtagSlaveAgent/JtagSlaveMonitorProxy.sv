@@ -8,6 +8,8 @@ class JtagSlaveMonitor extends uvm_monitor;
   virtual JtagSlaveMonitorBfm jtagSlaveMonitorBfm;
   JtagSlaveAgentConfig jtagSlaveAgentConfig;
   JtagSlaveTransaction jtagSlaveTransaction;
+  JtagConfigStruct jtagConfigStruct;
+  JtagPacketStruct jtagPacketStruct;
   
   extern function new(string name = "JtagSlaveMonitor" , uvm_component parent);
   extern virtual function void  build_phase(uvm_phase phase);
