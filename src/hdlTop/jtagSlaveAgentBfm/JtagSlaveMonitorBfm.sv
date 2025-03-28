@@ -10,7 +10,7 @@ import JtagGlobalPkg::*;
 //--------------------------------------------------------------------------------------------
 interface JtagSlaveMonitorBfm (input  logic   clk,
                               input  logic   reset,
-                             input logic  jtagSerialOut,
+                             input logic  jtagSerialIn,
 			     input logic jtagTms
                               );
 	//-------------------------------------------------------
