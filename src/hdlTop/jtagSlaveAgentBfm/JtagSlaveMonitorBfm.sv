@@ -22,7 +22,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   // Importing the Transmitter package file
   //-------------------------------------------------------
   import JtagSlavePkg::*;
-  JtagTapStates JtagTapState;
+  JtagTapStates jtagTapState;
   //Variable: name
   //Used to store the name of the interface
   string name = "JTAG_Slave_MONITOR_BFM"; 
