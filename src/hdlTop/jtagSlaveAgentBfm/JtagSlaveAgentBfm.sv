@@ -26,7 +26,7 @@ module JtagSlaveAgentBfm(JtagIf jtagIf);
   // Slave monitor bfm instantiation
   //-------------------------------------------------------
   
-  JtagSlaveMonitorBfm jtagSlaveMonitorBfm (.clk(jtagIf.clk),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset),.jtagTms(jtagIf.jtagTms));
+  JtagSlaveMonitorBfm jtagSlaveMonitorBfm (.clk(jtagIf.clk),.jtagSerialIn(jtagIf.jtagSerialIn),.reset(jtagIf.reset),.jtagTms(jtagIf.jtagTms));
 
 
   //-------------------------------------------------------
