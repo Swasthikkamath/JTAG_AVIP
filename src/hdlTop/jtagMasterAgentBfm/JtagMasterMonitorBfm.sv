@@ -34,7 +34,8 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
    @(posedge jtagSerialIn or negedge jtagSerialIn);
    repeat(jtagConfigStruct.jtagInstructionWidth) begin 
      repeat(1)@(posedge clk);
-     jtagPacketStruct. 
+     jtagPacketStruct.jtaInstruction = jtagSerialIn;
+    end 
 
 
    
