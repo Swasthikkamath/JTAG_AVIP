@@ -32,9 +32,7 @@ function void JtagSlaveMonitor :: build_phase(uvm_phase phase);
     `uvm_fatal(get_type_name(),"FAILED TO GET THE Slave MONITOR BFM IN Slave MONITOR")
 
       jtagSlaveTransaction = JtagSlaveTransaction :: type_id :: create("jtagSlaveTransaction");
-  jtagSlaveMonitorAnalysisPort = new("jtagSlaveMonitorAnalysisPort",this);
-  
-  jtagSlaveMonitorAnalysisPort = new("jtagSlaveMonitorAnalysisPort",this);
+  jtagSlaveMonitorAnalysisPort = new("jtagSlaveMonitorAnalysisPort",this);  
 endfunction : build_phase
 
 task JtagSlaveMonitor :: run_phase(uvm_phase phase);
