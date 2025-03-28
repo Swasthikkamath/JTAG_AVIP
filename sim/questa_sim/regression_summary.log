@@ -18835,3 +18835,615 @@
 # Saving coverage database on exit...
 # End time: 11:06:55 on Mar 27,2025, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 3
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 14:39:02 on Mar 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# CONNECTING DRIVER AND SEQUENCER
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                                      Type                        Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                              JtagBaseTest                -     @473 
+#   jtagEnv                                 JtagEnv                     -     @511 
+#     JtagMasterAgent                       JtagMasterAgent             -     @635 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @805 
+#       jtagMasterCoverage                  JtagMasterCoverage          -     @790 
+#         analysis_imp                      uvm_analysis_imp            -     @797 
+#       jtagMasterDriver                    JtagMasterDriver            -     @651 
+#         rsp_port                          uvm_analysis_port           -     @666 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @658 
+#       jtagMasterMonitor                   JtagMasterMonitor           -     @783 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @822 
+#       jtagMasterSequencer                 JtagMasterSequencer         -     @674 
+#         rsp_export                        uvm_analysis_export         -     @681 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @775 
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagScoreboard                        JtagScoreboard              -     @519 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @835 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @851 
+#         analysis_export                   uvm_analysis_imp            -     @890 
+#         get_ap                            uvm_analysis_port           -     @882 
+#         get_peek_export                   uvm_get_peek_imp            -     @866 
+#         put_ap                            uvm_analysis_port           -     @874 
+#         put_export                        uvm_put_imp                 -     @858 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @843 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @898 
+#         analysis_export                   uvm_analysis_imp            -     @937 
+#         get_ap                            uvm_analysis_port           -     @929 
+#         get_peek_export                   uvm_get_peek_imp            -     @913 
+#         put_ap                            uvm_analysis_port           -     @921 
+#         put_export                        uvm_put_imp                 -     @905 
+#     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @1101
+#       jtagSlaveCoverage                   JtagSlaveCoverage           -     @1079
+#         analysis_imp                      uvm_analysis_imp            -     @1086
+#       jtagSlaveDriver                     JtagSlaveDriver             -     @947 
+#         rsp_port                          uvm_analysis_port           -     @962 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @954 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @1094
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @1113
+#       jtagSlaveSequencer                  JtagSlaveSequencer          -     @970 
+#         rsp_export                        uvm_analysis_export         -     @977 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @1071
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
+#       rsp_export                          uvm_analysis_export         -     @533 
+#       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
+#       arbitration_queue                   array                       0     -    
+#       lock_queue                          array                       0     -    
+#       num_last_reqs                       integral                    32    'd1  
+#       num_last_rsps                       integral                    32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# ENTERED TO DRIVER PROXY SUCCESSFULLY
+# The test vector is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# UVM_WARNING @ 0: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterSequencer@@JtagMasterTestingVirtualSequence.jtagMasterTestVectorSequence [uvm_sequence_base] Body definition undefined
+# -----------------------------------------------------
+# Name           Type                   Size  Value    
+# -----------------------------------------------------
+# req            JtagMasterTransaction  -     @1147    
+#   TEST VECTOR  integral               32    'b1100100
+# -----------------------------------------------------
+# THE STATE IS jtagIdleState @                 100
+# THE STATE IS jtagResetState @                 100
+# THE STATE in slave IS jtagResetState @                 100 instruction is xxxxx 
+# THE STATE in slave IS jtagIdleState @                 300 instruction is xxxxx 
+# THE STATE IS jtagIdleState @                 300
+# THE STATE IS jtagDrScanState @                 300
+# THE STATE IS jtagIrScanState @                 500
+# THE STATE IS jtagDrScanState @                 500
+# THE STATE in slave IS jtagDrScanState @                 500 instruction is xxxxx 
+# THE STATE in slave IS jtagIrScanState @                 700 instruction is xxxxx 
+# THE STATE IS jtagIrScanState @                 700
+# THE STATE IS jtagCaptureIrState @                 700
+# THE STATE IS jtagShiftIrState @                 900
+# THE STATE IS jtagCaptureIrState @                 900
+# THE STATE in slave IS jtagCaptureIrState @                 900 instruction is xxxxx 
+# THE STATE in slave IS jtagShiftIrState @                1100 instruction is 00010 
+# THE STATE IS jtagShiftIrState @                1100
+# THE STATE IS jtagShiftIrState @                1100
+# THE STATE IS jtagShiftIrState @                1300
+# THE STATE IS jtagShiftIrState @                1300
+# THE STATE in slave IS jtagShiftIrState @                1300 instruction is 00001 
+# THE STATE in slave IS jtagShiftIrState @                1500 instruction is 10000 
+# THE STATE IS jtagShiftIrState @                1500
+# THE STATE IS jtagShiftIrState @                1500
+# THE STATE IS jtagShiftIrState @                1700
+# THE STATE IS jtagShiftIrState @                1700
+# THE STATE in slave IS jtagShiftIrState @                1700 instruction is 11000 
+# THE STATE in slave IS jtagShiftIrState @                1900 instruction is 01100 
+# THE STATE IS jtagShiftIrState @                1900
+# THE STATE IS jtagExit1IrState @                1900
+# THE STATE IS jtagUpdateIrState @                2100
+# THE STATE IS jtagExit1IrState @                2100
+# THE STATE in slave IS jtagExit1IrState @                2100 instruction is 00110 
+# THE STATE in slave IS jtagUpdateIrState @                2300 instruction is 00110 
+# THE STATE IS jtagUpdateIrState @                2300
+# THE STATE IS jtagDrScanState @                2300
+# THE STATE IS jtagCaptureDrState @                2500
+# THE STATE IS jtagDrScanState @                2500
+# THE STATE in slave IS jtagDrScanState @                2500 instruction is 00110 
+# THE STATE in slave IS jtagCaptureDrState @                2700 instruction is 00110 
+# THE STATE IS jtagCaptureDrState @                2700
+# THE STATE IS jtagShiftDrState @                2700
+# THE STATE IS jtagShiftDrState @                2900
+# THE STATE IS jtagShiftDrState @                2900
+# THE STATE in slave IS jtagShiftDrState @                2900 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# the next enum moved is userDefinedRegister
+# the next enum moved is boundaryScanRegisters
+# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(46): Non-existent associative array entry. Returning default value.
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 0xxxxxxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3100 instruction is 00110 
+# THE STATE IS jtagShiftDrState @                3100
+# THE STATE IS jtagShiftDrState @                3100
+# THE STATE IS jtagShiftDrState @                3300
+# THE STATE IS jtagShiftDrState @                3300
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 00xxxxxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3300 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 100xxxxx and data in is 1
+# THE STATE in slave IS jtagShiftDrState @                3500 instruction is 00110 
+# THE STATE IS jtagShiftDrState @                3500
+# THE STATE IS jtagShiftDrState @                3500
+# THE STATE IS jtagShiftDrState @                3700
+# THE STATE IS jtagShiftDrState @                3700
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 0100xxxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3700 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 00100xxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3900 instruction is 00110 
+# THE STATE IS jtagShiftDrState @                3900
+# THE STATE IS jtagShiftDrState @                3900
+# THE STATE IS jtagShiftDrState @                4100
+# THE STATE IS jtagShiftDrState @                4100
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 100100xx and data in is 1
+# THE STATE in slave IS jtagShiftDrState @                4100 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 1100100x and data in is 1
+# THE STATE in slave IS jtagShiftDrState @                4300 instruction is 00110 
+# THE STATE IS jtagShiftDrState @                4300
+# THE STATE IS jtagExit1DrState @                4300
+# THE STATE IS jtagUpdateDrState @                4500
+# THE STATE IS jtagExit1DrState @                4500
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 01100100 and data in is 0
+# THE STATE in slave IS jtagExit1DrState @                4500 instruction is 00110 
+# THE STATE in slave IS jtagUpdateDrState @                4700 instruction is 00110 
+# THE STATE IS jtagUpdateDrState @                4700
+# THE STATE IS jtagIdleState @                4700
+# THE STATE IS jtagIdleState @                4900
+# THE STATE IS jtagIdleState @                4900
+# THE STATE in slave IS jtagIdleState @                4900 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                5100 instruction is 00110 
+# THE STATE IS jtagIdleState @                5100
+# THE STATE IS jtagIdleState @                5100
+# THE STATE IS jtagIdleState @                5300
+# THE STATE IS jtagIdleState @                5300
+# THE STATE in slave IS jtagIdleState @                5300 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                5500 instruction is 00110 
+# THE STATE IS jtagIdleState @                5500
+# THE STATE IS jtagIdleState @                5500
+# THE STATE IS jtagIdleState @                5700
+# THE STATE IS jtagIdleState @                5700
+# THE STATE in slave IS jtagIdleState @                5700 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                5900 instruction is 00110 
+# THE STATE IS jtagIdleState @                5900
+# THE STATE IS jtagIdleState @                5900
+# THE STATE IS jtagIdleState @                6100
+# THE STATE IS jtagIdleState @                6100
+# THE STATE in slave IS jtagIdleState @                6100 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                6300 instruction is 00110 
+# THE STATE IS jtagIdleState @                6300
+# THE STATE IS jtagIdleState @                6300
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 6300: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    8
+# UVM_WARNING :    1
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [HDL_TOP]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [jtag Master agent bfm]     1
+# [jtag slave agent bfm]     1
+# [uvm_sequence_base]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 6300 ps  Iteration: 65  Instance: /HvlTop
+# Saving coverage database on exit...
+# End time: 14:39:09 on Mar 28,2025, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 3
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 14:41:16 on Mar 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# ** Warning: (vsim-3839) ../../src/hdlTop/JtagHdlTop.sv(70): Variable '/HdlTop/jtagIf/jtagSerialOut', driven via a port connection, is multiply driven. See ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /HdlTop File: ../../src/hdlTop/JtagHdlTop.sv
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# CONNECTING DRIVER AND SEQUENCER
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                                      Type                        Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                              JtagBaseTest                -     @473 
+#   jtagEnv                                 JtagEnv                     -     @511 
+#     JtagMasterAgent                       JtagMasterAgent             -     @635 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @805 
+#       jtagMasterCoverage                  JtagMasterCoverage          -     @790 
+#         analysis_imp                      uvm_analysis_imp            -     @797 
+#       jtagMasterDriver                    JtagMasterDriver            -     @651 
+#         rsp_port                          uvm_analysis_port           -     @666 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @658 
+#       jtagMasterMonitor                   JtagMasterMonitor           -     @783 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @822 
+#       jtagMasterSequencer                 JtagMasterSequencer         -     @674 
+#         rsp_export                        uvm_analysis_export         -     @681 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @775 
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagScoreboard                        JtagScoreboard              -     @519 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @835 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @851 
+#         analysis_export                   uvm_analysis_imp            -     @890 
+#         get_ap                            uvm_analysis_port           -     @882 
+#         get_peek_export                   uvm_get_peek_imp            -     @866 
+#         put_ap                            uvm_analysis_port           -     @874 
+#         put_export                        uvm_put_imp                 -     @858 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @843 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @898 
+#         analysis_export                   uvm_analysis_imp            -     @937 
+#         get_ap                            uvm_analysis_port           -     @929 
+#         get_peek_export                   uvm_get_peek_imp            -     @913 
+#         put_ap                            uvm_analysis_port           -     @921 
+#         put_export                        uvm_put_imp                 -     @905 
+#     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @1101
+#       jtagSlaveCoverage                   JtagSlaveCoverage           -     @1079
+#         analysis_imp                      uvm_analysis_imp            -     @1086
+#       jtagSlaveDriver                     JtagSlaveDriver             -     @947 
+#         rsp_port                          uvm_analysis_port           -     @962 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @954 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @1094
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @1113
+#       jtagSlaveSequencer                  JtagSlaveSequencer          -     @970 
+#         rsp_export                        uvm_analysis_export         -     @977 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @1071
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
+#       rsp_export                          uvm_analysis_export         -     @533 
+#       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
+#       arbitration_queue                   array                       0     -    
+#       lock_queue                          array                       0     -    
+#       num_last_reqs                       integral                    32    'd1  
+#       num_last_rsps                       integral                    32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# ENTERED TO DRIVER PROXY SUCCESSFULLY
+# The test vector is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# UVM_WARNING @ 0: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterSequencer@@JtagMasterTestingVirtualSequence.jtagMasterTestVectorSequence [uvm_sequence_base] Body definition undefined
+# -----------------------------------------------------
+# Name           Type                   Size  Value    
+# -----------------------------------------------------
+# req            JtagMasterTransaction  -     @1147    
+#   TEST VECTOR  integral               32    'b1100100
+# -----------------------------------------------------
+# THE STATE IS jtagIdleState @                 100
+# ********************
+#  THE STATE IS jtagResetState @                 100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagResetState @                 100 instruction is xxxxx 
+# THE STATE in slave IS jtagIdleState @                 300 instruction is xxxxx 
+# ********************
+#  THE STATE IS jtagIdleState @                 300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagDrScanState @                 300
+# THE STATE IS jtagIrScanState @                 500
+# ********************
+#  THE STATE IS jtagDrScanState @                 500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagDrScanState @                 500 instruction is xxxxx 
+# THE STATE in slave IS jtagIrScanState @                 700 instruction is xxxxx 
+# ********************
+#  THE STATE IS jtagIrScanState @                 700 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagCaptureIrState @                 700
+# THE STATE IS jtagShiftIrState @                 900
+# ********************
+#  THE STATE IS jtagCaptureIrState @                 900 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagCaptureIrState @                 900 instruction is xxxxx 
+# THE STATE in slave IS jtagShiftIrState @                1100 instruction is 00010 
+# ********************
+#  THE STATE IS jtagShiftIrState @                1100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagShiftIrState @                1100
+# THE STATE IS jtagShiftIrState @                1300
+# ********************
+#  THE STATE IS jtagShiftIrState @                1300 and jtag instruction obtained is xxxx0 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagShiftIrState @                1300 instruction is 00001 
+# THE STATE in slave IS jtagShiftIrState @                1500 instruction is 10000 
+# ********************
+#  THE STATE IS jtagShiftIrState @                1500 and jtag instruction obtained is xxx10 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagShiftIrState @                1500
+# THE STATE IS jtagShiftIrState @                1700
+# ********************
+#  THE STATE IS jtagShiftIrState @                1700 and jtag instruction obtained is xx110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagShiftIrState @                1700 instruction is 11000 
+# THE STATE in slave IS jtagShiftIrState @                1900 instruction is 01100 
+# ********************
+#  THE STATE IS jtagShiftIrState @                1900 and jtag instruction obtained is x0110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagExit1IrState @                1900
+# THE STATE IS jtagUpdateIrState @                2100
+# ********************
+#  THE STATE IS jtagExit1IrState @                2100 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagExit1IrState @                2100 instruction is 00110 
+# THE STATE in slave IS jtagUpdateIrState @                2300 instruction is 00110 
+# ********************
+#  THE STATE IS jtagUpdateIrState @                2300 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagDrScanState @                2300
+# THE STATE IS jtagCaptureDrState @                2500
+# ********************
+#  THE STATE IS jtagDrScanState @                2500 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagDrScanState @                2500 instruction is 00110 
+# THE STATE in slave IS jtagCaptureDrState @                2700 instruction is 00110 
+# ********************
+#  THE STATE IS jtagCaptureDrState @                2700 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE IS jtagShiftDrState @                2700
+# THE STATE IS jtagShiftDrState @                2900
+# ********************
+#  THE STATE IS jtagShiftDrState @                2900 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE STATE in slave IS jtagShiftDrState @                2900 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# the next enum moved is userDefinedRegister
+# the next enum moved is boundaryScanRegisters
+# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(46): Non-existent associative array entry. Returning default value.
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 0xxxxxxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3100 instruction is 00110 
+# ********************
+#  THE STATE IS jtagShiftDrState @                3100 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0
+# THE STATE IS jtagShiftDrState @                3100
+# THE STATE IS jtagShiftDrState @                3300
+# ********************
+#  THE STATE IS jtagShiftDrState @                3300 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx00
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 00xxxxxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3300 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 100xxxxx and data in is 1
+# THE STATE in slave IS jtagShiftDrState @                3500 instruction is 00110 
+# ********************
+#  THE STATE IS jtagShiftDrState @                3500 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxx100
+# THE STATE IS jtagShiftDrState @                3500
+# THE STATE IS jtagShiftDrState @                3700
+# ********************
+#  THE STATE IS jtagShiftDrState @                3700 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxx0100
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 0100xxxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3700 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 00100xxx and data in is 0
+# THE STATE in slave IS jtagShiftDrState @                3900 instruction is 00110 
+# ********************
+#  THE STATE IS jtagShiftDrState @                3900 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxx00100
+# THE STATE IS jtagShiftDrState @                3900
+# THE STATE IS jtagShiftDrState @                4100
+# ********************
+#  THE STATE IS jtagShiftDrState @                4100 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxx100100
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 100100xx and data in is 1
+# THE STATE in slave IS jtagShiftDrState @                4100 instruction is 00110 
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 1100100x and data in is 1
+# THE STATE in slave IS jtagShiftDrState @                4300 instruction is 00110 
+# ********************
+#  THE STATE IS jtagShiftDrState @                4300 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxx1100100
+# THE STATE IS jtagExit1DrState @                4300
+# THE STATE IS jtagUpdateDrState @                4500
+# ********************
+#  THE STATE IS jtagExit1DrState @                4500 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# ^^^^^^^^^^^^^^^666ENUM SIZE IS 3 
+# ^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is 01100100 and data in is 0
+# THE STATE in slave IS jtagExit1DrState @                4500 instruction is 00110 
+# THE STATE in slave IS jtagUpdateDrState @                4700 instruction is 00110 
+# ********************
+#  THE STATE IS jtagUpdateDrState @                4700 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE IS jtagIdleState @                4700
+# THE STATE IS jtagIdleState @                4900
+# ********************
+#  THE STATE IS jtagIdleState @                4900 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE in slave IS jtagIdleState @                4900 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                5100 instruction is 00110 
+# ********************
+#  THE STATE IS jtagIdleState @                5100 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE IS jtagIdleState @                5100
+# THE STATE IS jtagIdleState @                5300
+# ********************
+#  THE STATE IS jtagIdleState @                5300 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE in slave IS jtagIdleState @                5300 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                5500 instruction is 00110 
+# ********************
+#  THE STATE IS jtagIdleState @                5500 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE IS jtagIdleState @                5500
+# THE STATE IS jtagIdleState @                5700
+# ********************
+#  THE STATE IS jtagIdleState @                5700 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE in slave IS jtagIdleState @                5700 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                5900 instruction is 00110 
+# ********************
+#  THE STATE IS jtagIdleState @                5900 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE IS jtagIdleState @                5900
+# THE STATE IS jtagIdleState @                6100
+# ********************
+#  THE STATE IS jtagIdleState @                6100 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE in slave IS jtagIdleState @                6100 instruction is 00110 
+# THE STATE in slave IS jtagIdleState @                6300 instruction is 00110 
+# ********************
+#  THE STATE IS jtagIdleState @                6300 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# THE STATE IS jtagIdleState @                6300
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 6300: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    8
+# UVM_WARNING :    1
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [HDL_TOP]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [jtag Master agent bfm]     1
+# [jtag slave agent bfm]     1
+# [uvm_sequence_base]     1
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 6300 ps  Iteration: 65  Instance: /HvlTop
+# Saving coverage database on exit...
+# End time: 14:41:20 on Mar 28,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 3

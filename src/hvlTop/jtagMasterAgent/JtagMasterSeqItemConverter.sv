@@ -27,7 +27,7 @@ function void JtagMasterSeqItemConverter :: toClass (input JtagPacketStruct jtag
    for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
      jtagMasterTransaction.jtagTestVector[i] = jtagPacketStruct.jtagTestVector[i];
 
-   for (int i=0 ;i<jtagConfigStruct.jtagInstruction ; i++)
+   for (int i=0 ;i<jtagPacketStruct.jtagInstruction ; i++)
      jtagMasterTransaction.jtagInstruction = jtagPacketStruct.jtagInstruction[i];
 
  endfunction : toClass
