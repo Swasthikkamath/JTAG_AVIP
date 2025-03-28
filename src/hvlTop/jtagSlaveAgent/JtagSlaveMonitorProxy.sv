@@ -36,5 +36,8 @@ endfunction : build_phase
 
 task JtagSlaveMonitor :: run_phase(uvm_phase phase);
   super.run_phase(phase);
+    JtagSlaveConfigConverter :: fromClass (jtagSlaveAgentConfig , jtagConfigStruct);
+  jtagSlaveMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
+  JtagSlaveSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagSlaveTransaction);
 endtask : run_phase
 `endif
