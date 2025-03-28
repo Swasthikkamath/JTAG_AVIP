@@ -210,7 +210,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	  end 
           
 	endcase  
-	$display("********************\n THE STATE IS %s @%t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
+	      $display("********************\n  in SLAVE THE STATE IS %s @%t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
       end  
 
 
