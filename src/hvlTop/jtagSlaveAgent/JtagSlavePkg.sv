@@ -8,8 +8,8 @@ package JtagSlavePkg;
   import JtagGlobalPkg :: *;
   `include "JtagSlaveAgentConfig.sv"
   `include "JtagSlaveTransaction.sv"
-  //`include "JtagSlaveSeqItemConverter.sv"
-  //`include "JtagSlaveConfigConverter.sv"
+  `include "JtagSlaveSeqItemConverter.sv"
+  `include "JtagSlaveConfigConverter.sv"
   `include "JtagSlaveSequencer.sv"
   `include "JtagSlaveDriverProxy.sv"
   `include "JtagSlaveMonitorProxy.sv"
