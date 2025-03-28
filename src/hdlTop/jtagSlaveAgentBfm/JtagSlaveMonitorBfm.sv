@@ -215,6 +215,6 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
 
   
-
+  endtask 
 	
 endinterface : JtagSlaveMonitorBfm
