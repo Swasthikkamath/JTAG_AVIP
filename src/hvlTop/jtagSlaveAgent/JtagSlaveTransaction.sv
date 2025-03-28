@@ -6,6 +6,7 @@ class JtagSlaveTransaction extends uvm_sequence_item;
   `uvm_object_utils(JtagSlaveTransaction)
 
   logic[31:0]jtagTestVector;
+  logic[4:0]jtagInstruction;
   extern function new(string name = "JtagSlaveTransaction");
   extern function void do_copy(uvm_object rhs);
   extern function bit do_compare(uvm_object rhs , uvm_comparer comparer = null);
