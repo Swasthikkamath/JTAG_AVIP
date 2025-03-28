@@ -7,8 +7,8 @@ class JtagSlaveAgentConfig extends uvm_object;
   bit hasCoverage;
   uvm_active_passive_enum is_active;
   JtagTestVectorWidthEnum jtagTestVectorWidth;
-  JtagInstructionWidthEnum jtagInstructionWidthEnum;
-  JtagInstructionOpcodeEnum jtagInstructionOpcodeEnum;
+  JtagInstructionWidthEnum jtagInstructionWidth;
+  JtagInstructionOpcodeEnum jtagInstructionOpcode;
 
   extern function new(string name = "JtagSlaveAgentConfig");
 endclass : JtagSlaveAgentConfig
