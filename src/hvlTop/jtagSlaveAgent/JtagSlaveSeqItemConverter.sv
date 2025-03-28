@@ -19,8 +19,8 @@ function void JtagSlaveSeqItemConverter :: fromClass(input JtagSlaveTransaction 
   for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
     jtagPacketStruct.jtagTestVector[i] = jtagSlaveTransaction.jtagTestVector[i];
 
-  for(int i=0 ; i<32 ; i++)
-   jtagPacketStruct.jtagTms[i]= jtagSlaveTransaction.jtagTms[i];
+  // for(int i=0 ; i<32 ; i++)
+  //  jtagPacketStruct.jtagTms[i]= jtagSlaveTransaction.jtagTms[i];
  endfunction : fromClass
 
 function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagPacketStruct ,input JtagConfigStruct  jtagConfigStruct , inout JtagSlaveTransaction jtagSlaveTransaction);
