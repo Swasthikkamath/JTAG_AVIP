@@ -90,7 +90,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;      
 	    end 
-		jtagPacketStruct.jtagTestVector[k++] = jtagSerialIn;       
+		  jtagPacketStruct.jtagTestVector = {jtagSerialIn , jtagPacketSttruct.jtagTestVector[61:1]};       
 	  end 
           
 	  
