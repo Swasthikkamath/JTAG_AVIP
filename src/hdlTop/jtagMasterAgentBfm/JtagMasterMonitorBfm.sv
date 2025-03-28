@@ -31,12 +31,191 @@ interface JtagMasterMonitorBfm (input  logic   clk,
 	
   
 task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
-   @(posedge jtagSerialIn or negedge jtagSerialIn);
-   repeat(jtagConfigStruct.jtagInstructionWidth) begin 
-     repeat(1)@(posedge clk);
-     jtagPacketStruct.jtaInstruction = jtagSerialIn;
-    end 
+  int  i,k ,m;
+    for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
+      begin
+        @(posedge clk);
 
+        case(jtagTapState)
+
+          jtagResetState :begin 
+          
+	    if(jtagTms == 1) begin 
+	      jtagTapState = jtagResetState;
+	    end 
+	    else if(jtagTms ==0) begin 
+	      jtagTapState = jtagIdleState;
+	    end 
+	  end
+
+
+	  jtagIdleState : begin 
+	   
+	   if(jtagTms ==0) begin 
+             jtagTapState = jtagIdleState;
+	   end 
+	   else if(jtagTms == 1) begin 
+             jtagTapState = jtagDrScanState;
+	   end 
+	  end
+
+
+          jtagDrScanState : begin 
+	   
+	   if(jtagTms == 1) begin 
+             jtagTapState = jtagIrScanState;
+	   end
+	   else if(jtagTms == 0) begin 
+             jtagTapState = jtagCaptureDrState;
+	   end
+	  end 
+
+	  
+	  jtagCaptureDrState : begin 
+	    
+	    if(jtagTms == 1) begin 
+             jtagTapState = jtagExit1DrState;
+	    end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagShiftDrState;
+	    end 
+	  end 
+
+	  
+	  jtagShiftDrState : begin 
+	    
+	    if(jtagTms ==1) begin
+              jtagTapState = jtagExit1DrState;
+	    end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagShiftDrState;      
+	    end 
+		jtagPacketStruct.jtagTestVector[k++] = jtagSerialIn;       
+	  end 
+          
+	  
+	  jtagExit1DrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateDrState;
+	    end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagPauseDrState;
+	    end 
+
+	    jtagSerialIn = 'b x;
+	  end 
+          
+
+          jtagPauseDrState : begin 
+	    
+	    if(jtagTms ==1) begin 
+              jtagTapState = jtagExit2DrState;
+ 	    end 
+	    else if(jtagTms ==0) begin
+              jtagTapState = jtagPauseDrState;
+	    end 
+	  end 
+
+
+          jtagExit2DrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateDrState;
+	    end 
+ 	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagShiftDrState;
+            end 
+	  end 
+
+	  jtagUpdateDrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagDrScanState;
+	    end  
+	    else if(jtagTms == 0) begin 
+	      jtagTapState = jtagIdleState;
+	    end 
+	  end 
+
+	  jtagIrScanState : begin 
+	    
+            if(jtagTms == 1) begin 
+	      jtagTapState = jtagResetState;
+            end 
+	    else if(jtagTms ==0) begin 
+              jtagTapState = jtagCaptureIrState;
+	    end
+	  end 
+
+	  jtagCaptureIrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagExit1IrState;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagShiftIrState;
+	    end 
+	  end 
+
+
+	  jtagShiftIrState : begin 
+
+	    if(jtagTms == 1) begin 
+              jtagTapState = jtagExit1IrState;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagShiftIrState ;
+	    end
+		  jtagPacketStruct.jtagInstruction[m++] = jtagSerialIn;
+	  end 
+ 
+    
+          jtagExit1IrState : begin 
+            
+ 	    if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateIrState ;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagPauseIrState;
+	    end 
+	    jtagSerialIn = 'b x;
+	  end 
+
+
+	  jtagPauseIrState : begin 
+  
+            if(jtagTms == 1) begin 
+              jtagTapState = jtagExit2IrState;
+	    end 
+	    else if(jtagTms == 0) begin 
+              jtagTapState = jtagPauseIrState;
+	    end
+	  end 
+
+	  jtagExit2IrState : begin 
+      
+            if(jtagTms ==0) begin 
+              jtagTapState = jtagShiftIrState;
+	    end 
+	    else if(jtagTms == 1) begin 
+              jtagTapState = jtagUpdateIrState;
+	    end 
+	  end
+
+	  jtagUpdateIrState: begin 
+            
+	    if(jtagTms == 1) begin 
+	      jtagTapState = jtagDrScanState;
+            end
+	    else if(jtagTms == 0) begin 
+               jtagTapState = jtagIdleState;
+	    end
+	  end 
+          
+	endcase  
+	$display("THE STATE IS %s @%t",jtagTapState.name(),$time);
+      end  
 
    
 endtask 
