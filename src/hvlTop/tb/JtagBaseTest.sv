@@ -55,6 +55,9 @@ function void  JtagBaseTest :: setupJtagSlaveAgentConfig();
  jtagEnvConfig.jtagSlaveAgentConfig = JtagSlaveAgentConfig :: type_id :: create("jtagSlaveAgentConfig");
  jtagEnvConfig.jtagSlaveAgentConfig.hasCoverage =1;
  jtagEnvConfig.jtagSlaveAgentConfig.is_active = UVM_ACTIVE;
+ jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
+ jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
+ jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionOpcode = boundaryScanRegisters;
   uvm_config_db #(JtagSlaveAgentConfig) :: set(null,"*", "jtagSlaveAgentConfig",jtagEnvConfig.jtagSlaveAgentConfig);
 endfunction : setupJtagSlaveAgentConfig
 
