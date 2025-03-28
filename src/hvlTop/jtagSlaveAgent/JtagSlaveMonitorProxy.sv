@@ -25,8 +25,11 @@ function void JtagSlaveMonitor :: build_phase(uvm_phase phase);
   if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,"","jtagSlaveAgentConfig",jtagSlaveAgentConfig)))
     `uvm_fatal(get_type_name(),"FAILED TP GET Slave AGENT CONFIG IN Slave MONITOR")
 
-//  if(!(uvm_config_db #(JtagSlaveMonitorBfm) :: get(this,"","jtagSlaveMonitorBfm",jtagSlaveMonitorBfm)))
-  //  `uvm_fatal(get_type_name(),"FAILED TO GET THE Slave MONITOR BFM IN Slave MONITOR")
+    if(!(uvm_config_db #(virtual JtagSlaveMonitorBfm) :: get(this,"","jtagSlaveMonitorBfm",jtagSlaveMonitorBfm)))
+    `uvm_fatal(get_type_name(),"FAILED TO GET THE Slave MONITOR BFM IN Slave MONITOR")
+
+      jtagSlaveTransaction = JtagSlaveTransaction :: type_id :: create("jtagSlaveTransaction");
+  jtagSlaveMonitorAnalysisPort = new("jtagSlaveMonitorAnalysisPort",this);
   
   jtagSlaveMonitorAnalysisPort = new("jtagSlaveMonitorAnalysisPort",this);
 endfunction : build_phase
