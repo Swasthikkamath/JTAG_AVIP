@@ -67,6 +67,5 @@ module HdlTop;
 
   JtagSlaveAgentBfm jtagSlaveAgentBfm(jtagIf);
 
-  assign jtagIf.jtagSerialOut = jtagIf.jtagSerialIn;
   
 endmodule : HdlTop

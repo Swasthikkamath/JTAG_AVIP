@@ -39,13 +39,13 @@ interface JtagSlaveDriverBfm (input  logic   clk,
 
 
 task registeringData(reg[4:0]instructionRegister , logic dataIn);
-       $display("^^^^^^^^^^^^^^^666ENUM SIZE IS %0D ",jtagInstructionOpcode.num());
+       //$display("^^^^^^^^^^^^^^^666ENUM SIZE IS %0D ",jtagInstructionOpcode.num());
        for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin 
         if(jtagInstructionOpcode == instructionRegister) begin
 	  // jtagSerialOut = registerBank[instructionRegister][0];
 	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][7:1] };
-	  $display("^^^^^^^^^^^^^^^^^^^^**************8entered here regiser value is %b and data in is %b",registerBank[instructionRegister],dataIn);
-
+	   jtagSerialOut = registerBank[instructionRegister][0];
+	  $display("serial out in slave driver is %b @%t and data is %b",jtagSerialOut,$time,registerBank[instructionRegister]);
 	  break;
         end 
 	else begin
@@ -235,7 +235,7 @@ task observeData();
 	  end 
           
 	endcase  
-	$display("THE STATE in slave IS %s @%t instruction is %b ",jtagTapState.name(),$time,instructionRegister);
+	//$display("THE STATE in slave IS %s @%t instruction is %b and serial out is %0b",jtagTapState.name(),$time,instructionRegister,jtagSerialOut);
       end  
   endtask : observeData
 

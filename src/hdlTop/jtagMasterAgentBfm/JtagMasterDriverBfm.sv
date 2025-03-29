@@ -58,7 +58,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
      @(posedge clk);
     jtagTms = 1; */
     int  i,k ,m;
-    for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
+    for(int j=0 ; j< 61;j++)
       begin
       @(posedge clk) jtagTms = jtagPacketStruct.jtagTms[i++];
 
@@ -116,7 +116,8 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;      
 	    end 
-            jtagSerialIn = jtagPacketStruct.jtagTestVector[k++];          
+	    jtagSerialIn=jtagPacketStruct.jtagTestVector[k++];
+	  $display("THE SERIAL DATA IN MASTER IS %b @%0t",jtagSerialIn,$time);
 	  end 
           
 	  
@@ -129,7 +130,6 @@ interface JtagMasterDriverBfm (input  logic   clk,
               jtagTapState = jtagPauseDrState;
 	    end 
 
-	    jtagSerialIn = 'b x;
 	  end 
           
 
@@ -205,7 +205,6 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagPauseIrState;
 	    end 
-	    jtagSerialIn = 'b x;
 	  end 
 
 
@@ -240,8 +239,10 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	  end 
           
 	endcase  
-	$display("THE STATE IS %s @%t",jtagTapState.name(),$time);
+           //@(posedge clk);
+	   $display("IN MASTER TMS IS %b @%0t",jtagTms,$time);
       end  
+      @(posedge clk);
   endtask :DriveToBfm
 
 	

@@ -10,7 +10,7 @@ import JtagGlobalPkg::*;
 //--------------------------------------------------------------------------------------------
 interface JtagSlaveMonitorBfm (input  logic   clk,
                               input  logic   reset,
-                             input logic  jtagSerialIn,
+                             input logic  jtagSerialOut,
 			     input logic jtagTms
                               );
 	//-------------------------------------------------------
@@ -30,7 +30,8 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
   task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
-    for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
+  automatic int count =0;
+  for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
       begin
         @(posedge clk);
 
@@ -87,8 +88,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	    end 
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;      
-	    end 
-		  jtagPacketStruct.jtagTestVector = {jtagSerialIn , jtagPacketStruct.jtagTestVector[61:1]};       
+	    end
+
+	      $display("IN MONITOR SLAVE SERIAL OUT IS %B @%t ",jtagSerialOut,$time);
+		  jtagPacketStruct.jtagTestVector = {jtagSerialOut, jtagPacketStruct.jtagTestVector[61:1]};       
 	  end 
           
 	  
@@ -100,6 +103,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagPauseDrState;
 	    end 
+	    count++;
 
 	  end 
           
@@ -164,7 +168,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagShiftIrState ;
 	    end
-		  jtagPacketStruct.jtagInstruction[m++] = jtagSerialIn;
+		//  jtagPacketStruct.jtagInstruction[m++] = jtagSeriaOut;
 	  end 
  
     
@@ -210,8 +214,13 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	  end 
           
 	endcase  
-	      $display("********************\n  in SLAVE THE STATE IS %s @%t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
-      end  
+  $display("i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************\n  in SLAVE THE STATE IS %s @%0t and jtag instruction obtained is %b and data is %b and jtagseriot is %b *************************\n",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector,jtagSerialOut);
+
+$display("THE MONITOR TESTVECTOR IS");
+  for(int i=61 ; i>30;i--)
+    $write("%b",jtagPacketStruct.jtagTestVector[i]);
+
+    end  
 
 
   

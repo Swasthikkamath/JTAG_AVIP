@@ -89,7 +89,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 	    end 
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;      
-	    end 
+	    end
 		  jtagPacketStruct.jtagTestVector = {jtagSerialIn , jtagPacketStruct.jtagTestVector[61:1]};       
 	  end 
           
@@ -102,7 +102,6 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagPauseDrState;
 	    end 
-
 	  end 
           
 
@@ -212,7 +211,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 	  end 
           
 	endcase  
-	$display("********************\n THE STATE IS %s @%t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
+	//$display("********************\n THE STATE IS %s @%t and jtag instruction obtained is %b and data is %b \n",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
       end  
 
    
