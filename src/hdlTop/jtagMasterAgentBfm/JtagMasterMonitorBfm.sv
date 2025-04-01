@@ -211,7 +211,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 	  end 
           
 	endcase  
-	$display("********************\n THE STATE IS %s @%t and jtag instruction obtained is %b and data is %b \n",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
+	$display("THE STATE IN MASTER MONITOR %s @%0t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
       end  
 
    

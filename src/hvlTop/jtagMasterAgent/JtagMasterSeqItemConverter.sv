@@ -19,21 +19,29 @@ function void JtagMasterSeqItemConverter :: fromClass(input JtagMasterTransactio
   for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
     jtagPacketStruct.jtagTestVector[i] = jtagMasterTransaction.jtagTestVector[i];
 
-  for(int i=0 ; i<32 ; i++)
+  for(int i=0 ; i<62 ; i++)
    jtagPacketStruct.jtagTms[i]= jtagMasterTransaction.jtagTms[i];
  endfunction : fromClass
 
 function void JtagMasterSeqItemConverter :: toClass (input JtagPacketStruct jtagPacketStruct ,input JtagConfigStruct  jtagConfigStruct , inout JtagMasterTransaction jtagMasterTransaction);
-   //for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
-     //jtagMasterTransaction.jtagTestVector[i] = jtagPacketStruct.jtagTestVector[i];
 
+int j;
+j=0;
+for (int i=0;i<61;i++)
+   if(!($isunknown(jtagPacketStruct.jtagTestVector[i]))) begin 
+     jtagMasterTransaction.jtagTestVector[j++] = jtagPacketStruct.jtagTestVector[i];
+   end
 
-   case(jtagConfigStruct.jtagTestVectorWidth)
+ $display("MASTER CONVERTER IS %b",jtagMasterTransaction.jtagTestVector);
+  $display("THE MASTER SIDE INPUT SEQUENCE IS %b",jtagPacketStruct.jtagTestVector);
+/*   case(jtagConfigStruct.jtagTestVectorWidth)
        'd 8 : jtagMasterTransaction.jtagTestVector[7:0] = jtagPacketStruct.jtagTestVector[53:46];
            'd 16: jtagMasterTransaction.jtagTestVector[15:0]= jtagPacketStruct.jtagTestVector[45:30];
 	       'd 24 : jtagMasterTransaction.jtagTestVector[23:0] = jtagPacketStruct.jtagTestVector[37:14];
 	           'd 32 : jtagMasterTransaction.jtagTestVector[31:0] = jtagPacketStruct.jtagTestVector[31:0];
 		      endcase
+*/
+
 
    for (int i=0 ;i<jtagPacketStruct.jtagInstruction ; i++)
      jtagMasterTransaction.jtagInstruction = jtagPacketStruct.jtagInstruction[i];

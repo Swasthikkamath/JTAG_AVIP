@@ -6,7 +6,7 @@ class JtagMasterTransaction extends uvm_sequence_item;
   `uvm_object_utils(JtagMasterTransaction)
 
   rand logic[31:0]jtagTestVector;
-  logic[31:0]jtagTms = 'b 01100000000000000000111000000110;
+  logic[61:0]jtagTms = 'b 011000000000000000000000000000000000111000000110;
   logic[4:0]jtagInstruction;
 
   extern function new(string name = "JtagMasterTransaction");

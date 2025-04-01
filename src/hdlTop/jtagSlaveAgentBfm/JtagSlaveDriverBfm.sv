@@ -50,13 +50,13 @@ task registeringData(reg[4:0]instructionRegister , logic dataIn);
         end 
 	else begin
 	  jtagInstructionOpcode = jtagInstructionOpcode.next();
-	  $display("the next enum moved is %s",jtagInstructionOpcode.name());
+	  //$display("the next enum moved is %s",jtagInstructionOpcode.name());
         end 
       end 
 endtask 
 task observeData();
   int  i,k ,m;
-    for(int j=0 ; j< 32 ;j++)
+    for(int j=0 ; j<61 ;j++)
       begin
         @(posedge clk);
 
@@ -107,7 +107,7 @@ task observeData();
 
 	  
 	  jtagShiftDrState : begin 
-	    
+	   $display("IN SLAVE THE SHIFT DR TMS VALUE IS %b",jtagTms); 
 	    if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 

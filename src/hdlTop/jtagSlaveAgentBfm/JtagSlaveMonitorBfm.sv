@@ -90,7 +90,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
               jtagTapState = jtagShiftDrState;      
 	    end
 
-	      $display("IN MONITOR SLAVE SERIAL OUT IS %B @%t ",jtagSerialOut,$time);
+	//      $display("IN MONITOR SLAVE SERIAL OUT IS %B @%t ",jtagSerialOut,$time);
 		  jtagPacketStruct.jtagTestVector = {jtagSerialOut, jtagPacketStruct.jtagTestVector[61:1]};       
 	  end 
           
@@ -214,7 +214,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	  end 
           
 	endcase  
-//  $display("i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************\n  in SLAVE THE STATE IS %s @%0t and jtag instruction obtained is %b and data is %b and jtagseriot is %b *************************\n",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector,jtagSerialOut);
+  $display("in SLAVE THE STATE IS %s @%0t and jtag instruction obtained is %b and data is %b and jtagseriot is %b *************************\n",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector,jtagSerialOut);
 
 //$display("THE MONITOR TESTVECTOR IS");
   //for(int i=61 ; i>30;i--)

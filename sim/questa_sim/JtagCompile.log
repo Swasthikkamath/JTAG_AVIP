@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 15:12:11 on Apr 01,2025
+Start time: 22:58:47 on Apr 01,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
@@ -9,7 +9,6 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 -- Compiling package JtagSlavePkg
 -- Compiling package JtagMasterSequencePkg
 -- Importing package JtagMasterPkg
-** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vlog-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
 -- Compiling package JtagSlaveSequencePkg
 -- Importing package JtagSlavePkg
 -- Compiling package JtagEnvPkg
@@ -56,5 +55,5 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 Top level modules:
 	HdlTop
 	HvlTop
-End time: 15:12:14 on Apr 01,2025, Elapsed time: 0:00:03
-Errors: 0, Warnings: 1
+End time: 22:58:49 on Apr 01,2025, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0

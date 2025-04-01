@@ -16,7 +16,7 @@ endfunction : new
 task JtagMasterTestVectorSequence :: body();
   super.body();
   req = JtagMasterTransaction :: type_id :: create("req");
-  req.randomize()with{jtagTestVector==100;};
+  req.randomize();
   req.print();
   start_item(req);
   finish_item(req);
