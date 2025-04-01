@@ -40,6 +40,8 @@ task JtagMasterMonitor :: run_phase(uvm_phase phase);
   JtagMasterConfigConverter :: fromClass (jtagMasterAgentConfig , jtagConfigStruct);
   jtagMasterMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagMasterSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagMasterTransaction);
+  $display("\n \n THE VECTOR IN MASTER SIDE IS %b \n \n",jtagMasterTransaction.jtagTestVector);
+
 endtask : run_phase
 
 `endif

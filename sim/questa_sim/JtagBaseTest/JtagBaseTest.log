@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 22:56:08 on Mar 29,2025
+# Start time: 15:12:18 on Apr 01,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(19): (vopt-2239) Treating stand-alone use of presumed external function as an implicit VOID cast.
 # //  Questa Sim
@@ -149,216 +149,191 @@
 #   TEST VECTOR  integral               32    'b1100100
 # -----------------------------------------------------
 # IN MASTER TMS IS 0 @100
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagResetState @100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagResetState @                 100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagIdleState @300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagIdleState @                 300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 1 @300
+# IN MASTER TMS IS 1 @300
 # IN MASTER TMS IS 1 @500
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagDrScanState @500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagDrScanState @                 500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagIrScanState @700 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagIrScanState @                 700 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 0 @700
+# IN MASTER TMS IS 0 @700
 # IN MASTER TMS IS 0 @900
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagCaptureIrState @900 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagCaptureIrState @                 900 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftIrState @1100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagShiftIrState @                1100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 0 @1100
+# IN MASTER TMS IS 0 @1100
 # IN MASTER TMS IS 0 @1300
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftIrState @1300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagShiftIrState @                1300 and jtag instruction obtained is xxxx0 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftIrState @1500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagShiftIrState @                1500 and jtag instruction obtained is xxx10 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 0 @1500
+# IN MASTER TMS IS 0 @1500
 # IN MASTER TMS IS 0 @1700
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftIrState @1700 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagShiftIrState @                1700 and jtag instruction obtained is xx110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftIrState @1900 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagShiftIrState @                1900 and jtag instruction obtained is x0110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 1 @1900
+# IN MASTER TMS IS 1 @1900
 # IN MASTER TMS IS 1 @2100
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagExit1IrState @2100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagExit1IrState @                2100 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagUpdateIrState @2300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagUpdateIrState @                2300 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 1 @2300
+# IN MASTER TMS IS 1 @2300
 # IN MASTER TMS IS 0 @2500
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagDrScanState @2500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagDrScanState @                2500 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagCaptureDrState @2700 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagCaptureDrState @                2700 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 0 @2700
+# IN MASTER TMS IS 0 @2700
 # THE SERIAL DATA IN MASTER IS 0 @2900
 # IN MASTER TMS IS 0 @2900
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @2900 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# ********************
+#  THE STATE IS jtagShiftDrState @                2900 and jtag instruction obtained is 00110 and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS x @                3100 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @3100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxthe next enum moved is userDefinedRegister
+# IN MONITOR SLAVE SERIAL OUT IS x @                3100 
+# the next enum moved is userDefinedRegister
 # the next enum moved is boundaryScanRegisters
 # ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(46): Non-existent associative array entry. Returning default value.
 # serial out in slave driver is x @                3100 and data is 0xxxxxxx
+# ********************
+#  THE STATE IS jtagShiftDrState @                3100 and jtag instruction obtained is 00110 and data is 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # THE SERIAL DATA IN MASTER IS 0 @3100
 # IN MASTER TMS IS 0 @3100
 # THE SERIAL DATA IN MASTER IS 1 @3300
 # IN MASTER TMS IS 0 @3300
+# ********************
+#  THE STATE IS jtagShiftDrState @                3300 and jtag instruction obtained is 00110 and data is 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is x @                3300 and data is 00xxxxxx
 # IN MONITOR SLAVE SERIAL OUT IS x @                3300 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @3300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# IN MONITOR SLAVE SERIAL OUT IS x @                3500 
+# serial out in slave driver is x @                3500 and data is 100xxxxx
+# ********************
+#  THE STATE IS jtagShiftDrState @                3500 and jtag instruction obtained is 00110 and data is 100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS x @                3500 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @3500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is x @                3500 and data is 100xxxxx
 # THE SERIAL DATA IN MASTER IS 0 @3500
 # IN MASTER TMS IS 0 @3500
 # THE SERIAL DATA IN MASTER IS 0 @3700
 # IN MASTER TMS IS 0 @3700
+# ********************
+#  THE STATE IS jtagShiftDrState @                3700 and jtag instruction obtained is 00110 and data is 0100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is x @                3700 and data is 0100xxxx
 # IN MONITOR SLAVE SERIAL OUT IS x @                3700 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @3700 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# IN MONITOR SLAVE SERIAL OUT IS x @                3900 
+# serial out in slave driver is x @                3900 and data is 00100xxx
+# ********************
+#  THE STATE IS jtagShiftDrState @                3900 and jtag instruction obtained is 00110 and data is 00100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS x @                3900 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @3900 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is x @                3900 and data is 00100xxx
 # THE SERIAL DATA IN MASTER IS 1 @3900
 # IN MASTER TMS IS 0 @3900
 # THE SERIAL DATA IN MASTER IS 1 @4100
 # IN MASTER TMS IS 0 @4100
+# ********************
+#  THE STATE IS jtagShiftDrState @                4100 and jtag instruction obtained is 00110 and data is 100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is x @                4100 and data is 100100xx
 # IN MONITOR SLAVE SERIAL OUT IS x @                4100 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @4100 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# IN MONITOR SLAVE SERIAL OUT IS x @                4300 
+# serial out in slave driver is x @                4300 and data is 1100100x
+# ********************
+#  THE STATE IS jtagShiftDrState @                4300 and jtag instruction obtained is 00110 and data is 1100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS x @                4300 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @4300 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is x @                4300 and data is 1100100x
 # THE SERIAL DATA IN MASTER IS 0 @4300
 # IN MASTER TMS IS 0 @4300
 # THE SERIAL DATA IN MASTER IS x @4500
 # IN MASTER TMS IS 0 @4500
+# ********************
+#  THE STATE IS jtagShiftDrState @                4500 and jtag instruction obtained is 00110 and data is 01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is 0 @                4500 and data is 01100100
 # IN MONITOR SLAVE SERIAL OUT IS x @                4500 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @4500 and jtag instruction obtained is xxxxx and data is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
+# IN MONITOR SLAVE SERIAL OUT IS 0 @                4700 
+# serial out in slave driver is 0 @                4700 and data is x0110010
+# ********************
+#  THE STATE IS jtagShiftDrState @                4700 and jtag instruction obtained is 00110 and data is x01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS 0 @                4700 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @4700 and jtag instruction obtained is xxxxx and data is 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 0 *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is 0 @                4700 and data is x0110010
 # THE SERIAL DATA IN MASTER IS x @4700
 # IN MASTER TMS IS 0 @4700
 # THE SERIAL DATA IN MASTER IS x @4900
 # IN MASTER TMS IS 0 @4900
+# ********************
+#  THE STATE IS jtagShiftDrState @                4900 and jtag instruction obtained is 00110 and data is xx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is 1 @                4900 and data is xx011001
 # IN MONITOR SLAVE SERIAL OUT IS 0 @                4900 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @4900 and jtag instruction obtained is xxxxx and data is 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 0 *************************
+# IN MONITOR SLAVE SERIAL OUT IS 1 @                5100 
+# serial out in slave driver is 0 @                5100 and data is xxx01100
+# ********************
+#  THE STATE IS jtagShiftDrState @                5100 and jtag instruction obtained is 00110 and data is xxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# 00xxxxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS 1 @                5100 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @5100 and jtag instruction obtained is xxxxx and data is 100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 1 *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# 100xxxxxxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is 0 @                5100 and data is xxx01100
 # THE SERIAL DATA IN MASTER IS x @5100
 # IN MASTER TMS IS 0 @5100
 # THE SERIAL DATA IN MASTER IS x @5300
 # IN MASTER TMS IS 0 @5300
+# ********************
+#  THE STATE IS jtagShiftDrState @                5300 and jtag instruction obtained is 00110 and data is xxxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is 0 @                5300 and data is xxxx0110
 # IN MONITOR SLAVE SERIAL OUT IS 0 @                5300 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @5300 and jtag instruction obtained is xxxxx and data is 0100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 0 *************************
+# IN MONITOR SLAVE SERIAL OUT IS 0 @                5500 
+# serial out in slave driver is 1 @                5500 and data is xxxxx011
+# ********************
+#  THE STATE IS jtagShiftDrState @                5500 and jtag instruction obtained is 00110 and data is xxxxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# 0100xxxxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS 0 @                5500 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @5500 and jtag instruction obtained is xxxxx and data is 00100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 0 *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# 00100xxxxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is 1 @                5500 and data is xxxxx011
 # THE SERIAL DATA IN MASTER IS x @5500
 # IN MASTER TMS IS 0 @5500
 # THE SERIAL DATA IN MASTER IS x @5700
 # IN MASTER TMS IS 0 @5700
+# ********************
+#  THE STATE IS jtagShiftDrState @                5700 and jtag instruction obtained is 00110 and data is xxxxxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is 1 @                5700 and data is xxxxxx01
 # IN MONITOR SLAVE SERIAL OUT IS 1 @                5700 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @5700 and jtag instruction obtained is xxxxx and data is 100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 1 *************************
+# IN MONITOR SLAVE SERIAL OUT IS 1 @                5900 
+# serial out in slave driver is 0 @                5900 and data is xxxxxxx0
+# ********************
+#  THE STATE IS jtagShiftDrState @                5900 and jtag instruction obtained is 00110 and data is xxxxxxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# 100100xxxxxxxxxxxxxxxxxxxxxxxxxIN MONITOR SLAVE SERIAL OUT IS 1 @                5900 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagShiftDrState @5900 and jtag instruction obtained is xxxxx and data is 1100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 1 *************************
-# 
-# THE MONITOR TESTVECTOR IS
-# 1100100xxxxxxxxxxxxxxxxxxxxxxxxserial out in slave driver is 0 @                5900 and data is xxxxxxx0
 # THE SERIAL DATA IN MASTER IS x @5900
 # IN MASTER TMS IS 1 @5900
 # IN MASTER TMS IS 1 @6100
+# ********************
+#  THE STATE IS jtagExit1DrState @                6100 and jtag instruction obtained is 00110 and data is xxxxxxxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+# 
 # serial out in slave driver is x @                6100 and data is xxxxxxxx
 # IN MONITOR SLAVE SERIAL OUT IS 0 @                6100 
-# i*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagExit1DrState @6100 and jtag instruction obtained is xxxxx and data is 01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is 0 *************************
+# THE INPUT TEST VECTOR IN SEQ CONVERTER IS 01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# THE CONTENT IN SLAVE SIDE IS xxxxxxxxxxxxxxxxxxxxxxxx01100100
+# ********************
+#  THE STATE IS jtagUpdateDrState @                6300 and jtag instruction obtained is 00110 and data is xxxxxxxx01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 # 
-# THE MONITOR TESTVECTOR IS
-# 01100100xxxxxxxxxxxxxxxxxxxxxxxi*$$$$$$$$$$$$$$$$$$$$$$$$$$$4********************
-#   in SLAVE THE STATE IS jtagUpdateDrState @6300 and jtag instruction obtained is xxxxx and data is 01100100xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx and jtagseriot is x *************************
 # 
-# THE MONITOR TESTVECTOR IS
-# 01100100xxxxxxxxxxxxxxxxxxxxxxxIN MASTER TMS IS 0 @6300
+#  
+#  THE VECTOR IN MASTER SIDE IS xxxxxxxxxxxxxxxxxxxxxxxx01100100 
+#  
+# 
+# IN MASTER TMS IS 0 @6300
 # IN MASTER TMS IS x @6500
 # IN MASTER TMS IS x @6700
 # IN MASTER TMS IS x @6900
@@ -409,5 +384,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 12300 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 22:56:15 on Mar 29,2025, Elapsed time: 0:00:07
+# End time: 15:12:25 on Apr 01,2025, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 2

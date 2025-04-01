@@ -16,16 +16,29 @@ endfunction : new
 
 
 function void JtagSlaveSeqItemConverter :: fromClass(input JtagSlaveTransaction jtagSlaveTransaction ,          input JtagConfigStruct jtagConfigStruct , output JtagPacketStruct jtagPacketStruct);
-  for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
+ for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
     jtagPacketStruct.jtagTestVector[i] = jtagSlaveTransaction.jtagTestVector[i];
+
+
+   
 
   // for(int i=0 ; i<32 ; i++)
   //  jtagPacketStruct.jtagTms[i]= jtagSlaveTransaction.jtagTms[i];
  endfunction : fromClass
 
 function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagPacketStruct ,input JtagConfigStruct  jtagConfigStruct , inout JtagSlaveTransaction jtagSlaveTransaction);
-   for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
-     jtagSlaveTransaction.jtagTestVector[i] = jtagPacketStruct.jtagTestVector[i];
+ //  for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
+   //  jtagSlaveTransaction.jtagTestVector[i] = jtagPacketStruct.jtagTestVector[i];
+
+   $display("THE INPUT TEST VECTOR IN SEQ CONVERTER IS %b",jtagPacketStruct.jtagTestVector);
+
+   case(jtagConfigStruct.jtagTestVectorWidth)
+    'd 8 : jtagSlaveTransaction.jtagTestVector[7:0] = jtagPacketStruct.jtagTestVector[61:54];
+    'd 16: jtagSlaveTransaction.jtagTestVector[15:0]= jtagPacketStruct.jtagTestVector[61:46];
+    'd 24 : jtagSlaveTransaction.jtagTestVector[23:0] = jtagPacketStruct.jtagTestVector[61:38];
+    'd 32 : jtagSlaveTransaction.jtagTestVector[31:0] = jtagPacketStruct.jtagTestVector[61:30];
+   endcase
+     
 
    for (int i=0 ;i<jtagPacketStruct.jtagInstruction ; i++)
      jtagSlaveTransaction.jtagInstruction = jtagPacketStruct.jtagInstruction[i];

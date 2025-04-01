@@ -40,5 +40,7 @@ task JtagSlaveMonitor :: run_phase(uvm_phase phase);
     JtagSlaveConfigConverter :: fromClass (jtagSlaveAgentConfig , jtagConfigStruct);
   jtagSlaveMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagSlaveSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagSlaveTransaction);
+  $display("THE CONTENT IN SLAVE SIDE IS %b",jtagSlaveTransaction.jtagTestVector);
+
 endtask : run_phase
 `endif
