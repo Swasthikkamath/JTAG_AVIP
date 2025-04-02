@@ -109,7 +109,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
 	  
 	  jtagShiftDrState : begin 
-	    
+           $display("### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT %0t\n",$time);	    
 	    if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 
@@ -117,7 +117,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
               jtagTapState = jtagShiftDrState;      
 	    end 
 	    jtagSerialIn=jtagPacketStruct.jtagTestVector[k++];
-	  $display("THE SERIAL DATA IN MASTER IS %b @%0t",jtagSerialIn,$time);
+	  $display("### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS %b AT %0t \n",jtagSerialIn,$time);
 	  end 
           
 	  
@@ -186,7 +186,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
 
 	  jtagShiftIrState : begin 
-
+            $display("### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT %0t \n",$time);
 	    if(jtagTms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
@@ -194,6 +194,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
               jtagTapState = jtagShiftIrState ;
 	    end
 	    jtagSerialIn = jtagConfigStruct.jtagInstructionOpcode[m++];
+	    $display("### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS %b\n",jtagSerialIn);
 	  end 
  
     
@@ -240,7 +241,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
           
 	endcase  
            //@(posedge clk);
-	   $display("IN MASTER TMS IS %b @%0t",jtagTms,$time);
+	   //$display("IN MASTER TMS IS %b @%0t",jtagTms,$time);
       end  
       @(posedge clk);
   endtask :DriveToBfm

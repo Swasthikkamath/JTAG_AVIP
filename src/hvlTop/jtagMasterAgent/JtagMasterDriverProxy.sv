@@ -31,12 +31,14 @@ task JtagMasterDriver :: run_phase(uvm_phase phase);
   JtagMasterConfigConverter :: fromClass(jtagMasterAgentConfig,jtagConfigStruct);
  
   $display("ENTERED TO DRIVER PROXY SUCCESSFULLY");
-  $display("The test vector is %b ",jtagPacketStruct.jtagTestVector);
   seq_item_port.get_next_item(req);
  
+  $display("\nTHE CONFIG FOR THE CONTROLLER DEVICE ARE: \nTHE TEST VECTOR WIDTH IS %0d \nTHE INSTRUCTION WIDTH IS %0d\n",jtagConfigStruct.jtagTestVectorWidth,jtagConfigStruct.jtagInstructionWidth); 
   JtagMasterSeqItemConverter :: fromClass(req ,jtagConfigStruct,jtagPacketStruct);
+  $display("************************************************************************************************************************************************************************************************************\n \t \t THE SENT SENT FROM CONTROLLER DEVICE IS %b \n \t \t THE TMS BEING SENT IS %b \n************************************************************************************************************************************************************************************************************\n",jtagPacketStruct.jtagTestVector,jtagPacketStruct.jtagTms);
   jtagMasterDriverBfm.waitForReset();
   jtagMasterDriverBfm.DriveToBfm(jtagPacketStruct,jtagConfigStruct); 
+  
   seq_item_port.item_done(rsp);
 endtask : run_phase
 

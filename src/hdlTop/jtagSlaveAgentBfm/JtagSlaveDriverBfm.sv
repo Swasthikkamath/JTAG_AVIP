@@ -45,7 +45,7 @@ task registeringData(reg[4:0]instructionRegister , logic dataIn);
 	  // jtagSerialOut = registerBank[instructionRegister][0];
 	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][7:1] };
 	   jtagSerialOut = registerBank[instructionRegister][0];
-	  $display("serial out in slave driver is %b @%t and data is %b",jtagSerialOut,$time,registerBank[instructionRegister]);
+//	  $display("serial out in slave driver is %b @%t and data is %b",jtagSerialOut,$time,registerBank[instructionRegister]);
 	  break;
         end 
 	else begin
@@ -107,7 +107,7 @@ task observeData();
 
 	  
 	  jtagShiftDrState : begin 
-	   $display("IN SLAVE THE SHIFT DR TMS VALUE IS %b",jtagTms); 
+//	   $display("IN SLAVE THE SHIFT DR TMS VALUE IS %b",jtagTms); 
 	    if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 

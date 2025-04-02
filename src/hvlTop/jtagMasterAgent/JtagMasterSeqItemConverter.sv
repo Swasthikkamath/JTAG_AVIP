@@ -28,11 +28,9 @@ function void JtagMasterSeqItemConverter :: fromClass(input JtagMasterTransactio
 //  jtagPacketStruct.jtagTms = {JTAGMOVETOIDLE , {TEST_VECTOR_WIDTH{0}},JTAGMOVETILLSHIFTDR , JTAGMOVETILLSELECTDR , {INSTRUCTION_WIDTH{0}} ,JTAGMOVETILLSHIFTIR}; 
 
   jtagPacketStruct.jtagTms=JTAGMOVETILLSHIFTIR;
-  $display("the size of param is %0d",$bits(JTAGMOVETILLSHIFTIR));
   for(i=0;i<jtagConfigStruct.jtagInstructionWidth-1;i++)
     jtagPacketStruct.jtagTms[($bits(JTAGMOVETILLSHIFTIR))+i] = 1'b 0;
 
-  $display("the tms is %b",jtagPacketStruct.jtagTms);
   
 
   case(jtagConfigStruct.jtagInstructionWidth) 
@@ -68,7 +66,6 @@ case(jtagConfigStruct.jtagTestVectorWidth)
    end
 
 endcase
-  $display("the tms is %b",jtagPacketStruct.jtagTms);
 
 
   for(int i=0;i<(jtagConfigStruct.jtagTestVectorWidth+ JTAGREGISTERWIDTH)-1;i++)
@@ -76,7 +73,6 @@ endcase
 
   jtagPacketStruct.jtagTms = {JTAGMOVETOIDLE,jtagPacketStruct.jtagTms};
 
-$display("the tms is %b",jtagPacketStruct.jtagTms);
 
 //  for(int i=0 ; i<62 ; i++)
   // jtagPacketStruct.jtagTms[i]= jtagMasterTransaction.jtagTms[i];
@@ -91,8 +87,6 @@ for (int i=0;i<61;i++)
      jtagMasterTransaction.jtagTestVector[j++] = jtagPacketStruct.jtagTestVector[i];
    end
 
- $display("MASTER CONVERTER IS %b",jtagMasterTransaction.jtagTestVector);
-  $display("THE MASTER SIDE INPUT SEQUENCE IS %b",jtagPacketStruct.jtagTestVector);
 /*   case(jtagConfigStruct.jtagTestVectorWidth)
        'd 8 : jtagMasterTransaction.jtagTestVector[7:0] = jtagPacketStruct.jtagTestVector[53:46];
            'd 16: jtagMasterTransaction.jtagTestVector[15:0]= jtagPacketStruct.jtagTestVector[45:30];

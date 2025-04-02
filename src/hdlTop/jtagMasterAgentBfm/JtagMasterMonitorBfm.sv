@@ -83,7 +83,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 
 	  
 	  jtagShiftDrState : begin 
-	    
+            $display("### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT %0t \n",$time);          
 	    if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 
@@ -91,6 +91,8 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
               jtagTapState = jtagShiftDrState;      
 	    end
 		  jtagPacketStruct.jtagTestVector = {jtagSerialIn , jtagPacketStruct.jtagTestVector[61:1]};       
+	  
+	         $display("### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS %b COMPLETE VECTOR IS %b AT %0t \n",jtagSerialIn,jtagPacketStruct.jtagTestVector,$time);
 	  end 
           
 	  
@@ -158,7 +160,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 
 
 	  jtagShiftIrState : begin 
-
+           $display("### CONTROLLER MONITOR ### IS IN SHIFT IR STATE AT %0t \n",$time);
 	    if(jtagTms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
@@ -166,9 +168,11 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
               jtagTapState = jtagShiftIrState ;
 	    end
 		  jtagPacketStruct.jtagInstruction[m++] = jtagSerialIn;
-	  end 
+                  $display("### CONTROLLER MONITOR### THE INSTRUCTION BIT OBTAINED HERE IS %b COMPLETE VECTOR IS %b AT %0t \n",jtagSerialIn,jtagPacketStruct.jtagInstruction,$time);
+
+            end 
  
-    
+      
           jtagExit1IrState : begin 
             
  	    if(jtagTms == 1) begin 
@@ -211,7 +215,7 @@ task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigSt
 	  end 
           
 	endcase  
-	$display("THE STATE IN MASTER MONITOR %s @%0t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
+	//$display("THE STATE IN MASTER MONITOR %s @%0t and jtag instruction obtained is %b and data is %b",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector);
       end  
 
    
