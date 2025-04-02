@@ -30,6 +30,8 @@ function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagP
  //  for (int i=0;i<jtagConfigStruct.jtagTestVectorWidth;i++)
    //  jtagSlaveTransaction.jtagTestVector[i] = jtagPacketStruct.jtagTestVector[i];
 
+  int j;
+  j=0;
    $display("THE INPUT TEST VECTOR IN SEQ CONVERTER IS %b",jtagPacketStruct.jtagTestVector);
  /*
    case(jtagConfigStruct.jtagTestVectorWidth)
@@ -41,6 +43,10 @@ function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagP
 */
 
 
+for (int i=0;i<61;i++)
+   if(!($isunknown(jtagPacketStruct.jtagTestVector[i]))) begin 
+     jtagSlaveTransaction.jtagTestVector[j++] = jtagPacketStruct.jtagTestVector[i];
+   end
 
 
    for (int i=0 ;i<jtagPacketStruct.jtagInstruction ; i++)
