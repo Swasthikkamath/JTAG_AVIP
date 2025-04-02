@@ -1,5 +1,5 @@
-`ifndef UARTSLAVEMONITOR_INCLUDED_
-`define UARTSLAVEMONITOR_INCLUDED_
+`ifndef JTAGSLAVEMONITOR_INCLUDED_
+`define JTAGSLAVEMONITOR_INCLUDED_
 
 class JtagSlaveMonitor extends uvm_monitor; 
   `uvm_component_utils(JtagSlaveMonitor)
@@ -40,7 +40,8 @@ task JtagSlaveMonitor :: run_phase(uvm_phase phase);
     JtagSlaveConfigConverter :: fromClass (jtagSlaveAgentConfig , jtagConfigStruct);
   jtagSlaveMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagSlaveSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagSlaveTransaction);
-  $display("THE CONTENT IN SLAVE SIDE IS %b",jtagSlaveTransaction.jtagTestVector);
+  $display("*****************************************************************************************************************************************************************************************\n");
+  $display("THE RECEIVED VECTOR IN TARGET IS %b",jtagSlaveTransaction.jtagTestVector);
 
 endtask : run_phase
 `endif

@@ -82,7 +82,8 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
 	  
 	  jtagShiftDrState : begin 
-	    
+	  
+	  $display("### TARGET MONITOR ### IS IN SHIFT DR STATE AT %0t \n ",$time);
 	    if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 
@@ -90,8 +91,9 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
               jtagTapState = jtagShiftDrState;      
 	    end
 
-	//      $display("IN MONITOR SLAVE SERIAL OUT IS %B @%t ",jtagSerialOut,$time);
-		  jtagPacketStruct.jtagTestVector = {jtagSerialOut, jtagPacketStruct.jtagTestVector[61:1]};       
+	    jtagPacketStruct.jtagTestVector = {jtagSerialOut, jtagPacketStruct.jtagTestVector[61:1]};  
+	      $display("### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS %b COMPLETE VECTORE IS %b AT %0t \n",jtagSerialOut,jtagPacketStruct.jtagTestVector,$time);
+
 	  end 
           
 	  
@@ -214,12 +216,6 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	  end 
           
 	endcase  
- // $display("in SLAVE THE STATE IS %s @%0t and jtag instruction obtained is %b and data is %b and jtagseriot is %b *************************\n",jtagTapState.name(),$time,jtagPacketStruct.jtagInstruction,jtagPacketStruct.jtagTestVector,jtagSerialOut);
-
-//$display("THE MONITOR TESTVECTOR IS");
-  //for(int i=61 ; i>30;i--)
-    //$write("%b",jtagPacketStruct.jtagTestVector[i]);
-
     end  
 
 

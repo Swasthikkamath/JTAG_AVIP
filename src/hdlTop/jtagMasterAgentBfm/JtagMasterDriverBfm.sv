@@ -33,30 +33,6 @@ interface JtagMasterDriverBfm (input  logic   clk,
     jtagTapState = jtagResetState;
   endtask : waitForReset
   task DriveToBfm(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfigStruct);
-  /* 
-    int i;
-    @(posedge clk);
-    jtagTms = jtagPacketStruct.jtagTms[i++];
-    jtagTapState = jtagIdleState;
-    $display("first tms is being sent @%0t",$time);
-    while(jtagTapState != jtagCaptureIrState)
-     begin 
-       @(posedge clk);
-       jtagTapState = JtagTapStates'(i);
-       jtagTms = jtagPacketStruct.jtagTms[i++];
-       $display("THE STATE IS %s @%0t",jtagTapState.name(),$time);
-     end 
-    $display("in capture state now %0t",$time); 
-    jtagSerialIn = jtagPacketStruct.jtagTestVector[0];
-    for(int i=1;i<jtagConfigStruct.jtagTestVectorWidth;i++)
-     begin 
-       @(posedge clk);
-       jtagSerialIn = jtagPacketStruct.jtagTestVector[i];
-       $display("The serial in from driver is %b @%t",jtagSerialIn,$time);
-       jtagTms=0;
-     end 
-     @(posedge clk);
-    jtagTms = 1; */
     int  i,k ,m;
     for(int j=0 ; j< 61;j++)
       begin

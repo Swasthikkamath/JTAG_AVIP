@@ -32,7 +32,7 @@ function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagP
 
   int j;
   j=0;
-   $display("THE INPUT TEST VECTOR IN SEQ CONVERTER IS %b",jtagPacketStruct.jtagTestVector);
+
  /*
    case(jtagConfigStruct.jtagTestVectorWidth)
     'd 8 : jtagSlaveTransaction.jtagTestVector[7:0] = jtagPacketStruct.jtagTestVector[61:54];

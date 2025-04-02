@@ -39,18 +39,15 @@ interface JtagSlaveDriverBfm (input  logic   clk,
 
 
 task registeringData(reg[4:0]instructionRegister , logic dataIn);
-       //$display("^^^^^^^^^^^^^^^666ENUM SIZE IS %0D ",jtagInstructionOpcode.num());
        for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin 
         if(jtagInstructionOpcode == instructionRegister) begin
-	  // jtagSerialOut = registerBank[instructionRegister][0];
-	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][7:1] };
+	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
 	   jtagSerialOut = registerBank[instructionRegister][0];
-//	  $display("serial out in slave driver is %b @%t and data is %b",jtagSerialOut,$time,registerBank[instructionRegister]);
+	  $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
 	  break;
         end 
 	else begin
 	  jtagInstructionOpcode = jtagInstructionOpcode.next();
-	  //$display("the next enum moved is %s",jtagInstructionOpcode.name());
         end 
       end 
 endtask 
@@ -107,7 +104,7 @@ task observeData();
 
 	  
 	  jtagShiftDrState : begin 
-//	   $display("IN SLAVE THE SHIFT DR TMS VALUE IS %b",jtagTms); 
+	    $display("### TARGET DRIVER ### IS IN SHIFT DR STATE AT %0t\n",$time);
 	    if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 
@@ -183,7 +180,7 @@ task observeData();
 
 
 	  jtagShiftIrState : begin 
-
+            $display("### TARGET DRIVER ### IS IN SHIFT IR STATE AT %0t \n",$time);
 	    if(jtagTms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
@@ -191,6 +188,7 @@ task observeData();
               jtagTapState = jtagShiftIrState ;
 	    end
             instructionRegister = {jtagSerialIn,instructionRegister[4:1]};
+	    $display("### TARGET DRIVER ### THE INSTRUCTION BIT OBTAINED HERE IS %b COMPLETE VECTOR IS %b AT %0t \n",jtagSerialIn,instructionRegister,$time);
 	  end 
  
           jtagExit1IrState : begin 

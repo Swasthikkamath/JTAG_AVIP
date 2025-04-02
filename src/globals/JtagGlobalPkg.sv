@@ -3,7 +3,8 @@
 
 package JtagGlobalPkg;
  
-  parameter JTAGREGISTERWIDTH =8;
+  parameter JTAGREGISTERWIDTH =10;
+  
   parameter [4:0] JTAGMOVETILLSHIFTIR = 5'b 00110;
   
   parameter [2:0] JTAGMOVETILLSELECTDR = 3'b 111;
@@ -11,6 +12,9 @@ package JtagGlobalPkg;
   parameter [1:0] JTAGMOVETILLSHIFTDR = 2'b 00;
 
   parameter [2:0] JTAGMOVETOIDLE = 3'b 011;
+
+  parameter NO_OF_TESTS = 10;
+
 
   typedef enum bit [5:0]{testVectorWidth8Bit= 8,
                          testVectorWidth16Bit = 16,
@@ -33,5 +37,7 @@ package JtagGlobalPkg;
   typedef struct packed{logic[61:0] jtagTestVector; logic[4:0]jtagInstruction; logic[61:0]jtagTms;}JtagPacketStruct;
 
   typedef enum{jtagResetState ,jtagIdleState,jtagDrScanState, jtagIrScanState,jtagCaptureIrState,jtagShiftIrState,jtagExit1IrState,jtagPauseIrState,jtagExit2IrState,jtagUpdateIrState,jtagCaptureDrState,jtagShiftDrState,jtagExit1DrState,jtagPauseDrState,jtagExit2DrState,jtagUpdateDrState}JtagTapStates;
+
 endpackage : JtagGlobalPkg
+
 `endif
