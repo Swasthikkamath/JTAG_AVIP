@@ -43,7 +43,7 @@ function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagP
 */
 
 
-for (int i=0;i<61;i++)
+  for (int i=0;i<=61;i++)
    if(!($isunknown(jtagPacketStruct.jtagTestVector[i]))) begin 
      jtagSlaveTransaction.jtagTestVector[j++] = jtagPacketStruct.jtagTestVector[i];
    end
