@@ -1,11 +1,20 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 22:58:47 on Apr 01,2025
+Start time: 09:36:38 on Apr 02,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
 ** Note: (vlog-2286) ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(5): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 -- Importing package JtagGlobalPkg
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(49): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(50): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(51): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(56): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(57): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(58): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(64): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(65): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(66): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 -- Compiling package JtagSlavePkg
 -- Compiling package JtagMasterSequencePkg
 -- Importing package JtagMasterPkg
@@ -55,5 +64,5 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 Top level modules:
 	HdlTop
 	HvlTop
-End time: 22:58:49 on Apr 01,2025, Elapsed time: 0:00:02
-Errors: 0, Warnings: 0
+End time: 09:36:40 on Apr 02,2025, Elapsed time: 0:00:02
+Errors: 0, Warnings: 9

@@ -26,7 +26,7 @@ interface JtagSlaveDriverBfm (input  logic   clk,
   import JtagSlavePkg::*;
   JtagTapStates jtagTapState;
   reg byPassRegister;
-  reg[7:0]registerBank[JtagInstructionOpcodeEnum];
+  reg[(JTAGREGISTERWIDTH -1):0]registerBank[JtagInstructionOpcodeEnum];
   reg[4:0]instructionRegister;
   JtagInstructionOpcodeEnum jtagInstructionOpcode;
   //Variable: name

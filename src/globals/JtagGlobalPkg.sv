@@ -2,8 +2,16 @@
 `define JTAGGLOBALPKG_INCLUDED_
 
 package JtagGlobalPkg;
+ 
+  parameter JTAGREGISTERWIDTH =8;
+  parameter [4:0] JTAGMOVETILLSHIFTIR = 5'b 00110;
   
-  
+  parameter [2:0] JTAGMOVETILLSELECTDR = 3'b 111;
+
+  parameter [1:0] JTAGMOVETILLSHIFTDR = 2'b 00;
+
+  parameter [2:0] JTAGMOVETOIDLE = 3'b 011;
+
   typedef enum bit [5:0]{testVectorWidth8Bit= 8,
                          testVectorWidth16Bit = 16,
 			 testVectorWidth24Bit = 24 , 
