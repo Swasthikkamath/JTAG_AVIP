@@ -39,6 +39,6 @@ module JtagMasterAgentBfm(JtagIf jtagIf);
     uvm_config_db#(virtual JtagMasterMonitorBfm)::set(null,"*","jtagMasterMonitorBfm",jtagMasterMonitorBfm);
   end
 
-//  bind jtagMasterMonitorBfm jtagMasterAssertions TestVectrorTestingAssertions();
+ bind jtagMasterMonitorBfm JtagMasterAssertions TestVectrorTestingAssertions(.clk(clk),.jtagSerialIn(jtagSerialIn), .reset(reset),.jtagTms(jtagTms));
 
 endmodule : JtagMasterAgentBfm
