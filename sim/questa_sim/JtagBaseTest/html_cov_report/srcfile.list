@@ -1,6 +1,7 @@
 ../../src/hdlTop/JtagHdlTop.sv
 ../../src/hdlTop/jtagInterface/JtagInterface.sv
 ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv
+../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv
 ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv
 ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterMonitorBfm.sv
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv

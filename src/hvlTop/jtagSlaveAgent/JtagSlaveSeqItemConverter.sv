@@ -49,8 +49,8 @@ function void JtagSlaveSeqItemConverter :: toClass (input JtagPacketStruct jtagP
    end
 
 
-   for (int i=0 ;i<jtagPacketStruct.jtagInstruction ; i++)
-     jtagSlaveTransaction.jtagInstruction = jtagPacketStruct.jtagInstruction[i];
+   for (int i=0 ;i<jtagConfigStruct.jtagInstructionWidth ; i++)
+     jtagSlaveTransaction.jtagInstruction[i] = jtagPacketStruct.jtagInstruction[i];
 
  endfunction : toClass
 

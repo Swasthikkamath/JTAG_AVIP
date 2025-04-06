@@ -7,10 +7,10 @@ class JtagMasterAgentConfig extends uvm_object;
 
   bit hasCoverage;
   uvm_active_passive_enum   is_active;
-  JtagTestVectorWidthEnum   jtagTestVectorWidth;
-  JtagInstructionWidthEnum  jtagInstructionWidth;
-  JtagInstructionOpcodeEnum jtagInstructionOpcode;
-  int NumberOfTests =10;
+  rand JtagTestVectorWidthEnum   jtagTestVectorWidth;
+  rand JtagInstructionWidthEnum  jtagInstructionWidth;
+  rand JtagInstructionOpcodeEnum jtagInstructionOpcode;
+  int NumberOfTests;
 
   extern function new(string name = "JtagMasterAgentConfig");
 
