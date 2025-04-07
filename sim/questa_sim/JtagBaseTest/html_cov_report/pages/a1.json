@@ -1,12 +1,14 @@
 var g_data = {
 a23:{
 scopes:[{link:'z.htm?f=0&s=23',val:'work.JtagMasterAssertions'}]
-,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'1',h2:'61',h3:'0',h4:'60',h5:'0',h6:'2'}
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testVectorValidity',fc:'Gr',pc:'Gr',h0:'0',h1:'1',h2:'61',h3:'0',h4:'60',h5:'0',h6:'2'}
+,{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'1',h2:'61',h3:'0',h4:'60',h5:'0',h6:'2'}
 ],
 },
 a123:{
 scopes:[{s:'29',b:'1',val:'HdlTop'},{s:'39',b:'1',val:'jtagMasterAgentBfm'},{s:'66',b:'1',val:'jtagMasterMonitorBfm'},{link:'z.htm?f=0&s=123',val:'TestVectrorTestingAssertions'}]
-,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'1',h2:'61',h3:'0',h4:'60',h5:'0',h6:'2'}
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testVectorValidity',fc:'Gr',pc:'Gr',h0:'0',h1:'1',h2:'61',h3:'0',h4:'60',h5:'0',h6:'2'}
+,{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'1',h2:'61',h3:'0',h4:'60',h5:'0',h6:'2'}
 ],
 },
 dummyEnd:0

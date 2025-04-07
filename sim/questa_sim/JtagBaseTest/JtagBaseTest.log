@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 22:08:14 on Apr 06,2025
+# Start time: 15:30:01 on Apr 07,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
@@ -639,6 +639,11 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6500 
 # 
+# ** Info: 
+#  
+#  
+#  TEST VECTOR IS VALID
+#    Time: 6500 ps Started: 6300 ps  Scope: HdlTop.jtagMasterAgentBfm.jtagMasterMonitorBfm.TestVectrorTestingAssertions File: ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv Line: 101
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6700 
@@ -849,5 +854,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 12300 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 22:08:19 on Apr 06,2025, Elapsed time: 0:00:05
+# End time: 15:30:07 on Apr 07,2025, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 19

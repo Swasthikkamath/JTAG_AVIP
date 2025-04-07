@@ -91,20 +91,19 @@ end
   else
  $error("\n \n \n INSTRUCTION BIT IS UNKNOWN ");
 
-/*
+
     property testVectorValidity;
 	  @(posedge clk) disable iff (!testVectorCheck)
-        (##1 (width-1 == jtagTestVectorWidth) && (test == jtagInstruction));
+        (##1 (width-1 == jtagTestVectorWidth) );
   endproperty
 
   assert property (testVectorValidity) begin 
-  $info("TEST VECTOR IS VALID");
+  $info("\n \n \n TEST VECTOR IS VALID \n \n \n ");
   testVectorCheck = 0;
   end 
   else
   $error("TEST VECTOR  INVALID ");
 
-*/   //NEED TO ASK WHETHER DATA TESTING IS NEEDED 
 
 
 endinterface : JtagMasterAssertions
