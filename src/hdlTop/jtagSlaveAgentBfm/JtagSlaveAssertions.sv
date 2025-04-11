@@ -44,10 +44,10 @@ end
 
 
   always @(posedge  clk)
-    begin 
+    begin
+    $display("THE WIDTH IS %0d",width);
      if((!($isunknown(jtagSerialOut))) && (width <jtagSlaveAgentConfig.jtagTestVectorWidth)) begin 
        width++;
-       $display("****************************************************\n slave width =%0d \n ***********************************",width);
     end 
 
      if(width == jtagSlaveAgentConfig.jtagTestVectorWidth) begin 
@@ -65,11 +65,11 @@ end
   endproperty
 
   assert property (testWidthCheck) begin
-  $info(" \n \n \n \n Slave bit width ARE VALID =%0d \n \n \n \n ",width);
+  $info("******************************************************************************************************\n [SLAVE ASSERTION] \n Slave TDI WIDTH IS VALID =%0d \n************************************************************************************************************",width);
   width= 1'b 0;
   end
   else
- $error("\n \n \n INSTRUCTION BIT IS UNKNOWN ");
+ $error("\n \n \n WIDTH MISMATCH \n \n \n");
 
 endinterface : JtagSlaveAssertions
 

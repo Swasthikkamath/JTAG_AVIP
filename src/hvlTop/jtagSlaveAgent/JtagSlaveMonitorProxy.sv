@@ -39,7 +39,8 @@ task JtagSlaveMonitor :: run_phase(uvm_phase phase);
   super.run_phase(phase);
   forever begin 
     JtagSlaveConfigConverter :: fromClass (jtagSlaveAgentConfig , jtagConfigStruct);
-  jtagSlaveMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
+ jtagSlaveMonitorBfm.waitForReset();
+ jtagSlaveMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagSlaveSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagSlaveTransaction);
   $display("*****************************************************************************************************************************************************************************************\n");
   $display("THE RECEIVED VECTOR IN TARGET IS %b and instruction is %b",jtagSlaveTransaction.jtagTestVector,jtagSlaveTransaction.jtagInstruction);

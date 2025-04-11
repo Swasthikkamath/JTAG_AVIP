@@ -29,6 +29,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   //Used to store the name of the interface
   string name = "JTAG_Slave_MONITOR_BFM"; 
 
+  task waitForReset();
+    jtagTapState = jtagResetState;
+  endtask 
+
   task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
   automatic int count =0;

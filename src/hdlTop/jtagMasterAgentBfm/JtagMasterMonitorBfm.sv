@@ -27,15 +27,21 @@ interface JtagMasterMonitorBfm (input  logic   clk,
   
   //Variable: name
   //Used to store the name of the interface
-  string name = "JTAG_MASTER_MONITOR_BFM"; 
+  string name = "JTAG_MASTER_MONITOR_BFM";
+
+  task waitForReset();
+    jtagTapState = jtagResetState;
+  endtask 
 	
   
 task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
+  m=0;
+  k=0;
     for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
       begin
         @(posedge clk);
-
+          $display("THE CURRENT STATE IS %s",jtagTapState.name());
         case(jtagTapState)
 
           jtagResetState :begin 

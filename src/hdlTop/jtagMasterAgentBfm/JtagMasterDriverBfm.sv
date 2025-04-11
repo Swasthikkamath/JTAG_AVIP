@@ -34,11 +34,15 @@ interface JtagMasterDriverBfm (input  logic   clk,
   endtask : waitForReset
   task DriveToBfm(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfigStruct);
     int  i,k ,m;
-    for(int j=0 ; j< 61;j++)
+    i=0; 
+    m=0;
+    k=0;
+    $display("THE RECEIVED IS %b i=%0d",jtagPacketStruct.jtagTms,i);
+    for(int j=0 ; j< $bits(jtagPacketStruct.jtagTms);j++)
       begin
       @(posedge clk) jtagTms = jtagPacketStruct.jtagTms[i++];
-
-        case(jtagTapState)
+        $display("THE STATE IN MASTER IS %s and tms is %b",jtagTapState.name(),jtagTms);
+	case(jtagTapState)
 
           jtagResetState :begin 
           

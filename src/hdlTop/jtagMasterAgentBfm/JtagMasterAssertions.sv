@@ -50,31 +50,26 @@ end
 
 
   always @(posedge  clk)
-    begin 
+    begin
+     $display("THE WIDTH OF MASTER WIDTH IS %0d",width);
      if((!($isunknown(jtagSerialIn))) && (width < jtagMasterAgentConfig.jtagInstructionWidth)) begin 
        width++;
-       $display("****************************************************\n width =%0d \n ***********************************",width);
        instruction = {jtagSerialIn,instruction[4:1]};
        $display("instruction is %b",instruction);
     end 
 
      if(width == jtagMasterAgentConfig.jtagInstructionWidth) begin 
        startValidityCheck = 1'b 1;
-       startWidthCheck = 1'b 1;
        repeat(2) @(posedge clk);
         startValidityCheck = 1'b 0;
 	repeat(3) @(posedge clk);
-        width =1;
-	while(width <= 16)
+        width =0;
+	while(width < 16)
 	 begin 
           width++;
-          test = {jtagSerialIn , test[15:1]};
-	  $display("THE RESULTANT TEST IS %b",test);
            @(posedge clk);
 	 end
-  $display("the width here is %0d",width);	 
 	 testVectorCheck =1;
-
 
       end 
        //width = 0;
@@ -87,19 +82,20 @@ end
   endproperty
 
   assert property (instructionValidityCheck)
-  $info(" \n \n \n \n INSTRUCTION BITS ARE VALID \n \n \n \n ");
+  $info("*************************************************************************************************************\n[MASTER ASSERTION]\n INSTRUCTION %b MATCHES AND WIDTH %0d  IS CORRECT \n**************************************************************************************************************",instruction,width);
   else
  $error("\n \n \n INSTRUCTION BIT IS UNKNOWN ");
 
 
     property testVectorValidity;
 	  @(posedge clk) disable iff (!testVectorCheck)
-        (##1 (width-1 == jtagTestVectorWidth) );
+        (##1 (width == jtagTestVectorWidth) );
   endproperty
 
   assert property (testVectorValidity) begin 
-  $info("\n \n \n TEST VECTOR IS VALID \n \n \n ");
+  $info("*************************************************************************************************************\n[MASTER ASSERTION]\nTEST VECTOR WIDTH %0d MATCHES \n************************************************************************************************************",width);
   testVectorCheck = 0;
+  width=0;
   end 
   else
   $error("TEST VECTOR  INVALID ");

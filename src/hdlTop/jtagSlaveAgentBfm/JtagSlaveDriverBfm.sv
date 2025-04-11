@@ -53,7 +53,7 @@ task registeringData(reg[4:0]instructionRegister , logic dataIn);
 endtask 
 task observeData();
   int  i,k ,m;
-    for(int j=0 ; j<61 ;j++)
+    for(int j=0 ; j< 61;j++)
       begin
         @(posedge clk);
 
