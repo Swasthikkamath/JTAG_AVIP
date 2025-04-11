@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 15:30:01 on Apr 07,2025
+# Start time: 13:07:44 on Apr 11,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
@@ -63,9 +63,21 @@
 # Loading work.JtagSlaveDriverBfm(fast)
 # Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
 # Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagSlaveAssertions_sv_unit(fast)
+# Loading work.JtagSlaveAssertions(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
+# ** Error: Unable to lock WLF file "JtagBaseTest/waveform.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "JtagBaseTest/waveform.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "JtagBaseTest/waveform.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "JtagBaseTest/waveform.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: JtagBaseTest/waveform.wlf
+#           File in use by: swasthikkamath  Hostname: FEserver.mirafra.com  ProcessID: 72048
+#           Attempting to use alternate WLF file "JtagBaseTest/wlftMQ8Pco".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: JtagBaseTest/waveform.wlf
+#           Using alternate file: JtagBaseTest/wlftMQ8Pco
 #  add wave -r /*
 #  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
 #  run -all
@@ -96,6 +108,7 @@
 # UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
 # UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv(19) @ 0: reporter [JtagMasterAssertions] JtagMasterAssertions
 # UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv(19) @ 0: reporter [JtagSlaveAssertions] JtagSlaveAssertions
 # CONNECTING DRIVER AND SEQUENCER
 # UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 # ---------------------------------------------------------------------------------
@@ -491,6 +504,9 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is 1 
 # THE RESULTANT TEST IS 10010001110xxxxx
+# ****************************************************
+#  slave width =1 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5100 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5100 
@@ -525,10 +541,16 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5300 
 # 
+# ****************************************************
+#  slave width =2 
+#  ***********************************
 # THE RESULTANT TEST IS 110010001110xxxx
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is 1 
 # THE RESULTANT TEST IS 1110010001110xxx
+# ****************************************************
+#  slave width =3 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5500 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5500 
@@ -563,10 +585,16 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 1110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5700 
 # 
+# ****************************************************
+#  slave width =4 
+#  ***********************************
 # THE RESULTANT TEST IS 11110010001110xx
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is 0 
 # THE RESULTANT TEST IS 011110010001110x
+# ****************************************************
+#  slave width =5 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5900 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 01110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5900 
@@ -601,10 +629,16 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6100 
 # 
+# ****************************************************
+#  slave width =6 
+#  ***********************************
 # THE RESULTANT TEST IS 0011110010001110
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
 # the width here is 17
+# ****************************************************
+#  slave width =7 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6300 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6300 
@@ -639,6 +673,9 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6500 
 # 
+# ****************************************************
+#  slave width =8 
+#  ***********************************
 # ** Info: 
 #  
 #  
@@ -646,6 +683,9 @@
 #    Time: 6500 ps Started: 6300 ps  Scope: HdlTop.jtagMasterAgentBfm.jtagMasterMonitorBfm.TestVectrorTestingAssertions File: ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv Line: 101
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
+# ****************************************************
+#  slave width =9 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6700 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6700 
@@ -680,8 +720,14 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6900 
 # 
+# ****************************************************
+#  slave width =10 
+#  ***********************************
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
+# ****************************************************
+#  slave width =11 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7100 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7100 
@@ -716,8 +762,14 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7300 
 # 
+# ****************************************************
+#  slave width =12 
+#  ***********************************
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
+# ****************************************************
+#  slave width =13 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7500 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 1110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7500 
@@ -752,8 +804,14 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 11110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7700 
 # 
+# ****************************************************
+#  slave width =14 
+#  ***********************************
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
+# ****************************************************
+#  slave width =15 
+#  ***********************************
 ### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7900 
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7900 
@@ -784,8 +842,17 @@
 #  
 ### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 8100 
 # 
+# ****************************************************
+#  slave width =16 
+#  ***********************************
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
+# ** Info:  
+#  
+#  
+#  
+#  Slave bit width ARE VALID =16
+#    Time: 8300 ps Started: 8100 ps  Scope: HdlTop.jtagSlaveAgentBfm.jtagSlaveMonitorBfm.TestVectrorTestingAssertions File: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv Line: 68
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # the serial in is x 
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
@@ -828,31 +895,38 @@
 # the serial in is x 
 # *****************************************************************************************************************************************************************************************
 # 
-# THE RECEIVED VECTOR IN TARGET IS xxxxxxxxxxxxxxxx0011110010001110
-# THE RECEIVED VECTOR IN CONTROLLER SIDE IS xxxxxxxxxxxxxxxx0011110010001110 
+# THE RECEIVED VECTOR IN TARGET IS xxxxxxxxxxxxxxxx0011110010001110 and instruction is 00110
+# THE RECEIVED VECTOR IN CONTROLLER SIDE IS xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION IS 00110
 # 
 # ****************************************************************************************************************************************************************
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(59) @ 12300: uvm_test_top.jtagEnv.JtagScoreboard [[MASTER TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(62) @ 12300: uvm_test_top.jtagEnv.JtagScoreboard [[SLAVE TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(48) @ 12300: reporter [[ PASS ]] TDI = xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION=00110
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 12300: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :    9
+# UVM_INFO :   13
 # UVM_WARNING :    1
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [HDL_TOP]     1
 # [JtagMasterAssertions]     1
+# [JtagSlaveAssertions]     1
 # [Questa UVM]     2
 # [RNTST]     1
 # [TEST_DONE]     1
 # [UVMTOP]     1
+# [[ PASS ]]     1
+# [[MASTER TRANSACTION IN SCB]]     1
+# [[SLAVE TRANSACTION IN SCB]]     1
 # [jtag Master agent bfm]     1
 # [jtag slave agent bfm]     1
 # [uvm_sequence_base]     1
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 12300 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 15:30:07 on Apr 07,2025, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 19
+# End time: 13:07:55 on Apr 11,2025, Elapsed time: 0:00:11
+# Errors: 4, Warnings: 21

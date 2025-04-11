@@ -36,14 +36,8 @@ interface JtagSlaveAssertions (input clk,
   JtagInstructionOpcodeEnum jtagInstruction;
  always @(posedge clk) begin 
   if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(null , "" , "jtagSlaveAgentConfig" ,jtagSlaveAgentConfig)))
-      `uvm_fatal("CONTROLLER DEVICE]" , "FAILED TO GET CONFIG")
-
-      jtagInstructionWidth = jtagSlaveAgentConfig.jtagInstructionWidth;
+      `uvm_fatal("CONTROLLER DEVICE]" , "FAILED TO GET CONFIG")   
       jtagTestVectorWidth = jtagSlaveAgentConfig.jtagTestVectorWidth;
-      jtagInstruction = jtagSlaveAgentConfig.jtagInstructionOpcode;
-      $display("THE INSTRUCTION  WIDTH IS %s",jtagInstructionWidth.name());
-
- $display("the serial in is %b ",jtagSerialOut);
 end 
 
 
@@ -51,60 +45,31 @@ end
 
   always @(posedge  clk)
     begin 
-     if((!($isunknown(jtagSerialOut))) && (width < jtagSlaveAgentConfig.jtagInstructionWidth)) begin 
+     if((!($isunknown(jtagSerialOut))) && (width <jtagSlaveAgentConfig.jtagTestVectorWidth)) begin 
        width++;
-       $display("****************************************************\n width =%0d \n ***********************************",width);
-       instruction = {jtagSerialOut,instruction[4:1]};
-       $display("instruction is %b",instruction);
+       $display("****************************************************\n slave width =%0d \n ***********************************",width);
     end 
 
-     if(width == jtagSlaveAgentConfig.jtagInstructionWidth) begin 
-       startValidityCheck = 1'b 1;
+     if(width == jtagSlaveAgentConfig.jtagTestVectorWidth) begin 
        startWidthCheck = 1'b 1;
        repeat(2) @(posedge clk);
-        startValidityCheck = 1'b 0;
-	repeat(3) @(posedge clk);
-        width =1;
-	while(width <= 16)
-	 begin 
-          width++;
-          test = {jtagSerialOut , test[15:1]};
-	  $display("THE RESULTANT TEST IS %b",test);
-           @(posedge clk);
-	 end
-  $display("the width here is %0d",width);	 
-	 testVectorCheck =1;
-
-
+        startWidthCheck = 1'b 0;
       end 
        //width = 0;
     end 
 
 
-   property instructionValidityCheck;
-	  @(posedge clk) disable iff (!(startValidityCheck))
-              ##1  ((instruction  == jtagInstruction) && ((width)== jtagInstructionWidth));
+   property testWidthCheck;
+	  @(posedge clk) disable iff (!(startWidthCheck))
+              ##1 (((width)== jtagTestVectorWidth));
   endproperty
 
-  assert property (instructionValidityCheck)
-  $info(" \n \n \n \n INSTRUCTION BITS ARE VALID \n \n \n \n ");
+  assert property (testWidthCheck) begin
+  $info(" \n \n \n \n Slave bit width ARE VALID =%0d \n \n \n \n ",width);
+  width= 1'b 0;
+  end
   else
  $error("\n \n \n INSTRUCTION BIT IS UNKNOWN ");
-
-
-    property testVectorValidity;
-	  @(posedge clk) disable iff (!testVectorCheck)
-        (##1 (width-1 == jtagTestVectorWidth) );
-  endproperty
-
-  assert property (testVectorValidity) begin 
-  $info("\n \n \n TEST VECTOR IS VALID \n \n \n ");
-  testVectorCheck = 0;
-  end 
-  else
-  $error("TEST VECTOR  INVALID ");
-
-
 
 endinterface : JtagSlaveAssertions
 

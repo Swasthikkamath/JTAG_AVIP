@@ -96,8 +96,8 @@ for (int i=0;i<61;i++)
 */
 
 
-   for (int i=0 ;i<jtagPacketStruct.jtagInstruction ; i++)
-     jtagMasterTransaction.jtagInstruction = jtagPacketStruct.jtagInstruction[i];
+   for (int i=0 ;i<jtagConfigStruct.jtagInstructionWidth ; i++)
+     jtagMasterTransaction.jtagInstruction[i] = jtagPacketStruct.jtagInstruction[i];
 
  endfunction : toClass
 

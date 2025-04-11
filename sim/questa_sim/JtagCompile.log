@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 15:29:55 on Apr 07,2025
+Start time: 13:07:38 on Apr 11,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
@@ -65,9 +65,14 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 -- Compiling interface JtagMasterAssertions
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
 -- Importing package JtagMasterPkg
+-- Compiling package JtagSlaveAssertions_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagSlaveAssertions
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagSlavePkg
 
 Top level modules:
 	HdlTop
 	HvlTop
-End time: 15:29:58 on Apr 07,2025, Elapsed time: 0:00:03
+End time: 13:07:41 on Apr 11,2025, Elapsed time: 0:00:03
 Errors: 0, Warnings: 9

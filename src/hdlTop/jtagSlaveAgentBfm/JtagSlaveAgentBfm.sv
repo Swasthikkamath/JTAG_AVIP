@@ -26,7 +26,7 @@ module JtagSlaveAgentBfm(JtagIf jtagIf);
   // Slave monitor bfm instantiation
   //-------------------------------------------------------
   
-  JtagSlaveMonitorBfm jtagSlaveMonitorBfm (.clk(jtagIf.clk),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset),.jtagTms(jtagIf.jtagTms));
+  JtagSlaveMonitorBfm jtagSlaveMonitorBfm (.clk(jtagIf.clk),.jtagSerialIn(jtagIf.jtagSerialIn),.jtagSerialOut(jtagIf.jtagSerialOut),.reset(jtagIf.reset),.jtagTms(jtagIf.jtagTms));
 
 
   //-------------------------------------------------------
@@ -38,6 +38,6 @@ module JtagSlaveAgentBfm(JtagIf jtagIf);
     uvm_config_db#(virtual JtagSlaveMonitorBfm)::set(null,"*","jtagSlaveMonitorBfm",jtagSlaveMonitorBfm);
   end
 
-//  bind jtagSlaveMonitorBfm jtagSlaveAssertions TestVectrorTestingAssertions();
+  bind JtagSlaveMonitorBfm JtagSlaveAssertions TestVectrorTestingAssertions(.clk(jtagIf.clk),.jtagSerialOut(jtagIf.jtagSerialOut),.jtagTms(jtagIf.jtagTms),.reset(jtagIf.reset));
 
 endmodule : JtagSlaveAgentBfm

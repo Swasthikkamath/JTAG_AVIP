@@ -11,7 +11,8 @@ import JtagGlobalPkg::*;
 interface JtagSlaveMonitorBfm (input  logic   clk,
                               input  logic   reset,
                              input logic  jtagSerialOut,
-			     input logic jtagTms
+			     input logic jtagTms,
+			     input logic jtagSerialIn
                               );
 	//-------------------------------------------------------
   // Importing uvm package file
@@ -170,7 +171,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	    else if(jtagTms == 0) begin 
               jtagTapState = jtagShiftIrState ;
 	    end
-		//  jtagPacketStruct.jtagInstruction[m++] = jtagSeriaOut;
+	     jtagPacketStruct.jtagInstruction[m++] = jtagSerialIn;
 	  end 
  
     

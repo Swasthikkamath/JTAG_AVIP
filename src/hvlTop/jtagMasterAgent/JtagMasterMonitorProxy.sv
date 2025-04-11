@@ -41,8 +41,10 @@ task JtagMasterMonitor :: run_phase(uvm_phase phase);
   jtagMasterMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagMasterSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagMasterTransaction);
   
-  $display("THE RECEIVED VECTOR IN CONTROLLER SIDE IS %b \n",jtagMasterTransaction.jtagTestVector);
+  $display("THE RECEIVED VECTOR IN CONTROLLER SIDE IS %b AND INSTRUCTION IS %b\n",jtagMasterTransaction.jtagTestVector,jtagMasterTransaction.jtagInstruction);
   $display("****************************************************************************************************************************************************************");
+
+jtagMasterMonitorAnalysisPort.write(jtagMasterTransaction);
 endtask : run_phase
 
 `endif

@@ -5,6 +5,7 @@
 ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv
 ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterMonitorBfm.sv
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv
+../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv
 ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveMonitorBfm.sv
 ../../src/hvlTop/JtagHvlTop.sv
