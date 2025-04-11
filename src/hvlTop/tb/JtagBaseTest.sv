@@ -71,7 +71,7 @@ task  JtagBaseTest :: run_phase(uvm_phase phase);
   jtagMasterTestingVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
  
   phase.raise_objection(this);
-  repeat(1) begin 
+  repeat(2) begin 
   jtagMasterTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   end 
   phase.drop_objection(this);

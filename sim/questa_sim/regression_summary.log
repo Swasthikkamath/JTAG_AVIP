@@ -52993,3 +52993,1085 @@
 # Saving coverage database on exit...
 # End time: 13:07:55 on Apr 11,2025, Elapsed time: 0:00:11
 # Errors: 4, Warnings: 21
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
+# Start time: 13:21:34 on Apr 11,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(48): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(48): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(49): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(49): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(54): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(54): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(55): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(55): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(56): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(56): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(62): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(62): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(63): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(63): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(64): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(64): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagGlobalPkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.JtagSlavePkg(fast)
+# Loading work.JtagSlaveSequencePkg(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterPkg(fast)
+# Loading work.JtagMasterSequencePkg(fast)
+# Loading work.JtagEnvPkg(fast)
+# Loading work.JtagVirtualSequencePkg(fast)
+# Loading work.JtagBaseTestPkg(fast)
+# Loading work.HvlTop(fast)
+# Loading work.HdlTop(fast)
+# Loading work.JtagInterface_sv_unit(fast)
+# Loading work.JtagIf(fast)
+# Loading work.JtagMasterAgentBfm(fast)
+# Loading work.JtagMasterDriverBfm_sv_unit(fast)
+# Loading work.JtagMasterDriverBfm(fast)
+# Loading work.JtagMasterMonitorBfm_sv_unit(fast)
+# Loading work.JtagMasterMonitorBfm(fast)
+# Loading work.JtagMasterAssertions_sv_unit(fast)
+# Loading work.JtagMasterAssertions(fast)
+# Loading work.JtagSlaveAgentBfm(fast)
+# Loading work.JtagSlaveDriverBfm_sv_unit(fast)
+# Loading work.JtagSlaveDriverBfm(fast)
+# Loading work.JtagSlaveMonitorBfm_sv_unit(fast)
+# Loading work.JtagSlaveMonitorBfm(fast)
+# Loading work.JtagSlaveAssertions_sv_unit(fast)
+# Loading work.JtagSlaveAssertions(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# log -r /*
+# ** Error: Unable to lock WLF file "JtagBaseTest/waveform.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "JtagBaseTest/waveform.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "JtagBaseTest/waveform.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "JtagBaseTest/waveform.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: JtagBaseTest/waveform.wlf
+#           File in use by: swasthikkamath  Hostname: FEserver.mirafra.com  ProcessID: 72048
+#           Attempting to use alternate WLF file "JtagBaseTest/wlftgMVp1t".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: JtagBaseTest/waveform.wlf
+#           Using alternate file: JtagBaseTest/wlftgMVp1t
+#  add wave -r /*
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test JtagBaseTest...
+# UVM_INFO ../../src/hdlTop/JtagHdlTop.sv(15) @ 0: reporter [HDL_TOP] HDL_TOP
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(17) @ 0: reporter [jtag Master agent bfm] JTAG Master AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv(19) @ 0: reporter [JtagMasterAssertions] JtagMasterAssertions
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(16) @ 0: reporter [jtag slave agent bfm] JTAG SLAVE AGENT BFM
+# UVM_INFO ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv(19) @ 0: reporter [JtagSlaveAssertions] JtagSlaveAssertions
+# CONNECTING DRIVER AND SEQUENCER
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ---------------------------------------------------------------------------------
+# Name                                      Type                        Size  Value
+# ---------------------------------------------------------------------------------
+# uvm_test_top                              JtagBaseTest                -     @473 
+#   jtagEnv                                 JtagEnv                     -     @511 
+#     JtagMasterAgent                       JtagMasterAgent             -     @635 
+#       jtagMasterAnalysisPort              uvm_analysis_port           -     @805 
+#       jtagMasterCoverage                  JtagMasterCoverage          -     @790 
+#         analysis_imp                      uvm_analysis_imp            -     @797 
+#       jtagMasterDriver                    JtagMasterDriver            -     @651 
+#         rsp_port                          uvm_analysis_port           -     @666 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @658 
+#       jtagMasterMonitor                   JtagMasterMonitor           -     @783 
+#         jtagMasterMonitorAnalysisPort     uvm_analysis_port           -     @822 
+#       jtagMasterSequencer                 JtagMasterSequencer         -     @674 
+#         rsp_export                        uvm_analysis_export         -     @681 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @775 
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagScoreboard                        JtagScoreboard              -     @519 
+#       jtagScoreboardMasterAnalysisExport  uvm_analysis_export         -     @835 
+#       jtagScoreboardMasterAnalysisFifo    uvm_tlm_analysis_fifo #(T)  -     @851 
+#         analysis_export                   uvm_analysis_imp            -     @890 
+#         get_ap                            uvm_analysis_port           -     @882 
+#         get_peek_export                   uvm_get_peek_imp            -     @866 
+#         put_ap                            uvm_analysis_port           -     @874 
+#         put_export                        uvm_put_imp                 -     @858 
+#       jtagScoreboardSlaveAnalysisExport   uvm_analysis_export         -     @843 
+#       jtagScoreboardSlaveAnalysisFifo     uvm_tlm_analysis_fifo #(T)  -     @898 
+#         analysis_export                   uvm_analysis_imp            -     @937 
+#         get_ap                            uvm_analysis_port           -     @929 
+#         get_peek_export                   uvm_get_peek_imp            -     @913 
+#         put_ap                            uvm_analysis_port           -     @921 
+#         put_export                        uvm_put_imp                 -     @905 
+#     JtagSlaveAgent                        JtagSlaveAgent              -     @642 
+#       jtagSlaveAnalysisPort               uvm_analysis_port           -     @1101
+#       jtagSlaveCoverage                   JtagSlaveCoverage           -     @1079
+#         analysis_imp                      uvm_analysis_imp            -     @1086
+#       jtagSlaveDriver                     JtagSlaveDriver             -     @947 
+#         rsp_port                          uvm_analysis_port           -     @962 
+#         seq_item_port                     uvm_seq_item_pull_port      -     @954 
+#       jtagSlaveMonitor                    JtagSlaveMonitor            -     @1094
+#         jtagSlaveMonitorAnalysisPort      uvm_analysis_port           -     @1118
+#       jtagSlaveSequencer                  JtagSlaveSequencer          -     @970 
+#         rsp_export                        uvm_analysis_export         -     @977 
+#         seq_item_export                   uvm_seq_item_pull_imp       -     @1071
+#         arbitration_queue                 array                       0     -    
+#         lock_queue                        array                       0     -    
+#         num_last_reqs                     integral                    32    'd1  
+#         num_last_rsps                     integral                    32    'd1  
+#     JtagVirtualSequencer                  JtagVirtualSequencer        -     @526 
+#       rsp_export                          uvm_analysis_export         -     @533 
+#       seq_item_export                     uvm_seq_item_pull_imp       -     @627 
+#       arbitration_queue                   array                       0     -    
+#       lock_queue                          array                       0     -    
+#       num_last_reqs                       integral                    32    'd1  
+#       num_last_rsps                       integral                    32    'd1  
+# ---------------------------------------------------------------------------------
+# 
+# ENTERED TO DRIVER PROXY SUCCESSFULLY
+# UVM_WARNING @ 0: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterSequencer@@JtagMasterTestingVirtualSequence.jtagMasterTestVectorSequence [uvm_sequence_base] Body definition undefined
+# ------------------------------------------------------------------------------
+# Name           Type                   Size  Value                             
+# ------------------------------------------------------------------------------
+# req            JtagMasterTransaction  -     @1152                             
+#   TEST VECTOR  integral               32    'b11110011111010010011110010001110
+# ------------------------------------------------------------------------------
+# 
+# THE CONFIG FOR THE CONTROLLER DEVICE ARE: 
+# THE TEST VECTOR WIDTH IS 16 
+# THE INSTRUCTION WIDTH IS 5
+# 
+# ************************************************************************************************************************************************************************************************************
+#  	 	 THE SENT SENT FROM CONTROLLER DEVICE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0011110010001110 
+#  	 	 THE TMS BEING SENT IS xxxxxxxxxxxxxxxxxxxx011000000000000000000000000000111000000110 
+# ************************************************************************************************************************************************************************************************************
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT 1100 
+# 
+### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS 0
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT 1300 
+# 
+### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS 1
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT IR STATE AT 1300 
+# 
+### CONTROLLER MONITOR### THE INSTRUCTION BIT OBTAINED HERE IS 0 COMPLETE VECTOR IS xxxx0 AT 1300 
+# 
+### TARGET DRIVER ### IS IN SHIFT IR STATE AT 1300 
+# 
+### TARGET DRIVER ### THE INSTRUCTION BIT OBTAINED HERE IS 0 COMPLETE VECTOR IS 00001 AT 1300 
+# 
+# ****************************************************
+#  width =1 
+#  ***********************************
+# instruction is 0xxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+# ****************************************************
+#  width =2 
+#  ***********************************
+# instruction is 10xxx
+### TARGET DRIVER ### IS IN SHIFT IR STATE AT 1500 
+# 
+### TARGET DRIVER ### THE INSTRUCTION BIT OBTAINED HERE IS 1 COMPLETE VECTOR IS 10000 AT 1500 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT IR STATE AT 1500 
+# 
+### CONTROLLER MONITOR### THE INSTRUCTION BIT OBTAINED HERE IS 1 COMPLETE VECTOR IS xxx10 AT 1500 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT 1500 
+# 
+### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS 1
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT 1700 
+# 
+### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS 0
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT IR STATE AT 1700 
+# 
+### CONTROLLER MONITOR### THE INSTRUCTION BIT OBTAINED HERE IS 1 COMPLETE VECTOR IS xx110 AT 1700 
+# 
+### TARGET DRIVER ### IS IN SHIFT IR STATE AT 1700 
+# 
+### TARGET DRIVER ### THE INSTRUCTION BIT OBTAINED HERE IS 1 COMPLETE VECTOR IS 11000 AT 1700 
+# 
+# ****************************************************
+#  width =3 
+#  ***********************************
+# instruction is 110xx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# ****************************************************
+#  width =4 
+#  ***********************************
+# instruction is 0110x
+### TARGET DRIVER ### IS IN SHIFT IR STATE AT 1900 
+# 
+### TARGET DRIVER ### THE INSTRUCTION BIT OBTAINED HERE IS 0 COMPLETE VECTOR IS 01100 AT 1900 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT IR STATE AT 1900 
+# 
+### CONTROLLER MONITOR### THE INSTRUCTION BIT OBTAINED HERE IS 0 COMPLETE VECTOR IS x0110 AT 1900 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT 1900 
+# 
+### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS 0
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+### CONTROLLER MONITOR ### IS IN SHIFT IR STATE AT 2100 
+# 
+### CONTROLLER MONITOR### THE INSTRUCTION BIT OBTAINED HERE IS 0 COMPLETE VECTOR IS 00110 AT 2100 
+# 
+### TARGET DRIVER ### IS IN SHIFT IR STATE AT 2100 
+# 
+### TARGET DRIVER ### THE INSTRUCTION BIT OBTAINED HERE IS 0 COMPLETE VECTOR IS 00110 AT 2100 
+# 
+# ****************************************************
+#  width =5 
+#  ***********************************
+# instruction is 00110
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# ** Info:  
+#  
+#  
+#  
+#  INSTRUCTION BITS ARE VALID
+#    Time: 2300 ps Started: 2100 ps  Scope: HdlTop.jtagMasterAgentBfm.jtagMasterMonitorBfm.TestVectrorTestingAssertions File: ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv Line: 90
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 2900
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 2900 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE RESULTANT TEST IS 0xxxxxxxxxxxxxxx
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 3100 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3100 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 3100
+# 
+# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(44): Non-existent associative array entry. Returning default value.
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 0xxxxxxxxx AT 3100 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 3100 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3100 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 3100
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 3100 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 3300
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 3300 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 3300 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 10xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3300 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 3300
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 10xxxxxxxx AT 3300 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 3300 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3300 
+# 
+# THE RESULTANT TEST IS 10xxxxxxxxxxxxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+# THE RESULTANT TEST IS 110xxxxxxxxxxxxx
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 3500 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3500 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 3500
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 110xxxxxxx AT 3500 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 3500 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3500 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 3500
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 3500 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 3700
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 3700 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 3700 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 1110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3700 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 3700
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 1110xxxxxx AT 3700 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 3700 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3700 
+# 
+# THE RESULTANT TEST IS 1110xxxxxxxxxxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE RESULTANT TEST IS 01110xxxxxxxxxxx
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 3900 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3900 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 3900
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 01110xxxxx AT 3900 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 3900 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 01110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 3900 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 3900
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 3900 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 4100
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 4100 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 4100 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4100 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 4100
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 001110xxxx AT 4100 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 4100 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4100 
+# 
+# THE RESULTANT TEST IS 001110xxxxxxxxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE RESULTANT TEST IS 0001110xxxxxxxxx
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 4300 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4300 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 4300
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 0001110xxx AT 4300 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 4300 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 0001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4300 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 4300
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 4300 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 4500
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 4500 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 4500 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 10001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4500 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 4500
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 10001110xx AT 4500 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 4500 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4500 
+# 
+# THE RESULTANT TEST IS 10001110xxxxxxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE RESULTANT TEST IS 010001110xxxxxxx
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 4700 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4700 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 4700
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 010001110x AT 4700 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 4700 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4700 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 4700
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 4700 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 4900
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 4900 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 4900 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 0010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4900 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 4900
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 0010001110 AT 4900 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 4900 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS x COMPLETE VECTORE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 4900 
+# 
+# THE RESULTANT TEST IS 0010001110xxxxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+# THE RESULTANT TEST IS 10010001110xxxxx
+# ****************************************************
+#  slave width =1 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5100 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5100 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 5100
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 1001000111 AT 5100 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 5100 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 10010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5100 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 5100
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 5100 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 5300
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 5300 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 5300 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5300 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 5300
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 1100100011 AT 5300 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5300 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5300 
+# 
+# ****************************************************
+#  slave width =2 
+#  ***********************************
+# THE RESULTANT TEST IS 110010001110xxxx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+# THE RESULTANT TEST IS 1110010001110xxx
+# ****************************************************
+#  slave width =3 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5500 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5500 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 5500
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 1110010001 AT 5500 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 5500 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 1110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5500 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 5500
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 1 AT 5500 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 1 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 5700
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 5700 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 5700 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 1 COMPLETE VECTOR IS 11110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5700 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 5700
+# 
+### TARGET DRIVER ### THE SERIAL DATA 1 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 1111001000 AT 5700 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5700 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 1110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5700 
+# 
+# ****************************************************
+#  slave width =4 
+#  ***********************************
+# THE RESULTANT TEST IS 11110010001110xx
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+# THE RESULTANT TEST IS 011110010001110x
+# ****************************************************
+#  slave width =5 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 5900 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 01110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5900 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 5900
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 0111100100 AT 5900 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 5900 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 5900 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 5900
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS 0 AT 5900 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is 0 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 6100
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 6100 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 6100 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS 0 COMPLETE VECTOR IS 0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6100 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 6100
+# 
+### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 0011110010 AT 6100 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6100 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6100 
+# 
+# ****************************************************
+#  slave width =6 
+#  ***********************************
+# THE RESULTANT TEST IS 0011110010001110
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# the width here is 17
+# ****************************************************
+#  slave width =7 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6300 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6300 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 6300
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS x001111001 AT 6300 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 6300 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS x0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6300 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 6300
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 6300 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 6500
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 6500 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 6500 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6500 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 6500
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xx00111100 AT 6500 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6500 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6500 
+# 
+# ****************************************************
+#  slave width =8 
+#  ***********************************
+# ** Info: 
+#  
+#  
+#  TEST VECTOR IS VALID
+#    Time: 6500 ps Started: 6300 ps  Scope: HdlTop.jtagMasterAgentBfm.jtagMasterMonitorBfm.TestVectrorTestingAssertions File: ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv Line: 101
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# ****************************************************
+#  slave width =9 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6700 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6700 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 6700
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxx0011110 AT 6700 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 6700 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6700 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 6700
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 6700 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 6900
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 6900 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 6900 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6900 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 6900
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxx001111 AT 6900 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 6900 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 6900 
+# 
+# ****************************************************
+#  slave width =10 
+#  ***********************************
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# ****************************************************
+#  slave width =11 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7100 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 10010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7100 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 7100
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxxx00111 AT 7100 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 7100 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7100 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 7100
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 7100 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 7300
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 7300 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 7300 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7300 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 7300
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxxxx0011 AT 7300 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7300 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7300 
+# 
+# ****************************************************
+#  slave width =12 
+#  ***********************************
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# ****************************************************
+#  slave width =13 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7500 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 1110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7500 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 7500
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxxxxx001 AT 7500 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 7500 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxxxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7500 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 7500
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 7500 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 7700
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 7700 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 7700 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxxxxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7700 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 7700
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxxxxxx00 AT 7700 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7700 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 1 COMPLETE VECTORE IS 11110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7700 
+# 
+# ****************************************************
+#  slave width =14 
+#  ***********************************
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# ****************************************************
+#  slave width =15 
+#  ***********************************
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 7900 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7900 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 7900
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxxxxxxx0 AT 7900 
+# 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 7900 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxxxxxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 7900 
+# 
+### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT 7900
+# 
+### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS x AT 7900 
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+### CONTROLLER MONITOR ### IS IN SHIFT DR STATE AT 8100 
+# 
+### CONTROLLER MONITOR### THE SERIAL DATA OBTAINED HERE IS x COMPLETE VECTOR IS xxxxxxxxxx0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 8100 
+# 
+### TARGET DRIVER ### IS IN SHIFT DR STATE AT 8100
+# 
+### TARGET DRIVER ### THE SERIAL DATA x FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS xxxxxxxxxx AT 8100 
+# 
+### TARGET MONITOR ### IS IN SHIFT DR STATE AT 8100 
+#  
+### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS 0 COMPLETE VECTORE IS 0011110010001110xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx AT 8100 
+# 
+# ****************************************************
+#  slave width =16 
+#  ***********************************
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# ** Info:  
+#  
+#  
+#  
+#  Slave bit width ARE VALID =16
+#    Time: 8300 ps Started: 8100 ps  Scope: HdlTop.jtagSlaveAgentBfm.jtagSlaveMonitorBfm.TestVectrorTestingAssertions File: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv Line: 68
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# *****************************************************************************************************************************************************************************************
+# 
+# THE RECEIVED VECTOR IN TARGET IS xxxxxxxxxxxxxxxx0011110010001110 and instruction is 00110
+# THE RECEIVED VECTOR IN CONTROLLER SIDE IS xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION IS 00110
+# 
+# ****************************************************************************************************************************************************************
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(59) @ 12300: uvm_test_top.jtagEnv.JtagScoreboard [[MASTER TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(62) @ 12300: uvm_test_top.jtagEnv.JtagScoreboard [[SLAVE TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(48) @ 12300: reporter [[ PASS ]] TDI = xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION=00110
+# UVM_WARNING @ 12300: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterSequencer@@JtagMasterTestingVirtualSequence.jtagMasterTestVectorSequence [uvm_sequence_base] Body definition undefined
+# ------------------------------------------------------------------------------
+# Name           Type                   Size  Value                             
+# ------------------------------------------------------------------------------
+# req            JtagMasterTransaction  -     @1358                             
+#   TEST VECTOR  integral               32    'b10100000000010100101110011000010
+# ------------------------------------------------------------------------------
+# 
+# THE CONFIG FOR THE CONTROLLER DEVICE ARE: 
+# THE TEST VECTOR WIDTH IS 16 
+# THE INSTRUCTION WIDTH IS 5
+# 
+# ************************************************************************************************************************************************************************************************************
+#  	 	 THE SENT SENT FROM CONTROLLER DEVICE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0101110011000010 
+#  	 	 THE TMS BEING SENT IS xxxxxxxxxxxxxxxxxxxx011000000000000000000000000000111000000110 
+# ************************************************************************************************************************************************************************************************************
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# *****************************************************************************************************************************************************************************************
+# 
+# THE RECEIVED VECTOR IN TARGET IS xxxxxxxxxxxxxxxx0011110010001110 and instruction is 00110
+# THE RECEIVED VECTOR IN CONTROLLER SIDE IS xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION IS 00110
+# 
+# ****************************************************************************************************************************************************************
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(59) @ 24700: uvm_test_top.jtagEnv.JtagScoreboard [[MASTER TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(62) @ 24700: uvm_test_top.jtagEnv.JtagScoreboard [[SLAVE TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(48) @ 24700: reporter [[ PASS ]] TDI = xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION=00110
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 24700: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   16
+# UVM_WARNING :    2
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [HDL_TOP]     1
+# [JtagMasterAssertions]     1
+# [JtagSlaveAssertions]     1
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [[ PASS ]]     2
+# [[MASTER TRANSACTION IN SCB]]     2
+# [[SLAVE TRANSACTION IN SCB]]     2
+# [jtag Master agent bfm]     1
+# [jtag slave agent bfm]     1
+# [uvm_sequence_base]     2
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 24700 ps  Iteration: 65  Instance: /HvlTop
+# Saving coverage database on exit...
+# End time: 13:21:45 on Apr 11,2025, Elapsed time: 0:00:11
+# Errors: 4, Warnings: 21

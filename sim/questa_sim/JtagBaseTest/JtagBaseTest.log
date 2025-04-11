@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 13:07:44 on Apr 11,2025
+# Start time: 13:21:34 on Apr 11,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
@@ -75,9 +75,9 @@
 #           errno 11: Resource temporarily unavailable.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: JtagBaseTest/waveform.wlf
 #           File in use by: swasthikkamath  Hostname: FEserver.mirafra.com  ProcessID: 72048
-#           Attempting to use alternate WLF file "JtagBaseTest/wlftMQ8Pco".
+#           Attempting to use alternate WLF file "JtagBaseTest/wlftgMVp1t".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: JtagBaseTest/waveform.wlf
-#           Using alternate file: JtagBaseTest/wlftMQ8Pco
+#           Using alternate file: JtagBaseTest/wlftgMVp1t
 #  add wave -r /*
 #  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb
 #  run -all
@@ -902,13 +902,163 @@
 # UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(59) @ 12300: uvm_test_top.jtagEnv.JtagScoreboard [[MASTER TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
 # UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(62) @ 12300: uvm_test_top.jtagEnv.JtagScoreboard [[SLAVE TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
 # UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(48) @ 12300: reporter [[ PASS ]] TDI = xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION=00110
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 12300: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_WARNING @ 12300: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterSequencer@@JtagMasterTestingVirtualSequence.jtagMasterTestVectorSequence [uvm_sequence_base] Body definition undefined
+# ------------------------------------------------------------------------------
+# Name           Type                   Size  Value                             
+# ------------------------------------------------------------------------------
+# req            JtagMasterTransaction  -     @1358                             
+#   TEST VECTOR  integral               32    'b10100000000010100101110011000010
+# ------------------------------------------------------------------------------
+# 
+# THE CONFIG FOR THE CONTROLLER DEVICE ARE: 
+# THE TEST VECTOR WIDTH IS 16 
+# THE INSTRUCTION WIDTH IS 5
+# 
+# ************************************************************************************************************************************************************************************************************
+#  	 	 THE SENT SENT FROM CONTROLLER DEVICE IS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0101110011000010 
+#  	 	 THE TMS BEING SENT IS xxxxxxxxxxxxxxxxxxxx011000000000000000000000000000111000000110 
+# ************************************************************************************************************************************************************************************************************
+# 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# THE INSTRUCTION  WIDTH IS instructionWidth5Bit
+# the serial in is x 
+# *****************************************************************************************************************************************************************************************
+# 
+# THE RECEIVED VECTOR IN TARGET IS xxxxxxxxxxxxxxxx0011110010001110 and instruction is 00110
+# THE RECEIVED VECTOR IN CONTROLLER SIDE IS xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION IS 00110
+# 
+# ****************************************************************************************************************************************************************
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(59) @ 24700: uvm_test_top.jtagEnv.JtagScoreboard [[MASTER TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(62) @ 24700: uvm_test_top.jtagEnv.JtagScoreboard [[SLAVE TRANSACTION IN SCB]] THE INSTRUCTION IS 00110 and test vector is xxxxxxxxxxxxxxxx0011110010001110
+# UVM_INFO ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(48) @ 24700: reporter [[ PASS ]] TDI = xxxxxxxxxxxxxxxx0011110010001110 AND INSTRUCTION=00110
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 24700: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   13
-# UVM_WARNING :    1
+# UVM_INFO :   16
+# UVM_WARNING :    2
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
@@ -919,14 +1069,14 @@
 # [RNTST]     1
 # [TEST_DONE]     1
 # [UVMTOP]     1
-# [[ PASS ]]     1
-# [[MASTER TRANSACTION IN SCB]]     1
-# [[SLAVE TRANSACTION IN SCB]]     1
+# [[ PASS ]]     2
+# [[MASTER TRANSACTION IN SCB]]     2
+# [[SLAVE TRANSACTION IN SCB]]     2
 # [jtag Master agent bfm]     1
 # [jtag slave agent bfm]     1
-# [uvm_sequence_base]     1
+# [uvm_sequence_base]     2
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 12300 ps  Iteration: 65  Instance: /HvlTop
+#    Time: 24700 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:07:55 on Apr 11,2025, Elapsed time: 0:00:11
+# End time: 13:21:45 on Apr 11,2025, Elapsed time: 0:00:11
 # Errors: 4, Warnings: 21

@@ -26,9 +26,10 @@ endfunction : build_phase
 
 task JtagSlaveDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
-
+  forever begin
+  jtagSlaveDriverBfm.waitForReset();
   jtagSlaveDriverBfm.observeData();
-
+  end 
 endtask : run_phase
 
 `endif

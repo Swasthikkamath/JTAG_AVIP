@@ -31,6 +31,7 @@ task JtagMasterDriver :: run_phase(uvm_phase phase);
   JtagMasterConfigConverter :: fromClass(jtagMasterAgentConfig,jtagConfigStruct);
  
   $display("ENTERED TO DRIVER PROXY SUCCESSFULLY");
+  forever begin 
   seq_item_port.get_next_item(req);
  
   $display("\nTHE CONFIG FOR THE CONTROLLER DEVICE ARE: \nTHE TEST VECTOR WIDTH IS %0d \nTHE INSTRUCTION WIDTH IS %0d\n",jtagConfigStruct.jtagTestVectorWidth,jtagConfigStruct.jtagInstructionWidth); 
@@ -40,6 +41,7 @@ task JtagMasterDriver :: run_phase(uvm_phase phase);
   jtagMasterDriverBfm.DriveToBfm(jtagPacketStruct,jtagConfigStruct); 
   
   seq_item_port.item_done(rsp);
+  end 
 endtask : run_phase
 
 `endif

@@ -37,6 +37,7 @@ endfunction : build_phase
 
 task JtagMasterMonitor :: run_phase(uvm_phase phase);
   super.run_phase(phase);
+  forever begin 
   JtagMasterConfigConverter :: fromClass (jtagMasterAgentConfig , jtagConfigStruct);
   jtagMasterMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagMasterSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagMasterTransaction);
@@ -45,6 +46,7 @@ task JtagMasterMonitor :: run_phase(uvm_phase phase);
   $display("****************************************************************************************************************************************************************");
 
 jtagMasterMonitorAnalysisPort.write(jtagMasterTransaction);
+end 
 endtask : run_phase
 
 `endif
