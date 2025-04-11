@@ -24,3 +24,4 @@
 ../../src/hdlTop/JtagHdlTop.sv
 ../../src/hvlTop/JtagHvlTop.sv
 ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv
+../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv
