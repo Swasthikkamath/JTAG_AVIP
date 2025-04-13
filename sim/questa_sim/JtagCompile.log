@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 23:50:55 on Apr 13,2025
+Start time: 00:03:49 on Apr 14,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
@@ -74,5 +74,5 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 Top level modules:
 	HdlTop
 	HvlTop
-End time: 23:50:58 on Apr 13,2025, Elapsed time: 0:00:03
+End time: 00:03:52 on Apr 14,2025, Elapsed time: 0:00:03
 Errors: 0, Warnings: 9

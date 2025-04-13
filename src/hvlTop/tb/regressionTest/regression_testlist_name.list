@@ -1,0 +1,8 @@
+#TestName
+
+#Simple Test
+
+JtagTdiWidth24Test.sv
+JtagTdiWidth16Test.sv
+JtagTdiWidth8Test.sv
+JtagBaseTest.sv
