@@ -1,72 +1,31 @@
-`ifndef JTAGBASETEST_INCLUDED_
-`define JTAGBASETEST_INCLUDED_
+`ifndef JTAGWIDTH24TEST_INCLUDED_
+`define JTAGWIDTH24TEST_INCLUDED_
 
-class JtagBaseTest extends uvm_test;
-  `uvm_component_utils(JtagBaseTest)
+class JtagWidth24Test extends JtagBaseTest;
+  `uvm_component_utils(JtagWidth24Test)
 
-  JtagMasterTestingVirtualSequence jtagMasterTestingVirtualSequence;
-  JtagEnv jtagEnv;
-  JtagEnvConfig jtagEnvConfig;
-  
-  extern function new(string name = "JtagBaseTest" , uvm_component parent);
+  extern function new(string name = "JtagWidth24Test" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
-  extern function void setupJtagEnvConfig();
-  extern function void setupJtagMasterAgentConfig();
-  extern function void setupJtagSlaveAgentConfig();
-  extern virtual function void end_of_elaboration_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
-endclass : JtagBaseTest
+endclass : JtagWidth24Test
 
 
-function JtagBaseTest :: new(string name = "JtagBaseTest" , uvm_component parent);
+function JtagWidth24Test :: new(string name = "JtagWidth24Test" , uvm_component parent);
   super.new(name,parent);
 endfunction : new
 
 
-function void JtagBaseTest :: build_phase(uvm_phase phase);
+function void JtagWidth24Test :: build_phase(uvm_phase phase);
   super.build_phase(phase);
-  setupJtagEnvConfig();
-  jtagEnv = JtagEnv :: type_id :: create("jtagEnv",this);
+  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth24Bit;
+  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth24Bit;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
 endfunction : build_phase
 
-function void  JtagBaseTest :: setupJtagEnvConfig();
-  jtagEnvConfig = JtagEnvConfig :: type_id :: create("jtagEnvConfig");
-  jtagEnvConfig.hasScoreboard = 1 ;
-  jtagEnvConfig.hasVirtualSequencer = 1;
-  uvm_config_db #(JtagEnvConfig) :: set(this,"*", "jtagEnvConfig",jtagEnvConfig);
-  setupJtagMasterAgentConfig();
-  setupJtagSlaveAgentConfig();
-endfunction : setupJtagEnvConfig
-
-function void  JtagBaseTest :: setupJtagMasterAgentConfig();
-  jtagEnvConfig.jtagMasterAgentConfig = JtagMasterAgentConfig :: type_id :: create("jtagMasterAgentConfig");
-  jtagEnvConfig.jtagMasterAgentConfig.hasCoverage =1;
-  jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_ACTIVE;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth16Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionOpcode = bypassRegister;
 
 
-  uvm_config_db #(JtagMasterAgentConfig) :: set(null,"*", "jtagMasterAgentConfig",jtagEnvConfig.jtagMasterAgentConfig);
-
-endfunction : setupJtagMasterAgentConfig
-
-function void  JtagBaseTest :: setupJtagSlaveAgentConfig();
- jtagEnvConfig.jtagSlaveAgentConfig = JtagSlaveAgentConfig :: type_id :: create("jtagSlaveAgentConfig");
- jtagEnvConfig.jtagSlaveAgentConfig.hasCoverage =1;
- jtagEnvConfig.jtagSlaveAgentConfig.is_active = UVM_ACTIVE;
- jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth16Bit;
- jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
- jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionOpcode = boundaryScanRegisters;
-  uvm_config_db #(JtagSlaveAgentConfig) :: set(null,"*", "jtagSlaveAgentConfig",jtagEnvConfig.jtagSlaveAgentConfig);
-endfunction : setupJtagSlaveAgentConfig
-
-function void JtagBaseTest :: end_of_elaboration_phase(uvm_phase phase);
-  super.end_of_elaboration_phase(phase);
-  uvm_top.print_topology();
-endfunction :  end_of_elaboration_phase
-
-task  JtagBaseTest :: run_phase(uvm_phase phase);
+task  JtagWidth24Test :: run_phase(uvm_phase phase);
   jtagMasterTestingVirtualSequence = JtagMasterTestingVirtualSequence :: type_id :: create("JtagMasterTestingVirtualSequence");
   jtagMasterTestingVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
  
