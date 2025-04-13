@@ -15,6 +15,9 @@ package JtagBaseTestPkg;
   import JtagVirtualSequencePkg :: *;
 
   `include "JtagBaseTest.sv"
+  `include "JtagTdiWidth8Test.sv"
+  `include "JtagTdiWidth16Test.sv"
+  `include "JtagTdiWidth24Test.sv"
 
  endpackage : JtagBaseTestPkg
 
