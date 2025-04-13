@@ -33,7 +33,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
     jtagTapState = jtagResetState;
   endtask 
 
-  task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
+  task startMonitoring(inout JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
   automatic int count =0;
   for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)

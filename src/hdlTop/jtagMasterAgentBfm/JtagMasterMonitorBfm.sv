@@ -34,7 +34,7 @@ interface JtagMasterMonitorBfm (input  logic   clk,
   endtask 
 	
   
-task startMonitoring(output JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
+task startMonitoring(inout JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
   m=0;
   k=0;

@@ -39,6 +39,7 @@ task JtagMasterMonitor :: run_phase(uvm_phase phase);
   super.run_phase(phase);
   forever begin 
   JtagMasterConfigConverter :: fromClass (jtagMasterAgentConfig , jtagConfigStruct);
+  jtagPacketStruct.jtagTestVector=64'b x;
   jtagMasterMonitorBfm.waitForReset();
   jtagMasterMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagMasterSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagMasterTransaction);
