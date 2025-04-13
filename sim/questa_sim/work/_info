@@ -9,11 +9,11 @@ z2
 cModel Technology
 Z0 d/home/swasthikkamath/JTAG_AVIP/sim/questa_sim
 T_opt
-!s110 1744567297
-VfLPG6X0;?fggl2K_kXIdZ1
+!s110 1744568463
+VXBANd9SEf8^TD`Aj`U]@b3
 04 6 4 work HvlTop fast 0
 04 6 4 work HdlTop fast 0
-=1-6805caf5892e-67fbfc00-74f4b-3811
+=1-6805caf5892e-67fc008e-d1cd6-4511
 o-quiet -auto_acc_if_foreign -work work +acc=npr
 Z1 tCvgOpt 0
 n@_opt
@@ -22,7 +22,7 @@ vHdlTop
 Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 Z3 DXx6 mtiUvm 7 uvm_pkg 0 22 oMKUklN?>LE6@MJe7=2><1
 Z4 DXx4 work 13 JtagGlobalPkg 0 22 cnTn_G_P5QO1l1Jz`>h231
-Z5 !s110 1744567291
+Z5 !s110 1744568457
 !i10b 1
 !s100 DB3M7dY^M@<]DCgSbnAfT1
 IT7lY78C410;2Lmize?o]H0
@@ -50,8 +50,8 @@ Z19 OE;L;10.6c;65
 r1
 !s85 0
 31
-Z20 !s108 1744567289.000000
-Z21 !s107 ../../src/hvlTop/tb/JtagBaseTest.sv|../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv|../../src/hvlTop/tb/jtagVirtualSequences//JtagVirtualBaseSequence.sv|../../src/hvlTop/jtagEnv/JtagEnv.sv|../../src/hvlTop/jtagEnv/JtagScoreboard.sv|../../src/hvlTop/jtagEnv/virtualSequencer//JtagVirtualSequencer.sv|../../src/hvlTop/jtagEnv/JtagEnvConfig.sv|../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences//JtagSlaveBaseSequence.sv|../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv|../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveCoverage.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveMonitorProxy.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveSequencer.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveConfigConverter.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveSeqItemConverter.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveTransaction.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgentConfig.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterAgent.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterMonitorProxy.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterDriverProxy.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterSequencer.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterConfigConverter.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterTransaction.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv|../../src/hvlTop/JtagHvlTop.sv|../../src/hdlTop/JtagHdlTop.sv|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveMonitorBfm.sv|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterMonitorBfm.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv|../../src/hdlTop/jtagInterface/JtagInterface.sv|../../src/hvlTop/tb/JtagBaseTestPkg.sv|../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv|../../src/hvlTop/jtagEnv/JtagEnvPkg.sv|../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv|../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv|../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv|../../src/globals/JtagGlobalPkg.sv|
+Z20 !s108 1744568455.000000
+Z21 !s107 ../../src/hvlTop/tb/JtagTdiWidth24Test.sv|../../src/hvlTop/tb/JtagTdiWidth16Test.sv|../../src/hvlTop/tb/JtagTdiWidth8Test.sv|../../src/hvlTop/tb/JtagBaseTest.sv|../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv|../../src/hvlTop/tb/jtagVirtualSequences//JtagVirtualBaseSequence.sv|../../src/hvlTop/jtagEnv/JtagEnv.sv|../../src/hvlTop/jtagEnv/JtagScoreboard.sv|../../src/hvlTop/jtagEnv/virtualSequencer//JtagVirtualSequencer.sv|../../src/hvlTop/jtagEnv/JtagEnvConfig.sv|../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences//JtagSlaveBaseSequence.sv|../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv|../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgent.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveCoverage.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveMonitorProxy.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveDriverProxy.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveSequencer.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveConfigConverter.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveSeqItemConverter.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveTransaction.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlaveAgentConfig.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterAgent.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterMonitorProxy.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterDriverProxy.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterSequencer.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterConfigConverter.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterTransaction.sv|../../src/hvlTop/jtagMasterAgent//JtagMasterAgentConfig.sv|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_deprecated_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_reg_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_callback_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_sequence_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_imps.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_tlm_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_printer_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_object_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_phase_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_message_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/macros/uvm_version_defines.svh|/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src/uvm_macros.svh|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv|../../src/hvlTop/JtagHvlTop.sv|../../src/hdlTop/JtagHdlTop.sv|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveMonitorBfm.sv|../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterMonitorBfm.sv|../../src/hdlTop/jtagMasterAgentBfm/JtagMasterDriverBfm.sv|../../src/hdlTop/jtagInterface/JtagInterface.sv|../../src/hvlTop/tb/JtagBaseTestPkg.sv|../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv|../../src/hvlTop/jtagEnv/JtagEnvPkg.sv|../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv|../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv|../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv|../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv|../../src/globals/JtagGlobalPkg.sv|
 Z22 !s90 -sv|+acc|+cover|+fcover|-l|JtagCompile.log|-f|../JtagCompile.f|
 !i113 0
 Z23 !s102 +cover
@@ -69,11 +69,11 @@ Z28 DXx4 work 10 JtagEnvPkg 0 22 RC@>C>KRb0CbZVP;DC3120
 Z29 DXx4 work 21 JtagMasterSequencePkg 0 22 bZjdfgN;aUgW8AiTg9?do0
 Z30 DXx4 work 20 JtagSlaveSequencePkg 0 22 ==;]jSJUFMjZFOZC9=2JY3
 Z31 DXx4 work 22 JtagVirtualSequencePkg 0 22 `UjnF5_GVj2:UO2X2SO0G2
-DXx4 work 15 JtagBaseTestPkg 0 22 n=V7CeoaPb5o=UE28HLGC0
+DXx4 work 15 JtagBaseTestPkg 0 22 aod^FkSYBn?6T?Pk<ce[R3
 R5
 !i10b 1
 !s100 d^NF@0MXjSaeP<:o01<d03
-I9P_[eVE4[iMFm4=HLn<fB3
+IOeB`30ghR4XX5G`<WC3VH2
 R6
 !s105 JtagHvlTop_sv_unit
 S1
@@ -105,14 +105,14 @@ R28
 R29
 R30
 R31
-Z32 !s110 1744567289
+Z32 !s110 1744568455
 !i10b 1
-!s100 igD;nUCaAPR8mn<o8TKnk3
-In=V7CeoaPb5o=UE28HLGC0
-Vn=V7CeoaPb5o=UE28HLGC0
+!s100 G7VEf<ZI9CJL?8Yjl30Ci0
+Iaod^FkSYBn?6T?Pk<ce[R3
+Vaod^FkSYBn?6T?Pk<ce[R3
 S1
 R0
-w1744563803
+w1744568453
 8../../src/hvlTop/tb/JtagBaseTestPkg.sv
 F../../src/hvlTop/tb/JtagBaseTestPkg.sv
 R7
@@ -128,6 +128,9 @@ R16
 R17
 R18
 F../../src/hvlTop/tb/JtagBaseTest.sv
+F../../src/hvlTop/tb/JtagTdiWidth8Test.sv
+F../../src/hvlTop/tb/JtagTdiWidth16Test.sv
+F../../src/hvlTop/tb/JtagTdiWidth24Test.sv
 L0 4
 R19
 r1
@@ -272,7 +275,7 @@ n@jtag@interface_sv_unit
 vJtagMasterAgentBfm
 R2
 R3
-!s110 1744567290
+!s110 1744568456
 !i10b 1
 !s100 [i=IV=jCZKMnT^mVig:Hm2
 IOM<cBRH_lY[iN:LNY`D0Z2
@@ -312,7 +315,7 @@ n@jtag@master@agent@bfm
 YJtagMasterAssertions
 R2
 R4
-DXx4 work 28 JtagMasterAssertions_sv_unit 0 22 hWLP;PHe:3Le3BEJ`4hBV0
+DXx4 work 28 JtagMasterAssertions_sv_unit 0 22 00O[8aO?1l<VkWnG=[UYI3
 R3
 R26
 R6
@@ -320,12 +323,12 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 n7X2YMn=EP6`YPN9P8BA41
-I`OUcRo03>o0>Qfjf]SYYI0
+!s100 IcOfl@e2fb>U9lh=1fdH03
+Id9i:;0BXf<ZA94DL@z`Tg0
 !s105 JtagMasterAssertions_sv_unit
 S1
 R0
-Z36 w1744567285
+Z36 w1744568336
 Z37 8../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv
 Z38 F../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAssertions.sv
 R7
@@ -354,13 +357,13 @@ n@jtag@master@assertions
 XJtagMasterAssertions_sv_unit
 R2
 R4
-VhWLP;PHe:3Le3BEJ`4hBV0
+V00O[8aO?1l<VkWnG=[UYI3
 r1
 !s85 0
 31
 !i10b 1
-!s100 RZ0?HKjS_;W3Xhk@?M=h91
-IhWLP;PHe:3Le3BEJ`4hBV0
+!s100 T4PA_3d?ie5=UMzZA0iof1
+I00O[8aO?1l<VkWnG=[UYI3
 !i103 1
 S1
 R0

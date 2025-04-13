@@ -62,7 +62,7 @@ end
         startValidityCheck = 1'b 0;
 	repeat(3) @(posedge clk);
         width =0;
-	while(width < 16)
+	while(width < jtagTestVectorWidth)
 	 begin 
           width++;
 

@@ -44,7 +44,7 @@ function void  JtagBaseTest :: setupJtagMasterAgentConfig();
   jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_ACTIVE;
   jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth16Bit;
   jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionOpcode = bypassRegister;
+  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionOpcode = boundaryScanRegisters;
 
 
   uvm_config_db #(JtagMasterAgentConfig) :: set(null,"*", "jtagMasterAgentConfig",jtagEnvConfig.jtagMasterAgentConfig);
