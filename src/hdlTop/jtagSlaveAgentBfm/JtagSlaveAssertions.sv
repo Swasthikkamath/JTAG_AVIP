@@ -45,17 +45,17 @@ end
 
   always @(posedge  clk)
     begin
-    $display("THE WIDTH IS %0d",width);
-     if((!($isunknown(jtagSerialOut))) && (width <jtagSlaveAgentConfig.jtagTestVectorWidth)) begin 
+     if((!($isunknown(jtagSerialOut))) && (width <jtagSlaveAgentConfig.jtagTestVectorWidth) && (!($isunknown(jtagTms)))) begin 
        width++;
+       $display("THE WIDTH IS %0d and serial in is %0b",width,jtagSerialOut);
+
     end 
 
-     if(width == jtagSlaveAgentConfig.jtagTestVectorWidth) begin 
+     if(width == jtagSlaveAgentConfig.jtagTestVectorWidth && (!($isunknown(jtagTms)))) begin 
        startWidthCheck = 1'b 1;
        repeat(2) @(posedge clk);
         startWidthCheck = 1'b 0;
       end 
-       //width = 0;
     end 
 
 

@@ -43,11 +43,11 @@ t43:{items:[{dummy:0}
 t23:{items:[{dummy:0}
 ,{id:'cvg134',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg136',s:'2',cr:'m',z:'dataTest[15-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg153',s:'2',cr:'c',z:'instruction[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg158 ',s:9,z:'jtagInstruction',c:'R',p:'33.33'}
+,{id:'cvg153',s:'2',cr:'m',z:'instruction[4-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg158 ',s:9,cr:'m',z:'jtagInstruction',c:'R',p:'0.00'}
 ,{cr:'m',st:'1',z:'bypassRegister',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'userDefinedRegister',h1:'0',c:'r'}
-,{cr:'c',st:'1',z:'boundaryScanRegisters',h1:'1',c:'g'}
+,{cr:'m',st:'1',z:'boundaryScanRegisters',h1:'0',c:'r'}
 ,{id:'cvg159 ',s:9,z:'jtagInstructionWidth',c:'R',p:'33.33'}
 ,{cr:'m',st:'1',z:'instructionWidth3Bit',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'instructionWidth4Bit',h1:'0',c:'r'}
@@ -72,11 +72,11 @@ t23:{items:[{dummy:0}
 t126:{items:[{dummy:0}
 ,{id:'cvg134',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg136',s:'2',cr:'m',z:'dataTest[15-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg153',s:'2',cr:'c',z:'instruction[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg158 ',s:9,z:'jtagInstruction',c:'R',p:'33.33'}
+,{id:'cvg153',s:'2',cr:'m',z:'instruction[4-0]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg158 ',s:9,cr:'m',z:'jtagInstruction',c:'R',p:'0.00'}
 ,{cr:'m',st:'1',z:'bypassRegister',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'userDefinedRegister',h1:'0',c:'r'}
-,{cr:'c',st:'1',z:'boundaryScanRegisters',h1:'1',c:'g'}
+,{cr:'m',st:'1',z:'boundaryScanRegisters',h1:'0',c:'r'}
 ,{id:'cvg159 ',s:9,z:'jtagInstructionWidth',c:'R',p:'33.33'}
 ,{cr:'m',st:'1',z:'instructionWidth3Bit',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'instructionWidth4Bit',h1:'0',c:'r'}
@@ -125,12 +125,13 @@ t68:{items:[{dummy:0}
 ,footnote:1
 },
 t193:{items:[{dummy:0}
-,{id:'cvg194',s:'2',cr:'m',z:'byPassRegister',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg194',s:'2',cr:'c',z:'byPassRegister',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg195',s:'2',cr:'c',t:'/HdlTop/jtagIf/clk',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg197',s:'2',cr:'c',z:'instructionRegister[4-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg202 ',s:9,z:'jtagInstructionOpcode',c:'R',p:'33.33'}
+,{id:'cvg197',s:'2',cr:'m',z:'instructionRegister[4-2]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg200',s:'2',cr:'c',z:'instructionRegister[1-0]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg202 ',s:9,cr:'m',z:'jtagInstructionOpcode',c:'R',p:'0.00'}
 ,{cr:'m',st:'1',z:'bypassRegister',h1:'0',c:'r'}
-,{cr:'c',st:'1',z:'userDefinedRegister',h1:'1',c:'g'}
+,{cr:'m',st:'1',z:'userDefinedRegister',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'boundaryScanRegisters',h1:'0',c:'r'}
 ,{id:'cvg203',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
 ,{id:'cvg204',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
@@ -251,16 +252,17 @@ t31:{items:[{dummy:0}
 ]
 },
 t2:{items:[{dummy:0}
-,{id:'cvg1485',s:'2',cr:'m',z:'byPassRegister',h1:'0',h2:'0',c:'R',p:'0.00'}
-,{id:'cvg1486',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1488',s:'2',cr:'c',z:'instructionRegister[0-4]',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1493 ',s:9,z:'jtagInstructionOpcode',c:'R',p:'33.33'}
+,{id:'cvg1490',s:'2',cr:'c',z:'byPassRegister',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1491',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1493',s:'2',cr:'c',z:'instructionRegister[0-1]',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1495',s:'2',cr:'m',z:'instructionRegister[2-4]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1498 ',s:9,cr:'m',z:'jtagInstructionOpcode',c:'R',p:'0.00'}
 ,{cr:'m',st:'1',z:'bypassRegister',h1:'0',c:'r'}
-,{cr:'c',st:'1',z:'userDefinedRegister',h1:'1',c:'g'}
+,{cr:'m',st:'1',z:'userDefinedRegister',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'boundaryScanRegisters',h1:'0',c:'r'}
-,{id:'cvg1494',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1495',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1496 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
+,{id:'cvg1499',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1500',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1501 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
 ,{cr:'c',st:'1',z:'jtagResetState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIdleState',h1:'4',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'4',c:'g'}
@@ -277,15 +279,15 @@ t2:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'2',c:'g'}
-,{id:'cvg1497',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1498',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1502',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1503',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t3:{items:[{dummy:0}
-,{id:'cvg1522',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1523',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1524',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1525 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
+,{id:'cvg1527',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1528',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1529',s:'2',cr:'c',z:'jtagSerialOut',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1530 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
 ,{cr:'c',st:'1',z:'jtagResetState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIdleState',h1:'4',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'4',c:'g'}
@@ -302,14 +304,14 @@ t3:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'2',c:'g'}
-,{id:'cvg1526',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1527',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1531',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1532',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t8:{items:[{dummy:0}
-,{id:'cvg1673',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1674',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1675 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
+,{id:'cvg1678',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1679',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1680 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
 ,{cr:'c',st:'1',z:'jtagResetState',h1:'1',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIdleState',h1:'4',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'4',c:'g'}
@@ -326,14 +328,14 @@ t8:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'2',c:'g'}
-,{id:'cvg1676',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1677',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1681',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1682',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
 ]
 },
 t9:{items:[{dummy:0}
-,{id:'cvg1698',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1699',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1700 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
+,{id:'cvg1703',s:'2',cr:'c',z:'clk',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1704',s:'2',cr:'c',z:'jtagSerialIn',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1705 ',s:9,z:'jtagTapState',c:'Y',p:'75.00'}
 ,{cr:'c',st:'1',z:'jtagResetState',h1:'2',c:'g'}
 ,{cr:'c',st:'1',z:'jtagIdleState',h1:'4',c:'g'}
 ,{cr:'c',st:'1',z:'jtagDrScanState',h1:'4',c:'g'}
@@ -350,9 +352,9 @@ t9:{items:[{dummy:0}
 ,{cr:'m',st:'1',z:'jtagPauseDrState',h1:'0',c:'r'}
 ,{cr:'m',st:'1',z:'jtagExit2DrState',h1:'0',c:'r'}
 ,{cr:'c',st:'1',z:'jtagUpdateDrState',h1:'2',c:'g'}
-,{id:'cvg1701',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1702',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
-,{id:'cvg1704',s:'2',cr:'m',z:'temp[0-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
+,{id:'cvg1706',s:'2',cr:'c',z:'jtagTms',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1707',s:'2',cr:'c',z:'reset',h1:'1',h2:'1',c:'G',p:'100.00'}
+,{id:'cvg1709',s:'2',cr:'m',z:'temp[0-31]',h1:'0',h2:'0',c:'R',p:'0.00'}
 ]
 },
 dummyEnd:0

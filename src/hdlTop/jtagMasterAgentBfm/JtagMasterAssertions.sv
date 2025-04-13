@@ -43,7 +43,6 @@ interface JtagMasterAssertions (input clk,
       jtagInstruction = jtagMasterAgentConfig.jtagInstructionOpcode;
       $display("THE INSTRUCTION  WIDTH IS %s",jtagInstructionWidth.name());
 
- $display("the serial in is %b ",jtagSerialIn);
 end 
 
 
@@ -51,14 +50,13 @@ end
 
   always @(posedge  clk)
     begin
-     $display("THE WIDTH OF MASTER WIDTH IS %0d",width);
-     if((!($isunknown(jtagSerialIn))) && (width < jtagMasterAgentConfig.jtagInstructionWidth)) begin 
+     //$display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b",width,jtagSerialIn);
+     if((!($isunknown(jtagSerialIn))) && (width < jtagMasterAgentConfig.jtagInstructionWidth) &&(!($isunknown(jtagTms)))) begin 
        width++;
        instruction = {jtagSerialIn,instruction[4:1]};
-       $display("instruction is %b",instruction);
     end 
 
-     if(width == jtagMasterAgentConfig.jtagInstructionWidth) begin 
+     if(width == jtagMasterAgentConfig.jtagInstructionWidth && (!($isunknown(jtagTms)))) begin 
        startValidityCheck = 1'b 1;
        repeat(2) @(posedge clk);
         startValidityCheck = 1'b 0;
@@ -67,12 +65,14 @@ end
 	while(width < 16)
 	 begin 
           width++;
+
            @(posedge clk);
+
 	 end
 	 testVectorCheck =1;
 
       end 
-       //width = 0;
+    $display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b @%0t",width,jtagSerialIn,$time);
     end 
 
 

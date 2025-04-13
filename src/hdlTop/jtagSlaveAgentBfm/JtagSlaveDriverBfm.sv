@@ -35,6 +35,7 @@ interface JtagSlaveDriverBfm (input  logic   clk,
 
    task waitForReset();
     jtagTapState = jtagResetState;
+    jtagSerialOut = 'b x;
   endtask : waitForReset
 
 

@@ -31,17 +31,16 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
   task waitForReset();
     jtagTapState = jtagResetState;
+    jtagSerialIn = 'b x;
   endtask : waitForReset
   task DriveToBfm(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfigStruct);
     int  i,k ,m;
     i=0; 
     m=0;
     k=0;
-    $display("THE RECEIVED IS %b i=%0d",jtagPacketStruct.jtagTms,i);
     for(int j=0 ; j< $bits(jtagPacketStruct.jtagTms);j++)
       begin
       @(posedge clk) jtagTms = jtagPacketStruct.jtagTms[i++];
-        $display("THE STATE IN MASTER IS %s and tms is %b",jtagTapState.name(),jtagTms);
 	case(jtagTapState)
 
           jtagResetState :begin 

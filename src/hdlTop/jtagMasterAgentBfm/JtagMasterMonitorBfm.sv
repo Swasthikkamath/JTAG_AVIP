@@ -41,7 +41,6 @@ task startMonitoring(inout JtagPacketStruct jtagPacketStruct,input JtagConfigStr
     for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
       begin
         @(posedge clk);
-          $display("THE CURRENT STATE IS %s",jtagTapState.name());
         case(jtagTapState)
 
           jtagResetState :begin 
