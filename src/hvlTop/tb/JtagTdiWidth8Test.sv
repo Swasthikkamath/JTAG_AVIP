@@ -10,17 +10,17 @@ class JtagTdiWidth8Test extends JtagBaseTest;
 endclass : JtagTdiWidth8Test
 
 
-function JtagTdiWidth8Test :: new(string name = "JtagTdiWidth8Test" , uvm_component parent);
+    function JtagTdiWidth8Test :: new(string name = "JtagTdiWidth8Test" , uvm_component parent);
   super.new(name,parent);
 endfunction : new
 
 
 function void JtagTdiWidth8Test :: build_phase(uvm_phase phase);
   super.build_phase(phase);
-  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorTdiWidth = testVectorTdiWidth8Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionTdiWidth = instructionTdiWidth5Bit;
-   jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorTdiWidth = testVectorTdiWidth8Bit;
-   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionTdiWidth = instructionTdiWidth5Bit;
+  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
+  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
 endfunction : build_phase
 
 
