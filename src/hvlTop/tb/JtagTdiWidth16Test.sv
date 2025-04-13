@@ -17,10 +17,10 @@ endfunction : new
 
 function void JtagTdiWidth16Test :: build_phase(uvm_phase phase);
   super.build_phase(phase);
-  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorTdiWidth = testVectorTdiWidth16Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionTdiWidth = instructionTdiWidth5Bit;
-   jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorTdiWidth = testVectorTdiWidth16Bit;
-   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionTdiWidth = instructionTdiWidth5Bit;
+  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth16Bit;
+  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth16Bit;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
 endfunction : build_phase
 
 
