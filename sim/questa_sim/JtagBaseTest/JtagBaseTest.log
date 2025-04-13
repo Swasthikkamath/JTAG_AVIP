@@ -1,5 +1,5 @@
 # vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest/waveform.wlf 
-# Start time: 17:00:24 on Apr 13,2025
+# Start time: 19:07:39 on Apr 13,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(47): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
@@ -350,7 +350,7 @@
 # 
 ### TARGET DRIVER ### IS IN SHIFT DR STATE AT 3100
 # 
-# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(44): Non-existent associative array entry. Returning default value.
+# ** Warning: (vsim-3829) ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(50): Non-existent associative array entry. Returning default value.
 ### TARGET DRIVER ### THE SERIAL DATA 0 FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS 0xxxxxxxxx AT 3100 
 # 
 # THE CURRENT STATE IS jtagShiftDrState
@@ -1919,17 +1919,19 @@
 # THE WIDTH IS 0
 # THE CURRENT STATE IS jtagResetState
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(54) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 52.78 % *********************
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   16
+# UVM_INFO :   17
 # UVM_WARNING :    2
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [HDL_TOP]     1
 # [JtagMasterAssertions]     1
+# [JtagMasterCoverage]     1
 # [JtagSlaveAssertions]     1
 # [Questa UVM]     2
 # [RNTST]     1
@@ -1944,5 +1946,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 17:00:31 on Apr 13,2025, Elapsed time: 0:00:07
+# End time: 19:07:46 on Apr 13,2025, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 19

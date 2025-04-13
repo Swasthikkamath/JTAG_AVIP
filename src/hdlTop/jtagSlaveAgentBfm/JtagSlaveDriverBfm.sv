@@ -41,10 +41,17 @@ interface JtagSlaveDriverBfm (input  logic   clk,
 task registeringData(reg[4:0]instructionRegister , logic dataIn);
        for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin 
         if(jtagInstructionOpcode == instructionRegister) begin
+	  if(instructionRegister == jtagInstructionOpcode.first()) 
+	   begin 
+               byPassRegister = dataIn;
+	      jtagSerialOut  = byPassRegister ;
+	   end 
+	 else begin 
 	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
 	   jtagSerialOut = registerBank[instructionRegister][0];
 	  $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
 	  break;
+	  end 
         end 
 	else begin
 	  jtagInstructionOpcode = jtagInstructionOpcode.next();

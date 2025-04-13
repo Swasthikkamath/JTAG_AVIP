@@ -6,14 +6,25 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
   
   bit[31:0] testVector;
   JtagMasterAgentConfig jtagMasterAgentConfig;
-
+  int j;
   extern function new(string name = "JtagMasterCoverage",uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern function void write(JtagMasterTransaction t);
-
-  covergroup JtagMasterCoverGroup with function sample(bit[31:0]TestVector);
+  extern function void report_phase(uvm_phase phase);
+  covergroup JtagMasterCoverGroup with function sample(bit[31:0]TestVector,JtagMasterAgentConfig jtagMasterAgentConfig);
 
     JtagTestVector_CP : coverpoint TestVector{ bins TestData = {[0:$]};}
+   
+    JTAG_TESTVECTOR_WIDTH : coverpoint jtagMasterAgentConfig.jtagTestVectorWidth{ bins TDI_WIDTH_8 = {testVectorWidth8Bit};
+     										  bins TDI_WIDTH_16 = {testVectorWidth16Bit};
+										   bins TDI_WIDTH_24 = {testVectorWidth24Bit};
+										    bins TDI_WIDTH_32 = {testVectorWidth32Bit};
+										    }
+
+    JTAG_INSTRUCTION_WIDTH:coverpoint jtagMasterAgentConfig.jtagInstructionWidth{ bins INSTRUCTION_WIDTH_3 = {instructionWidth3Bit};
+                                                                                   bins INSTRUCTION_WIDTH_4 = {instructionWidth4Bit};
+										    bins INSTRUCTION_WIDTH_5 = {instructionWidth5Bit};
+										    }
 
   endgroup
 
@@ -32,10 +43,15 @@ endfunction : build_phase
 
 function void JtagMasterCoverage :: write(JtagMasterTransaction t);
   testVector =0;
-  testVector = t.jtagTestVector;
-  JtagMasterCoverGroup.sample(testVector);
+  for(int i=0;i<62 ;i++)
+  if(!($isunknown(t.jtagTestVector[i])))
+  testVector[j++] = t.jtagTestVector[i];
+  JtagMasterCoverGroup.sample(testVector,jtagMasterAgentConfig);
  
 endfunction : write
 
+function void  JtagMasterCoverage::report_phase(uvm_phase phase);
+  `uvm_info(get_type_name(), $sformatf("******************** JTAGController Agent Coverage = %0.2f %% *********************",  JtagMasterCoverGroup.get_coverage()), UVM_NONE);
+  endfunction: report_phase
 `endif
 

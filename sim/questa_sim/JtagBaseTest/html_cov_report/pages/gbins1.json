@@ -1,8 +1,12 @@
 var g_data = {
-c1186:[4,'JtagTestVector_CP',[],,'1185',1,1,'JtagSlaveCoverGroup','1176','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','2',,'TestData']],[]],
-c1316:[4,'JtagTestVector_CP',[],,'1315',1,1,'JtagMasterCoverGroup','1306','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','2',,'TestData']],[]],
-c1637:[4,'JtagTestVector_CP',[],,'1636',1,1,'JtagSlaveCoverGroup','1627','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','2',,'TestData']],[]],
-c1850:[4,'JtagTestVector_CP',[],,'1849',1,1,'JtagMasterCoverGroup','1840','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1187:[4,'JtagTestVector_CP',[],,'1186',1,1,'JtagSlaveCoverGroup','1177','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1320:[4,'JtagTestVector_CP',[],,'1319',1,1,'JtagMasterCoverGroup','1307','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1321:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1319',1,1,'JtagMasterCoverGroup','1307','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','0',1,'TDI_WIDTH_8'],[0,'1','2',,'TDI_WIDTH_16'],[0,'1','0',1,'TDI_WIDTH_24'],[0,'1','0',1,'TDI_WIDTH_32']],[]],
+c1322:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1319',1,1,'JtagMasterCoverGroup','1307','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','0',1,'INSTRUCTION_WIDTH_3'],[0,'1','0',1,'INSTRUCTION_WIDTH_4'],[0,'1','2',,'INSTRUCTION_WIDTH_5']],[]],
+c1644:[4,'JtagTestVector_CP',[],,'1643',1,1,'JtagSlaveCoverGroup','1634','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1860:[4,'JtagTestVector_CP',[],,'1859',1,1,'JtagMasterCoverGroup','1847','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1861:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1859',1,1,'JtagMasterCoverGroup','1847','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','0',1,'TDI_WIDTH_8'],[0,'1','2',,'TDI_WIDTH_16'],[0,'1','0',1,'TDI_WIDTH_24'],[0,'1','0',1,'TDI_WIDTH_32']],[]],
+c1862:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1859',1,1,'JtagMasterCoverGroup','1847','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','0',1,'INSTRUCTION_WIDTH_3'],[0,'1','0',1,'INSTRUCTION_WIDTH_4'],[0,'1','2',,'INSTRUCTION_WIDTH_5']],[]],
 dummyEnd:0
 };
 processCovergroupsData(g_data);
