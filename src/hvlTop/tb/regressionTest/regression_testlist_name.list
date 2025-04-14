@@ -15,3 +15,8 @@ JtagTdiWidth8InstructionWidth3Test.sv
 JtagTdiWidth8InstructionWidth4Test.sv
 JtagTdiWidth32InstructionWidth3Test.sv
 JtagTdiWidth32InstructionWidth4Test.sv  
+
+JtagTdiWidth8BypassRegisterTest.sv
+JtagTdiWidth16BypassRegisterTest.sv
+JtagTdiWidth24BypassRegisterTest.sv
+JtagTdiWidth32BypassRegisterTest.sv
