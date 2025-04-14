@@ -58,10 +58,10 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
 	      bins Target_pattern5_32 = {32'b 01010101010101010101010101010101};}
        
 
-	  DATA_PATTERN_5_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_8,JTAG_TESTVECTOR_WIDTH { ignore_bins data_8 =  !binsof(JTAG_TESTVECTOR_WIDTH)intersect{testVectorWidth8Bit};}
-	  DATA_PATTERN_6_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_16,JTAG_TESTVECTOR_WIDTH { ignore_bins data_16 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth16Bit};}
-	  DATA_PATTERN_7_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_24,JTAG_TESTVECTOR_WIDTH { ignore_bins data_24 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect {testVectorWidth24Bit};}
-	  DATA_PATTERN_8_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_32,JTAG_TESTVECTOR_WIDTH { ignore_bins data_32 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth32Bit};}
+	  DATA_PATTERN_8_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_8,JTAG_TESTVECTOR_WIDTH { ignore_bins data_8 =  !binsof(JTAG_TESTVECTOR_WIDTH)intersect{testVectorWidth8Bit};}
+	  DATA_PATTERN_16_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_16,JTAG_TESTVECTOR_WIDTH { ignore_bins data_16 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth16Bit};}
+	  DATA_PATTERN_24_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_24,JTAG_TESTVECTOR_WIDTH { ignore_bins data_24 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect {testVectorWidth24Bit};}
+	  DATA_PATTERN_32_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_32,JTAG_TESTVECTOR_WIDTH { ignore_bins data_32 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth32Bit};}
 
   endgroup
 
