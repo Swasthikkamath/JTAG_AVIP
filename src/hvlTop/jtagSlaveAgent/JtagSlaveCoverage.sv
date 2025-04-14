@@ -28,7 +28,7 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
    JTAG_INSTRUCTION : coverpoint jtagSlaveAgentConfig.jtagInstructionOpcode;
 
 
-   TAGETDATA_PATTERN_8 : coverpoint TDO{
+   TARGETDATA_PATTERN_8 : coverpoint TDO{
       bins Target_pattern1_8 = {8'b 11111111};
       bins Target_pattern2_8 = {8'b 10101010};
       bins Target_pattern3_8 = {8'b 11110000};
