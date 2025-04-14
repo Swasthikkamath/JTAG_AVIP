@@ -1,14 +1,14 @@
 var g_data = {
-c1216:[4,'JtagTestVector_CP',[],,'1215',1,1,'JtagSlaveCoverGroup','1206','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','26',,'TestData']],[]],
-c1356:[4,'JtagTestVector_CP',[],,'1355',1,1,'JtagMasterCoverGroup','1343','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','26',,'TestData']],[]],
-c1357:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1355',1,1,'JtagMasterCoverGroup','1343','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','6',,'TDI_WIDTH_8'],[0,'1','6',,'TDI_WIDTH_16'],[0,'1','6',,'TDI_WIDTH_24'],[0,'1','8',,'TDI_WIDTH_32']],[]],
-c1358:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1355',1,1,'JtagMasterCoverGroup','1343','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','10',,'INSTRUCTION_WIDTH_3'],[0,'1','8',,'INSTRUCTION_WIDTH_4'],[0,'1','8',,'INSTRUCTION_WIDTH_5']],[]],
-c1359:[4,'JTAG_INSTRUCTION',[],,'1355',1,1,'JtagMasterCoverGroup','1343','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','26',,'auto[bypassRegister]'],[0,'1','0',1,'auto[userDefinedRegister]'],[0,'1','0',1,'auto[boundaryScanRegisters]']],[]],
-c1770:[4,'JtagTestVector_CP',[],,'1769',1,1,'JtagSlaveCoverGroup','1760','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','26',,'TestData']],[]],
-c1993:[4,'JtagTestVector_CP',[],,'1992',1,1,'JtagMasterCoverGroup','1980','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','26',,'TestData']],[]],
-c1994:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1992',1,1,'JtagMasterCoverGroup','1980','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','6',,'TDI_WIDTH_8'],[0,'1','6',,'TDI_WIDTH_16'],[0,'1','6',,'TDI_WIDTH_24'],[0,'1','8',,'TDI_WIDTH_32']],[]],
-c1995:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1992',1,1,'JtagMasterCoverGroup','1980','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','10',,'INSTRUCTION_WIDTH_3'],[0,'1','8',,'INSTRUCTION_WIDTH_4'],[0,'1','8',,'INSTRUCTION_WIDTH_5']],[]],
-c1996:[4,'JTAG_INSTRUCTION',[],,'1992',1,1,'JtagMasterCoverGroup','1980','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','26',,'auto[bypassRegister]'],[0,'1','0',1,'auto[userDefinedRegister]'],[0,'1','0',1,'auto[boundaryScanRegisters]']],[]],
+c1232:[4,'JtagTestVector_CP',[],,'1231',1,1,'JtagSlaveCoverGroup','1222','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','42',,'TestData']],[]],
+c1372:[4,'JtagTestVector_CP',[],,'1371',1,1,'JtagMasterCoverGroup','1359','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','42',,'TestData']],[]],
+c1373:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1371',1,1,'JtagMasterCoverGroup','1359','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','10',,'TDI_WIDTH_8'],[0,'1','10',,'TDI_WIDTH_16'],[0,'1','10',,'TDI_WIDTH_24'],[0,'1','12',,'TDI_WIDTH_32']],[]],
+c1374:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1371',1,1,'JtagMasterCoverGroup','1359','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','10',,'INSTRUCTION_WIDTH_3'],[0,'1','8',,'INSTRUCTION_WIDTH_4'],[0,'1','24',,'INSTRUCTION_WIDTH_5']],[]],
+c1375:[4,'JTAG_INSTRUCTION',[],,'1371',1,1,'JtagMasterCoverGroup','1359','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','8',,'auto[bypassRegister]'],[0,'1','8',,'auto[userDefinedRegister]'],[0,'1','26',,'auto[boundaryScanRegisters]']],[]],
+c1842:[4,'JtagTestVector_CP',[],,'1841',1,1,'JtagSlaveCoverGroup','1832','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','42',,'TestData']],[]],
+c2065:[4,'JtagTestVector_CP',[],,'2064',1,1,'JtagMasterCoverGroup','2052','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','42',,'TestData']],[]],
+c2066:[4,'JTAG_TESTVECTOR_WIDTH',[],,'2064',1,1,'JtagMasterCoverGroup','2052','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','10',,'TDI_WIDTH_8'],[0,'1','10',,'TDI_WIDTH_16'],[0,'1','10',,'TDI_WIDTH_24'],[0,'1','12',,'TDI_WIDTH_32']],[]],
+c2067:[4,'JTAG_INSTRUCTION_WIDTH',[],,'2064',1,1,'JtagMasterCoverGroup','2052','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','10',,'INSTRUCTION_WIDTH_3'],[0,'1','8',,'INSTRUCTION_WIDTH_4'],[0,'1','24',,'INSTRUCTION_WIDTH_5']],[]],
+c2068:[4,'JTAG_INSTRUCTION',[],,'2064',1,1,'JtagMasterCoverGroup','2052','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','8',,'auto[bypassRegister]'],[0,'1','8',,'auto[userDefinedRegister]'],[0,'1','26',,'auto[boundaryScanRegisters]']],[]],
 dummyEnd:0
 };
 processCovergroupsData(g_data);
