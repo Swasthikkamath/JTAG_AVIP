@@ -23,6 +23,7 @@ package JtagVirtualSequencePkg;
 
   `include "JtagVirtualBaseSequence.sv"
   `include "JtagMasterTestingVirtualSequence.sv"
+  `include "JtagPatternBasedVirtualSequence.sv"
 endpackage
 
 `endif
