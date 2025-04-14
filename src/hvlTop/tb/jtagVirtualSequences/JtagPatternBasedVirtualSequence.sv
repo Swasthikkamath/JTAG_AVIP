@@ -1,30 +1,30 @@
 
-`ifndef JTAGPATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
-`define JTAGPATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
+`ifndef JTAGMASTERPATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
+`define JTAGMASTERPATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
 
-class JtagPatternBasedVirtualSequence extends JtagVirtualBaseSequence;
-  `uvm_object_utils(JtagPatternBasedVirtualSequence)
+class JtagMasterPatternBasedVirtualSequence extends JtagVirtualBaseSequence;
+  `uvm_object_utils(JtagMasterPatternBasedVirtualSequence)
 
   JtagMasterPatternBasedSequence jtagMasterPatternBasedSequence;
   JtagSlaveBaseSequence  jtagSlaveBaseSequence;
   JtagMasterAgentConfig jtagMasterAgentConfig;
 
-  extern function new(string name = "JtagPatternBasedVirtualSequence");
+  extern function new(string name = "JtagMasterPatternBasedVirtualSequence");
   extern virtual task body();
   extern task setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
-endclass : JtagPatternBasedVirtualSequence 
+endclass : JtagMasterPatternBasedVirtualSequence 
 
 
-function JtagPatternBasedVirtualSequence ::new(string name = "JtagPatternBasedVirtualSequence");
+function JtagMasterPatternBasedVirtualSequence ::new(string name = "JtagMasterPatternBasedVirtualSequence");
   super.new(name);
 endfunction  : new
 
-task JtagPatternBasedVirtualSequence :: body();
+task JtagMasterPatternBasedVirtualSequence :: body();
   super.body();
   `uvm_do_on_with(jtagMasterPatternBasedSequence,p_sequencer.jtagMasterSequencer,{patternNeeded == jtagMasterAgentConfig.patternNeeded;})
 endtask : body 
 
-task JtagPatternBasedVirtualSequence :: setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
+task JtagMasterPatternBasedVirtualSequence :: setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
   this.jtagMasterAgentConfig = jtagMasterAgentConfig;
 endtask : setConfig
  
