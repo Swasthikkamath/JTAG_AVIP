@@ -24,6 +24,7 @@ function void JtagTdiWidth8UDR :: build_phase(uvm_phase phase);
    jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
    jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
    jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionOpcode = userDefinedRegister;
+  jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionOpcode = userDefinedRegister;
 endfunction : build_phase
 
 
