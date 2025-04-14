@@ -33,7 +33,7 @@ task Jtag8BitPatternBasedTest :: run_phase(uvm_phase phase);
   jtagMasterPatternBasedVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
  
   phase.raise_objection(this);
-  repeat(2) begin 
+  repeat(NO_OF_TESTS) begin 
   jtagMasterPatternBasedVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   end 
   phase.drop_objection(this);
