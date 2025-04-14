@@ -18,13 +18,15 @@ package JtagBaseTestPkg;
   `include "JtagTdiWidth8Test.sv"
   `include "JtagTdiWidth16Test.sv"
   `include "JtagTdiWidth24Test.sv"
+  `include "JtagTdiWidth32Test.sv"
   `include "JtagTdiWidth16InstructionWidth3Test.sv"
   `include "JtagTdiWidth16InstructionWidth4Test.sv"
   `include "JtagTdiWidth24InstructionWidth3Test.sv"
   `include "JtagTdiWidth24InstructionWidth4Test.sv"
   `include "JtagTdiWidth8InstructionWidth3Test.sv"
   `include "JtagTdiWidth8InstructionWidth4Test.sv"
-  
+  `include "JtagTdiWidth32InstructionWidth3Test.sv"
+  `include "JtagTdiWidth32InstructionWidth4Test.sv"  
 
  endpackage : JtagBaseTestPkg
 
