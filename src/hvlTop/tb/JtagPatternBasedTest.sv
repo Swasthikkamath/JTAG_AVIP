@@ -9,7 +9,7 @@ class JtagPatternBasedTest extends JtagBaseTest;
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
 
- JtagMastterPatternBasedVirtualSequence jtagMasterPatternBasedVirtualSequence;
+ JtagMasterPatternBasedVirtualSequence jtagMasterPatternBasedVirtualSequence;
 endclass : JtagPatternBasedTest
 
 function JtagPatternBasedTest :: new(string name = "JtagPatternBasedTest" , uvm_component parent);
@@ -29,7 +29,7 @@ endfunction : build_phase
 
 
 task JtagPatternBasedTest :: run_phase(uvm_phase phase);
-  jtagMasterPatternBasedVirtualSequence = JtagMastterPatternBasedVirtualSequence :: type_id :: create("JtagMasterPatternBasedVirtualSequence");
+  jtagMasterPatternBasedVirtualSequence = JtagMasterPatternBasedVirtualSequence :: type_id :: create("JtagMasterPatternBasedVirtualSequence");
   jtagMasterPatternBasedVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
  
   phase.raise_objection(this);
