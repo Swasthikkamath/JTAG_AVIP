@@ -19,3 +19,7 @@ JtagTdiWidth16UDR
 JtagTdiWidth8UDR
 JtagTdiWidth24UDR
 JtagTdiWidth32UDR
+Jtag8BitPatternBasedTest
+Jtag16BitPatternBasedTest
+Jtag32BitPatternBasedTest
+Jtag24BitPatternBasedTest

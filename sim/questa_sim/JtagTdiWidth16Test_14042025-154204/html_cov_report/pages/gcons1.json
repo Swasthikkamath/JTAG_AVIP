@@ -1,7 +1,0 @@
-var g_db_data = [
-{dummy:0},
-{name:'JtagSlaveCoverGroup',f:1,type:6,id:1212,tb:'13',h:'5',m:'8',hp:'38.46%',cov:['39.58%','R'],g:'100.00%',gp:['39.58%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/JtagSlavePkg/JtagSlaveCoverage',parent:'1202'},
-{name:'JtagMasterCoverGroup',f:1,type:6,id:1355,tb:'13',h:'5',m:'8',hp:'38.46%',cov:['39.58%','R'],g:'100.00%',gp:['39.58%','R'],opts:[[],['merge_instance','auto(true)']],hdlPath:'/JtagMasterPkg/JtagMasterCoverage',parent:'1343'},
-{name:'JtagSlaveCoverGroup',f:1,type:6,id:1826,tb:'13',h:'5',m:'8',hp:'38.46%',cov:['39.58%','R'],g:'100.00%',gp:['39.58%','R'],opts:[[],['merge_instance','true']],hdlPath:'work.JtagSlavePkg::JtagSlaveCoverage',parent:'1816'},
-{name:'JtagMasterCoverGroup',f:1,type:6,id:2052,tb:'13',h:'5',m:'8',hp:'38.46%',cov:['39.58%','R'],g:'100.00%',gp:['39.58%','R'],opts:[[],['merge_instance','true']],hdlPath:'work.JtagMasterPkg::JtagMasterCoverage',parent:'2040'}];
-processConsCovergroupsData(g_db_data);
