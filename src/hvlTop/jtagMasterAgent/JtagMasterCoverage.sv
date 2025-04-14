@@ -5,8 +5,10 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
   `uvm_component_utils(JtagMasterCoverage)
   
   bit[31:0] testVector;
+  bit[4:0]instruction;
   JtagMasterAgentConfig jtagMasterAgentConfig;
   int j;
+  int index;
   extern function new(string name = "JtagMasterCoverage",uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern function void write(JtagMasterTransaction t);
@@ -25,7 +27,7 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
                                                                                    bins INSTRUCTION_WIDTH_4 = {instructionWidth4Bit};
 										    bins INSTRUCTION_WIDTH_5 = {instructionWidth5Bit};
 										    }
-
+    JTAG_INSTRUCTION : coverpoint jtagMasterAgentConfig.jtagInstructionOpcode;
   endgroup
 
 endclass : JtagMasterCoverage
@@ -46,7 +48,9 @@ function void JtagMasterCoverage :: write(JtagMasterTransaction t);
   for(int i=0;i<62 ;i++)
   if(!($isunknown(t.jtagTestVector[i])))
   testVector[j++] = t.jtagTestVector[i];
-  JtagMasterCoverGroup.sample(testVector,jtagMasterAgentConfig);
+
+    
+  JtagMasterCoverGroup.sample(testVector,jtagMasterAgentConfig );
  
 endfunction : write
 
