@@ -26,3 +26,5 @@ JtagTdiWidth16UDR.sv
 JtagTdiWidth8UDR.sv
 JtagTdiWidth24UDR.sv
 JtagTdiWidth32UDR.sv
+
+JtagPatternBasedTest.sv
