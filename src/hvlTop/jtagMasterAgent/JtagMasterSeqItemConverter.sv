@@ -70,6 +70,15 @@ function void JtagMasterSeqItemConverter :: fromClass(input JtagMasterTransactio
        endcase
      end
 
+      'd 32: begin
+        case(jtagConfigStruct.jtagInstructionWidth)
+		'd 3 : jtagPacketStruct.jtagTms = {'b x,JTAGMOVETOIDLE,{JTAGREGISTERWIDTH{1'b 0}}, 31'b 0 , jtagPacketStruct.jtagTms[11:0]};
+		'd 4 : jtagPacketStruct.jtagTms = {'b x,JTAGMOVETOIDLE,{JTAGREGISTERWIDTH{1'b 0}} , 31'b 0 , jtagPacketStruct.jtagTms[12:0]};
+		'd 5 : jtagPacketStruct.jtagTms = {'b x,JTAGMOVETOIDLE,{JTAGREGISTERWIDTH{1'b 0}} , 31'b 0 , jtagPacketStruct.jtagTms[13:0]};
+       endcase
+     end
+     
+
   endcase
 end 
 else 
@@ -99,6 +108,16 @@ else
 	  'd 5: jtagPacketStruct.jtagTms = {64'b x ,JTAGMOVETOIDLE ,24'b 0, jtagPacketStruct.jtagTms[13:0]};
 	endcase
        end 
+
+       'd 32: begin
+        case(jtagConfigStruct.jtagInstructionWidth)
+		'd 3 : jtagPacketStruct.jtagTms = {64'b x ,JTAGMOVETOIDLE, 32'b 0 , jtagPacketStruct.jtagTms[11:0]};
+		'd 4 : jtagPacketStruct.jtagTms = {64'b x,JTAGMOVETOIDLE, 32'b 0 , jtagPacketStruct.jtagTms[12:0]};
+		'd 5: jtagPacketStruct.jtagTms = {64'b x ,JTAGMOVETOIDLE ,32'b 0, jtagPacketStruct.jtagTms[13:0]};
+	endcase
+       end 
+
+	
      endcase
 
   end 
