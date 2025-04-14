@@ -2,14 +2,14 @@
 `define JTAGTDIWidth8INSTRUCTIONWIDTH4TEST_INCLUDED_
 
 class JtagTdiWidth8InstructionWidth4Test extends JtagBaseTest;
-  `uvm_component_utils(JtagTdiWidth8Test)
+  `uvm_component_utils(JtagTdiWidth8InstructionWidth4Test)
 
   extern function new(string name = "JtagTdiWidth8InstructionWidth4Test" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
-endclass : JtagTdiWidth8Test
+endclass : JtagTdiWidth8InstructionWidth4Test
 
-function JtagTdiWidth8Test :: new(string name = "JtagTdiWidth8InstructionWidth4Test" , uvm_component parent);
+function JtagTdiWidth8InstructionWidth4Test :: new(string name = "JtagTdiWidth8InstructionWidth4Test" , uvm_component parent);
   super.new(name,parent);
 endfunction : new
 
