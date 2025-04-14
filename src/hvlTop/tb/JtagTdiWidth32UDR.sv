@@ -34,7 +34,7 @@ task  JtagTdiWidth32UDR :: run_phase(uvm_phase phase);
   jtagMasterTestingVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
  
   phase.raise_objection(this);
-  repeat(2) begin 
+  repeat( NO_OF_TESTS) begin 
   jtagMasterTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   end 
   phase.drop_objection(this);
