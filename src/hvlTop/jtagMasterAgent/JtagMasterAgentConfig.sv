@@ -11,6 +11,7 @@ class JtagMasterAgentConfig extends uvm_object;
   rand JtagInstructionWidthEnum  jtagInstructionWidth;
   rand JtagInstructionOpcodeEnum jtagInstructionOpcode;
   int NumberOfTests;
+  logic[31:0]patternNeeded;
 
   extern function new(string name = "JtagMasterAgentConfig");
 
