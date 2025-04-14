@@ -30,6 +30,48 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
 										    bins INSTRUCTION_WIDTH_5 = {instructionWidth5Bit};
 										    }
     JTAG_INSTRUCTION : coverpoint jtagMasterAgentConfig.jtagInstructionOpcode;
+
+
+
+      DATA_PATTERN_8 : coverpoint data{
+      bins pattern1_8 = {8'b 11111111};
+      bins pattern2_8 = {8'b 10101010};
+      bins pattern3_8 = {8'b 11110000};
+      bins pattern4_8 = {8'b 00000000};
+      bins pattern5_8 = {8'b 01010101};}
+
+      DATA_PATTERN_16 : coverpoint data{
+      bins pattern1_16 = {16'b 1111111111111111};
+	      bins pattern2_16 = {16'b 1010101010101010};
+	      bins pattern3_16 = {16'b 1111000011110000};
+	      bins pattern4_16 = {16'b 0000000000000000};
+	      bins pattern5_16 = {16'b 0101010101010101};}
+
+
+      DATA_PATTERN_24 : coverpoint data{
+	      bins pattern1_24 = {24'b 111111111111111111111111};
+	      bins pattern2_24 = {24'b 101010101010101010101010};
+	      bins pattern3_24 = {24'b 111100001111000011110000};
+	      bins pattern4_24 = {24'b 000000000000000000000000};
+	      bins pattern5_24 = {24'b 010101010101010101010101};}
+
+      DATA_PATTERN_32 : coverpoint data{
+	      bins pattern1_32 = {32'b 11111111111111111111111111111111};
+	      bins pattern2_32 = {32'b 10101010101010101010101010101010};
+	      bins pattern3_32 = {32'b 11110000111100001111000011110000};
+	      bins pattern4_32 = {32'b 00000000000000000000000000000000};
+	      bins pattern5_32 = {32'b 01010101010101010101010101010101};}
+       
+
+	  DATA_PATTERN_5_DATA_WIDTH_CP : cross DATA_PATTERN_8,JTAG_TESTVECTOR_WIDTH { ignore_bins data_8 =  !binsof(DATA_WIDTH_CP)intersect{testVectorWidth8Bit};}
+	  DATA_PATTERN_6_DATA_WIDTH_CP : cross DATA_PATTERN_16,JTAG_TESTVECTOR_WIDTH { ignore_bins data_16 =  !binsof(DATA_WIDTH_CP) intersect{testVectorWidth16Bit};}
+	  DATA_PATTERN_7_DATA_WIDTH_CP : cross DATA_PATTERN_24,JTAG_TESTVECTOR_WIDTH { ignore_bins data_24 =  !binsof(DATA_WIDTH_CP) intersect {testVectorWidth24Bit};}
+	  DATA_PATTERN_8_DATA_WIDTH_CP : cross DATA_PATTERN_32,JTAG_TESTVECTOR_WIDTH { ignore_bins data_32 =  !binsof(DATA_WIDTH_CP) intersect{testVectorWidth32Bit};}
+
+      
+
+
+	  
   endgroup
 
 endclass : JtagMasterCoverage
