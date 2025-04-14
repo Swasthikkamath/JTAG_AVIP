@@ -43,28 +43,6 @@ interface JtagSlaveDriverBfm (input  logic   clk,
 task registeringData(reg[4:0]instructionRegister , logic dataIn,JtagConfigStruct jtagConfigStruct);
     for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin
 
-<<<<<<< HEAD
-   
-      case(jtagConfigStruct.jtagInstructionWidth) 
-
-        'd 5 : begin 
-           if(jtagInstructionOpcode == instructionRegister) begin
-	     if(instructionRegister == jtagInstructionOpcode.first()) 
-	        begin 
-                  byPassRegister = dataIn;
-	          jtagSerialOut  = byPassRegister ;
-	        end 
-	     else begin 
-	       registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
-	       jtagSerialOut = registerBank[instructionRegister][0];
-	       $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
-	       break;
-	     end 
-           end 
-	   else begin
-	     jtagInstructionOpcode = jtagInstructionOpcode.next();
-           end 
-=======
 
       case(jtagConfigStruct.jtagInstructionWidth)
 
@@ -85,56 +63,9 @@ task registeringData(reg[4:0]instructionRegister , logic dataIn,JtagConfigStruct
            else begin
              jtagInstructionOpcode = jtagInstructionOpcode.next();
            end
->>>>>>> 647fd3ab3db11c89a24596e5be82cf85d155b98e
         end
 
 
-
-<<<<<<< HEAD
-	'd 4: begin 
-           if(jtagInstructionOpcode [3:0]== instructionRegister[4:1]) begin
-	     if(instructionRegister[4:1] == jtagInstructionOpcode.first()[3:0])
-	       begin 
-	         byPassRegister = dataIn;
-                 jtagSerialOut  = byPassRegister ;
-               end 
-	     else begin 
-	       registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
-	       jtagSerialOut = registerBank[instructionRegister][0];
-	       $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
-	       break;
-	     end 
-	   end 
-	   else begin 
-	      jtagInstructionOpcode = jtagInstructionOpcode.next();
-	   end 
-	 end 
- 	
-
-
-         'd 3: begin 
-	     if(jtagInstructionOpcode [2:0]== instructionRegister[4:2]) begin
-		if(instructionRegister[4:2] == jtagInstructionOpcode.first()[2:0])
-		  begin 
-		     byPassRegister = dataIn; 					           
-		     jtagSerialOut  = byPassRegister ;
-		  end
-		  else begin 
-		    registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
-		    jtagSerialOut = registerBank[instructionRegister][0];
-		    $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
-		    break;
-		  end
-		end
-	       else begin 	
-	         jtagInstructionOpcode = jtagInstructionOpcode.next();
-	       end
-          end
-              
-      endcase
-   end 
-endtask 
-=======
         'd 4: begin
            if(jtagInstructionOpcode [3:0]== instructionRegister[4:1]) begin
              if(instructionRegister[4:1] == jtagInstructionOpcode.first()[3:0])
@@ -178,7 +109,7 @@ endtask
       endcase
    end
 endtask
->>>>>>> 647fd3ab3db11c89a24596e5be82cf85d155b98e
+
 task observeData(JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
     for(int j=0 ; j< 61;j++)
@@ -235,19 +166,7 @@ task observeData(JtagConfigStruct jtagConfigStruct);
             $display("### TARGET DRIVER ### IS IN SHIFT DR STATE AT %0t\n",$time);
             if(jtagTms ==1) begin
               jtagTapState = jtagExit1DrState;
-<<<<<<< HEAD
-	    end 
-	    else if(jtagTms ==0) begin 
-              jtagTapState = jtagShiftDrState;      
-	    end
-	    registeringData(instructionRegister,jtagSerialIn,jtagConfigStruct);
-	  end 
-          
-	  
-	  jtagExit1DrState : begin 
 
-	    if(jtagTms == 1) begin 
-=======
             end
             else if(jtagTms ==0) begin
               jtagTapState = jtagShiftDrState;
@@ -259,7 +178,7 @@ task observeData(JtagConfigStruct jtagConfigStruct);
           jtagExit1DrState : begin
 
             if(jtagTms == 1) begin
->>>>>>> 647fd3ab3db11c89a24596e5be82cf85d155b98e
+
               jtagTapState = jtagUpdateDrState;
             end
             else if(jtagTms ==0) begin
