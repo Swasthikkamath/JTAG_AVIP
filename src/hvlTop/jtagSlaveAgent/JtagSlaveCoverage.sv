@@ -14,7 +14,7 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
   covergroup JtagSlaveCoverGroup with function sample(bit[31:0]TDO , JtagSlaveAgentConfig jtagSlaveAgentConfig);
    JtagTestVector_CP : coverpoint TDO{ bins low_range = {[0:(2**12)]};
                                                   bins mid_range = {[(2**12)+1 : 2**24]} ;
-		                                bins high_range = {[(2**24)+1 : 0]}}
+		                                bins high_range = {[(2**24)+1 : 0]};}
    		
    JTAG_TESTVECTOR_WIDTH : coverpoint jtagSlaveAgentConfig.jtagTestVectorWidth{ bins TDO_WIDTH_8 = {testVectorWidth8Bit};
                                                                                  bins TDO_WIDTH_16 = {testVectorWidth16Bit};

@@ -1,0 +1,26 @@
+var g_data = {
+a43:{
+scopes:[{link:'z.htm?f=0&s=43',val:'work.JtagMasterAssertions'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testVectorValidity',fc:'Gr',pc:'Gr',h0:'0',h1:'42',h2:'2625',h3:'0',h4:'2583',h5:'0',h6:'42'}
+,{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'42',h2:'2625',h3:'0',h4:'2583',h5:'0',h6:'42'}
+],
+},
+a146:{
+scopes:[{s:'51',b:'1',val:'HdlTop'},{s:'61',b:'1',val:'jtagMasterAgentBfm'},{s:'88',b:'1',val:'jtagMasterMonitorBfm'},{link:'z.htm?f=0&s=146',val:'TestVectrorTestingAssertions'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testVectorValidity',fc:'Gr',pc:'Gr',h0:'0',h1:'42',h2:'2625',h3:'0',h4:'2583',h5:'0',h6:'42'}
+,{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'42',h2:'2625',h3:'0',h4:'2583',h5:'0',h6:'42'}
+],
+},
+a48:{
+scopes:[{link:'z.htm?f=0&s=48',val:'work.JtagSlaveAssertions'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testWidthCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'42',h2:'2625',h3:'0',h4:'2583',h5:'0',h6:'42'}
+],
+},
+a281:{
+scopes:[{s:'51',b:'1',val:'HdlTop'},{s:'211',b:'1',val:'jtagSlaveAgentBfm'},{s:'255',b:'1',val:'jtagSlaveMonitorBfm'},{link:'z.htm?f=0&s=281',val:'TestVectrorTestingAssertions'}]
+,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testWidthCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'42',h2:'2625',h3:'0',h4:'2583',h5:'0',h6:'42'}
+],
+},
+dummyEnd:0
+};
+processAssertionsData(g_data,1);

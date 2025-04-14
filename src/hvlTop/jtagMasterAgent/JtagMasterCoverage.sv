@@ -17,7 +17,7 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
 
     JtagTestVector_CP : coverpoint TestVector{ bins low_range = {[0:(2**12)]};
                                                bins mid_range = {[(2**12)+1 : 2**24]} ;
-					       bins high_range = {[(2**24)+1 : 0]}}
+					       bins high_range = {[(2**24)+1 : 0]};}
    
     JTAG_TESTVECTOR_WIDTH : coverpoint jtagMasterAgentConfig.jtagTestVectorWidth{ bins TDI_WIDTH_8 = {testVectorWidth8Bit};
      										  bins TDI_WIDTH_16 = {testVectorWidth16Bit};

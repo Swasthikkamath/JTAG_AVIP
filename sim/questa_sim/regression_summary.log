@@ -1,5 +1,5 @@
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24Test_14042025-135401/JtagTdiWidth24Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24Test_14042025-135401/JtagTdiWidth24Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24Test_14042025-135401/waveform.wlf 
-# Start time: 13:54:02 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24Test_14042025-153324/JtagTdiWidth24Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24Test_14042025-153324/JtagTdiWidth24Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24Test_14042025-153324/waveform.wlf 
+# Start time: 15:33:25 on Apr 14,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(52): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 # ** Warning: (vopt-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(52): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
@@ -75,7 +75,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24Test_14042025-135401/JtagTdiWidth24Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24Test_14042025-153324/JtagTdiWidth24Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -1711,7 +1711,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -1738,10 +1738,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:09 on Apr 14,2025, Elapsed time: 0:00:07
+# End time: 15:33:32 on Apr 14,2025, Elapsed time: 0:00:07
 # Errors: 0, Warnings: 25
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16Test_14042025-135410/JtagTdiWidth16Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16Test_14042025-135410/JtagTdiWidth16Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16Test_14042025-135410/waveform.wlf 
-# Start time: 13:54:11 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16Test_14042025-153334/JtagTdiWidth16Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16Test_14042025-153334/JtagTdiWidth16Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16Test_14042025-153334/waveform.wlf 
+# Start time: 15:33:34 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -1793,7 +1793,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16Test_14042025-135410/JtagTdiWidth16Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16Test_14042025-153334/JtagTdiWidth16Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -3173,7 +3173,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -3200,10 +3200,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:13 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:33:36 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8Test_14042025-135414/JtagTdiWidth8Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8Test_14042025-135414/JtagTdiWidth8Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8Test_14042025-135414/waveform.wlf 
-# Start time: 13:54:15 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8Test_14042025-153337/JtagTdiWidth8Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8Test_14042025-153337/JtagTdiWidth8Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8Test_14042025-153337/waveform.wlf 
+# Start time: 15:33:38 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -3255,7 +3255,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8Test_14042025-135414/JtagTdiWidth8Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8Test_14042025-153337/JtagTdiWidth8Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -4379,7 +4379,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -4406,10 +4406,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:16 on Apr 14,2025, Elapsed time: 0:00:01
+# End time: 15:33:40 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32Test_14042025-135418/JtagTdiWidth32Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32Test_14042025-135418/JtagTdiWidth32Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32Test_14042025-135418/waveform.wlf 
-# Start time: 13:54:19 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32Test_14042025-153341/JtagTdiWidth32Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32Test_14042025-153341/JtagTdiWidth32Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32Test_14042025-153341/waveform.wlf 
+# Start time: 15:33:42 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -4461,7 +4461,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32Test_14042025-135418/JtagTdiWidth32Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32Test_14042025-153341/JtagTdiWidth32Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -6353,7 +6353,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -6380,10 +6380,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:21 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:33:44 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest_14042025-135422/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest_14042025-135422/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest_14042025-135422/waveform.wlf 
-# Start time: 13:54:23 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagBaseTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagBaseTest_14042025-153346/JtagBaseTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest_14042025-153346/JtagBaseTest_coverage.ucdb; run -all; exit" -wlf JtagBaseTest_14042025-153346/waveform.wlf 
+# Start time: 15:33:46 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -6435,7 +6435,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest_14042025-135422/JtagBaseTest_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagBaseTest_14042025-153346/JtagBaseTest_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -8279,7 +8279,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth3Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -8306,10 +8306,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:25 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:33:48 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16InstructionWidth3Test_14042025-135426/JtagTdiWidth16InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth3Test_14042025-135426/JtagTdiWidth16InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16InstructionWidth3Test_14042025-135426/waveform.wlf 
-# Start time: 13:54:27 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16InstructionWidth3Test_14042025-153350/JtagTdiWidth16InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth3Test_14042025-153350/JtagTdiWidth16InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16InstructionWidth3Test_14042025-153350/waveform.wlf 
+# Start time: 15:33:51 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -8361,7 +8361,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth3Test_14042025-135426/JtagTdiWidth16InstructionWidth3Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth3Test_14042025-153350/JtagTdiWidth16InstructionWidth3Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -9693,7 +9693,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth3Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -9720,10 +9720,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:29 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:33:53 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16InstructionWidth4Test_14042025-135430/JtagTdiWidth16InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth4Test_14042025-135430/JtagTdiWidth16InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16InstructionWidth4Test_14042025-135430/waveform.wlf 
-# Start time: 13:54:31 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16InstructionWidth4Test_14042025-153354/JtagTdiWidth16InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth4Test_14042025-153354/JtagTdiWidth16InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16InstructionWidth4Test_14042025-153354/waveform.wlf 
+# Start time: 15:33:55 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -9775,7 +9775,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth4Test_14042025-135430/JtagTdiWidth16InstructionWidth4Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16InstructionWidth4Test_14042025-153354/JtagTdiWidth16InstructionWidth4Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -11131,7 +11131,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth4Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -11158,10 +11158,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:33 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:33:57 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24InstructionWidth3Test_14042025-135434/JtagTdiWidth24InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth3Test_14042025-135434/JtagTdiWidth24InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24InstructionWidth3Test_14042025-135434/waveform.wlf 
-# Start time: 13:54:35 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24InstructionWidth3Test_14042025-153358/JtagTdiWidth24InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth3Test_14042025-153358/JtagTdiWidth24InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24InstructionWidth3Test_14042025-153358/waveform.wlf 
+# Start time: 15:33:59 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -11213,7 +11213,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth3Test_14042025-135434/JtagTdiWidth24InstructionWidth3Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth3Test_14042025-153358/JtagTdiWidth24InstructionWidth3Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -12801,7 +12801,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth3Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -12828,10 +12828,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:37 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:01 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24InstructionWidth4Test_14042025-135438/JtagTdiWidth24InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth4Test_14042025-135438/JtagTdiWidth24InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24InstructionWidth4Test_14042025-135438/waveform.wlf 
-# Start time: 13:54:39 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24InstructionWidth4Test_14042025-153402/JtagTdiWidth24InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth4Test_14042025-153402/JtagTdiWidth24InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24InstructionWidth4Test_14042025-153402/waveform.wlf 
+# Start time: 15:34:03 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -12883,7 +12883,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth4Test_14042025-135438/JtagTdiWidth24InstructionWidth4Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24InstructionWidth4Test_14042025-153402/JtagTdiWidth24InstructionWidth4Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -14495,7 +14495,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth4Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -14522,10 +14522,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:41 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:05 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8InstructionWidth3Test_14042025-135442/JtagTdiWidth8InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth3Test_14042025-135442/JtagTdiWidth8InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8InstructionWidth3Test_14042025-135442/waveform.wlf 
-# Start time: 13:54:43 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8InstructionWidth3Test_14042025-153406/JtagTdiWidth8InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth3Test_14042025-153406/JtagTdiWidth8InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8InstructionWidth3Test_14042025-153406/waveform.wlf 
+# Start time: 15:34:07 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -14577,7 +14577,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth3Test_14042025-135442/JtagTdiWidth8InstructionWidth3Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth3Test_14042025-153406/JtagTdiWidth8InstructionWidth3Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -15653,7 +15653,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth3Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -15680,10 +15680,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:45 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:09 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8InstructionWidth4Test_14042025-135446/JtagTdiWidth8InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth4Test_14042025-135446/JtagTdiWidth8InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8InstructionWidth4Test_14042025-135446/waveform.wlf 
-# Start time: 13:54:47 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8InstructionWidth4Test_14042025-153410/JtagTdiWidth8InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth4Test_14042025-153410/JtagTdiWidth8InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8InstructionWidth4Test_14042025-153410/waveform.wlf 
+# Start time: 15:34:11 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -15735,7 +15735,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth4Test_14042025-135446/JtagTdiWidth8InstructionWidth4Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8InstructionWidth4Test_14042025-153410/JtagTdiWidth8InstructionWidth4Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -16835,7 +16835,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth4Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -16862,10 +16862,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:49 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:12 on Apr 14,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32InstructionWidth3Test_14042025-135450/JtagTdiWidth32InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth3Test_14042025-135450/JtagTdiWidth32InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32InstructionWidth3Test_14042025-135450/waveform.wlf 
-# Start time: 13:54:51 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32InstructionWidth3Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32InstructionWidth3Test_14042025-153414/JtagTdiWidth32InstructionWidth3Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth3Test_14042025-153414/JtagTdiWidth32InstructionWidth3Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32InstructionWidth3Test_14042025-153414/waveform.wlf 
+# Start time: 15:34:15 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -16917,7 +16917,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth3Test_14042025-135450/JtagTdiWidth32InstructionWidth3Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth3Test_14042025-153414/JtagTdiWidth32InstructionWidth3Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -18761,7 +18761,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth3Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -18788,10 +18788,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:53 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:16 on Apr 14,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32InstructionWidth4Test_14042025-135454/JtagTdiWidth32InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth4Test_14042025-135454/JtagTdiWidth32InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32InstructionWidth4Test_14042025-135454/waveform.wlf 
-# Start time: 13:54:55 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32InstructionWidth4Test" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32InstructionWidth4Test_14042025-153418/JtagTdiWidth32InstructionWidth4Test.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth4Test_14042025-153418/JtagTdiWidth32InstructionWidth4Test_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32InstructionWidth4Test_14042025-153418/waveform.wlf 
+# Start time: 15:34:18 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -18843,7 +18843,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth4Test_14042025-135454/JtagTdiWidth32InstructionWidth4Test_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32InstructionWidth4Test_14042025-153418/JtagTdiWidth32InstructionWidth4Test_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -20711,7 +20711,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth4Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -20738,10 +20738,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:54:57 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:20 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8BypassRegisterTest_14042025-135458/JtagTdiWidth8BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8BypassRegisterTest_14042025-135458/JtagTdiWidth8BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8BypassRegisterTest_14042025-135458/waveform.wlf 
-# Start time: 13:54:59 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8BypassRegisterTest_14042025-153422/JtagTdiWidth8BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8BypassRegisterTest_14042025-153422/JtagTdiWidth8BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8BypassRegisterTest_14042025-153422/waveform.wlf 
+# Start time: 15:34:23 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -20793,7 +20793,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8BypassRegisterTest_14042025-135458/JtagTdiWidth8BypassRegisterTest_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8BypassRegisterTest_14042025-153422/JtagTdiWidth8BypassRegisterTest_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -21592,7 +21592,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -21619,10 +21619,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:01 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:25 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16BypassRegisterTest_14042025-135502/JtagTdiWidth16BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16BypassRegisterTest_14042025-135502/JtagTdiWidth16BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16BypassRegisterTest_14042025-135502/waveform.wlf 
-# Start time: 13:55:03 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16BypassRegisterTest_14042025-153426/JtagTdiWidth16BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16BypassRegisterTest_14042025-153426/JtagTdiWidth16BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16BypassRegisterTest_14042025-153426/waveform.wlf 
+# Start time: 15:34:27 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -21674,7 +21674,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16BypassRegisterTest_14042025-135502/JtagTdiWidth16BypassRegisterTest_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16BypassRegisterTest_14042025-153426/JtagTdiWidth16BypassRegisterTest_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -22697,7 +22697,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -22724,10 +22724,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:05 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:29 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24BypassRegisterTest_14042025-135506/JtagTdiWidth24BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24BypassRegisterTest_14042025-135506/JtagTdiWidth24BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24BypassRegisterTest_14042025-135506/waveform.wlf 
-# Start time: 13:55:07 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24BypassRegisterTest_14042025-153430/JtagTdiWidth24BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24BypassRegisterTest_14042025-153430/JtagTdiWidth24BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24BypassRegisterTest_14042025-153430/waveform.wlf 
+# Start time: 15:34:31 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -22779,7 +22779,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24BypassRegisterTest_14042025-135506/JtagTdiWidth24BypassRegisterTest_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24BypassRegisterTest_14042025-153430/JtagTdiWidth24BypassRegisterTest_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -24026,7 +24026,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -24053,10 +24053,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:09 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:32 on Apr 14,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32BypassRegisterTest_14042025-135510/JtagTdiWidth32BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32BypassRegisterTest_14042025-135510/JtagTdiWidth32BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32BypassRegisterTest_14042025-135510/waveform.wlf 
-# Start time: 13:55:11 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32BypassRegisterTest" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32BypassRegisterTest_14042025-153433/JtagTdiWidth32BypassRegisterTest.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32BypassRegisterTest_14042025-153433/JtagTdiWidth32BypassRegisterTest_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32BypassRegisterTest_14042025-153433/waveform.wlf 
+# Start time: 15:34:34 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -24108,7 +24108,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32BypassRegisterTest_14042025-135510/JtagTdiWidth32BypassRegisterTest_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32BypassRegisterTest_14042025-153433/JtagTdiWidth32BypassRegisterTest_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -25579,7 +25579,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -25606,10 +25606,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:12 on Apr 14,2025, Elapsed time: 0:00:01
+# End time: 15:34:36 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16UDR_14042025-135514/JtagTdiWidth16UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16UDR_14042025-135514/JtagTdiWidth16UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16UDR_14042025-135514/waveform.wlf 
-# Start time: 13:55:15 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth16UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth16UDR_14042025-153438/JtagTdiWidth16UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16UDR_14042025-153438/JtagTdiWidth16UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth16UDR_14042025-153438/waveform.wlf 
+# Start time: 15:34:39 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -25661,7 +25661,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16UDR_14042025-135514/JtagTdiWidth16UDR_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth16UDR_14042025-153438/JtagTdiWidth16UDR_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -27041,7 +27041,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -27068,10 +27068,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:17 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:40 on Apr 14,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8UDR_14042025-135518/JtagTdiWidth8UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8UDR_14042025-135518/JtagTdiWidth8UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8UDR_14042025-135518/waveform.wlf 
-# Start time: 13:55:19 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth8UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth8UDR_14042025-153441/JtagTdiWidth8UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8UDR_14042025-153441/JtagTdiWidth8UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth8UDR_14042025-153441/waveform.wlf 
+# Start time: 15:34:42 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -27123,7 +27123,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8UDR_14042025-135518/JtagTdiWidth8UDR_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth8UDR_14042025-153441/JtagTdiWidth8UDR_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -28247,7 +28247,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -28274,10 +28274,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:21 on Apr 14,2025, Elapsed time: 0:00:02
+# End time: 15:34:44 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24UDR_14042025-135522/JtagTdiWidth24UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24UDR_14042025-135522/JtagTdiWidth24UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24UDR_14042025-135522/waveform.wlf 
-# Start time: 13:55:23 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth24UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth24UDR_14042025-153445/JtagTdiWidth24UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24UDR_14042025-153445/JtagTdiWidth24UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth24UDR_14042025-153445/waveform.wlf 
+# Start time: 15:34:46 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -28329,7 +28329,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24UDR_14042025-135522/JtagTdiWidth24UDR_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth24UDR_14042025-153445/JtagTdiWidth24UDR_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -29965,7 +29965,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -29992,10 +29992,10 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:24 on Apr 14,2025, Elapsed time: 0:00:01
+# End time: 15:34:48 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
-# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32UDR_14042025-135526/JtagTdiWidth32UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32UDR_14042025-135526/JtagTdiWidth32UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32UDR_14042025-135526/waveform.wlf 
-# Start time: 13:55:27 on Apr 14,2025
+# vsim -vopt work.HvlTop work.HdlTop -voptargs="+acc=npr" -assertdebug "+UVM_TESTNAME=JtagTdiWidth32UDR" "+UVM_VERBOSITY=UVM_MEDIUM" "+define+JtagBaseTest" -l JtagTdiWidth32UDR_14042025-153449/JtagTdiWidth32UDR.log -sva -coverage -c -do "log -r /*; add wave -r /*; coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32UDR_14042025-153449/JtagTdiWidth32UDR_coverage.ucdb; run -all; exit" -wlf JtagTdiWidth32UDR_14042025-153449/waveform.wlf 
+# Start time: 15:34:50 on Apr 14,2025
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -30047,7 +30047,7 @@
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
 # log -r /*
 #  add wave -r /*
-#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32UDR_14042025-135526/JtagTdiWidth32UDR_coverage.ucdb
+#  coverage save -onexit -assert -directive -cvg -codeAll JtagTdiWidth32UDR_14042025-153449/JtagTdiWidth32UDR_coverage.ucdb
 #  run -all
 # ----------------------------------------------------------------
 # UVM-1.1d
@@ -31939,7 +31939,7 @@
 # THE INSTRUCTION  WIDTH IS instructionWidth5Bit
 # THE WIDTH OF MASTER WIDTH IS 0 and data in is x @25100
 # UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 25100: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(58) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 47.92 % *********************
+# UVM_INFO ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(60) @ 25100: uvm_test_top.jtagEnv.JtagMasterAgent.jtagMasterCoverage [JtagMasterCoverage] ******************** JTAGController Agent Coverage = 39.58 % *********************
 # 
 # --- UVM Report Summary ---
 # 
@@ -31966,5 +31966,5 @@
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 25100 ps  Iteration: 65  Instance: /HvlTop
 # Saving coverage database on exit...
-# End time: 13:55:28 on Apr 14,2025, Elapsed time: 0:00:01
+# End time: 15:34:52 on Apr 14,2025, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
