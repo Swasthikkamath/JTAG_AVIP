@@ -4,7 +4,7 @@
 class JtagMasterTestingVirtualSequence extends JtagVirtualBaseSequence;
   `uvm_object_utils(JtagMasterTestingVirtualSequence)
 
-  JtagMasterPatternBasedSequence jtagMasterPatternBasedSequence;
+  JtagMasterTestVectorSequence jtagMasterTestVectorSequence;
   JtagSlaveBaseSequence  jtagSlaveBaseSequence;
   JtagMasterAgentConfig jtagMasterAgentConfig;
 
@@ -20,7 +20,7 @@ endfunction  : new
 
 task JtagMasterTestingVirtualSequence :: body();
   super.body();
-  `uvm_do_on_with(jtagMasterPatternBasedSequence,p_sequencer.jtagMasterSequencer,{numberOfTests == jtagMasterAgentConfig.NumberOfTests;})
+  `uvm_do_on_with(JtagMasterTestVectorSequence,p_sequencer.jtagMasterSequencer,{numberOfTests == jtagMasterAgentConfig.NumberOfTests;})
 endtask : body 
 
 task JtagMasterTestingVirtualSequence :: setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
