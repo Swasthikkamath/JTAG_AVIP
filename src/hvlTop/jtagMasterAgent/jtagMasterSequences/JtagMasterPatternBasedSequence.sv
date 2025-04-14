@@ -4,7 +4,7 @@
 
 class JtagMasterPatternBasedSequence extends JtagMasterBaseSequence;
   `uvm_object_utils(JtagMasterPatternBasedSequence)
-  bit[31:0]patternNeeded
+  logic[31:0]patternNeeded
   extern function new(string name = "JtagMasterPatternBasedSequence");
   extern virtual task body();
 
