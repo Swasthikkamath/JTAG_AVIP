@@ -5,6 +5,7 @@
 JtagTdiWidth24Test.sv
 JtagTdiWidth16Test.sv
 JtagTdiWidth8Test.sv
+JtagTdiWidth32Test.sv
 JtagBaseTest.sv
 JtagTdiWidth16InstructionWidth3Test.sv
 JtagTdiWidth16InstructionWidth4Test.sv
@@ -12,3 +13,5 @@ JtagTdiWidth24InstructionWidth3Test.sv
 JtagTdiWidth24InstructionWidth4Test.sv
 JtagTdiWidth8InstructionWidth3Test.sv
 JtagTdiWidth8InstructionWidth4Test.sv
+JtagTdiWidth32InstructionWidth3Test.sv
+JtagTdiWidth32InstructionWidth4Test.sv  
