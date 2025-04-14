@@ -1,23 +1,23 @@
 
-`ifndef JTAGPATTERNBASEDTEST_INCLUDED_
-`define JTAGPATTERNBASEDTEST_INCLUDED_
+`ifndef JTAG8BitPATTERNBASEDTEST_INCLUDED_
+`define JTAG8BitPATTERNBASEDTEST_INCLUDED_
 
-class JtagPatternBasedTest extends JtagBaseTest;
-  `uvm_component_utils(JtagPatternBasedTest)
+class Jtag8BitPatternBasedTest extends JtagBaseTest;
+  `uvm_component_utils(Jtag8BitPatternBasedTest)
 
-  extern function new(string name = "JtagPatternBasedTest" , uvm_component parent);
+  extern function new(string name = "Jtag8BitPatternBasedTest" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
 
  JtagMasterPatternBasedVirtualSequence jtagMasterPatternBasedVirtualSequence;
-endclass : JtagPatternBasedTest
+endclass : Jtag8BitPatternBasedTest
 
-function JtagPatternBasedTest :: new(string name = "JtagPatternBasedTest" , uvm_component parent);
+function Jtag8BitPatternBasedTest :: new(string name = "Jtag8BitPatternBasedTest" , uvm_component parent);
   super.new(name,parent);
 endfunction : new
 
 
-function void JtagPatternBasedTest :: build_phase(uvm_phase phase);
+function void Jtag8BitPatternBasedTest :: build_phase(uvm_phase phase);
   super.build_phase(phase);
   jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
   jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth4Bit;
@@ -28,7 +28,7 @@ endfunction : build_phase
 
 
 
-task JtagPatternBasedTest :: run_phase(uvm_phase phase);
+task Jtag8BitPatternBasedTest :: run_phase(uvm_phase phase);
   jtagMasterPatternBasedVirtualSequence = JtagMasterPatternBasedVirtualSequence :: type_id :: create("JtagMasterPatternBasedVirtualSequence");
   jtagMasterPatternBasedVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
  
