@@ -22,6 +22,7 @@ function void JtagTdiWidth8BypassRegisterTest :: build_phase(uvm_phase phase);
    jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
    jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth5Bit;
    jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionOpcode = bypassRegister;
+   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionOpcode = bypassRegister;
 endfunction : build_phase
 
 
