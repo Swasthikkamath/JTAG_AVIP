@@ -31,7 +31,10 @@ package JtagBaseTestPkg;
   `include "JtagTdiWidth16BypassRegisterTest.sv"
    `include "JtagTdiWidth24BypassRegisterTest.sv"
    `include "JtagTdiWidth32BypassRegisterTest.sv"
-
+   `include "JtagTdiWidth16UDR.sv"
+  `include "JtagTdiWidth8UDR.sv"
+  `include "JtagTdiWidth24UDR.sv"
+  `include "JtagTdiWidth32UDR.sv"
 
  endpackage : JtagBaseTestPkg
 
