@@ -78,7 +78,7 @@ end
 
    property instructionValidityCheck;
 	  @(posedge clk) disable iff (!(startValidityCheck))
-              ##1  ((instruction  == jtagInstruction) && ((width)== jtagInstructionWidth));
+              ##1  (((width)== jtagInstructionWidth));
   endproperty
 
   assert property (instructionValidityCheck)

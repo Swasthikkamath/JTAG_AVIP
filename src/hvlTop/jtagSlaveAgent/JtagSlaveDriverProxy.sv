@@ -5,6 +5,7 @@ class JtagSlaveDriver extends uvm_driver#(JtagSlaveTransaction);
   `uvm_component_utils(JtagSlaveDriver)
   virtual JtagSlaveDriverBfm jtagSlaveDriverBfm;
   JtagSlaveAgentConfig jtagSlaveAgentConfig;
+  JtagConfigStruct jtagConfigStruct;
   extern function new (string name = "JtagSlaveDriver", uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
@@ -27,8 +28,9 @@ endfunction : build_phase
 task JtagSlaveDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
   forever begin
+  JtagSlaveConfigConverter ::fromClass(jtagSlaveAgentConfig ,jtagConfigStruct);
   jtagSlaveDriverBfm.waitForReset();
-  jtagSlaveDriverBfm.observeData();
+  jtagSlaveDriverBfm.observeData(jtagConfigStruct);
   end 
 endtask : run_phase
 

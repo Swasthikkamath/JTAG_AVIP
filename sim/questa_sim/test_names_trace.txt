@@ -1,4 +1,0 @@
-JtagTdiWidth24Test
-JtagTdiWidth16Test
-JtagTdiWidth8Test
-JtagBaseTest

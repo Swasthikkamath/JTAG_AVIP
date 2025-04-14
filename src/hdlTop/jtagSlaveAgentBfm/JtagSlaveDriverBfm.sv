@@ -36,30 +36,81 @@ interface JtagSlaveDriverBfm (input  logic   clk,
    task waitForReset();
     jtagTapState = jtagResetState;
     jtagSerialOut = 'b x;
+    instructionRegister = 'b x;
   endtask : waitForReset
 
 
-task registeringData(reg[4:0]instructionRegister , logic dataIn);
-       for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin 
-        if(jtagInstructionOpcode == instructionRegister) begin
-	  if(instructionRegister == jtagInstructionOpcode.first()) 
-	   begin 
-               byPassRegister = dataIn;
-	      jtagSerialOut  = byPassRegister ;
+task registeringData(reg[4:0]instructionRegister , logic dataIn,JtagConfigStruct jtagConfigStruct);
+    for (int i=0;i<(jtagInstructionOpcode.num()) ;i++) begin
+
+   
+      case(jtagConfigStruct.jtagInstructionWidth) 
+
+        'd 5 : begin 
+           if(jtagInstructionOpcode == instructionRegister) begin
+	     if(instructionRegister == jtagInstructionOpcode.first()) 
+	        begin 
+                  byPassRegister = dataIn;
+	          jtagSerialOut  = byPassRegister ;
+	        end 
+	     else begin 
+	       registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
+	       jtagSerialOut = registerBank[instructionRegister][0];
+	       $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
+	       break;
+	     end 
+           end 
+	   else begin
+	     jtagInstructionOpcode = jtagInstructionOpcode.next();
+           end 
+        end
+
+
+
+	'd 4: begin 
+           if(jtagInstructionOpcode [3:0]== instructionRegister[4:1]) begin
+	     if(instructionRegister[4:1] == jtagInstructionOpcode.first()[3:0])
+	       begin 
+	         byPassRegister = dataIn;
+                 jtagSerialOut  = byPassRegister ;
+               end 
+	     else begin 
+	       registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
+	       jtagSerialOut = registerBank[instructionRegister][0];
+	       $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
+	       break;
+	     end 
 	   end 
-	 else begin 
-	  registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
-	   jtagSerialOut = registerBank[instructionRegister][0];
-	  $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
-	  break;
-	  end 
-        end 
-	else begin
-	  jtagInstructionOpcode = jtagInstructionOpcode.next();
-        end 
-      end 
+	   else begin 
+	      jtagInstructionOpcode = jtagInstructionOpcode.next();
+	   end 
+	 end 
+ 	
+
+
+         'd 3: begin 
+	     if(jtagInstructionOpcode [2:0]== instructionRegister[4:2]) begin
+		if(instructionRegister[4:2] == jtagInstructionOpcode.first()[2:0])
+		  begin 
+		     byPassRegister = dataIn; 					           
+		     jtagSerialOut  = byPassRegister ;
+		  end
+		  else begin 
+		    registerBank[instructionRegister] = {dataIn,registerBank[instructionRegister][(JTAGREGISTERWIDTH -1):1] };
+		    jtagSerialOut = registerBank[instructionRegister][0];
+		    $display("### TARGET DRIVER ### THE SERIAL DATA %b FROM CONTROLLER DRIVER IS STORED IN REG WHOSE VECTOR IS %b AT %0t \n",dataIn,registerBank[instructionRegister],$time);
+		    break;
+		  end
+		end
+	       else begin 	
+	         jtagInstructionOpcode = jtagInstructionOpcode.next();
+	       end
+          end
+              
+      endcase
+   end 
 endtask 
-task observeData();
+task observeData(JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
     for(int j=0 ; j< 61;j++)
       begin
@@ -119,7 +170,7 @@ task observeData();
 	    else if(jtagTms ==0) begin 
               jtagTapState = jtagShiftDrState;      
 	    end
-	    registeringData(instructionRegister,jtagSerialIn);
+	    registeringData(instructionRegister,jtagSerialIn,jtagConfigStruct);
 	  end 
           
 	  
