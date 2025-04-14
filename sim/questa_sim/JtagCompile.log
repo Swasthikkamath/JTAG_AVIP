@@ -1,0 +1,120 @@
+QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
+Start time: 15:29:47 on Apr 14,2025
+vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
+-- Compiling package JtagGlobalPkg
+-- Compiling package JtagMasterPkg
+** Note: (vlog-2286) ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(5): Using implicit +incdir+/tools/mentor/questasim_10.6c/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagGlobalPkg
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** at ../../src/hvlTop/jtagMasterAgent//JtagMasterCoverage.sv(20): near "}": syntax error, unexpected '}', expecting ';'.
+-- Compiling package JtagSlavePkg
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlaveCoverage.sv(17): near "}": syntax error, unexpected '}', expecting ';'.
+-- Compiling package JtagMasterSequencePkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv(10)
+** at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv(4): Identifier 'JtagMasterTransaction' is not directly visible.
+   Found multiple Declaration of 'JtagMasterTransaction' through wildcard imports from these packages : JtagMasterPkg, JtagMasterPkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv(10)
+** at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterBaseSequence.sv(4): Illegal to use typedef "JtagMasterTransaction" as a variable.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv(11)
+** at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(18): (vlog-2164) Class or package 'JtagMasterTransaction' not found.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv(11)
+** at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(18): Identifier 'JtagMasterTransaction' is not directly visible.
+   Found multiple Declaration of 'JtagMasterTransaction' through wildcard imports from these packages : JtagMasterPkg, JtagMasterPkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv(11)
+** at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(18): Illegal to use typedef "JtagMasterTransaction" as a variable.
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(16)
+** while parsing file included at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences/JtagMasterSequencePkg.sv(11)
+** at ../../src/hvlTop/jtagMasterAgent/jtagMasterSequences//JtagMasterTestVectorSequence.sv(18): near "::": syntax error, unexpected ::, expecting ';'.
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** at ../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv(19): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
+-- Compiling package JtagSlaveSequencePkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(16)
+** at ../../src/hvlTop/jtagSlaveAgent/jtagSlaveSequences/JtagSlaveSequencePkg.sv(8): (vlog-13006) Could not find the package (JtagSlavePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Warning: (vlog-2051) coverage is still off at the end of file '../../src/hvlTop/jtagSlaveAgent/JtagSlavePkg.sv'.
+** Error: (vlog-13069) ../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv(19): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
+-- Compiling package JtagEnvPkg
+** Error: ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(12): (vlog-13006) Could not find the package (JtagSlavePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(14)
+** at ../../src/hvlTop/jtagEnv/JtagEnvConfig.sv(7): Invalid type 'JtagMasterAgentConfig'. Please check the type of the variable 'jtagMasterAgentConfig'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(15)
+** at ../../src/hvlTop/jtagEnv/virtualSequencer//JtagVirtualSequencer.sv(7): Invalid type 'JtagMasterSequencer'. Please check the type of the variable 'jtagMasterSequencer'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(16)
+** at ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(7): Identifier 'JtagMasterTransaction' is not directly visible.
+   Found multiple Declaration of 'JtagMasterTransaction' through wildcard imports from these packages : JtagMasterPkg, JtagMasterPkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(16)
+** at ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(7): Illegal to use typedef "JtagMasterTransaction" as a variable.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(16)
+** at ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(10): Identifier 'JtagMasterTransaction' is not directly visible.
+   Found multiple Declaration of 'JtagMasterTransaction' through wildcard imports from these packages : JtagMasterPkg, JtagMasterPkg
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(16)
+** at ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(10): Illegal to use typedef "JtagMasterTransaction" as a variable.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(16)
+** at ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(13): Invalid type 'JtagMasterTransaction'. Please check the type of the variable 'jtagMasterTransaction'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(16)
+** at ../../src/hvlTop/jtagEnv/JtagScoreboard.sv(45): (vlog-2400) Identifier ('JtagMasterTransaction') found where a type or type identifier is required.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(17)
+** at ../../src/hvlTop/jtagEnv/JtagEnv.sv(11): Invalid type 'JtagSlaveAgent'. Please check the type of the variable 'jtagSlaveAgent'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(17)
+** at ../../src/hvlTop/jtagEnv/JtagEnv.sv(37): (vlog-2730) Undefined variable: 'jtagSlaveAgent'.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(17)
+** at ../../src/hvlTop/jtagEnv/JtagEnv.sv(37): (vlog-2164) Class or package 'JtagSlaveAgent' not found.
+** Error: ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(17)
+** at ../../src/hvlTop/jtagEnv/JtagEnv.sv(37): (vlog-2730) Undefined variable: 'JtagSlaveAgent'.
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/jtagEnv/JtagEnvPkg.sv(17)
+** at ../../src/hvlTop/jtagEnv/JtagEnv.sv(37): near "::": syntax error, unexpected ::, expecting ';'.
+** Warning: (vlog-2051) coverage is still off at the end of file '../../src/hvlTop/jtagMasterAgent/JtagMasterPkg.sv'.
+-- Compiling package JtagVirtualSequencePkg
+** Error: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(14): (vlog-13006) Could not find the package (JtagEnvPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(16): (vlog-13006) Could not find the package (JtagSlavePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(17): (vlog-13006) Could not find the package (JtagMasterSequencePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(18): (vlog-13006) Could not find the package (JtagSlaveSequencePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ** while parsing file included at ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(24)
+** while parsing macro expansion: 'uvm_declare_p_sequencer' starting at ../../src/hvlTop/tb/jtagVirtualSequences//JtagVirtualBaseSequence.sv(6)
+** at ../../src/hvlTop/tb/jtagVirtualSequences//JtagVirtualBaseSequence.sv(6): Invalid type 'JtagVirtualSequencer'. Please check the type of the variable 'p_sequencer'.
+** Error: ** while parsing file included at ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(25)
+** at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(7): Invalid type 'JtagMasterTestVectorSequence'. Please check the type of the variable 'jtagMasterTestVectorSequence'.
+** Error: ** while parsing file included at ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(25)
+** at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(8): Invalid type 'JtagSlaveBaseSequence'. Please check the type of the variable 'jtagSlaveBaseSequence'.
+** Error: ** while parsing file included at ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(25)
+** at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(9): Invalid type 'JtagMasterAgentConfig'. Please check the type of the variable 'jtagMasterAgentConfig'.
+** Error: ** while parsing file included at ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(25)
+** at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(13): (vlog-2400) Identifier ('JtagMasterAgentConfig') found where a type or type identifier is required.
+** Error: (vlog-13069) ** while parsing file included at ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(25)
+** at ../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv(13): near ")": syntax error, unexpected ')', expecting class.
+-- Compiling interface JtagIf
+** Error: (vlog-13069) ../../src/hvlTop/tb/jtagVirtualSequences/JtagVirtualSequencePkg.sv(26): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
+-- Compiling interface JtagMasterDriverBfm
+-- Compiling interface JtagMasterMonitorBfm
+-- Compiling module JtagMasterAgentBfm
+** Error: ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(7): (vlog-2730) Undefined variable: 'jtagIf'.
+** Error: ../../src/hdlTop/jtagMasterAgentBfm/JtagMasterAgentBfm.sv(7): (vlog-13294) Identifier must be declared with a port mode: jtagIf.
+-- Compiling interface JtagSlaveDriverBfm
+** Error: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveDriverBfm.sv(26): (vlog-13006) Could not find the package (JtagSlavePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+-- Compiling interface JtagSlaveMonitorBfm
+** Error: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveMonitorBfm.sv(26): (vlog-13006) Could not find the package (JtagSlavePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+-- Compiling module JtagSlaveAgentBfm
+** Error: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(6): (vlog-2730) Undefined variable: 'jtagIf'.
+** Error: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAgentBfm.sv(6): (vlog-13294) Identifier must be declared with a port mode: jtagIf.
+-- Compiling module HdlTop
+-- Compiling module HvlTop
+** Error: ../../src/hvlTop/JtagHvlTop.sv(13): (vlog-13006) Could not find the package (JtagBaseTestPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+-- Compiling interface JtagMasterAssertions
+-- Compiling interface JtagSlaveAssertions
+** Error: ../../src/hdlTop/jtagSlaveAgentBfm/JtagSlaveAssertions.sv(22): (vlog-13006) Could not find the package (JtagSlavePkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: End of source encountered before `endif directive closing region starting at file '../../src/hvlTop/tb/jtagVirtualSequences//JtagMasterTestingVirtualSequence.sv' line 1.
+End time: 15:29:48 on Apr 14,2025, Elapsed time: 0:00:01
+Errors: 45, Warnings: 2
