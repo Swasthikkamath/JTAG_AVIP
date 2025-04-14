@@ -20,3 +20,9 @@ JtagTdiWidth8BypassRegisterTest.sv
 JtagTdiWidth16BypassRegisterTest.sv
 JtagTdiWidth24BypassRegisterTest.sv
 JtagTdiWidth32BypassRegisterTest.sv
+
+
+JtagTdiWidth16UDR.sv
+JtagTdiWidth8UDR.sv
+JtagTdiWidth24UDR.sv
+JtagTdiWidth32UDR.sv
