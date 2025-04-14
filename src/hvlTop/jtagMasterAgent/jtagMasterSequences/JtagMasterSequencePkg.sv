@@ -9,5 +9,6 @@ package JtagMasterSequencePkg;
 
   `include "JtagMasterBaseSequence.sv"
   `include "JtagMasterTestVectorSequence.sv"
+  `include "JtagMasterPatternBasedSequence.sv"
 endpackage : JtagMasterSequencePkg
 `endif
