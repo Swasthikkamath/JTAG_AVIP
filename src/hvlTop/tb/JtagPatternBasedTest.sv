@@ -8,6 +8,8 @@ class JtagPatternBasedTest extends JtagBaseTest;
   extern function new(string name = "JtagPatternBasedTest" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
+
+ JtagMastterPatternBasedVirtualSequence jtagMasterPatternBasedVirtualSequence;
 endclass : JtagPatternBasedTest
 
 function JtagPatternBasedTest :: new(string name = "JtagPatternBasedTest" , uvm_component parent);
