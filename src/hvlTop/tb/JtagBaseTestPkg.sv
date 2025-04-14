@@ -35,7 +35,7 @@ package JtagBaseTestPkg;
   `include "JtagTdiWidth8UDR.sv"
   `include "JtagTdiWidth24UDR.sv"
   `include "JtagTdiWidth32UDR.sv"
-
+  `include "JtagPatternBasedTest.sv"
  endpackage : JtagBaseTestPkg
 
  `endif
