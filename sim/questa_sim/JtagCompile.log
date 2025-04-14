@@ -1,5 +1,5 @@
 QuestaSim vlog 10.6c Compiler 2017.07 Jul 25 2017
-Start time: 12:08:24 on Apr 14,2025
+Start time: 12:38:27 on Apr 14,2025
 vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f 
 -- Compiling package JtagGlobalPkg
 -- Compiling package JtagMasterPkg
@@ -15,6 +15,9 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 ** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(67): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 ** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(68): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 ** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(69): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(75): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(76): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: (vlog-2121) ../../src/hvlTop/jtagMasterAgent//JtagMasterSeqItemConverter.sv(77): Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 -- Compiling package JtagSlavePkg
 -- Compiling package JtagMasterSequencePkg
 -- Importing package JtagMasterPkg
@@ -27,62 +30,52 @@ vlog -sv "+acc" "+cover" "+fcover" -l JtagCompile.log -f ../JtagCompile.f
 -- Importing package JtagSlaveSequencePkg
 -- Compiling package JtagBaseTestPkg
 -- Importing package JtagVirtualSequencePkg
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(21)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth3Test.sv(10): (vlog-13163) End label 'JtagTdiWidth16Test' does not match class name on line 4.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(21)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth3Test.sv(12): Multiple definitions for function 'new'.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(21)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth3Test.sv(13): 'super.new()' call can be made only from within a class constructor.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(22)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth4Test.sv(11): (vlog-13163) End label 'JtagTdiWidth16Test' does not match class name on line 5.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(22)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth4Test.sv(13): Multiple definitions for function 'new'.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(22)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth4Test.sv(13): (vlog-2388) 'name' already declared in this scope (JtagBaseTestPkg).
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(22)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth4Test.sv(13): (vlog-2388) 'parent' already declared in this scope (JtagBaseTestPkg).
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(22)
-** at ../../src/hvlTop/tb/JtagTdiWidth16InstructionWidth4Test.sv(14): 'super.new()' call can be made only from within a class constructor.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(23)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth3Test.sv(11): (vlog-13163) End label 'JtagTdiWidth24Test' does not match class name on line 5.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(23)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth3Test.sv(13): Multiple definitions for function 'new'.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(23)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth3Test.sv(13): (vlog-2388) 'name' already declared in this scope (JtagBaseTestPkg).
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(23)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth3Test.sv(13): (vlog-2388) 'parent' already declared in this scope (JtagBaseTestPkg).
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(23)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth3Test.sv(14): 'super.new()' call can be made only from within a class constructor.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(24)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth4Test.sv(11): (vlog-13163) End label 'JtagTdiWidth24Test' does not match class name on line 5.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(24)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth4Test.sv(13): Multiple definitions for function 'new'.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(24)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth4Test.sv(13): (vlog-2388) 'name' already declared in this scope (JtagBaseTestPkg).
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(24)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth4Test.sv(13): (vlog-2388) 'parent' already declared in this scope (JtagBaseTestPkg).
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(24)
-** at ../../src/hvlTop/tb/JtagTdiWidth24InstructionWidth4Test.sv(14): 'super.new()' call can be made only from within a class constructor.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(25)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth3Test.sv(11): (vlog-13163) End label 'JtagTdiWidth8Test' does not match class name on line 5.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(25)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth3Test.sv(13): Multiple definitions for function 'new'.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(25)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth3Test.sv(13): (vlog-2388) 'name' already declared in this scope (JtagBaseTestPkg).
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(25)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth3Test.sv(13): (vlog-2388) 'parent' already declared in this scope (JtagBaseTestPkg).
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(25)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth3Test.sv(14): 'super.new()' call can be made only from within a class constructor.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(26)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth4Test.sv(10): (vlog-13163) End label 'JtagTdiWidth8Test' does not match class name on line 4.
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(26)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth4Test.sv(12): Multiple definitions for function 'new'.
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(26)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth4Test.sv(12): (vlog-2388) 'name' already declared in this scope (JtagBaseTestPkg).
-** Error (suppressible): ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(26)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth4Test.sv(12): (vlog-2388) 'parent' already declared in this scope (JtagBaseTestPkg).
-** Error: ** while parsing file included at ../../src/hvlTop/tb/JtagBaseTestPkg.sv(26)
-** at ../../src/hvlTop/tb/JtagTdiWidth8InstructionWidth4Test.sv(13): 'super.new()' call can be made only from within a class constructor.
-** Error: ../../src/hvlTop/JtagHvlTop.sv(13): (vlog-13006) Could not find the package (JtagBaseTestPkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-End time: 12:08:25 on Apr 14,2025, Elapsed time: 0:00:01
-Errors: 29, Warnings: 9
+-- Compiling package JtagInterface_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagIf
+-- Compiling package JtagMasterDriverBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagMasterDriverBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagMasterPkg
+-- Compiling package JtagMasterMonitorBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagMasterMonitorBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagMasterPkg
+-- Compiling module JtagMasterAgentBfm
+-- Compiling package JtagSlaveDriverBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagSlaveDriverBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagSlavePkg
+-- Compiling package JtagSlaveMonitorBfm_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagSlaveMonitorBfm
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagSlavePkg
+-- Compiling module JtagSlaveAgentBfm
+-- Compiling module HdlTop
+-- Compiling module HvlTop
+-- Importing package JtagBaseTestPkg
+-- Importing package JtagMasterPkg
+-- Importing package JtagEnvPkg
+-- Importing package JtagMasterSequencePkg
+-- Importing package JtagSlaveSequencePkg
+-- Importing package JtagVirtualSequencePkg
+-- Compiling package JtagMasterAssertions_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagMasterAssertions
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagMasterPkg
+-- Compiling package JtagSlaveAssertions_sv_unit
+-- Importing package JtagGlobalPkg
+-- Compiling interface JtagSlaveAssertions
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package JtagSlavePkg
+
+Top level modules:
+	HdlTop
+	HvlTop
+End time: 12:38:30 on Apr 14,2025, Elapsed time: 0:00:03
+Errors: 0, Warnings: 12

@@ -1,0 +1,12 @@
+var g_data = {
+c1201:[4,'JtagTestVector_CP',[],,'1200',1,1,'JtagSlaveCoverGroup','1191','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1339:[4,'JtagTestVector_CP',[],,'1338',1,1,'JtagMasterCoverGroup','1326','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1340:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1338',1,1,'JtagMasterCoverGroup','1326','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','0',1,'TDI_WIDTH_8'],[0,'1','0',1,'TDI_WIDTH_16'],[0,'1','2',,'TDI_WIDTH_24'],[0,'1','0',1,'TDI_WIDTH_32']],[]],
+c1341:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1338',1,1,'JtagMasterCoverGroup','1326','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','0',1,'INSTRUCTION_WIDTH_3'],[0,'1','2',,'INSTRUCTION_WIDTH_4'],[0,'1','0',1,'INSTRUCTION_WIDTH_5']],[]],
+c1731:[4,'JtagTestVector_CP',[],,'1730',1,1,'JtagSlaveCoverGroup','1721','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1952:[4,'JtagTestVector_CP',[],,'1951',1,1,'JtagMasterCoverGroup','1939','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','2',,'TestData']],[]],
+c1953:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1951',1,1,'JtagMasterCoverGroup','1939','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','0',1,'TDI_WIDTH_8'],[0,'1','0',1,'TDI_WIDTH_16'],[0,'1','2',,'TDI_WIDTH_24'],[0,'1','0',1,'TDI_WIDTH_32']],[]],
+c1954:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1951',1,1,'JtagMasterCoverGroup','1939','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','0',1,'INSTRUCTION_WIDTH_3'],[0,'1','2',,'INSTRUCTION_WIDTH_4'],[0,'1','0',1,'INSTRUCTION_WIDTH_5']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);
