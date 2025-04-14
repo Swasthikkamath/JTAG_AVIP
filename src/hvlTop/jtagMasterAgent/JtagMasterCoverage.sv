@@ -15,7 +15,9 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
   extern function void report_phase(uvm_phase phase);
   covergroup JtagMasterCoverGroup with function sample(bit[31:0]TestVector,JtagMasterAgentConfig jtagMasterAgentConfig);
 
-    JtagTestVector_CP : coverpoint TestVector{ bins TestData = {[0:$]};}
+    JtagTestVector_CP : coverpoint TestVector{ bins low_range = {[0:(2**12)]};
+                                               bins mid_range = {[(2**12)+1 : 2**24]} ;
+					       bins high_range = {[(2**24)+1 : 0]}}
    
     JTAG_TESTVECTOR_WIDTH : coverpoint jtagMasterAgentConfig.jtagTestVectorWidth{ bins TDI_WIDTH_8 = {testVectorWidth8Bit};
      										  bins TDI_WIDTH_16 = {testVectorWidth16Bit};

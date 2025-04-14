@@ -13,7 +13,6 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
 
   covergroup JtagSlaveCoverGroup with function sample(bit[31:0]TestVector);
 
-    JtagTestVector_CP : coverpoint TestVector{ bins TestData = {[0:$]};}
 
   endgroup
 
