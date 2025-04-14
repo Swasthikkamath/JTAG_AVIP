@@ -27,6 +27,42 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
    										    }	
    JTAG_INSTRUCTION : coverpoint jtagSlaveAgentConfig.jtagInstructionOpcode;
 
+
+   TAGETDATA_PATTERN_8 : coverpoint TDO{
+      bins Target_pattern1_8 = {8'b 11111111};
+      bins Target_pattern2_8 = {8'b 10101010};
+      bins Target_pattern3_8 = {8'b 11110000};
+      bins Target_pattern4_8 = {8'b 00000000};
+      bins Target_pattern5_8 = {8'b 01010101};}
+
+      TARGETDATA_PATTERN_16 : coverpoint TDO{
+      bins Target_pattern1_16 = {16'b 1111111111111111};
+	      bins Target_pattern2_16 = {16'b 1010101010101010};
+	      bins Target_pattern3_16 = {16'b 1111000011110000};
+	      bins Target_pattern4_16 = {16'b 0000000000000000};
+	      bins Target_pattern5_16 = {16'b 0101010101010101};}
+
+
+      TARGETDATA_PATTERN_24 : coverpoint TDO{
+	      bins Target_pattern1_24 = {24'b 111111111111111111111111};
+	      bins Target_pattern2_24 = {24'b 101010101010101010101010};
+	      bins Target_pattern3_24 = {24'b 111100001111000011110000};
+	      bins Target_pattern4_24 = {24'b 000000000000000000000000};
+	      bins Target_pattern5_24 = {24'b 010101010101010101010101};}
+
+      TARGETDATA_PATTERN_32 : coverpoint TDO{
+	      bins Target_pattern1_32 = {32'b 11111111111111111111111111111111};
+	      bins Target_pattern2_32 = {32'b 10101010101010101010101010101010};
+	      bins Target_pattern3_32 = {32'b 11110000111100001111000011110000};
+	      bins Target_pattern4_32 = {32'b 00000000000000000000000000000000};
+	      bins Target_pattern5_32 = {32'b 01010101010101010101010101010101};}
+       
+
+	  DATA_PATTERN_5_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_8,JTAG_TESTVECTOR_WIDTH { ignore_bins data_8 =  !binsof(JTAG_TESTVECTOR_WIDTH)intersect{testVectorWidth8Bit};}
+	  DATA_PATTERN_6_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_16,JTAG_TESTVECTOR_WIDTH { ignore_bins data_16 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth16Bit};}
+	  DATA_PATTERN_7_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_24,JTAG_TESTVECTOR_WIDTH { ignore_bins data_24 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect {testVectorWidth24Bit};}
+	  DATA_PATTERN_8_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_32,JTAG_TESTVECTOR_WIDTH { ignore_bins data_32 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth32Bit};}
+
   endgroup
 
 endclass : JtagSlaveCoverage
