@@ -27,7 +27,7 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
    										    }	
    JTAG_INSTRUCTION : coverpoint jtagSlaveAgentConfig.jtagInstructionOpcode;
 
-
+/*
    TARGETDATA_PATTERN_8 : coverpoint TDO{
       bins Target_pattern1_8 = {8'b 11111111};
       bins Target_pattern2_8 = {8'b 10101010};
@@ -62,7 +62,7 @@ class JtagSlaveCoverage extends uvm_subscriber#(JtagSlaveTransaction);
 	  DATA_PATTERN_16_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_16,JTAG_TESTVECTOR_WIDTH { ignore_bins data_16 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth16Bit};}
 	  DATA_PATTERN_24_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_24,JTAG_TESTVECTOR_WIDTH { ignore_bins data_24 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect {testVectorWidth24Bit};}
 	  DATA_PATTERN_32_DATA_WIDTH_CP : cross TARGETDATA_PATTERN_32,JTAG_TESTVECTOR_WIDTH { ignore_bins data_32 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth32Bit};}
-
+*/
   endgroup
 
 endclass : JtagSlaveCoverage

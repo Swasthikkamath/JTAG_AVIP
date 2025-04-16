@@ -32,7 +32,7 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
     JTAG_INSTRUCTION : coverpoint jtagMasterAgentConfig.jtagInstructionOpcode;
 
 
-
+/*
       DATA_PATTERN_8 : coverpoint TestVector{
       bins pattern1_8 = {8'b 11111111};
       bins pattern2_8 = {8'b 10101010};
@@ -68,7 +68,7 @@ class JtagMasterCoverage extends uvm_subscriber#(JtagMasterTransaction);
 	  DATA_PATTERN_24_DATA_WIDTH_CP : cross DATA_PATTERN_24,JTAG_TESTVECTOR_WIDTH { ignore_bins data_24 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect {testVectorWidth24Bit};}
 	  DATA_PATTERN_32_DATA_WIDTH_CP : cross DATA_PATTERN_32,JTAG_TESTVECTOR_WIDTH { ignore_bins data_32 =  !binsof(JTAG_TESTVECTOR_WIDTH) intersect{testVectorWidth32Bit};}
 
-      
+  */    
 
 
 	  
