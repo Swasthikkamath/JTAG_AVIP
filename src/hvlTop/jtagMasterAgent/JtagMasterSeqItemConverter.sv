@@ -28,15 +28,15 @@ function void JtagMasterSeqItemConverter :: fromClass(input JtagMasterTransactio
  
 //  jtagPacketStruct.jtagTms = {JTAGMOVETOIDLE , {TEST_VECTOR_WIDTH{0}},JTAGMOVETILLSHIFTDR , JTAGMOVETILLSELECTDR , {INSTRUCTION_WIDTH{0}} ,JTAGMOVETILLSHIFTIR}; 
 
- $display("FIRST CHECK IS %b",jtagPacketStruct.jtagTms);
+
 
   jtagPacketStruct.jtagTms= {64'b x ,JTAGMOVETILLSHIFTIR};
-  $display("FIRST CHECK IS %b",jtagPacketStruct.jtagTms);
+
 
    for(i=0;i<jtagConfigStruct.jtagInstructionWidth-1;i++)
     jtagPacketStruct.jtagTms[($bits(JTAGMOVETILLSHIFTIR))+i] = 1'b 0;
 
- $display("FIRST CHECK IS %b",jtagPacketStruct.jtagTms);
+
   
     case(jtagConfigStruct.jtagInstructionWidth) 
       'd 3 : jtagPacketStruct.jtagTms = {JTAGMOVETILLSHIFTDR , JTAGMOVETILLSELECTDR , jtagPacketStruct.jtagTms[6:0]};
@@ -123,7 +123,7 @@ else
   end 
 
 
-$display("TMS INSIDE CONVERTER IS %b", jtagPacketStruct.jtagTms);
+
 
  endfunction : fromClass
 

@@ -36,10 +36,11 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   task startMonitoring(inout JtagPacketStruct jtagPacketStruct,input JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
   automatic int count =0;
+  m=0;
   for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
       begin
         @(posedge clk);
-
+            $display("state of machine  is %s",jtagTapState.name());
         case(jtagTapState)
 
           jtagResetState :begin 
@@ -176,7 +177,8 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
               jtagTapState = jtagShiftIrState ;
 	    end
 	     jtagPacketStruct.jtagInstruction[m++] = jtagSerialIn;
-	  end 
+	 $display("#########################INS IS %b",jtagPacketStruct.jtagInstruction);
+	end 
  
     
           jtagExit1IrState : begin 

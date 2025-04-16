@@ -32,7 +32,6 @@ interface JtagSlaveDriverBfm (input  logic   clk,
   //Variable: name
   //Used to store the name of the interface
   string name = "JTAG_SlaveDRIVER_BFM";
-
    task waitForReset();
     jtagTapState = jtagResetState;
     jtagSerialOut = 'b x;
@@ -112,11 +111,11 @@ endtask
 
 task observeData(JtagConfigStruct jtagConfigStruct);
   int  i,k ,m;
-    for(int j=0 ; j< 61;j++)
+    for(int j=0 ; j< 62;j++)
       begin
         @(posedge clk);
-
-        case(jtagTapState)
+	
+	case(jtagTapState)
 
           jtagResetState :begin
 
@@ -294,7 +293,6 @@ task observeData(JtagConfigStruct jtagConfigStruct);
           end
 
         endcase
-        //$display("THE STATE in slave IS %s @%t instruction is %b and serial out is %0b",jtagTapState.name(),$time,instructionRegister,jtagSerialOut);
       end
   endtask : observeData
 

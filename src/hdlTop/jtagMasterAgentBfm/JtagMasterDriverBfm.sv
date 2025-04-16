@@ -27,7 +27,6 @@ interface JtagMasterDriverBfm (input  logic   clk,
   //Variable: name
   //Used to store the name of the interface
   string name = "JTAG_MASTERDRIVER_BFM"; 
-	
 
   task waitForReset();
     jtagTapState = jtagResetState;
@@ -41,7 +40,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
     for(int j=0 ; j< $bits(jtagPacketStruct.jtagTms);j++)
       begin
       @(posedge clk) jtagTms = jtagPacketStruct.jtagTms[i++];
-	case(jtagTapState)
+           case(jtagTapState)
 
           jtagResetState :begin 
           
@@ -219,10 +218,7 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	  end 
           
 	endcase  
-           //@(posedge clk);
-	   //$display("IN MASTER TMS IS %b @%0t",jtagTms,$time);
       end  
-      @(posedge clk);
   endtask :DriveToBfm
 
 	

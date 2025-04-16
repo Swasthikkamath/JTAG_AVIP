@@ -39,7 +39,7 @@ task JtagSlaveMonitor :: run_phase(uvm_phase phase);
   super.run_phase(phase);
   forever begin 
     JtagSlaveConfigConverter :: fromClass (jtagSlaveAgentConfig , jtagConfigStruct);
- jtagPacketStruct.jtagTestVector = 'b x;
+ jtagPacketStruct.jtagTestVector = 64'b x;
  jtagSlaveMonitorBfm.waitForReset();
  jtagSlaveMonitorBfm.startMonitoring(jtagPacketStruct,jtagConfigStruct);
   JtagSlaveSeqItemConverter :: toClass (jtagPacketStruct , jtagConfigStruct , jtagSlaveTransaction);
