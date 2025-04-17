@@ -11,10 +11,10 @@ import JtagGlobalPkg::*;
 
 interface JtagIf (input clk, input reset);
   
-  logic jtagSerialIn;
+  logic Tdi;
 
-  logic jtagSerialOut;
+  logic Tdo;
 
-  logic jtagTms;
+  logic Tms;
   
 endinterface : JtagIf 
