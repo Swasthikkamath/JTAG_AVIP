@@ -13,7 +13,7 @@ package JtagGlobalPkg;
 
   parameter [2:0] JTAGMOVETOIDLE = 3'b 011;
 
-  parameter NO_OF_TESTS = 20;
+  parameter NO_OF_TESTS = 10000;
 
 
   typedef enum bit [5:0]{testVectorWidth8Bit= 8,

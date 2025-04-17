@@ -1,0 +1,20 @@
+var g_data = {
+c1243:[4,'JtagTestVector_CP',[],,'1242',1,1,'JtagSlaveCoverGroup','1232','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','249954',,'low_range'],[0,'1','23',,'mid_range'],[0,'1','249977',,'high_range']],[]],
+c1244:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1242',1,1,'JtagSlaveCoverGroup','1232','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','60000',,'TDO_WIDTH_8'],[0,'1','60000',,'TDO_WIDTH_16'],[0,'1','60000',,'TDO_WIDTH_24'],[0,'1','70000',,'TDI_WIDTH_32']],[]],
+c1245:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1242',1,1,'JtagSlaveCoverGroup','1232','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','50000',,'INSTRUCTION_WIDTH_3'],[0,'1','80000',,'INSTRUCTION_WIDTH_4'],[0,'1','120000',,'INSTRUCTION_WIDTH_5']],[]],
+c1246:[4,'JTAG_INSTRUCTION',[],,'1242',1,1,'JtagSlaveCoverGroup','1232','/JtagSlavePkg/JtagSlaveCoverage',[[],[0,'1','40000',,'auto[bypassRegister]'],[0,'1','40000',,'auto[userDefinedRegister]'],[0,'1','170000',,'auto[boundaryScanRegisters]']],[]],
+c1386:[4,'JtagTestVector_CP',[],,'1385',1,1,'JtagMasterCoverGroup','1373','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','249954',,'low_range'],[0,'1','23',,'mid_range'],[0,'1','249977',,'high_range']],[]],
+c1387:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1385',1,1,'JtagMasterCoverGroup','1373','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','60000',,'TDI_WIDTH_8'],[0,'1','60000',,'TDI_WIDTH_16'],[0,'1','60000',,'TDI_WIDTH_24'],[0,'1','70000',,'TDI_WIDTH_32']],[]],
+c1388:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1385',1,1,'JtagMasterCoverGroup','1373','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','50000',,'INSTRUCTION_WIDTH_3'],[0,'1','80000',,'INSTRUCTION_WIDTH_4'],[0,'1','120000',,'INSTRUCTION_WIDTH_5']],[]],
+c1389:[4,'JTAG_INSTRUCTION',[],,'1385',1,1,'JtagMasterCoverGroup','1373','/JtagMasterPkg/JtagMasterCoverage',[[],[0,'1','40000',,'auto[bypassRegister]'],[0,'1','40000',,'auto[userDefinedRegister]'],[0,'1','170000',,'auto[boundaryScanRegisters]']],[]],
+c1916:[4,'JtagTestVector_CP',[],,'1915',1,1,'JtagSlaveCoverGroup','1905','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','249954',,'low_range'],[0,'1','23',,'mid_range'],[0,'1','249977',,'high_range']],[]],
+c1917:[4,'JTAG_TESTVECTOR_WIDTH',[],,'1915',1,1,'JtagSlaveCoverGroup','1905','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','60000',,'TDO_WIDTH_8'],[0,'1','60000',,'TDO_WIDTH_16'],[0,'1','60000',,'TDO_WIDTH_24'],[0,'1','70000',,'TDI_WIDTH_32']],[]],
+c1918:[4,'JTAG_INSTRUCTION_WIDTH',[],,'1915',1,1,'JtagSlaveCoverGroup','1905','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','50000',,'INSTRUCTION_WIDTH_3'],[0,'1','80000',,'INSTRUCTION_WIDTH_4'],[0,'1','120000',,'INSTRUCTION_WIDTH_5']],[]],
+c1919:[4,'JTAG_INSTRUCTION',[],,'1915',1,1,'JtagSlaveCoverGroup','1905','work.JtagSlavePkg::JtagSlaveCoverage',[[],[0,'1','40000',,'auto[bypassRegister]'],[0,'1','40000',,'auto[userDefinedRegister]'],[0,'1','170000',,'auto[boundaryScanRegisters]']],[]],
+c2142:[4,'JtagTestVector_CP',[],,'2141',1,1,'JtagMasterCoverGroup','2129','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','249954',,'low_range'],[0,'1','23',,'mid_range'],[0,'1','249977',,'high_range']],[]],
+c2143:[4,'JTAG_TESTVECTOR_WIDTH',[],,'2141',1,1,'JtagMasterCoverGroup','2129','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','60000',,'TDI_WIDTH_8'],[0,'1','60000',,'TDI_WIDTH_16'],[0,'1','60000',,'TDI_WIDTH_24'],[0,'1','70000',,'TDI_WIDTH_32']],[]],
+c2144:[4,'JTAG_INSTRUCTION_WIDTH',[],,'2141',1,1,'JtagMasterCoverGroup','2129','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','50000',,'INSTRUCTION_WIDTH_3'],[0,'1','80000',,'INSTRUCTION_WIDTH_4'],[0,'1','120000',,'INSTRUCTION_WIDTH_5']],[]],
+c2145:[4,'JTAG_INSTRUCTION',[],,'2141',1,1,'JtagMasterCoverGroup','2129','work.JtagMasterPkg::JtagMasterCoverage',[[],[0,'1','40000',,'auto[bypassRegister]'],[0,'1','40000',,'auto[userDefinedRegister]'],[0,'1','170000',,'auto[boundaryScanRegisters]']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);
