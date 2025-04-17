@@ -10,8 +10,8 @@ import JtagGlobalPkg::*;
 //--------------------------------------------------------------------------------------------
 interface JtagMasterDriverBfm (input  logic   clk,
                               input  logic   reset,
-                             output logic  jtagSerialIn,
-			     output logic jtagTms
+                             output logic  Tdi,
+			     output logic Tms
                               );
 	//-------------------------------------------------------
   // Importing uvm package file
@@ -30,24 +30,24 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
   task waitForReset();
     jtagTapState = jtagResetState;
-    jtagSerialIn = 'b x;
+    Tdi = 'b x;
   endtask : waitForReset
   task DriveToBfm(JtagPacketStruct jtagPacketStruct , JtagConfigStruct jtagConfigStruct);
     int  i,k ,m;
     i=0; 
     m=0;
     k=0;
-    for(int j=0 ; j< $bits(jtagPacketStruct.jtagTms);j++)
+    for(int j=0 ; j< $bits(jtagPacketStruct.Tms);j++)
       begin
-      @(posedge clk) jtagTms = jtagPacketStruct.jtagTms[i++];
+      @(posedge clk) Tms = jtagPacketStruct.Tms[i++];
            case(jtagTapState)
 
           jtagResetState :begin 
           
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
 	      jtagTapState = jtagResetState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
 	      jtagTapState = jtagIdleState;
 	    end 
 	  end
@@ -55,10 +55,10 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
 	  jtagIdleState : begin 
 	   
-	   if(jtagTms ==0) begin 
+	   if(Tms ==0) begin 
              jtagTapState = jtagIdleState;
 	   end 
-	   else if(jtagTms == 1) begin 
+	   else if(Tms == 1) begin 
              jtagTapState = jtagDrScanState;
 	   end 
 	  end
@@ -66,10 +66,10 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
           jtagDrScanState : begin 
 	   
-	   if(jtagTms == 1) begin 
+	   if(Tms == 1) begin 
              jtagTapState = jtagIrScanState;
 	   end
-	   else if(jtagTms == 0) begin 
+	   else if(Tms == 0) begin 
              jtagTapState = jtagCaptureDrState;
 	   end
 	  end 
@@ -77,10 +77,10 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	  
 	  jtagCaptureDrState : begin 
 	    
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
              jtagTapState = jtagExit1DrState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagShiftDrState;
 	    end 
 	  end 
@@ -88,23 +88,23 @@ interface JtagMasterDriverBfm (input  logic   clk,
 	  
 	  jtagShiftDrState : begin 
            $display("### CONTROLLER DRIVER ### IS IN SHIFT DR STATE AT %0t\n",$time);	    
-	    if(jtagTms ==1) begin
+	    if(Tms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagShiftDrState;      
 	    end 
-	    jtagSerialIn=jtagPacketStruct.jtagTestVector[k++];
-	  $display("### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS %b AT %0t \n",jtagSerialIn,$time);
+	    Tdi=jtagPacketStruct.jtagTestVector[k++];
+	  $display("### CONTROLLER DRIVER ### THE SERIAL DATA SENT OUT FROM CONTROLLER IS %b AT %0t \n",Tdi,$time);
 	  end 
           
 	  
 	  jtagExit1DrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagUpdateDrState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagPauseDrState;
 	    end 
 
@@ -113,10 +113,10 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
           jtagPauseDrState : begin 
 	    
-	    if(jtagTms ==1) begin 
+	    if(Tms ==1) begin 
               jtagTapState = jtagExit2DrState;
  	    end 
-	    else if(jtagTms ==0) begin
+	    else if(Tms ==0) begin
               jtagTapState = jtagPauseDrState;
 	    end 
 	  end 
@@ -124,40 +124,40 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
           jtagExit2DrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagUpdateDrState;
 	    end 
- 	    else if(jtagTms == 0) begin 
+ 	    else if(Tms == 0) begin 
               jtagTapState = jtagShiftDrState;
             end 
 	  end 
 
 	  jtagUpdateDrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagDrScanState;
 	    end  
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
 	      jtagTapState = jtagIdleState;
 	    end 
 	  end 
 
 	  jtagIrScanState : begin 
 	    
-            if(jtagTms == 1) begin 
+            if(Tms == 1) begin 
 	      jtagTapState = jtagResetState;
             end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagCaptureIrState;
 	    end
 	  end 
 
 	  jtagCaptureIrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagShiftIrState;
 	    end 
 	  end 
@@ -165,23 +165,23 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
 	  jtagShiftIrState : begin 
             $display("### CONTROLLER DRIVER ### IS IN SHIFT IR STATE AT %0t \n",$time);
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagShiftIrState ;
 	    end
-	    jtagSerialIn = jtagConfigStruct.jtagInstructionOpcode[m++];
-	    $display("### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS %b\n",jtagSerialIn);
+	    Tdi = jtagConfigStruct.jtagInstructionOpcode[m++];
+	    $display("### CONTROLLER DRIVER ### THE INSTRUCTION SENT OUT IS %b\n",Tdi);
 	  end 
  
     
           jtagExit1IrState : begin 
             
- 	    if(jtagTms == 1) begin 
+ 	    if(Tms == 1) begin 
               jtagTapState = jtagUpdateIrState ;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagPauseIrState;
 	    end 
 	  end 
@@ -189,30 +189,30 @@ interface JtagMasterDriverBfm (input  logic   clk,
 
 	  jtagPauseIrState : begin 
   
-            if(jtagTms == 1) begin 
+            if(Tms == 1) begin 
               jtagTapState = jtagExit2IrState;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagPauseIrState;
 	    end
 	  end 
 
 	  jtagExit2IrState : begin 
       
-            if(jtagTms ==0) begin 
+            if(Tms ==0) begin 
               jtagTapState = jtagShiftIrState;
 	    end 
-	    else if(jtagTms == 1) begin 
+	    else if(Tms == 1) begin 
               jtagTapState = jtagUpdateIrState;
 	    end 
 	  end
 
 	  jtagUpdateIrState: begin 
             
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
 	      jtagTapState = jtagDrScanState;
             end
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
                jtagTapState = jtagIdleState;
 	    end
 	  end 
