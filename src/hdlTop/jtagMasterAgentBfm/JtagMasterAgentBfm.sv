@@ -39,6 +39,6 @@ module JtagControllerDeviceAgentBfm(JtagIf jtagIf);
     uvm_config_db#(virtual JtagControllerDeviceMonitorBfm)::set(null,"*","jtagControllerDeviceMonitorBfm",jtagControllerDeviceMonitorBfm);
   end
 
- bind jtagControllerDeviceMonitorBfm JtagControllerDeviceAssertions TestVectrorTestingAssertions(.clk(clk),.jtagSerialIn(jtagSerialIn), .reset(reset),.jtagTms(jtagTms));
+  bind jtagControllerDeviceMonitorBfm JtagControllerDeviceAssertions TestVectrorTestingAssertions(.clk(clk),.Tdi(Tdi), .reset(reset),.Tms(Tms));
 
 endmodule : JtagControllerDeviceAgentBfm
