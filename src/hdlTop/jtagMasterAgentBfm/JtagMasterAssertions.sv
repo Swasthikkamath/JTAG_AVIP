@@ -1,12 +1,12 @@
-`ifndef JTAGMASTERASSERTIONS_INCLUDED_
-`define JTAGMASTERASSERTIONS_INCLUDED_
+`ifndef JTAGCONTROLLERDEVICEASSERTIONS_INCLUDED_
+`define JTAGCONTROLLERDEVICEASSERTIONS_INCLUDED_
 
 import JtagGlobalPkg::*;
 
-interface JtagMasterAssertions (input clk,
+interface JtagControllerDeviceAssertions (input clk,
                                          input reset,
-                                         input jtagSerialIn,
-                                         input jtagTms
+                                         input Tdi,
+                                         input Tms
                                         );
  
 
@@ -16,12 +16,12 @@ interface JtagMasterAssertions (input clk,
  
 
     initial begin
-    `uvm_info("JtagMasterAssertions","JtagMasterAssertions",UVM_LOW);
+    `uvm_info("JtagControllerDeviceAssertions","JtagControllerDeviceAssertions",UVM_LOW);
   end
 
-  import JtagMasterPkg ::JtagMasterAgentConfig;
+  import JtagControllerDevicePkg ::JtagControllerDeviceAgentConfig;
   
-  JtagMasterAgentConfig jtagMasterAgentConfig;
+  JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig;
 
   bit startValidityCheck;
   bit startWidthCheck;
@@ -35,12 +35,12 @@ interface JtagMasterAssertions (input clk,
   JtagTestVectorWidthEnum jtagTestVectorWidth;
   JtagInstructionOpcodeEnum jtagInstruction;
  always @(posedge clk) begin 
-  if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(null , "" , "jtagMasterAgentConfig" ,jtagMasterAgentConfig)))
+  if(!(uvm_config_db #(JtagControllerDeviceAgentConfig) :: get(null , "" , "jtagControllerDeviceAgentConfig" ,jtagControllerDeviceAgentConfig)))
       `uvm_fatal("CONTROLLER DEVICE]" , "FAILED TO GET CONFIG")
 
-      jtagInstructionWidth = jtagMasterAgentConfig.jtagInstructionWidth;
-      jtagTestVectorWidth = jtagMasterAgentConfig.jtagTestVectorWidth;
-      jtagInstruction = jtagMasterAgentConfig.jtagInstructionOpcode;
+      jtagInstructionWidth = jtagControllerDeviceAgentConfig.jtagInstructionWidth;
+      jtagTestVectorWidth = jtagControllerDeviceAgentConfig.jtagTestVectorWidth;
+      jtagInstruction = jtagControllerDeviceAgentConfig.jtagInstructionOpcode;
       $display("THE INSTRUCTION  WIDTH IS %s",jtagInstructionWidth.name());
 
 end 
@@ -50,13 +50,13 @@ end
 
   always @(posedge  clk)
     begin
-     //$display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b",width,jtagSerialIn);
-     if((!($isunknown(jtagSerialIn))) && (width < jtagMasterAgentConfig.jtagInstructionWidth) &&(!($isunknown(jtagTms)))) begin 
+     //$display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b",width,Tdi);
+     if((!($isunknown(Tdi))) && (width < jtagControllerDeviceAgentConfig.jtagInstructionWidth) &&(!($isunknown(Tms)))) begin 
        width++;
-       instruction = {jtagSerialIn,instruction[4:1]};
+       instruction = {Tdi,instruction[4:1]};
     end 
 
-     if(width == jtagMasterAgentConfig.jtagInstructionWidth && (!($isunknown(jtagTms)))) begin 
+     if(width == jtagControllerDeviceAgentConfig.jtagInstructionWidth && (!($isunknown(Tms)))) begin 
        startValidityCheck = 1'b 1;
        repeat(2) @(posedge clk);
         startValidityCheck = 1'b 0;
@@ -72,7 +72,7 @@ end
 	 testVectorCheck =1;
 
       end 
-    $display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b @%0t",width,jtagSerialIn,$time);
+    $display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b @%0t",width,Tdi,$time);
     end 
 
 
@@ -102,7 +102,7 @@ end
 
 
 
-endinterface : JtagMasterAssertions
+endinterface : JtagControllerDeviceAssertions
 
 `endif
 
