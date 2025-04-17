@@ -1,10 +1,10 @@
 
 //--------------------------------------------------------------------------------------------
-// Module      : jtag Master Agent BFM
+// Module      : jtag ControllerDevice Agent BFM
 // Description : Instantiates driver and monitor
 //--------------------------------------------------------------------------------------------
 
-module JtagMasterAgentBfm(JtagIf jtagIf);
+module JtagControllerDeviceAgentBfm(JtagIf jtagIf);
 
   //-------------------------------------------------------
   // Importing uvm package file
@@ -14,20 +14,20 @@ module JtagMasterAgentBfm(JtagIf jtagIf);
   `include "uvm_macros.svh"
   
   initial begin
-    `uvm_info("jtag Master agent bfm",$sformatf("JTAG Master AGENT BFM"),UVM_LOW)
+    `uvm_info("jtag ControllerDevice agent bfm",$sformatf("JTAG ControllerDevice AGENT BFM"),UVM_LOW)
   end
   
   //-------------------------------------------------------
-  // Master driver bfm instantiation
+  // ControllerDevice driver bfm instantiation
   //-------------------------------------------------------
   
-  JtagMasterDriverBfm jtagMasterDriverBfm (.clk(jtagIf.clk),.jtagSerialIn(jtagIf.jtagSerialIn),.reset(jtagIf.reset) ,.jtagTms(jtagIf.jtagTms));
+  JtagControllerDeviceDriverBfm jtagControllerDeviceDriverBfm (.clk(jtagIf.clk),.Tdi(jtagIf.Tdi),.reset(jtagIf.reset) ,.Tms(jtagIf.Tms));
 
   //-------------------------------------------------------
-  // Master monitor bfm instantiation
+  // ControllerDevice monitor bfm instantiation
   //-------------------------------------------------------
   
- JtagMasterMonitorBfm jtagMasterMonitorBfm (.clk(jtagIf.clk),.jtagSerialIn(jtagIf.jtagSerialIn),.reset(jtagIf.reset),.jtagTms(jtagIf.jtagTms));
+  JtagControllerDeviceMonitorBfm jtagControllerDeviceMonitorBfm (.clk(jtagIf.clk),.Tdi(jtagIf.Tdi),.reset(jtagIf.reset),.Tms(jtagIf.Tms));
 
 
   //-------------------------------------------------------
@@ -35,10 +35,10 @@ module JtagMasterAgentBfm(JtagIf jtagIf);
   //-------------------------------------------------------
 
   initial begin
-    uvm_config_db#(virtual JtagMasterDriverBfm)::set(null,"*","jtagMasterDriverBfm",jtagMasterDriverBfm);
-    uvm_config_db#(virtual JtagMasterMonitorBfm)::set(null,"*","jtagMasterMonitorBfm",jtagMasterMonitorBfm);
+    uvm_config_db#(virtual JtagControllerDeviceDriverBfm)::set(null,"*","jtagControllerDeviceDriverBfm",jtagControllerDeviceDriverBfm);
+    uvm_config_db#(virtual JtagControllerDeviceMonitorBfm)::set(null,"*","jtagControllerDeviceMonitorBfm",jtagControllerDeviceMonitorBfm);
   end
 
- bind jtagMasterMonitorBfm JtagMasterAssertions TestVectrorTestingAssertions(.clk(clk),.jtagSerialIn(jtagSerialIn), .reset(reset),.jtagTms(jtagTms));
+ bind jtagControllerDeviceMonitorBfm JtagControllerDeviceAssertions TestVectrorTestingAssertions(.clk(clk),.jtagSerialIn(jtagSerialIn), .reset(reset),.jtagTms(jtagTms));
 
-endmodule : JtagMasterAgentBfm
+endmodule : JtagControllerDeviceAgentBfm
