@@ -7,8 +7,8 @@ class JtagEnv extends uvm_env;
   JtagEnvConfig jtagEnvConfig;
   JtagScoreboard jtagScoreboard;
   JtagVirtualSequencer jtagVirtualSequencer;
-  JtagMasterAgent jtagMasterAgent;
-  JtagSlaveAgent jtagSlaveAgent;
+  JtagControllerDeviceAgent jtagControllerDeviceAgent;
+  JtagTargetDeviceAgent jtagTargetDeviceAgent;
   
   extern function new(string name = "JtagEnv" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
@@ -33,22 +33,22 @@ function void JtagEnv :: build_phase(uvm_phase phase);
   end
 
 
-  jtagMasterAgent = JtagMasterAgent :: type_id :: create("JtagMasterAgent",this);
-  jtagSlaveAgent = JtagSlaveAgent :: type_id :: create("JtagSlaveAgent",this);
+  jtagControllerDeviceAgent = JtagControllerDeviceAgent :: type_id :: create("JtagControllerDeviceAgent",this);
+  jtagTargetDeviceAgent = JtagTargetDeviceAgent :: type_id :: create("JtagTargetDeviceAgent",this);
 endfunction : build_phase
 
 function void JtagEnv :: connect_phase(uvm_phase phase);
   super.connect_phase(phase);
 
   if(jtagEnvConfig.hasScoreboard) begin 
-    jtagMasterAgent.jtagMasterAnalysisPort.connect(jtagScoreboard.jtagScoreboardMasterAnalysisExport);
-    jtagSlaveAgent.jtagSlaveAnalysisPort.connect(jtagScoreboard.jtagScoreboardSlaveAnalysisExport);
+    jtagControllerDeviceAgent.jtagControllerDeviceAnalysisPort.connect(jtagScoreboard.jtagScoreboardControllerDeviceAnalysisExport);
+    jtagTargetDeviceAgent.jtagTargetDeviceAnalysisPort.connect(jtagScoreboard.jtagScoreboardTargetDeviceAnalysisExport);
   end 
 
   if(jtagEnvConfig.hasVirtualSequencer)begin 
 
-   jtagVirtualSequencer.jtagMasterSequencer = jtagMasterAgent.jtagMasterSequencer;
-   jtagVirtualSequencer.jtagSlaveSequencer = jtagSlaveAgent.jtagSlaveSequencer;
+   jtagVirtualSequencer.jtagControllerDeviceSequencer = jtagControllerDeviceAgent.jtagControllerDeviceSequencer;
+   jtagVirtualSequencer.jtagTargetDeviceSequencer = jtagTargetDeviceAgent.jtagTargetDeviceSequencer;
   end 
 
 endfunction : connect_phase
