@@ -10,9 +10,9 @@ import JtagGlobalPkg::*;
 //--------------------------------------------------------------------------------------------
 interface JtagSlaveMonitorBfm (input  logic   clk,
                               input  logic   reset,
-                             input logic  jtagSerialOut,
-			     input logic jtagTms,
-			     input logic jtagSerialIn
+                             input logic  Tdo,
+			     input logic Tms,
+			     input logic Tdi
                               );
 	//-------------------------------------------------------
   // Importing uvm package file
@@ -37,7 +37,7 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   int  i,k ,m;
   automatic int count =0;
   m=0;
-  for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
+  for(int j=0 ; j<$bits(jtagPacketStruct.Tms);j++)
       begin
         @(posedge clk);
             $display("state of machine  is %s",jtagTapState.name());
@@ -45,10 +45,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
           jtagResetState :begin 
           
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
 	      jtagTapState = jtagResetState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
 	      jtagTapState = jtagIdleState;
 	    end 
 	  end
@@ -56,10 +56,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
 	  jtagIdleState : begin 
 	   
-	   if(jtagTms ==0) begin 
+	   if(Tms ==0) begin 
              jtagTapState = jtagIdleState;
 	   end 
-	   else if(jtagTms == 1) begin 
+	   else if(Tms == 1) begin 
              jtagTapState = jtagDrScanState;
 	   end 
 	  end
@@ -67,10 +67,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
           jtagDrScanState : begin 
 	   
-	   if(jtagTms == 1) begin 
+	   if(Tms == 1) begin 
              jtagTapState = jtagIrScanState;
 	   end
-	   else if(jtagTms == 0) begin 
+	   else if(Tms == 0) begin 
              jtagTapState = jtagCaptureDrState;
 	   end
 	  end 
@@ -78,10 +78,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	  
 	  jtagCaptureDrState : begin 
 	    
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
              jtagTapState = jtagExit1DrState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagShiftDrState;
 	    end 
 	  end 
@@ -90,25 +90,25 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 	  jtagShiftDrState : begin 
 	  
 	  $display("### TARGET MONITOR ### IS IN SHIFT DR STATE AT %0t \n ",$time);
-	    if(jtagTms ==1) begin
+	    if(Tms ==1) begin
               jtagTapState = jtagExit1DrState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagShiftDrState;      
 	    end
 
-	    jtagPacketStruct.jtagTestVector = {jtagSerialOut, jtagPacketStruct.jtagTestVector[61:1]};  
-	      $display("### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS %b COMPLETE VECTORE IS %b AT %0t \n",jtagSerialOut,jtagPacketStruct.jtagTestVector,$time);
+	    jtagPacketStruct.jtagTestVector = {Tdo, jtagPacketStruct.jtagTestVector[61:1]};  
+	      $display("### TARGET MONITOR ### THE SERIAL DATA OBTAINED FROM TARGET DRIVER IS %b COMPLETE VECTORE IS %b AT %0t \n",Tdo,jtagPacketStruct.jtagTestVector,$time);
 
 	  end 
           
 	  
 	  jtagExit1DrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagUpdateDrState;
 	    end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagPauseDrState;
 	    end 
 	    count++;
@@ -118,10 +118,10 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
           jtagPauseDrState : begin 
 	    
-	    if(jtagTms ==1) begin 
+	    if(Tms ==1) begin 
               jtagTapState = jtagExit2DrState;
  	    end 
-	    else if(jtagTms ==0) begin
+	    else if(Tms ==0) begin
               jtagTapState = jtagPauseDrState;
 	    end 
 	  end 
@@ -129,40 +129,40 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
           jtagExit2DrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagUpdateDrState;
 	    end 
- 	    else if(jtagTms == 0) begin 
+ 	    else if(Tms == 0) begin 
               jtagTapState = jtagShiftDrState;
             end 
 	  end 
 
 	  jtagUpdateDrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagDrScanState;
 	    end  
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
 	      jtagTapState = jtagIdleState;
 	    end 
 	  end 
 
 	  jtagIrScanState : begin 
 	    
-            if(jtagTms == 1) begin 
+            if(Tms == 1) begin 
 	      jtagTapState = jtagResetState;
             end 
-	    else if(jtagTms ==0) begin 
+	    else if(Tms ==0) begin 
               jtagTapState = jtagCaptureIrState;
 	    end
 	  end 
 
 	  jtagCaptureIrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagShiftIrState;
 	    end 
 	  end 
@@ -170,23 +170,23 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
 	  jtagShiftIrState : begin 
 
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
               jtagTapState = jtagExit1IrState;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagShiftIrState ;
 	    end
-	     jtagPacketStruct.jtagInstruction[m++] = jtagSerialIn;
+	     jtagPacketStruct.jtagInstruction[m++] = Tdi;
 	 $display("#########################INS IS %b",jtagPacketStruct.jtagInstruction);
 	end 
  
     
           jtagExit1IrState : begin 
             
- 	    if(jtagTms == 1) begin 
+ 	    if(Tms == 1) begin 
               jtagTapState = jtagUpdateIrState ;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagPauseIrState;
 	    end 
 	  end 
@@ -194,30 +194,30 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
 
 	  jtagPauseIrState : begin 
   
-            if(jtagTms == 1) begin 
+            if(Tms == 1) begin 
               jtagTapState = jtagExit2IrState;
 	    end 
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
               jtagTapState = jtagPauseIrState;
 	    end
 	  end 
 
 	  jtagExit2IrState : begin 
       
-            if(jtagTms ==0) begin 
+            if(Tms ==0) begin 
               jtagTapState = jtagShiftIrState;
 	    end 
-	    else if(jtagTms == 1) begin 
+	    else if(Tms == 1) begin 
               jtagTapState = jtagUpdateIrState;
 	    end 
 	  end
 
 	  jtagUpdateIrState: begin 
             
-	    if(jtagTms == 1) begin 
+	    if(Tms == 1) begin 
 	      jtagTapState = jtagDrScanState;
             end
-	    else if(jtagTms == 0) begin 
+	    else if(Tms == 0) begin 
                jtagTapState = jtagIdleState;
 	    end
 	  end 
