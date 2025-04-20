@@ -5,7 +5,7 @@
  *
  * Copyright 2015 Nick Downie
  * Released under the MIT license
- * https://github.com/nnnick/Chart.js/blob/master/LICENSE.md
+ * https://github.com/nnnick/Chart.js/blob/ControllerDevice/LICENSE.md
  */
 
 
@@ -231,7 +231,7 @@
 			});
 			return base;
 		},
-		merge = helpers.merge = function(base,master){
+		merge = helpers.merge = function(base,ControllerDevice){
 			//Merge properties in left object over to a shallow clone of object right.
 			var args = Array.prototype.slice.call(arguments,0);
 			args.unshift({});

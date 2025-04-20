@@ -12,9 +12,9 @@ package JtagVirtualSequencePkg;
   import uvm_pkg :: *;
   import JtagGlobalPkg :: *;
   import JtagEnvPkg::*;
-  import JtagMasterPkg::*;
+  import JtagControllerDevicePkg::*;
   import JtagSlavePkg::*;
-  import JtagMasterSequencePkg::*;
+  import JtagControllerDeviceSequencePkg::*;
   import JtagSlaveSequencePkg::*;
   
   //-------------------------------------------------------
@@ -22,7 +22,7 @@ package JtagVirtualSequencePkg;
   //-------------------------------------------------------
 
   `include "JtagVirtualBaseSequence.sv"
-  `include "JtagMasterTestingVirtualSequence.sv"
+  `include "JtagControllerDeviceTestingVirtualSequence.sv"
   `include "JtagPatternBasedVirtualSequence.sv"
 endpackage
 

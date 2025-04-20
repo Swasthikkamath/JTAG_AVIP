@@ -1,9 +1,9 @@
-`ifndef JTAGMASTERAGENTCONFIG_INCLUDED_
-`define JTAGMASTERAGENTCONFIG_INCLUDED_
+`ifndef JTAGControllerDeviceAGENTCONFIG_INCLUDED_
+`define JTAGControllerDeviceAGENTCONFIG_INCLUDED_
 
-class JtagMasterAgentConfig extends uvm_object;
+class JtagControllerDeviceAgentConfig extends uvm_object;
 
-  `uvm_object_utils(JtagMasterAgentConfig)
+  `uvm_object_utils(JtagControllerDeviceAgentConfig)
 
   bit hasCoverage;
   uvm_active_passive_enum   is_active;
@@ -13,11 +13,11 @@ class JtagMasterAgentConfig extends uvm_object;
   int NumberOfTests;
   logic[31:0]patternNeeded;
 
-  extern function new(string name = "JtagMasterAgentConfig");
+  extern function new(string name = "JtagControllerDeviceAgentConfig");
 
-endclass : JtagMasterAgentConfig
+endclass : JtagControllerDeviceAgentConfig
 
-function JtagMasterAgentConfig :: new(string name = "JtagMasterAgentConfig");
+function JtagControllerDeviceAgentConfig :: new(string name = "JtagControllerDeviceAgentConfig");
   super.new(name);
 endfunction : new
 `endif

@@ -17,8 +17,8 @@ endfunction : new
 
 function void JtagTdiWidth24InstructionWidth3Test :: build_phase(uvm_phase phase);
   super.build_phase(phase);
-  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth24Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagTestVectorWidth = testVectorWidth24Bit;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
    jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth24Bit;
    jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
 endfunction : build_phase
@@ -26,12 +26,12 @@ endfunction : build_phase
 
 
 task JtagTdiWidth24InstructionWidth3Test :: run_phase(uvm_phase phase);
-  jtagMasterTestingVirtualSequence = JtagMasterTestingVirtualSequence :: type_id :: create("JtagMasterTestingVirtualSequence");
-  jtagMasterTestingVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
+  jtagControllerDeviceTestingVirtualSequence = JtagControllerDeviceTestingVirtualSequence :: type_id :: create("JtagControllerDeviceTestingVirtualSequence");
+  jtagControllerDeviceTestingVirtualSequence.setConfig(jtagEnvConfig.jtagControllerDeviceAgentConfig);
  
   phase.raise_objection(this);
   repeat( NO_OF_TESTS) begin 
-  jtagMasterTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
+  jtagControllerDeviceTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   end 
   phase.drop_objection(this);
 

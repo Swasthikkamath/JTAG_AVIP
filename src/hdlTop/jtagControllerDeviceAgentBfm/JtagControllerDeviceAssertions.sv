@@ -50,7 +50,7 @@ end
 
   always @(posedge  clk)
     begin
-     //$display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b",width,Tdi);
+     //$display("THE WIDTH OF ControllerDevice WIDTH IS %0d and data in is %0b",width,Tdi);
      if((!($isunknown(Tdi))) && (width < jtagControllerDeviceAgentConfig.jtagInstructionWidth) &&(!($isunknown(Tms)))) begin 
        width++;
        instruction = {Tdi,instruction[4:1]};
@@ -72,7 +72,7 @@ end
 	 testVectorCheck =1;
 
       end 
-    $display("THE WIDTH OF MASTER WIDTH IS %0d and data in is %0b @%0t",width,Tdi,$time);
+    $display("THE WIDTH OF ControllerDevice WIDTH IS %0d and data in is %0b @%0t",width,Tdi,$time);
     end 
 
 
@@ -82,7 +82,7 @@ end
   endproperty
 
   assert property (instructionValidityCheck)
-  $info("*************************************************************************************************************\n[MASTER ASSERTION]\n INSTRUCTION %b MATCHES AND WIDTH %0d  IS CORRECT \n**************************************************************************************************************",instruction,width);
+  $info("*************************************************************************************************************\n[ControllerDevice ASSERTION]\n INSTRUCTION %b MATCHES AND WIDTH %0d  IS CORRECT \n**************************************************************************************************************",instruction,width);
   else
  $error("\n \n \n INSTRUCTION BIT IS UNKNOWN ");
 
@@ -93,7 +93,7 @@ end
   endproperty
 
   assert property (testVectorValidity) begin 
-  $info("*************************************************************************************************************\n[MASTER ASSERTION]\nTEST VECTOR WIDTH %0d MATCHES \n************************************************************************************************************",width);
+  $info("*************************************************************************************************************\n[ControllerDevice ASSERTION]\nTEST VECTOR WIDTH %0d MATCHES \n************************************************************************************************************",width);
   testVectorCheck = 0;
   width=0;
   end 

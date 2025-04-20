@@ -4,14 +4,14 @@
 class JtagBaseTest extends uvm_test;
   `uvm_component_utils(JtagBaseTest)
 
-  JtagMasterTestingVirtualSequence jtagMasterTestingVirtualSequence;
+  JtagControllerDeviceTestingVirtualSequence jtagControllerDeviceTestingVirtualSequence;
   JtagEnv jtagEnv;
   JtagEnvConfig jtagEnvConfig;
   
   extern function new(string name = "JtagBaseTest" , uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern function void setupJtagEnvConfig();
-  extern function void setupJtagMasterAgentConfig();
+  extern function void setupJtagControllerDeviceAgentConfig();
   extern function void setupJtagSlaveAgentConfig();
   extern virtual function void end_of_elaboration_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
@@ -34,22 +34,22 @@ function void  JtagBaseTest :: setupJtagEnvConfig();
   jtagEnvConfig.hasScoreboard = 1 ;
   jtagEnvConfig.hasVirtualSequencer = 1;
   uvm_config_db #(JtagEnvConfig) :: set(this,"*", "jtagEnvConfig",jtagEnvConfig);
-  setupJtagMasterAgentConfig();
+  setupJtagControllerDeviceAgentConfig();
   setupJtagSlaveAgentConfig();
 endfunction : setupJtagEnvConfig
 
-function void  JtagBaseTest :: setupJtagMasterAgentConfig();
-  jtagEnvConfig.jtagMasterAgentConfig = JtagMasterAgentConfig :: type_id :: create("jtagMasterAgentConfig");
-  jtagEnvConfig.jtagMasterAgentConfig.hasCoverage =1;
-  jtagEnvConfig.jtagMasterAgentConfig.is_active = UVM_ACTIVE;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth32Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionOpcode = boundaryScanRegisters;
+function void  JtagBaseTest :: setupJtagControllerDeviceAgentConfig();
+  jtagEnvConfig.jtagControllerDeviceAgentConfig = JtagControllerDeviceAgentConfig :: type_id :: create("jtagControllerDeviceAgentConfig");
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.hasCoverage =1;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.is_active = UVM_ACTIVE;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagTestVectorWidth = testVectorWidth32Bit;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagInstructionOpcode = boundaryScanRegisters;
 
 
-  uvm_config_db #(JtagMasterAgentConfig) :: set(null,"*", "jtagMasterAgentConfig",jtagEnvConfig.jtagMasterAgentConfig);
+  uvm_config_db #(JtagControllerDeviceAgentConfig) :: set(null,"*", "jtagControllerDeviceAgentConfig",jtagEnvConfig.jtagControllerDeviceAgentConfig);
 
-endfunction : setupJtagMasterAgentConfig
+endfunction : setupJtagControllerDeviceAgentConfig
 
 function void  JtagBaseTest :: setupJtagSlaveAgentConfig();
  jtagEnvConfig.jtagSlaveAgentConfig = JtagSlaveAgentConfig :: type_id :: create("jtagSlaveAgentConfig");
@@ -67,12 +67,12 @@ function void JtagBaseTest :: end_of_elaboration_phase(uvm_phase phase);
 endfunction :  end_of_elaboration_phase
 
 task  JtagBaseTest :: run_phase(uvm_phase phase);
-  jtagMasterTestingVirtualSequence = JtagMasterTestingVirtualSequence :: type_id :: create("JtagMasterTestingVirtualSequence");
-  jtagMasterTestingVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
+  jtagControllerDeviceTestingVirtualSequence = JtagControllerDeviceTestingVirtualSequence :: type_id :: create("JtagControllerDeviceTestingVirtualSequence");
+  jtagControllerDeviceTestingVirtualSequence.setConfig(jtagEnvConfig.jtagControllerDeviceAgentConfig);
  
   phase.raise_objection(this);
   repeat( NO_OF_TESTS) begin 
-  jtagMasterTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
+  jtagControllerDeviceTestingVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   end 
   phase.drop_objection(this);
 

@@ -1,14 +1,14 @@
-`ifndef JTAGMASTERSEQUENCER_INCLUDED_
-`define JTAGMASTERSEQUENCER_INCLUDED_
+`ifndef JTAGControllerDeviceSEQUENCER_INCLUDED_
+`define JTAGControllerDeviceSEQUENCER_INCLUDED_
 
-class JtagMasterSequencer extends uvm_sequencer #(JtagMasterTransaction);
-  `uvm_component_utils(JtagMasterSequencer)
+class JtagControllerDeviceSequencer extends uvm_sequencer #(JtagControllerDeviceTransaction);
+  `uvm_component_utils(JtagControllerDeviceSequencer)
 
-  extern function new(string name = "JtagMasterSequencer",uvm_component parent);
+  extern function new(string name = "JtagControllerDeviceSequencer",uvm_component parent);
 
-endclass : JtagMasterSequencer 
+endclass : JtagControllerDeviceSequencer 
 
-function JtagMasterSequencer :: new(string name = "JtagMasterSequencer",uvm_component parent);
+function JtagControllerDeviceSequencer :: new(string name = "JtagControllerDeviceSequencer",uvm_component parent);
   super.new(name,parent);
 endfunction  : new
 

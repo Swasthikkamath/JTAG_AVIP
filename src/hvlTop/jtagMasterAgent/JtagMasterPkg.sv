@@ -1,21 +1,21 @@
-`ifndef JTAGMASTERPKG_INCLUDED_
-`define JTAGMASTERPKG_INCLUDED_
+`ifndef JTAGControllerDevicePKG_INCLUDED_
+`define JTAGControllerDevicePKG_INCLUDED_
 
-package JtagMasterPkg;
+package JtagControllerDevicePkg;
   `include "uvm_macros.svh"
 
   import uvm_pkg :: *;
   import JtagGlobalPkg :: *;
-  `include "JtagMasterAgentConfig.sv"
-  `include "JtagMasterTransaction.sv"
-  `include "JtagMasterSeqItemConverter.sv"
-  `include "JtagMasterConfigConverter.sv"
-  `include "JtagMasterSequencer.sv"
-  `include "JtagMasterDriverProxy.sv"
-  `include "JtagMasterMonitorProxy.sv"
-  `include "JtagMasterCoverage.sv"
-  `include "JtagMasterAgent.sv"
+  `include "JtagControllerDeviceAgentConfig.sv"
+  `include "JtagControllerDeviceTransaction.sv"
+  `include "JtagControllerDeviceSeqItemConverter.sv"
+  `include "JtagControllerDeviceConfigConverter.sv"
+  `include "JtagControllerDeviceSequencer.sv"
+  `include "JtagControllerDeviceDriverProxy.sv"
+  `include "JtagControllerDeviceMonitorProxy.sv"
+  `include "JtagControllerDeviceCoverage.sv"
+  `include "JtagControllerDeviceAgent.sv"
 
-endpackage : JtagMasterPkg
+endpackage : JtagControllerDevicePkg
 
 `endif

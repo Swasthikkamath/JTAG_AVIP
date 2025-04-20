@@ -1,20 +1,20 @@
-`ifndef JTAGMASTERBASESEQUENCE_INCLUDED_
-`define JTAGMASTERBASESEQUENCE_INCLUDED_
+`ifndef JTAGControllerDeviceBASESEQUENCE_INCLUDED_
+`define JTAGControllerDeviceBASESEQUENCE_INCLUDED_
 
-class JtagMasterBaseSequence extends uvm_sequence#(JtagMasterTransaction);
-  `uvm_object_utils(JtagMasterBaseSequence) 
+class JtagControllerDeviceBaseSequence extends uvm_sequence#(JtagControllerDeviceTransaction);
+  `uvm_object_utils(JtagControllerDeviceBaseSequence) 
 
   rand int numberOfTests;
-  extern function new(string name = "JtagMasterBaseSequence");
+  extern function new(string name = "JtagControllerDeviceBaseSequence");
   extern virtual task body();
 
-endclass : JtagMasterBaseSequence 
+endclass : JtagControllerDeviceBaseSequence 
 
-function JtagMasterBaseSequence :: new (string name = "JtagMasterBaseSequence");
+function JtagControllerDeviceBaseSequence :: new (string name = "JtagControllerDeviceBaseSequence");
   super.new(name);
 endfunction : new
 
-task JtagMasterBaseSequence :: body();
+task JtagControllerDeviceBaseSequence :: body();
   super.body();
 endtask : body
 

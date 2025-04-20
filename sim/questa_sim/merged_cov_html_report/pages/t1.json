@@ -52,13 +52,13 @@ t47:{items:[{dummy:0}
 ,{cr:'c',st:'1',z:'instructionWidth3Bit',h1:'5',c:'g'}
 ,{cr:'c',st:'1',z:'instructionWidth4Bit',h1:'8',c:'g'}
 ,{cr:'c',st:'1',z:'instructionWidth5Bit',h1:'12',c:'g'}
-,{id:'cvg182',s:'2',cr:'c',t:'/HdlTop/jtagMasterAgentBfm/jtagMasterMonitorBfm/jtagSerialIn',z:'jtagSerialIn',h1:'25',h2:'25',c:'G',p:'100.00'}
+,{id:'cvg182',s:'2',cr:'c',t:'/HdlTop/jtagControllerDeviceAgentBfm/jtagControllerDeviceMonitorBfm/jtagSerialIn',z:'jtagSerialIn',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg183 ',s:9,cr:'c',z:'jtagTestVectorWidth',c:'G',p:'100.00'}
 ,{cr:'c',st:'1',z:'testVectorWidth8Bit',h1:'6',c:'g'}
 ,{cr:'c',st:'1',z:'testVectorWidth16Bit',h1:'6',c:'g'}
 ,{cr:'c',st:'1',z:'testVectorWidth24Bit',h1:'6',c:'g'}
 ,{cr:'c',st:'1',z:'testVectorWidth32Bit',h1:'7',c:'g'}
-,{id:'cvg184',s:'2',cr:'c',t:'/HdlTop/jtagMasterAgentBfm/jtagMasterMonitorBfm/jtagTms',z:'jtagTms',h1:'25',h2:'25',c:'G',p:'100.00'}
+,{id:'cvg184',s:'2',cr:'c',t:'/HdlTop/jtagControllerDeviceAgentBfm/jtagControllerDeviceMonitorBfm/jtagTms',z:'jtagTms',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg185',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg186',s:'2',cr:'c',z:'startValidityCheck',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg187',s:'2',cr:'m',z:'startWidthCheck',h1:'0',h2:'0',c:'R',p:'0.00'}
@@ -82,13 +82,13 @@ t150:{items:[{dummy:0}
 ,{cr:'c',st:'1',z:'instructionWidth3Bit',h1:'5',c:'g'}
 ,{cr:'c',st:'1',z:'instructionWidth4Bit',h1:'8',c:'g'}
 ,{cr:'c',st:'1',z:'instructionWidth5Bit',h1:'12',c:'g'}
-,{id:'cvg182',s:'2',cr:'c',t:'/HdlTop/jtagMasterAgentBfm/jtagMasterMonitorBfm/jtagSerialIn',z:'jtagSerialIn',h1:'25',h2:'25',c:'G',p:'100.00'}
+,{id:'cvg182',s:'2',cr:'c',t:'/HdlTop/jtagControllerDeviceAgentBfm/jtagControllerDeviceMonitorBfm/jtagSerialIn',z:'jtagSerialIn',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg183 ',s:9,cr:'c',z:'jtagTestVectorWidth',c:'G',p:'100.00'}
 ,{cr:'c',st:'1',z:'testVectorWidth8Bit',h1:'6',c:'g'}
 ,{cr:'c',st:'1',z:'testVectorWidth16Bit',h1:'6',c:'g'}
 ,{cr:'c',st:'1',z:'testVectorWidth24Bit',h1:'6',c:'g'}
 ,{cr:'c',st:'1',z:'testVectorWidth32Bit',h1:'7',c:'g'}
-,{id:'cvg184',s:'2',cr:'c',t:'/HdlTop/jtagMasterAgentBfm/jtagMasterMonitorBfm/jtagTms',z:'jtagTms',h1:'25',h2:'25',c:'G',p:'100.00'}
+,{id:'cvg184',s:'2',cr:'c',t:'/HdlTop/jtagControllerDeviceAgentBfm/jtagControllerDeviceMonitorBfm/jtagTms',z:'jtagTms',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg185',s:'2',cr:'c',t:'/HdlTop/jtagIf/reset',z:'reset',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg186',s:'2',cr:'c',z:'startValidityCheck',h1:'25',h2:'25',c:'G',p:'100.00'}
 ,{id:'cvg187',s:'2',cr:'m',z:'startWidthCheck',h1:'0',h2:'0',c:'R',p:'0.00'}

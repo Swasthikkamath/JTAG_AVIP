@@ -22,7 +22,7 @@
  */
 
 /*jslint evil: true, undef: true, browser: true */
-/*globals $,require,jQuery,define,_selector_run,_selector_opts,_selector_first,_selector_row_indexes,_ext,_Api,_api_register,_api_registerPlural,_re_new_lines,_re_html,_re_formatted_numeric,_re_escape_regex,_empty,_intVal,_numToDecimal,_isNumber,_isHtml,_htmlNumeric,_pluck,_pluck_order,_range,_stripHtml,_unique,_fnBuildAjax,_fnAjaxUpdate,_fnAjaxParameters,_fnAjaxUpdateDraw,_fnAjaxDataSrc,_fnAddColumn,_fnColumnOptions,_fnAdjustColumnSizing,_fnVisibleToColumnIndex,_fnColumnIndexToVisible,_fnVisbleColumns,_fnGetColumns,_fnColumnTypes,_fnApplyColumnDefs,_fnHungarianMap,_fnCamelToHungarian,_fnLanguageCompat,_fnBrowserDetect,_fnAddData,_fnAddTr,_fnNodeToDataIndex,_fnNodeToColumnIndex,_fnGetCellData,_fnSetCellData,_fnSplitObjNotation,_fnGetObjectDataFn,_fnSetObjectDataFn,_fnGetDataMaster,_fnClearTable,_fnDeleteIndex,_fnInvalidate,_fnGetRowElements,_fnCreateTr,_fnBuildHead,_fnDrawHead,_fnDraw,_fnReDraw,_fnAddOptionsHtml,_fnDetectHeader,_fnGetUniqueThs,_fnFeatureHtmlFilter,_fnFilterComplete,_fnFilterCustom,_fnFilterColumn,_fnFilter,_fnFilterCreateSearch,_fnEscapeRegex,_fnFilterData,_fnFeatureHtmlInfo,_fnUpdateInfo,_fnInfoMacros,_fnInitialise,_fnInitComplete,_fnLengthChange,_fnFeatureHtmlLength,_fnFeatureHtmlPaginate,_fnPageChange,_fnFeatureHtmlProcessing,_fnProcessingDisplay,_fnFeatureHtmlTable,_fnScrollDraw,_fnApplyToChildren,_fnCalculateColumnWidths,_fnThrottle,_fnConvertToWidth,_fnScrollingWidthAdjust,_fnGetWidestNode,_fnGetMaxLenString,_fnStringToCss,_fnScrollBarWidth,_fnSortFlatten,_fnSort,_fnSortAria,_fnSortListener,_fnSortAttachListener,_fnSortingClasses,_fnSortData,_fnSaveState,_fnLoadState,_fnSettingsFromNode,_fnLog,_fnMap,_fnBindAction,_fnCallbackReg,_fnCallbackFire,_fnLengthOverflow,_fnRenderer,_fnDataSource,_fnRowAttributes*/
+/*globals $,require,jQuery,define,_selector_run,_selector_opts,_selector_first,_selector_row_indexes,_ext,_Api,_api_register,_api_registerPlural,_re_new_lines,_re_html,_re_formatted_numeric,_re_escape_regex,_empty,_intVal,_numToDecimal,_isNumber,_isHtml,_htmlNumeric,_pluck,_pluck_order,_range,_stripHtml,_unique,_fnBuildAjax,_fnAjaxUpdate,_fnAjaxParameters,_fnAjaxUpdateDraw,_fnAjaxDataSrc,_fnAddColumn,_fnColumnOptions,_fnAdjustColumnSizing,_fnVisibleToColumnIndex,_fnColumnIndexToVisible,_fnVisbleColumns,_fnGetColumns,_fnColumnTypes,_fnApplyColumnDefs,_fnHungarianMap,_fnCamelToHungarian,_fnLanguageCompat,_fnBrowserDetect,_fnAddData,_fnAddTr,_fnNodeToDataIndex,_fnNodeToColumnIndex,_fnGetCellData,_fnSetCellData,_fnSplitObjNotation,_fnGetObjectDataFn,_fnSetObjectDataFn,_fnGetDataControllerDevice,_fnClearTable,_fnDeleteIndex,_fnInvalidate,_fnGetRowElements,_fnCreateTr,_fnBuildHead,_fnDrawHead,_fnDraw,_fnReDraw,_fnAddOptionsHtml,_fnDetectHeader,_fnGetUniqueThs,_fnFeatureHtmlFilter,_fnFilterComplete,_fnFilterCustom,_fnFilterColumn,_fnFilter,_fnFilterCreateSearch,_fnEscapeRegex,_fnFilterData,_fnFeatureHtmlInfo,_fnUpdateInfo,_fnInfoMacros,_fnInitialise,_fnInitComplete,_fnLengthChange,_fnFeatureHtmlLength,_fnFeatureHtmlPaginate,_fnPageChange,_fnFeatureHtmlProcessing,_fnProcessingDisplay,_fnFeatureHtmlTable,_fnScrollDraw,_fnApplyToChildren,_fnCalculateColumnWidths,_fnThrottle,_fnConvertToWidth,_fnScrollingWidthAdjust,_fnGetWidestNode,_fnGetMaxLenString,_fnStringToCss,_fnScrollBarWidth,_fnSortFlatten,_fnSort,_fnSortAria,_fnSortListener,_fnSortAttachListener,_fnSortingClasses,_fnSortData,_fnSaveState,_fnLoadState,_fnSettingsFromNode,_fnLog,_fnMap,_fnBindAction,_fnCallbackReg,_fnCallbackFire,_fnLengthOverflow,_fnRenderer,_fnDataSource,_fnRowAttributes*/
 
 (/** @lends <global> */function( window, document, undefined ) {
 
@@ -1029,7 +1029,7 @@
 		}
 	
 		/* Add to the display array */
-		oSettings.aiDisplayMaster.push( iRow );
+		oSettings.aiDisplayControllerDevice.push( iRow );
 	
 		/* Create the DOM information, or register it if already present */
 		if ( nTr || ! oSettings.oFeatures.bDeferRender )
@@ -1416,10 +1416,10 @@
 	/**
 	 * Return an array with the full table data
 	 *  @param {object} oSettings dataTables settings object
-	 *  @returns array {array} aData Master data array
+	 *  @returns array {array} aData ControllerDevice data array
 	 *  @memberof DataTable#oApi
 	 */
-	function _fnGetDataMaster ( settings )
+	function _fnGetDataControllerDevice ( settings )
 	{
 		return _pluck( settings.aoData, '_aData' );
 	}
@@ -1433,7 +1433,7 @@
 	function _fnClearTable( settings )
 	{
 		settings.aoData.length = 0;
-		settings.aiDisplayMaster.length = 0;
+		settings.aiDisplayControllerDevice.length = 0;
 		settings.aiDisplay.length = 0;
 	}
 	
@@ -1875,7 +1875,7 @@
 			bIncludeHidden = false;
 		}
 	
-		/* Make a copy of the master layout array, but without the visible columns in it */
+		/* Make a copy of the ControllerDevice layout array, but without the visible columns in it */
 		for ( i=0, iLen=aoSource.length ; i<iLen ; i++ )
 		{
 			aoLocal[i] = aoSource[i].slice();
@@ -2069,10 +2069,10 @@
 	
 		/* Header and footer callbacks */
 		_fnCallbackFire( oSettings, 'aoHeaderCallback', 'header', [ $(oSettings.nTHead).children('tr')[0],
-			_fnGetDataMaster( oSettings ), iDisplayStart, iDisplayEnd, aiDisplay ] );
+			_fnGetDataControllerDevice( oSettings ), iDisplayStart, iDisplayEnd, aiDisplay ] );
 	
 		_fnCallbackFire( oSettings, 'aoFooterCallback', 'footer', [ $(oSettings.nTFoot).children('tr')[0],
-			_fnGetDataMaster( oSettings ), iDisplayStart, iDisplayEnd, aiDisplay ] );
+			_fnGetDataControllerDevice( oSettings ), iDisplayStart, iDisplayEnd, aiDisplay ] );
 	
 		var body = $(oSettings.nTBody);
 	
@@ -2111,8 +2111,8 @@
 			_fnFilterComplete( settings, settings.oPreviousSearch );
 		}
 		else {
-			// No filtering, so we want to just use the display master
-			settings.aiDisplay = settings.aiDisplayMaster.slice();
+			// No filtering, so we want to just use the display ControllerDevice
+			settings.aiDisplay = settings.aiDisplayControllerDevice.slice();
 		}
 	
 		if ( holdPosition !== true ) {
@@ -2701,7 +2701,7 @@
 		for ( var i=0, ien=data.length ; i<ien ; i++ ) {
 			_fnAddData( settings, data[i] );
 		}
-		settings.aiDisplay = settings.aiDisplayMaster.slice();
+		settings.aiDisplay = settings.aiDisplayControllerDevice.slice();
 	
 		settings.bAjaxDataGet = false;
 		_fnDraw( settings );
@@ -2831,7 +2831,7 @@
 	 * Filter the table using both the global filter and column based filtering
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} oSearch search information
-	 *  @param {int} [iForce] force a research of the master array (1) or not (undefined or 0)
+	 *  @param {int} [iForce] force a research of the ControllerDevice array (1) or not (undefined or 0)
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnFilterComplete ( oSettings, oInput, iForce )
@@ -2948,7 +2948,7 @@
 	 * Filter the data table based on user input and draw the table
 	 *  @param {object} settings dataTables settings object
 	 *  @param {string} input string to filter on
-	 *  @param {int} force optional - force a research of the master array (1) or not (undefined or 0)
+	 *  @param {int} force optional - force a research of the ControllerDevice array (1) or not (undefined or 0)
 	 *  @param {bool} regex treat as a regular expression or not
 	 *  @param {bool} smart perform smart filtering or not
 	 *  @param {bool} caseInsensitive Do case insenstive matching or not
@@ -2958,7 +2958,7 @@
 	{
 		var rpSearch = _fnFilterCreateSearch( input, regex, smart, caseInsensitive );
 		var prevSearch = settings.oPreviousSearch.sSearch;
-		var displayMaster = settings.aiDisplayMaster;
+		var displayControllerDevice = settings.aiDisplayControllerDevice;
 		var display, invalidated, i;
 	
 		// Need to take account of custom filtering functions - always filter
@@ -2971,18 +2971,18 @@
 	
 		// If the input is blank - we just want the full data set
 		if ( input.length <= 0 ) {
-			settings.aiDisplay = displayMaster.slice();
+			settings.aiDisplay = displayControllerDevice.slice();
 		}
 		else {
-			// New search - start from the master array
+			// New search - start from the ControllerDevice array
 			if ( invalidated ||
 				 force ||
 				 prevSearch.length > input.length ||
 				 input.indexOf(prevSearch) !== 0 ||
-				 settings.bSorted // On resort, the display master needs to be
+				 settings.bSorted // On resort, the display ControllerDevice needs to be
 				                  // re-filtered since indexes will have changed
 			) {
-				settings.aiDisplay = displayMaster.slice();
+				settings.aiDisplay = displayControllerDevice.slice();
 			}
 	
 			// Search the display array
@@ -3650,7 +3650,7 @@
 		 *        table - scroll head table
 		 *          thead - thead
 		 *    div - scroll body
-		 *      table - table (master table)
+		 *      table - table (ControllerDevice table)
 		 *        thead - thead clone for sizing
 		 *        tbody - tbody
 		 *    div - scroll foot
@@ -4544,7 +4544,7 @@
 			aDataSort, data, iCol, sType, oSort,
 			formatters = 0,
 			sortCol,
-			displayMaster = oSettings.aiDisplayMaster,
+			displayControllerDevice = oSettings.aiDisplayControllerDevice,
 			aSort;
 	
 		// Resolve any column types that are unknown due to addition or invalidation
@@ -4571,8 +4571,8 @@
 		{
 			// Create a value - key array of the current row positions such that we can use their
 			// current position during the sort, if values match, in order to perform stable sorting
-			for ( i=0, iLen=displayMaster.length ; i<iLen ; i++ ) {
-				aiOrig[ displayMaster[i] ] = i;
+			for ( i=0, iLen=displayControllerDevice.length ; i<iLen ; i++ ) {
+				aiOrig[ displayControllerDevice[i] ] = i;
 			}
 	
 			/* Do the sort - here we want multi-column sorting based on a given data source (column)
@@ -4598,7 +4598,7 @@
 			 */
 			if ( formatters === aSort.length ) {
 				// All sort types have formatting functions
-				displayMaster.sort( function ( a, b ) {
+				displayControllerDevice.sort( function ( a, b ) {
 					var
 						x, y, k, test, sort,
 						len=aSort.length,
@@ -4626,7 +4626,7 @@
 				// Depreciated - remove in 1.11 (providing a plug-in option)
 				// Not all sort types have formatting methods, so we have to call their sorting
 				// methods.
-				displayMaster.sort( function ( a, b ) {
+				displayControllerDevice.sort( function ( a, b ) {
 					var
 						x, y, k, l, test, sort, fn,
 						len=aSort.length,
@@ -6554,7 +6554,7 @@
 			}
 			
 			/* Copy the data index array */
-			oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
+			oSettings.aiDisplay = oSettings.aiDisplayControllerDevice.slice();
 			
 			/* Initialisation complete - table can be drawn */
 			oSettings.bInitialised = true;
@@ -7620,7 +7620,7 @@
 		var
 			i, ien, tmp, a=[],
 			displayFiltered = settings.aiDisplay,
-			displayMaster = settings.aiDisplayMaster;
+			displayControllerDevice = settings.aiDisplayControllerDevice;
 	
 		var
 			search = opts.search,  // none, applied, removed
@@ -7634,7 +7634,7 @@
 			// array
 			return search === 'removed' ?
 				[] :
-				_range( 0, displayMaster.length );
+				_range( 0, displayControllerDevice.length );
 		}
 		else if ( page == 'current' ) {
 			// Current page implies that order=current and fitler=applied, since it is
@@ -7646,10 +7646,10 @@
 		}
 		else if ( order == 'current' || order == 'applied' ) {
 			a = search == 'none' ?
-				displayMaster.slice() :                      // no search
+				displayControllerDevice.slice() :                      // no search
 				search == 'applied' ?
 					displayFiltered.slice() :                // applied search
-					$.map( displayMaster, function (el, i) { // removed search
+					$.map( displayControllerDevice, function (el, i) { // removed search
 						return $.inArray( el, displayFiltered ) === -1 ? el : null;
 					} );
 		}
@@ -7819,7 +7819,7 @@
 			var displayIndex = $.inArray( row, settings.aiDisplay );
 	
 			// Delete from the display arrays
-			_fnDeleteIndex( settings.aiDisplayMaster, row );
+			_fnDeleteIndex( settings.aiDisplayControllerDevice, row );
 			_fnDeleteIndex( settings.aiDisplay, row );
 			_fnDeleteIndex( that[ thatIdx ], row, false ); // maintain local indexes
 	
@@ -9239,7 +9239,7 @@
 		 * row. We do this cache generation at the start of the sort in order that
 		 * the formatting of the sort data need be done only once for each cell
 		 * per sort. This array should not be read from or written to by anything
-		 * other than the master sorting methods.
+		 * other than the ControllerDevice sorting methods.
 		 *  @type array
 		 *  @default null
 		 *  @private
@@ -12868,7 +12868,7 @@
 		 *  @type array
 		 *  @default []
 		 */
-		"aiDisplayMaster": [],
+		"aiDisplayControllerDevice": [],
 	
 		/**
 		 * Store information about each column that is in use
@@ -13394,7 +13394,7 @@
 		{
 			return _fnDataSource( this ) == 'ssp' ?
 				this._iRecordsTotal * 1 :
-				this.aiDisplayMaster.length;
+				this.aiDisplayControllerDevice.length;
 		},
 	
 		/**
@@ -14694,7 +14694,7 @@
 		_fnSplitObjNotation: _fnSplitObjNotation,
 		_fnGetObjectDataFn: _fnGetObjectDataFn,
 		_fnSetObjectDataFn: _fnSetObjectDataFn,
-		_fnGetDataMaster: _fnGetDataMaster,
+		_fnGetDataControllerDevice: _fnGetDataControllerDevice,
 		_fnClearTable: _fnClearTable,
 		_fnDeleteIndex: _fnDeleteIndex,
 		_fnInvalidate: _fnInvalidate,

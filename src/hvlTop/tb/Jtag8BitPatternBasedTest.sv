@@ -9,7 +9,7 @@ class Jtag8BitPatternBasedTest extends JtagBaseTest;
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase (uvm_phase phase);
 
- JtagMasterPatternBasedVirtualSequence jtagMasterPatternBasedVirtualSequence;
+ JtagControllerDevicePatternBasedVirtualSequence jtagControllerDevicePatternBasedVirtualSequence;
 endclass : Jtag8BitPatternBasedTest
 
 function Jtag8BitPatternBasedTest :: new(string name = "Jtag8BitPatternBasedTest" , uvm_component parent);
@@ -19,22 +19,22 @@ endfunction : new
 
 function void Jtag8BitPatternBasedTest :: build_phase(uvm_phase phase);
   super.build_phase(phase);
-  jtagEnvConfig.jtagMasterAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
-  jtagEnvConfig.jtagMasterAgentConfig.jtagInstructionWidth = instructionWidth4Bit;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
+  jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagInstructionWidth = instructionWidth4Bit;
    jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth8Bit;
    jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth4Bit;
-   jtagEnvConfig.jtagMasterAgentConfig.patternNeeded = 8'b 10101010;
+   jtagEnvConfig.jtagControllerDeviceAgentConfig.patternNeeded = 8'b 10101010;
 endfunction : build_phase
 
 
 
 task Jtag8BitPatternBasedTest :: run_phase(uvm_phase phase);
-  jtagMasterPatternBasedVirtualSequence = JtagMasterPatternBasedVirtualSequence :: type_id :: create("JtagMasterPatternBasedVirtualSequence");
-  jtagMasterPatternBasedVirtualSequence.setConfig(jtagEnvConfig.jtagMasterAgentConfig);
+  jtagControllerDevicePatternBasedVirtualSequence = JtagControllerDevicePatternBasedVirtualSequence :: type_id :: create("JtagControllerDevicePatternBasedVirtualSequence");
+  jtagControllerDevicePatternBasedVirtualSequence.setConfig(jtagEnvConfig.jtagControllerDeviceAgentConfig);
  
   phase.raise_objection(this);
   repeat(NO_OF_TESTS) begin 
-  jtagMasterPatternBasedVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
+  jtagControllerDevicePatternBasedVirtualSequence.start(jtagEnv.jtagVirtualSequencer);
   end 
   phase.drop_objection(this);
 

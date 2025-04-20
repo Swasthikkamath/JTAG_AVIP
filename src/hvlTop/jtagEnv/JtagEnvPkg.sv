@@ -8,7 +8,7 @@ package JtagEnvPkg ;
   import uvm_pkg :: *;
 
   import JtagGlobalPkg :: *;
-  import JtagMasterPkg :: *;
+  import JtagControllerDevicePkg :: *;
   import JtagSlavePkg :: *;
 
   `include "JtagEnvConfig.sv"

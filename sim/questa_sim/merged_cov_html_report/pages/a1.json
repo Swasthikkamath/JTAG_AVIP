@@ -1,12 +1,12 @@
 var g_data = {
 a47:{
-scopes:[{link:'z.htm?f=0&s=47',val:'work.JtagMasterAssertions'}]
+scopes:[{link:'z.htm?f=0&s=47',val:'work.JtagControllerDeviceAssertions'}]
 ,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testVectorValidity',fc:'Gr',pc:'Gr',h0:'0',h1:'250000',h2:'15499975',h3:'0',h4:'15249975',h5:'0',h6:'50'}
 ,{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'250000',h2:'15499975',h3:'0',h4:'15249975',h5:'0',h6:'50'}
 ],
 },
 a150:{
-scopes:[{s:'55',b:'1',val:'HdlTop'},{s:'65',b:'1',val:'jtagMasterAgentBfm'},{s:'92',b:'1',val:'jtagMasterMonitorBfm'},{link:'z.htm?f=0&s=150',val:'TestVectrorTestingAssertions'}]
+scopes:[{s:'55',b:'1',val:'HdlTop'},{s:'65',b:'1',val:'jtagControllerDeviceAgentBfm'},{s:'92',b:'1',val:'jtagControllerDeviceMonitorBfm'},{link:'z.htm?f=0&s=150',val:'TestVectrorTestingAssertions'}]
 ,assertions:[{dummy:0},{cr:'c',c:'g',z:'assert__testVectorValidity',fc:'Gr',pc:'Gr',h0:'0',h1:'250000',h2:'15499975',h3:'0',h4:'15249975',h5:'0',h6:'50'}
 ,{cr:'c',c:'g',z:'assert__instructionValidityCheck',fc:'Gr',pc:'Gr',h0:'0',h1:'250000',h2:'15499975',h3:'0',h4:'15249975',h5:'0',h6:'50'}
 ],

@@ -7,10 +7,10 @@ package JtagBaseTestPkg;
   import uvm_pkg :: *;
   import JtagGlobalPkg :: *;
 
-  import JtagMasterPkg :: *;
+  import JtagControllerDevicePkg :: *;
   import JtagSlavePkg :: *;
   import JtagEnvPkg :: *;
-  import JtagMasterSequencePkg :: *;
+  import JtagControllerDeviceSequencePkg :: *;
   import JtagSlaveSequencePkg :: *;
   import JtagVirtualSequencePkg :: *;
 

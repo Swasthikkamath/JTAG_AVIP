@@ -1,14 +1,14 @@
-`ifndef JTAGMASTERSEQUENCEPKG_INCLUDED_
-`define JTAGMASTERSEQUENCEPKG_INCLUDED_
+`ifndef JTAGControllerDeviceSEQUENCEPKG_INCLUDED_
+`define JTAGControllerDeviceSEQUENCEPKG_INCLUDED_
 
-package JtagMasterSequencePkg;
+package JtagControllerDeviceSequencePkg;
   import uvm_pkg :: *;
   `include "uvm_macros.svh"
   import JtagGlobalPkg :: *;
-  import JtagMasterPkg :: *;
+  import JtagControllerDevicePkg :: *;
 
-  `include "JtagMasterBaseSequence.sv"
-  `include "JtagMasterTestVectorSequence.sv"
-  `include "JtagMasterPatternBasedSequence.sv"
-endpackage : JtagMasterSequencePkg
+  `include "JtagControllerDeviceBaseSequence.sv"
+  `include "JtagControllerDeviceTestVectorSequence.sv"
+  `include "JtagControllerDevicePatternBasedSequence.sv"
+endpackage : JtagControllerDeviceSequencePkg
 `endif

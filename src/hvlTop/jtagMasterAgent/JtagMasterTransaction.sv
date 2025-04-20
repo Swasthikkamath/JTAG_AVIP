@@ -1,28 +1,28 @@
-`ifndef JTAGMASTERTRANSACTION_INCLUDED_
-`define JTAGMASTERTRANSACTION_INCLUDED_
+`ifndef JTAGControllerDeviceTRANSACTION_INCLUDED_
+`define JTAGControllerDeviceTRANSACTION_INCLUDED_
 
-class JtagMasterTransaction extends uvm_sequence_item;
+class JtagControllerDeviceTransaction extends uvm_sequence_item;
 
-  `uvm_object_utils(JtagMasterTransaction)
+  `uvm_object_utils(JtagControllerDeviceTransaction)
 
   rand logic[31:0]jtagTestVector;
   //logic[61:0]jtagTms = 'b 011000000000000000000000000000000000111000000110;
   logic[4:0]jtagInstruction;
 
-  extern function new(string name = "JtagMasterTransaction");
+  extern function new(string name = "JtagControllerDeviceTransaction");
   extern function void do_copy(uvm_object rhs);
   extern function bit do_compare(uvm_object rhs , uvm_comparer comparer = null);
   extern function void do_print(uvm_printer printer);
 
-endclass : JtagMasterTransaction
+endclass : JtagControllerDeviceTransaction
 
-function JtagMasterTransaction :: new(string name = "JtagMasterTransaction");
+function JtagControllerDeviceTransaction :: new(string name = "JtagControllerDeviceTransaction");
   super.new(name);
 endfunction  : new
 
 
-function void JtagMasterTransaction  :: do_copy(uvm_object rhs);
-  JtagMasterTransaction sourceObject;
+function void JtagControllerDeviceTransaction  :: do_copy(uvm_object rhs);
+  JtagControllerDeviceTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
     `uvm_fatal("DO_COPY","THE TYPE OF SOURCE IS NOT COMPTATIBLE")
@@ -31,8 +31,8 @@ function void JtagMasterTransaction  :: do_copy(uvm_object rhs);
   this.jtagTestVector = sourceObject.jtagTestVector;
 endfunction : do_copy
 
-function bit JtagMasterTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
-  JtagMasterTransaction sourceObject;
+function bit JtagControllerDeviceTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
+  JtagControllerDeviceTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
    `uvm_fatal("DO_COMPARE","THE TYPE OF SOURCE IS NOT COMPATIBLE")
@@ -40,7 +40,7 @@ function bit JtagMasterTransaction :: do_compare(uvm_object rhs,uvm_comparer com
   return (super.compare(rhs,comparer) && (this.jtagTestVector == sourceObject.jtagTestVector));
 endfunction : do_compare
 
-function void JtagMasterTransaction :: do_print(uvm_printer printer);
+function void JtagControllerDeviceTransaction :: do_print(uvm_printer printer);
   super.do_print(printer);
   printer.print_field($sformatf("TEST VECTOR"),this.jtagTestVector,$bits(this.jtagTestVector),UVM_BIN);
 endfunction : do_print

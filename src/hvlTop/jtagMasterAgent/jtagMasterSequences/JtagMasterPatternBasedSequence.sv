@@ -1,22 +1,22 @@
 
-`ifndef JTAGMASTERPATTERNBASEDSEQUENCE_INCLUDED_
-`define JTAGMASTERPATTERNBASEDSEQUENCE_INCLUDED_
+`ifndef JTAGControllerDevicePATTERNBASEDSEQUENCE_INCLUDED_
+`define JTAGControllerDevicePATTERNBASEDSEQUENCE_INCLUDED_
 
-class JtagMasterPatternBasedSequence extends JtagMasterBaseSequence;
-  `uvm_object_utils(JtagMasterPatternBasedSequence)
+class JtagControllerDevicePatternBasedSequence extends JtagControllerDeviceBaseSequence;
+  `uvm_object_utils(JtagControllerDevicePatternBasedSequence)
   rand logic[31:0]patternNeeded;
-  extern function new(string name = "JtagMasterPatternBasedSequence");
+  extern function new(string name = "JtagControllerDevicePatternBasedSequence");
   extern virtual task body();
 
-endclass : JtagMasterPatternBasedSequence 
+endclass : JtagControllerDevicePatternBasedSequence 
 
-function JtagMasterPatternBasedSequence :: new(string name = "JtagMasterPatternBasedSequence");
+function JtagControllerDevicePatternBasedSequence :: new(string name = "JtagControllerDevicePatternBasedSequence");
   super.new(name);
 endfunction : new
 
-task JtagMasterPatternBasedSequence :: body();
+task JtagControllerDevicePatternBasedSequence :: body();
   super.body();
-  req = JtagMasterTransaction :: type_id :: create("req");
+  req = JtagControllerDeviceTransaction :: type_id :: create("req");
   req.randomize() with{jtagTestVector == patternNeeded;};
   req.print();
   start_item(req);

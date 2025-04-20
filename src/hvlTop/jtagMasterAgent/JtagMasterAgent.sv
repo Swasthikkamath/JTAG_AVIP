@@ -1,68 +1,68 @@
-`ifndef JTAGMASTERAGENT_INCLUDED_
-`define JTAGMASTERAGENT_INCLUDED_
+`ifndef JTAGControllerDeviceAGENT_INCLUDED_
+`define JTAGControllerDeviceAGENT_INCLUDED_
 
-class JtagMasterAgent extends uvm_agent;
-  `uvm_component_utils(JtagMasterAgent)
+class JtagControllerDeviceAgent extends uvm_agent;
+  `uvm_component_utils(JtagControllerDeviceAgent)
 
-  uvm_analysis_port #(JtagMasterTransaction) jtagMasterAnalysisPort;
+  uvm_analysis_port #(JtagControllerDeviceTransaction) jtagControllerDeviceAnalysisPort;
 
-  JtagMasterAgentConfig jtagMasterAgentConfig;
+  JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig;
 
-  JtagMasterDriver jtagMasterDriver;
+  JtagControllerDeviceDriver jtagControllerDeviceDriver;
  
-  JtagMasterMonitor jtagMasterMonitor;
+  JtagControllerDeviceMonitor jtagControllerDeviceMonitor;
 
-  JtagMasterSequencer jtagMasterSequencer;
+  JtagControllerDeviceSequencer jtagControllerDeviceSequencer;
 
-  JtagMasterCoverage jtagMasterCoverage;
+  JtagControllerDeviceCoverage jtagControllerDeviceCoverage;
 
 
-  extern function new(string name ="JtagMasterAgent", uvm_component parent);
+  extern function new(string name ="JtagControllerDeviceAgent", uvm_component parent);
   
   extern virtual function void build_phase(uvm_phase phase);
 
   extern virtual function void connect_phase(uvm_phase phase);
 
-endclass : JtagMasterAgent
+endclass : JtagControllerDeviceAgent
 
-function JtagMasterAgent :: new(string name ="JtagMasterAgent", uvm_component parent);
+function JtagControllerDeviceAgent :: new(string name ="JtagControllerDeviceAgent", uvm_component parent);
   super.new(name , parent);
 endfunction  : new
 
-function void  JtagMasterAgent ::build_phase (uvm_phase phase);
+function void  JtagControllerDeviceAgent ::build_phase (uvm_phase phase);
   super.build_phase(phase);
 
-  if(!(uvm_config_db #(JtagMasterAgentConfig) :: get(this ,"","jtagMasterAgentConfig",jtagMasterAgentConfig)))
-    `uvm_fatal(get_type_name(),"FAILED TO GET AGENT CONFIG IN MASTER")
+  if(!(uvm_config_db #(JtagControllerDeviceAgentConfig) :: get(this ,"","jtagControllerDeviceAgentConfig",jtagControllerDeviceAgentConfig)))
+    `uvm_fatal(get_type_name(),"FAILED TO GET AGENT CONFIG IN ControllerDevice")
 
   
 
-  if(jtagMasterAgentConfig.is_active == UVM_ACTIVE) begin 
-    jtagMasterDriver = JtagMasterDriver :: type_id :: create("jtagMasterDriver",this);
-    jtagMasterSequencer = JtagMasterSequencer :: type_id :: create("jtagMasterSequencer",this);
+  if(jtagControllerDeviceAgentConfig.is_active == UVM_ACTIVE) begin 
+    jtagControllerDeviceDriver = JtagControllerDeviceDriver :: type_id :: create("jtagControllerDeviceDriver",this);
+    jtagControllerDeviceSequencer = JtagControllerDeviceSequencer :: type_id :: create("jtagControllerDeviceSequencer",this);
   end 
 
-  jtagMasterMonitor = JtagMasterMonitor :: type_id :: create("jtagMasterMonitor",this);
+  jtagControllerDeviceMonitor = JtagControllerDeviceMonitor :: type_id :: create("jtagControllerDeviceMonitor",this);
 
-  if(jtagMasterAgentConfig.hasCoverage == 1) begin 
-   jtagMasterCoverage = JtagMasterCoverage :: type_id :: create("jtagMasterCoverage",this);
+  if(jtagControllerDeviceAgentConfig.hasCoverage == 1) begin 
+   jtagControllerDeviceCoverage = JtagControllerDeviceCoverage :: type_id :: create("jtagControllerDeviceCoverage",this);
   end
 
-  jtagMasterAnalysisPort = new("jtagMasterAnalysisPort",this);
+  jtagControllerDeviceAnalysisPort = new("jtagControllerDeviceAnalysisPort",this);
 endfunction  : build_phase
 
-function void JtagMasterAgent :: connect_phase(uvm_phase phase);
+function void JtagControllerDeviceAgent :: connect_phase(uvm_phase phase);
   super.connect_phase(phase);
 
-  if(jtagMasterAgentConfig.is_active == UVM_ACTIVE) begin 
+  if(jtagControllerDeviceAgentConfig.is_active == UVM_ACTIVE) begin 
     $display("CONNECTING DRIVER AND SEQUENCER");
-    jtagMasterDriver.seq_item_port.connect(jtagMasterSequencer.seq_item_export);
+    jtagControllerDeviceDriver.seq_item_port.connect(jtagControllerDeviceSequencer.seq_item_export);
   end  
 
-  if(jtagMasterAgentConfig.hasCoverage ==1) begin 
-  jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(jtagMasterCoverage.analysis_export);
+  if(jtagControllerDeviceAgentConfig.hasCoverage ==1) begin 
+  jtagControllerDeviceMonitor.jtagControllerDeviceMonitorAnalysisPort.connect(jtagControllerDeviceCoverage.analysis_export);
   end 
 
-  jtagMasterMonitor.jtagMasterMonitorAnalysisPort.connect(this.jtagMasterAnalysisPort);
+  jtagControllerDeviceMonitor.jtagControllerDeviceMonitorAnalysisPort.connect(this.jtagControllerDeviceAnalysisPort);
 endfunction : connect_phase
 `endif

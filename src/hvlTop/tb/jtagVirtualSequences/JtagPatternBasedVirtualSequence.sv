@@ -1,31 +1,31 @@
 
-`ifndef JTAGMASTERPATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
-`define JTAGMASTERPATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
+`ifndef JTAGControllerDevicePATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
+`define JTAGControllerDevicePATTERNBASEDVIRTUALSEQUENCE_INCLUDED_
 
-class JtagMasterPatternBasedVirtualSequence extends JtagVirtualBaseSequence;
-  `uvm_object_utils(JtagMasterPatternBasedVirtualSequence)
+class JtagControllerDevicePatternBasedVirtualSequence extends JtagVirtualBaseSequence;
+  `uvm_object_utils(JtagControllerDevicePatternBasedVirtualSequence)
 
-  JtagMasterPatternBasedSequence jtagMasterPatternBasedSequence;
+  JtagControllerDevicePatternBasedSequence jtagControllerDevicePatternBasedSequence;
   JtagSlaveBaseSequence  jtagSlaveBaseSequence;
-  JtagMasterAgentConfig jtagMasterAgentConfig;
+  JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig;
 
-  extern function new(string name = "JtagMasterPatternBasedVirtualSequence");
+  extern function new(string name = "JtagControllerDevicePatternBasedVirtualSequence");
   extern virtual task body();
-  extern task setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
-endclass : JtagMasterPatternBasedVirtualSequence 
+  extern task setConfig(JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig);
+endclass : JtagControllerDevicePatternBasedVirtualSequence 
 
 
-function JtagMasterPatternBasedVirtualSequence ::new(string name = "JtagMasterPatternBasedVirtualSequence");
+function JtagControllerDevicePatternBasedVirtualSequence ::new(string name = "JtagControllerDevicePatternBasedVirtualSequence");
   super.new(name);
 endfunction  : new
 
-task JtagMasterPatternBasedVirtualSequence :: body();
+task JtagControllerDevicePatternBasedVirtualSequence :: body();
   super.body();
-  `uvm_do_on_with(jtagMasterPatternBasedSequence,p_sequencer.jtagMasterSequencer,{patternNeeded == jtagMasterAgentConfig.patternNeeded;})
+  `uvm_do_on_with(jtagControllerDevicePatternBasedSequence,p_sequencer.jtagControllerDeviceSequencer,{patternNeeded == jtagControllerDeviceAgentConfig.patternNeeded;})
 endtask : body 
 
-task JtagMasterPatternBasedVirtualSequence :: setConfig(JtagMasterAgentConfig jtagMasterAgentConfig);
-  this.jtagMasterAgentConfig = jtagMasterAgentConfig;
+task JtagControllerDevicePatternBasedVirtualSequence :: setConfig(JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig);
+  this.jtagControllerDeviceAgentConfig = jtagControllerDeviceAgentConfig;
 endtask : setConfig
  
 `endif
