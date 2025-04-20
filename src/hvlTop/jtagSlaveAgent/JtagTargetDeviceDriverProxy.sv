@@ -1,36 +1,36 @@
-`ifndef JTAGSLAVEDRIVER_INCLUDED_
-`define JTAGSLAVEDRIVER_INCLUDED_
+`ifndef JTAGTargetDeviceDRIVER_INCLUDED_
+`define JTAGTargetDeviceDRIVER_INCLUDED_
 
-class JtagSlaveDriver extends uvm_driver#(JtagSlaveTransaction);
-  `uvm_component_utils(JtagSlaveDriver)
-  virtual JtagSlaveDriverBfm jtagSlaveDriverBfm;
-  JtagSlaveAgentConfig jtagSlaveAgentConfig;
+class JtagTargetDeviceDriver extends uvm_driver#(JtagTargetDeviceTransaction);
+  `uvm_component_utils(JtagTargetDeviceDriver)
+  virtual JtagTargetDeviceDriverBfm jtagTargetDeviceDriverBfm;
+  JtagTargetDeviceAgentConfig jtagTargetDeviceAgentConfig;
   JtagConfigStruct jtagConfigStruct;
-  extern function new (string name = "JtagSlaveDriver", uvm_component parent);
+  extern function new (string name = "JtagTargetDeviceDriver", uvm_component parent);
   extern virtual function void build_phase(uvm_phase phase);
   extern virtual task run_phase(uvm_phase phase);
-endclass : JtagSlaveDriver
+endclass : JtagTargetDeviceDriver
 
-function JtagSlaveDriver::new(string name = "JtagSlaveDriver",uvm_component parent);
+function JtagTargetDeviceDriver::new(string name = "JtagTargetDeviceDriver",uvm_component parent);
   super.new(name,parent);
 endfunction  : new
 
-function void JtagSlaveDriver :: build_phase(uvm_phase phase);
+function void JtagTargetDeviceDriver :: build_phase(uvm_phase phase);
   super.build_phase(phase);
 
-  if(!(uvm_config_db #(JtagSlaveAgentConfig) :: get(this,"","jtagSlaveAgentConfig",jtagSlaveAgentConfig)))
-    `uvm_fatal(get_type_name(),"FAILED TO GET CONFIG IN Slave DRIVER")
+  if(!(uvm_config_db #(JtagTargetDeviceAgentConfig) :: get(this,"","jtagTargetDeviceAgentConfig",jtagTargetDeviceAgentConfig)))
+    `uvm_fatal(get_type_name(),"FAILED TO GET CONFIG IN TargetDevice DRIVER")
 
-    if(!(uvm_config_db #(virtual JtagSlaveDriverBfm) :: get(this,"","jtagSlaveDriverBfm",jtagSlaveDriverBfm)))
-      `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO Slave DRIVERBFM IN Slave DRIVER")
+    if(!(uvm_config_db #(virtual JtagTargetDeviceDriverBfm) :: get(this,"","jtagTargetDeviceDriverBfm",jtagTargetDeviceDriverBfm)))
+      `uvm_fatal(get_type_name(),"FAILED TO GET VIRTUAL POINTER TO TargetDevice DRIVERBFM IN TargetDevice DRIVER")
 endfunction : build_phase
 
-task JtagSlaveDriver :: run_phase(uvm_phase phase);
+task JtagTargetDeviceDriver :: run_phase(uvm_phase phase);
   super.run_phase(phase);
   forever begin
-  JtagSlaveConfigConverter ::fromClass(jtagSlaveAgentConfig ,jtagConfigStruct);
-  jtagSlaveDriverBfm.waitForReset();
-  jtagSlaveDriverBfm.observeData(jtagConfigStruct);
+  JtagTargetDeviceConfigConverter ::fromClass(jtagTargetDeviceAgentConfig ,jtagConfigStruct);
+  jtagTargetDeviceDriverBfm.waitForReset();
+  jtagTargetDeviceDriverBfm.observeData(jtagConfigStruct);
   end 
 endtask : run_phase
 

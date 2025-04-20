@@ -1,20 +1,20 @@
-`ifndef JTAGSLAVEBASESEQUENCE_INCLUDED_
-`define JTAGSLAVEBASESEQUENCE_INCLUDED_
+`ifndef JTAGTargetDeviceBASESEQUENCE_INCLUDED_
+`define JTAGTargetDeviceBASESEQUENCE_INCLUDED_
 
-class JtagSlaveBaseSequence extends uvm_sequence#(JtagSlaveTransaction);
-  `uvm_object_utils(JtagSlaveBaseSequence) 
+class JtagTargetDeviceBaseSequence extends uvm_sequence#(JtagTargetDeviceTransaction);
+  `uvm_object_utils(JtagTargetDeviceBaseSequence) 
 
-  extern function new(string name = "JtagSlaveBaseSequence");
+  extern function new(string name = "JtagTargetDeviceBaseSequence");
   extern virtual task body();
 
-endclass : JtagSlaveBaseSequence 
+endclass : JtagTargetDeviceBaseSequence 
 
-function JtagSlaveBaseSequence :: new (string name = "JtagSlaveBaseSequence");
+function JtagTargetDeviceBaseSequence :: new (string name = "JtagTargetDeviceBaseSequence");
   super.new(name);
 endfunction : new
 
-task JtagSlaveBaseSequence :: body();
-  req = JtagSlaveTransaction :: type_id :: create("req");
+task JtagTargetDeviceBaseSequence :: body();
+  req = JtagTargetDeviceTransaction :: type_id :: create("req");
 
   start_item(req);
   req.randomize();

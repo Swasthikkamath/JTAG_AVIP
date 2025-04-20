@@ -5,7 +5,7 @@ class JtagVirtualSequencer extends uvm_sequencer;
   `uvm_component_utils(JtagVirtualSequencer)
 
   JtagControllerDeviceSequencer jtagControllerDeviceSequencer;
-  JtagSlaveSequencer jtagSlaveSequencer;
+  JtagTargetDeviceSequencer jtagTargetDeviceSequencer;
 
   extern function new(string name ="JtagVirtualSequencer" , uvm_component parent);
 

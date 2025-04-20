@@ -19,8 +19,8 @@ function void JtagTdiWidth32InstructionWidth3Test :: build_phase(uvm_phase phase
   super.build_phase(phase);
   jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagTestVectorWidth = testVectorWidth32Bit;
   jtagEnvConfig.jtagControllerDeviceAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
-   jtagEnvConfig.jtagSlaveAgentConfig.jtagTestVectorWidth = testVectorWidth32Bit;
-   jtagEnvConfig.jtagSlaveAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
+   jtagEnvConfig.jtagTargetDeviceAgentConfig.jtagTestVectorWidth = testVectorWidth32Bit;
+   jtagEnvConfig.jtagTargetDeviceAgentConfig.jtagInstructionWidth = instructionWidth3Bit;
 endfunction : build_phase
 
 

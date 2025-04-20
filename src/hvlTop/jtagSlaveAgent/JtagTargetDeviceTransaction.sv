@@ -1,26 +1,26 @@
-`ifndef JTAGSLAVETRANSACTION_INCLUDED_
-`define JTAGSLAVETRANSACTION_INCLUDED_
+`ifndef JTAGTargetDeviceTRANSACTION_INCLUDED_
+`define JTAGTargetDeviceTRANSACTION_INCLUDED_
 
-class JtagSlaveTransaction extends uvm_sequence_item;
+class JtagTargetDeviceTransaction extends uvm_sequence_item;
 
-  `uvm_object_utils(JtagSlaveTransaction)
+  `uvm_object_utils(JtagTargetDeviceTransaction)
 
   logic[31:0]jtagTestVector;
   logic[4:0]jtagInstruction;
-  extern function new(string name = "JtagSlaveTransaction");
+  extern function new(string name = "JtagTargetDeviceTransaction");
   extern function void do_copy(uvm_object rhs);
   extern function bit do_compare(uvm_object rhs , uvm_comparer comparer = null);
   extern function void do_print(uvm_printer printer);
 
-endclass : JtagSlaveTransaction
+endclass : JtagTargetDeviceTransaction
 
-function JtagSlaveTransaction :: new(string name = "JtagSlaveTransaction");
+function JtagTargetDeviceTransaction :: new(string name = "JtagTargetDeviceTransaction");
   super.new(name);
 endfunction  : new
 
 
-function void JtagSlaveTransaction  :: do_copy(uvm_object rhs);
-  JtagSlaveTransaction sourceObject;
+function void JtagTargetDeviceTransaction  :: do_copy(uvm_object rhs);
+  JtagTargetDeviceTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
     `uvm_fatal("DO_COPY","THE TYPE OF SOURCE IS NOT COMPTATIBLE")
@@ -29,8 +29,8 @@ function void JtagSlaveTransaction  :: do_copy(uvm_object rhs);
   this.jtagTestVector = sourceObject.jtagTestVector;
 endfunction : do_copy
 
-function bit  JtagSlaveTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
-  JtagSlaveTransaction sourceObject;
+function bit  JtagTargetDeviceTransaction :: do_compare(uvm_object rhs,uvm_comparer comparer=null);
+  JtagTargetDeviceTransaction sourceObject;
 
   if(!($cast(sourceObject,rhs)))
    `uvm_fatal("DO_COMPARE","THE TYPE OF SOURCE IS NOT COMPATIBLE")
@@ -38,7 +38,7 @@ function bit  JtagSlaveTransaction :: do_compare(uvm_object rhs,uvm_comparer com
   return (super.compare(rhs,comparer) && (this.jtagTestVector == sourceObject.jtagTestVector));
 endfunction : do_compare
 
-function void JtagSlaveTransaction :: do_print(uvm_printer printer);
+function void JtagTargetDeviceTransaction :: do_print(uvm_printer printer);
   super.do_print(printer);
   printer.print_field($sformatf("TEST VECTOR"),this.jtagTestVector,$bits(this.jtagTestVector),UVM_BIN);
 endfunction : do_print

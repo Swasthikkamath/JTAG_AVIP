@@ -13,9 +13,9 @@ package JtagVirtualSequencePkg;
   import JtagGlobalPkg :: *;
   import JtagEnvPkg::*;
   import JtagControllerDevicePkg::*;
-  import JtagSlavePkg::*;
+  import JtagTargetDevicePkg::*;
   import JtagControllerDeviceSequencePkg::*;
-  import JtagSlaveSequencePkg::*;
+  import JtagTargetDeviceSequencePkg::*;
   
   //-------------------------------------------------------
   // Include all other files

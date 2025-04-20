@@ -5,7 +5,7 @@ class JtagEnvConfig extends uvm_object;
   `uvm_object_utils(JtagEnvConfig)
 
   JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig;
-  JtagSlaveAgentConfig jtagSlaveAgentConfig;
+  JtagTargetDeviceAgentConfig jtagTargetDeviceAgentConfig;
 
   bit hasScoreboard;
   bit hasVirtualSequencer;

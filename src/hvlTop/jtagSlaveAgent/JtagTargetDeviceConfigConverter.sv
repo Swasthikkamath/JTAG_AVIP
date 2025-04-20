@@ -1,22 +1,22 @@
-`ifndef JTAGSLAVECONFIGCONVERTER_INCLUDED_
-`define JTAGSLAVECONFIGCONVERTER_INCLUDED_
+`ifndef JTAGTargetDeviceCONFIGCONVERTER_INCLUDED_
+`define JTAGTargetDeviceCONFIGCONVERTER_INCLUDED_
 
-class JtagSlaveConfigConverter extends uvm_object;
-  `uvm_object_utils(JtagSlaveConfigConverter)
-  extern function new(string name = "JtagSlaveConfigConverter");
-  extern static function void fromClass(input JtagSlaveAgentConfig jtagSlaveAgentConfig,                    output JtagConfigStruct jtagConfigStruct);
+class JtagTargetDeviceConfigConverter extends uvm_object;
+  `uvm_object_utils(JtagTargetDeviceConfigConverter)
+  extern function new(string name = "JtagTargetDeviceConfigConverter");
+  extern static function void fromClass(input JtagTargetDeviceAgentConfig jtagTargetDeviceAgentConfig,                    output JtagConfigStruct jtagConfigStruct);
 
-endclass : JtagSlaveConfigConverter 
+endclass : JtagTargetDeviceConfigConverter 
 
-function JtagSlaveConfigConverter :: new(string name = "JtagSlaveConfigConverter");
+function JtagTargetDeviceConfigConverter :: new(string name = "JtagTargetDeviceConfigConverter");
   super.new(name);
 endfunction : new
 
-function void JtagSlaveConfigConverter :: fromClass(input JtagSlaveAgentConfig jtagSlaveAgentConfig,output JtagConfigStruct jtagConfigStruct);
-  jtagConfigStruct.jtagTestVectorWidth = jtagSlaveAgentConfig.jtagTestVectorWidth;
-  jtagConfigStruct.jtagInstructionWidth = jtagSlaveAgentConfig.jtagInstructionWidth;
-  for (int i=0; i<jtagSlaveAgentConfig.jtagInstructionWidth;i++)
-   jtagConfigStruct.jtagInstructionOpcode[i] = jtagSlaveAgentConfig.jtagInstructionOpcode[i];
+function void JtagTargetDeviceConfigConverter :: fromClass(input JtagTargetDeviceAgentConfig jtagTargetDeviceAgentConfig,output JtagConfigStruct jtagConfigStruct);
+  jtagConfigStruct.jtagTestVectorWidth = jtagTargetDeviceAgentConfig.jtagTestVectorWidth;
+  jtagConfigStruct.jtagInstructionWidth = jtagTargetDeviceAgentConfig.jtagInstructionWidth;
+  for (int i=0; i<jtagTargetDeviceAgentConfig.jtagInstructionWidth;i++)
+   jtagConfigStruct.jtagInstructionOpcode[i] = jtagTargetDeviceAgentConfig.jtagInstructionOpcode[i];
 endfunction :fromClass
 
 `endif

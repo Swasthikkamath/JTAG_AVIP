@@ -5,7 +5,7 @@ class JtagControllerDeviceTestingVirtualSequence extends JtagVirtualBaseSequence
   `uvm_object_utils(JtagControllerDeviceTestingVirtualSequence)
 
   JtagControllerDeviceTestVectorSequence jtagControllerDeviceTestVectorSequence;
-  JtagSlaveBaseSequence  jtagSlaveBaseSequence;
+  JtagTargetDeviceBaseSequence  jtagTargetDeviceBaseSequence;
   JtagControllerDeviceAgentConfig jtagControllerDeviceAgentConfig;
 
   extern function new(string name = "JtagControllerDeviceTestingVirtualSequence");

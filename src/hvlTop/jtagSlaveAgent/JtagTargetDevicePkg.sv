@@ -1,21 +1,21 @@
-`ifndef JTAGMSLAVEPKG_INCLUDED_
-`define JTAGSLAVEPKG_INCLUDED_
+`ifndef JTAGMTargetDevicePKG_INCLUDED_
+`define JTAGTargetDevicePKG_INCLUDED_
 
-package JtagSlavePkg;
+package JtagTargetDevicePkg;
   `include "uvm_macros.svh"
 
   import uvm_pkg :: *;
   import JtagGlobalPkg :: *;
-  `include "JtagSlaveAgentConfig.sv"
-  `include "JtagSlaveTransaction.sv"
-  `include "JtagSlaveSeqItemConverter.sv"
-  `include "JtagSlaveConfigConverter.sv"
-  `include "JtagSlaveSequencer.sv"
-  `include "JtagSlaveDriverProxy.sv"
-  `include "JtagSlaveMonitorProxy.sv"
-  `include "JtagSlaveCoverage.sv"
-  `include "JtagSlaveAgent.sv"
+  `include "JtagTargetDeviceAgentConfig.sv"
+  `include "JtagTargetDeviceTransaction.sv"
+  `include "JtagTargetDeviceSeqItemConverter.sv"
+  `include "JtagTargetDeviceConfigConverter.sv"
+  `include "JtagTargetDeviceSequencer.sv"
+  `include "JtagTargetDeviceDriverProxy.sv"
+  `include "JtagTargetDeviceMonitorProxy.sv"
+  `include "JtagTargetDeviceCoverage.sv"
+  `include "JtagTargetDeviceAgent.sv"
 
-endpackage : JtagSlavePkg
+endpackage : JtagTargetDevicePkg
 
 `endif

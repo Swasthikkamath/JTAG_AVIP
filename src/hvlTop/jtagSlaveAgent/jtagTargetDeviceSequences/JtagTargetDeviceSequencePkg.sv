@@ -1,13 +1,13 @@
-`ifndef JTAGSLAVESEQUENCEPKG_INCLUDED_
-`define JTAGSLAVESEQUENCEPKG_INCLUDED_
+`ifndef JTAGTargetDeviceSEQUENCEPKG_INCLUDED_
+`define JTAGTargetDeviceSEQUENCEPKG_INCLUDED_
 
-package JtagSlaveSequencePkg;
+package JtagTargetDeviceSequencePkg;
   import uvm_pkg :: *;
   `include "uvm_macros.svh"
   import JtagGlobalPkg :: *;
-  import JtagSlavePkg :: *;
+  import JtagTargetDevicePkg :: *;
 
-  `include "JtagSlaveBaseSequence.sv"
+  `include "JtagTargetDeviceBaseSequence.sv"
 
-endpackage : JtagSlaveSequencePkg
+endpackage : JtagTargetDeviceSequencePkg
 `endif

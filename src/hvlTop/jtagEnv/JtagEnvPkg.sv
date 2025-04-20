@@ -9,7 +9,7 @@ package JtagEnvPkg ;
 
   import JtagGlobalPkg :: *;
   import JtagControllerDevicePkg :: *;
-  import JtagSlavePkg :: *;
+  import JtagTargetDevicePkg :: *;
 
   `include "JtagEnvConfig.sv"
   `include "JtagVirtualSequencer.sv"

@@ -4,11 +4,11 @@
 import JtagGlobalPkg::*;
 
 //--------------------------------------------------------------------------------------------
-// Interface : JtagSlaveMonitorBfm
+// Interface : JtagTargetDeviceMonitorBfm
 //  Used as the HDL driver for Jtag
 //  It connects with the HVL driver_proxy for driving the stimulus
 //--------------------------------------------------------------------------------------------
-interface JtagSlaveMonitorBfm (input  logic   clk,
+interface JtagTargetDeviceMonitorBfm (input  logic   clk,
                               input  logic   reset,
                              input logic  Tdo,
 			     input logic Tms,
@@ -23,11 +23,11 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   //-------------------------------------------------------
   // Importing the Transmitter package file
   //-------------------------------------------------------
-  import JtagSlavePkg::*;
+  import JtagTargetDevicePkg::*;
   JtagTapStates jtagTapState;
   //Variable: name
   //Used to store the name of the interface
-  string name = "JTAG_Slave_MONITOR_BFM"; 
+  string name = "JTAG_TargetDevice_MONITOR_BFM"; 
 
   task waitForReset();
     jtagTapState = jtagResetState;
@@ -229,4 +229,4 @@ interface JtagSlaveMonitorBfm (input  logic   clk,
   
   endtask 
 	
-endinterface : JtagSlaveMonitorBfm
+endinterface : JtagTargetDeviceMonitorBfm

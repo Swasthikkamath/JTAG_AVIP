@@ -1,8 +1,8 @@
-`ifndef JTAGSLAVEAGENTCONFIG_INCLUDED_
-`define JTAGSLAVEAGENTCONFIG_INCLUDED_
+`ifndef JTAGTargetDeviceAGENTCONFIG_INCLUDED_
+`define JTAGTargetDeviceAGENTCONFIG_INCLUDED_
 
-class JtagSlaveAgentConfig extends uvm_object;
-  `uvm_object_utils(JtagSlaveAgentConfig)
+class JtagTargetDeviceAgentConfig extends uvm_object;
+  `uvm_object_utils(JtagTargetDeviceAgentConfig)
 
   bit hasCoverage;
   uvm_active_passive_enum is_active;
@@ -10,10 +10,10 @@ class JtagSlaveAgentConfig extends uvm_object;
   JtagInstructionWidthEnum jtagInstructionWidth;
   JtagInstructionOpcodeEnum jtagInstructionOpcode;
 
-  extern function new(string name = "JtagSlaveAgentConfig");
-endclass : JtagSlaveAgentConfig
+  extern function new(string name = "JtagTargetDeviceAgentConfig");
+endclass : JtagTargetDeviceAgentConfig
 
-function JtagSlaveAgentConfig :: new(string name = "JtagSlaveAgentConfig");
+function JtagTargetDeviceAgentConfig :: new(string name = "JtagTargetDeviceAgentConfig");
   super.new(name);
 endfunction  : new
 

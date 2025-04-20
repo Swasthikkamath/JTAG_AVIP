@@ -8,10 +8,10 @@ package JtagBaseTestPkg;
   import JtagGlobalPkg :: *;
 
   import JtagControllerDevicePkg :: *;
-  import JtagSlavePkg :: *;
+  import JtagTargetDevicePkg :: *;
   import JtagEnvPkg :: *;
   import JtagControllerDeviceSequencePkg :: *;
-  import JtagSlaveSequencePkg :: *;
+  import JtagTargetDeviceSequencePkg :: *;
   import JtagVirtualSequencePkg :: *;
 
   `include "JtagBaseTest.sv"
