@@ -59,13 +59,13 @@ module HdlTop;
   // Jtag Transmitter BFM Agent Instantiation
   //-------------------------------------------------------
 
-  JtagMasterAgentBfm jtagMasterAgentBfm(jtagIf); 
+  JtagControllerDeviceAgentBfm jtagControllerDeviceAgentBfm(jtagIf); 
   
   //-------------------------------------------------------
   // Jtag Reciever BFM Agent Instantiation
   //-------------------------------------------------------
 
-  JtagSlaveAgentBfm jtagSlaveAgentBfm(jtagIf);
+  JtagTargetDeviceAgentBfm jtagTargetDeviceAgentBfm(jtagIf);
 
   
 endmodule : HdlTop
