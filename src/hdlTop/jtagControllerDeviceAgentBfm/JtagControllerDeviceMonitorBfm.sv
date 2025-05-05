@@ -38,7 +38,7 @@ task startMonitoring(inout JtagPacketStruct jtagPacketStruct,input JtagConfigStr
   int  i,k ,m;
   m=0;
   k=0;
-    for(int j=0 ; j<$bits(jtagPacketStruct.Tms);j++)
+    for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
       begin
         @(posedge clk);
         case(jtagTapState)
