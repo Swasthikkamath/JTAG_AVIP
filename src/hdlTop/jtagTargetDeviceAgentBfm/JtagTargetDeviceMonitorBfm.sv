@@ -37,7 +37,7 @@ interface JtagTargetDeviceMonitorBfm (input  logic   clk,
   int  i,k ,m;
   automatic int count =0;
   m=0;
-  for(int j=0 ; j<$bits(jtagPacketStruct.Tms);j++)
+  for(int j=0 ; j<$bits(jtagPacketStruct.jtagTms);j++)
       begin
         @(posedge clk);
             $display("state of machine  is %s",jtagTapState.name());
