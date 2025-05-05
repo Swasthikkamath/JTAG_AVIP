@@ -81,9 +81,11 @@ end
               ##1  (((width)== jtagInstructionWidth));
   endproperty
 
-  assert property (instructionValidityCheck)
+	assert property (instructionValidityCheck)begin 
   $info("*************************************************************************************************************\n[ControllerDevice ASSERTION]\n INSTRUCTION %b MATCHES AND WIDTH %0d  IS CORRECT \n**************************************************************************************************************",instruction,width);
-  else
+   instruction = 'bx;
+	end 
+else
  $error("\n \n \n INSTRUCTION BIT IS UNKNOWN ");
 
 
