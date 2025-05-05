@@ -37,7 +37,7 @@ interface JtagControllerDeviceDriverBfm (input  logic   clk,
     i=0; 
     m=0;
     k=0;
-    for(int j=0 ; j< $bits(jtagPacketStruct.Tms);j++)
+    for(int j=0 ; j< $bits(jtagPacketStruct.jtagTms);j++)
       begin
 	      @(posedge clk) Tms = jtagPacketStruct.jtagTms[i++];
            case(jtagTapState)
